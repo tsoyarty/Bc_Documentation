@@ -1389,10 +1389,46 @@ Now, let us explore how this method can be integrated with sampled-based methods
 \end{figure}
 
 %---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Integration to the RRT* algorithm}
+
+
+
 
 %---------------------------------------------------------------------------------
-
-\section{Integration to the RRT* algorithm}
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/RRTstar_maze216.0.pdf}
+      \caption{RRTstar.}
+      \label{fig:rrtstar_maze}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/RRTstarML_maze206.0.pdf}
+      \caption{RRTstarML.}
+      \label{fig:rrtstarML_maze}
+  \end{subfigure}
+  \caption{RRTstar vs implemented method 1000 iterations.}
+  \label{fig:RRTstar_vs_RRTstarML}
+\end{figure}
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/RRTstarML_learning206.0.pdf}
+      \caption{RRTstarML learning.}
+      \label{fig:rrtstarML_learning}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/RRTstarML_maze206.0.pdf}
+      \caption{RRTstarML.}
+      \label{fig:rrtstarML_maze}
+  \end{subfigure}
+  \caption{Learning.}
+  \label{fig:LearningConfigSpace}
+\end{figure}
+%---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \begin{algorithm}[H]
   \caption{Sample}
@@ -1402,10 +1438,10 @@ Now, let us explore how this method can be integrated with sampled-based methods
   \vspace{0.1cm}
   \hrule
   \vspace{0.2cm}
-  $x \gets$ \textit{Sample Density}()\; 
+  $x \gets$ \textit{Sample Density}($\mathcal{X}_{\text{obs}}$, $\mathcal{X}_{\text{free}}$)\; 
   \While{OnObstacle($x$)}{ 
     $\mathcal{X}_{\text{obs}} \gets \mathcal{X}_{\text{obs}} \cup$ \{x\}\;
-    $x \gets$ \textit{Sample Density}()\; 
+    $x \gets$ \textit{Sample Density}($\mathcal{X}_{\text{obs}}$, $\mathcal{X}_{\text{free}}$)\; 
   }
   $\mathcal{X}_{\text{free}} \gets \mathcal{X}_{\text{free}} \cup$ \{x\}\;
   
