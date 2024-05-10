@@ -576,7 +576,7 @@ leading to a notable increase in computational time.\\[12pt]
     Find nearest node $q_{\text{near}}$ in $T$ to $q_{\text{rand}}$\;
     Steer towards $q_{\text{rand}}$ to get new node $q_{\text{new}}$\;
     
-    \If{Obstacle-free($q_{\text{near}}$, $q_{\text{new}}$)}{
+    \If{ObstacleFree($q_{\text{near}}$, $q_{\text{new}}$)}{
       Add $q_{\text{new}}$ to $T$ with an edge from $q_{\text{near}}$\;
       \If{GoalFound($q_{\text{new}}$)}{
       \textbf{break}\;
@@ -1274,11 +1274,11 @@ in Figure \ref{fig:GKDEmaze} can be observed in Figure \ref{fig:GKDEdensity}.
   $\gamma_{\text{free}} \gets 0$\;
   $\gamma_{\text{obs}} \gets 1$\; 
   \While{$\gamma_{\text{free}} < \gamma_{\text{obs}}$}{
-    $x_{\text{rand}} \gets$ \textit{RandomConfiguration}()\;
+    $x_{\text{rand}} \gets$ RandomConfiguration()\;
     $P_{\text{free}} \gets \frac{|\mathcal{X}_{\text{free}}|}{|\mathcal{X}_{\text{free}}| + |\mathcal{X}_{\text{obs}}|}$\;
     $P_{\text{obs}} \gets 1 - P_{\text{free}}$\;
-    $b_{\text{free}} \gets$ \textit{DensityEstimator}($x_{\text{rand}}$, $\mathcal{X}_{\text{free}}$)\;
-    $b_{\text{obs}} \gets$ \textit{DensityEstimator}($x_{\text{rand}}$, $\mathcal{X}_{\text{obs}}$)\;
+    $b_{\text{free}} \gets$ DensityEstimator($x_{\text{rand}}$, $\mathcal{X}_{\text{free}}$)\;
+    $b_{\text{obs}} \gets$ DensityEstimator($x_{\text{rand}}$, $\mathcal{X}_{\text{obs}}$)\;
     $\gamma_{\text{free}} \gets b_{\text{free}} \cdot P_{\text{free}}$\;
     $\gamma_{\text{obs}} \gets b_{\text{obs}} \cdot P_{\text{obs}}$\; 
   }
@@ -1392,43 +1392,73 @@ Now, let us explore how this method can be integrated with sampled-based methods
 %---------------------------------------------------------------------------------
 \section{Integration to the RRT* algorithm}
 
-
-
-
+The proposed solution is designed to be compatible with any sampling-based method 
+that employs single configuration generation to explore the configuration space 
+in a single iteration. 
+In this implementation, RRT* was specifically chosen for its ability to converge 
+efficiently towards an optimal solution while effectively exploring the configuration space. 
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
   \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=\textwidth]{figChap4/RRTstar_maze216.0.pdf}
-      \caption{RRTstar.}
+      \caption{RRT*.}
       \label{fig:rrtstar_maze}
   \end{subfigure}  
   \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=\textwidth]{figChap4/RRTstarML_maze206.0.pdf}
-      \caption{RRTstarML.}
+      \caption{Improven RRT*.}
       \label{fig:rrtstarML_maze}
   \end{subfigure}
-  \caption{RRTstar vs implemented method 1000 iterations.}
+  \caption{
+    Both algorithms, RRT* \ref{fig:rrtstar_maze} and 
+    the improved RRT* using machine learning \ref{fig:rrtstarML_maze} methods, are presented, 
+    each consisting of 1000 iterations. 
+    It is evident that the improved RRT* efficiently explores the configuration space and 
+    eventually finds a path to the goal with the lowest cost of 206 u.d.(units of dimension), 
+    compared to RRT*, which finds a path to the goal with a cost of 216 u.d.. 
+    Additionally, despite both algorithms having the same number of iterations, 
+    the improved RRT* exhibits a higher number of collision-free paths found. 
+    This difference arises from the strategy of sampling points in the $\mathcal{C}$-space, 
+    which increases the probability of finding a collision-free path after each iteration.}
   \label{fig:RRTstar_vs_RRTstarML}
 \end{figure}
-%---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
   \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=\textwidth]{figChap4/RRTstarML_learning206.0.pdf}
-      \caption{RRTstarML learning.}
+      \caption{Learning the $\mathcal{C}$-space.}
       \label{fig:rrtstarML_learning}
   \end{subfigure}  
   \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=\textwidth]{figChap4/RRTstarML_maze206.0.pdf}
-      \caption{RRTstarML.}
+      \caption{Improven RRT*.}
       \label{fig:rrtstarML_maze}
   \end{subfigure}
-  \caption{Learning.}
+  \caption{In Figure \ref{fig:rrtstarML_learning}, 
+  the information about the $\mathcal{C}$-space can be seen. 
+  The purple color represents the \( \mathcal{X}_{\text{obs}} \) dataset, 
+  while the green color represents the \( \mathcal{X}_{\text{free}} \) dataset. 
+  Utilizing these datasets, the algorithm learns the $\mathcal{C}$-space.}
   \label{fig:LearningConfigSpace}
 \end{figure}
 %---------------------------------------------------------------------------------
+\\[12pt]
+The integration approach relies on a specific function for sampling predicted points,
+rather than utilizing random sampling. 
+This function is outlined in Algorithm \ref{alg:ml_sample}. 
+Within the while loop, 
+point predicted by the function $f$ to be in the $\mathcal{C}_{\text{free}}$ are generated. 
+After each iteration, 
+the algorithm verifies if this point indeed lies inside $\mathcal{C}_{\text{free}}$, 
+and upon finding such a point, it is returned. 
+If a point lies within the $\mathcal{C}_{\text{obs}}$ space, 
+it is added to the $\mathcal{X}_{\text{obs}}$ dataset.
+Otherwise, it is added to the $\mathcal{X}_{\text{free}}$ dataset.
+This function effectively replaces the random configuration generation step 
+in Algorithm \ref{alg:rrt_star}, Line 3, thus demonstrating integration with the RRT* algorithm.
+\\[12pt] 
 %---------------------------------------------------------------------------------
 \begin{algorithm}[H]
   \caption{Sample}
@@ -1438,17 +1468,31 @@ Now, let us explore how this method can be integrated with sampled-based methods
   \vspace{0.1cm}
   \hrule
   \vspace{0.2cm}
-  $x \gets$ \textit{Sample Density}($\mathcal{X}_{\text{obs}}$, $\mathcal{X}_{\text{free}}$)\; 
+  $x \gets$ Sample Density($\mathcal{X}_{\text{obs}}$, $\mathcal{X}_{\text{free}}$)\; 
   \While{OnObstacle($x$)}{ 
     $\mathcal{X}_{\text{obs}} \gets \mathcal{X}_{\text{obs}} \cup$ \{x\}\;
-    $x \gets$ \textit{Sample Density}($\mathcal{X}_{\text{obs}}$, $\mathcal{X}_{\text{free}}$)\; 
+    $x \gets$ Sample Density($\mathcal{X}_{\text{obs}}$, $\mathcal{X}_{\text{free}}$)\; 
   }
   $\mathcal{X}_{\text{free}} \gets \mathcal{X}_{\text{free}} \cup$ \{x\}\;
   
   \Return $x$\;
 \end{algorithm}
 %---------------------------------------------------------------------------------
+\vspace{1em}
+\noindent To demonstrate how this enhancement works, 
+Figure \ref{fig:RRTstar_vs_RRTstarML} depicts the expansion of RRT* with enhanced RRT* using 
+machine learning, which explores $\mathcal{C}$-space. 
+Figure \ref{fig:LearningConfigSpace} illustrates 
+the learning process of the $\mathcal{C}$-space by our enhanced RRT* algorithm.
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
 \section{Extension of the machine learning method to 3D configuration space}
+\textbf{To extend the improven RRT* to 3D configuration space, where will be 2D objects with parameters of x and y coordinates and rotation of this object., 
+it is needed to understand that our obstacle space is also represent by constraints of objects shape.
+also add information about reference point of the objest. it will be at the center of math of the object.
+and because of this on the Figures which u add will be seen that obstacle space is a bit bigger than just obstacle shape.
+write something about polygons, maybe about rapid for 6D config space write why u dont make this actually.
+and add figures same as section before :)}
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------

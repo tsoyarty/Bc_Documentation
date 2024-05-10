@@ -182,21 +182,21 @@
 \newlabel{sub@fig:GKDEfreeSpace}{{b}{26}{Obstacle-free density.\relax }{subfigure.4.3.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces An example of density estimation with Gaussian Kernel function of the $\mathcal  {C}$-space in Figure \ref  {fig:GKDEmaze}. Circles represent randomly generated points in the $\mathcal  {C}$-space. In Figure \ref  {fig:GKDEobstacleSpace}, the density estimation of the obstacle space can be seen. Figure \ref  {fig:GKDEfreeSpace} illustrates the density estimation of the free space. The higher the graph and the more yellow the color, the higher the density, indicating a higher probability for points to be in this space.\relax }}{26}{figure.4.3}\protected@file@percent }
 \newlabel{fig:GKDEdensity}{{4.3}{26}{An example of density estimation with Gaussian Kernel function of the $\mathcal {C}$-space in Figure \ref {fig:GKDEmaze}. Circles represent randomly generated points in the $\mathcal {C}$-space. In Figure \ref {fig:GKDEobstacleSpace}, the density estimation of the obstacle space can be seen. Figure \ref {fig:GKDEfreeSpace} illustrates the density estimation of the free space. The higher the graph and the more yellow the color, the higher the density, indicating a higher probability for points to be in this space.\relax }{figure.4.3}{}}
-\newlabel{fig:rrtstar_maze}{{4.4a}{27}{RRTstar.\relax }{subfigure.4.4.1}{}}
-\newlabel{sub@fig:rrtstar_maze}{{a}{27}{RRTstar.\relax }{subfigure.4.4.1}{}}
-\newlabel{fig:rrtstarML_maze}{{4.4b}{27}{RRTstarML.\relax }{subfigure.4.4.2}{}}
-\newlabel{sub@fig:rrtstarML_maze}{{b}{27}{RRTstarML.\relax }{subfigure.4.4.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces RRTstar vs implemented method 1000 iterations.\relax }}{27}{figure.4.4}\protected@file@percent }
-\newlabel{fig:RRTstar_vs_RRTstarML}{{4.4}{27}{RRTstar vs implemented method 1000 iterations.\relax }{figure.4.4}{}}
-\newlabel{fig:rrtstarML_learning}{{4.5a}{27}{RRTstarML learning.\relax }{subfigure.4.5.1}{}}
-\newlabel{sub@fig:rrtstarML_learning}{{a}{27}{RRTstarML learning.\relax }{subfigure.4.5.1}{}}
-\newlabel{fig:rrtstarML_maze}{{4.5b}{27}{RRTstarML.\relax }{subfigure.4.5.2}{}}
-\newlabel{sub@fig:rrtstarML_maze}{{b}{27}{RRTstarML.\relax }{subfigure.4.5.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Learning.\relax }}{27}{figure.4.5}\protected@file@percent }
-\newlabel{fig:LearningConfigSpace}{{4.5}{27}{Learning.\relax }{figure.4.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Integration to the RRT* algorithm}{27}{section.4.4}\protected@file@percent }
-\@writefile{loa}{\contentsline {algocf}{\numberline {5}{\ignorespaces Sample\relax }}{27}{algocf.5}\protected@file@percent }
-\newlabel{alg:ml_sample}{{5}{27}{Integration to the RRT* algorithm}{algocf.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Integration to the RRT* algorithm}{26}{section.4.4}\protected@file@percent }
+\newlabel{fig:rrtstar_maze}{{4.4a}{27}{RRT*.\relax }{subfigure.4.4.1}{}}
+\newlabel{sub@fig:rrtstar_maze}{{a}{27}{RRT*.\relax }{subfigure.4.4.1}{}}
+\newlabel{fig:rrtstarML_maze}{{4.4b}{27}{Improven RRT*.\relax }{subfigure.4.4.2}{}}
+\newlabel{sub@fig:rrtstarML_maze}{{b}{27}{Improven RRT*.\relax }{subfigure.4.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces  Both algorithms, RRT* \ref  {fig:rrtstar_maze} and the improved RRT* using machine learning \ref  {fig:rrtstarML_maze} methods, are presented, each consisting of 1000 iterations. It is evident that the improved RRT* efficiently explores the configuration space and eventually finds a path to the goal with the lowest cost of 206 u.d.(units of dimension), compared to RRT*, which finds a path to the goal with a cost of 216 u.d.. Additionally, despite both algorithms having the same number of iterations, the improved RRT* exhibits a higher number of collision-free paths found. This difference arises from the strategy of sampling points in the $\mathcal  {C}$-space, which increases the probability of finding a collision-free path after each iteration.\relax }}{27}{figure.4.4}\protected@file@percent }
+\newlabel{fig:RRTstar_vs_RRTstarML}{{4.4}{27}{Both algorithms, RRT* \ref {fig:rrtstar_maze} and the improved RRT* using machine learning \ref {fig:rrtstarML_maze} methods, are presented, each consisting of 1000 iterations. It is evident that the improved RRT* efficiently explores the configuration space and eventually finds a path to the goal with the lowest cost of 206 u.d.(units of dimension), compared to RRT*, which finds a path to the goal with a cost of 216 u.d.. Additionally, despite both algorithms having the same number of iterations, the improved RRT* exhibits a higher number of collision-free paths found. This difference arises from the strategy of sampling points in the $\mathcal {C}$-space, which increases the probability of finding a collision-free path after each iteration.\relax }{figure.4.4}{}}
+\newlabel{fig:rrtstarML_learning}{{4.5a}{27}{Learning the $\mathcal {C}$-space.\relax }{subfigure.4.5.1}{}}
+\newlabel{sub@fig:rrtstarML_learning}{{a}{27}{Learning the $\mathcal {C}$-space.\relax }{subfigure.4.5.1}{}}
+\newlabel{fig:rrtstarML_maze}{{4.5b}{27}{Improven RRT*.\relax }{subfigure.4.5.2}{}}
+\newlabel{sub@fig:rrtstarML_maze}{{b}{27}{Improven RRT*.\relax }{subfigure.4.5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces In Figure \ref  {fig:rrtstarML_learning}, the information about the $\mathcal  {C}$-space can be seen. The purple color represents the \( \mathcal  {X}_{\text  {obs}} \) dataset, while the green color represents the \( \mathcal  {X}_{\text  {free}} \) dataset. Utilizing these datasets, the algorithm learns the $\mathcal  {C}$-space.\relax }}{27}{figure.4.5}\protected@file@percent }
+\newlabel{fig:LearningConfigSpace}{{4.5}{27}{In Figure \ref {fig:rrtstarML_learning}, the information about the $\mathcal {C}$-space can be seen. The purple color represents the \( \mathcal {X}_{\text {obs}} \) dataset, while the green color represents the \( \mathcal {X}_{\text {free}} \) dataset. Utilizing these datasets, the algorithm learns the $\mathcal {C}$-space.\relax }{figure.4.5}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {5}{\ignorespaces Sample\relax }}{28}{algocf.5}\protected@file@percent }
+\newlabel{alg:ml_sample}{{5}{28}{Integration to the RRT* algorithm}{algocf.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.5}Extension of the machine learning method to 3D configuration space}{28}{section.4.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Results and discussion}{29}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
