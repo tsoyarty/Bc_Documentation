@@ -38,10 +38,10 @@
 \contentsline {section}{\numberline {4.1}Approach}{21}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Learning the Configuration Space}{22}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Proposed Solution}{22}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Integration to the RRT* algorithm}{26}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Extension of the machine learning method to 3D configuration space}{26}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Results and discussion}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Comparison with OMPL}{27}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Conclusion}{29}{chapter.6}%
-\contentsline {chapter}{Bibliography}{31}{chapter*.5}%
-\contentsline {chapter}{\numberline {A}List of Notation}{33}{appendix.A}%
+\contentsline {section}{\numberline {4.4}Integration to the RRT* algorithm}{27}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Extension of the machine learning method to 3D configuration space}{27}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Results and discussion}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Comparison with OMPL}{29}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Conclusion}{31}{chapter.6}%
+\contentsline {chapter}{Bibliography}{33}{chapter*.5}%
+\contentsline {chapter}{\numberline {A}List of Notation}{35}{appendix.A}%

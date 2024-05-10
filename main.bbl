@@ -20,6 +20,13 @@ Jaroslaw Drapala.
 \newblock
   \url{https://towardsdatascience.com/kernel-density-estimation-explained-step-by-step-7cc5b5bc4517}.
 
+\bibitem{Jaroslaw2023KDEmultidimensional}
+Jaroslaw Drapala.
+\newblock Kernel density estimator for multidimensional data.
+\newblock 2023.
+\newblock
+  \url{https://towardsdatascience.com/kernel-density-estimator-for-multidimensional-data-3e78c9779ed8}.
+
 \bibitem{Goodfellow-et-al-2016DeepLearning}
 Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
 \newblock {\em Deep Learning}.

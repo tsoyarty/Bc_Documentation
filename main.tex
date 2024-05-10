@@ -1176,7 +1176,9 @@ Consequently, the generation of points within \( \mathcal{C}_{\text{obs}} \) dec
 thereby reducing the need for collision checking on unsuitable points.
 \\[12pt]
 The key question now arises: how does the program make predictions? 
-To address this, a Bayesian classifier~\cite{Bishop2006Pattern} is utilized in conjunction with a kernel density estimator to determine the function \( f: \mathcal{X} \mapsto \{0,1\} \).
+To address this, 
+a Bayesian classifier~\cite{Bishop2006Pattern} is utilized in conjunction 
+with a kernel density estimator to determine the function \( f: \mathcal{X} \mapsto \{0,1\} \).
 % With each iteration, it improves its predictions and increasingly identifies points
 % within \( \mathcal{C}_{\text{free}} \). 
 % Consequently, the generation of points within \( \mathcal{C}_{\text{obs}} \) decreases, 
@@ -1238,7 +1240,7 @@ The Kernel Density Estimator \( \hat{f}_\mathcal{X}(x) \)
 for the estimation of the density value at point \( x \) is defined as:
 \[ \hat{f}_\mathcal{X}(x) = \frac{1}{m} \sum_{i=1}^{m} K \left( x - x^{(i)} \right), \]
 where $m$ is a number of points $x_i$ in respective dataset $\mathcal{X}$ and
-\( K(x) \) is the Gaussian Kernel function, represented as follows:
+\( K(x) \) is the Gaussian Kernel function~\cite{Jaroslaw2023KDEmultidimensional}, represented as follows:
 \[
 K(x) = (2\pi)^{-\frac{d}{2}} \cdot \det(\textbf{H})^{-\frac{1}{2}} \cdot e^{-\frac{1}{2} x^T H^{-1} x},
 \]
@@ -1260,7 +1262,32 @@ Because of this, the matrix \( \textbf{H} \) is symmetric.
 An illustrative example of kernel estimation in the configuration space depicted 
 in Figure \ref{fig:GKDEmaze} can be observed in Figure \ref{fig:GKDEdensity}.
 \\[12pt]
-Now, leveraging our density estimator, let us proceed to Bayesian classifier.
+%---------------------------------------------------------------------------------
+\begin{algorithm}[H]
+  \caption{Sample Density}
+  \label{alg:sample_density}
+  \KwData{$\mathcal{X}_{\text{obs}}$, $\mathcal{X}_{\text{free}}$}
+  \KwResult{Predicted sampled point $x$}
+  \vspace{0.1cm}
+  \hrule
+  \vspace{0.2cm}
+  $\gamma_{\text{free}} \gets 0$\;
+  $\gamma_{\text{obs}} \gets 1$\; 
+  \While{$\gamma_{\text{free}} < \gamma_{\text{obs}}$}{
+    $x_{\text{rand}} \gets$ \textit{RandomConfiguration}()\;
+    $P_{\text{free}} \gets \frac{|\mathcal{X}_{\text{free}}|}{|\mathcal{X}_{\text{free}}| + |\mathcal{X}_{\text{obs}}|}$\;
+    $P_{\text{obs}} \gets 1 - P_{\text{free}}$\;
+    $b_{\text{free}} \gets$ \textit{DensityEstimator}($x_{\text{rand}}$, $\mathcal{X}_{\text{free}}$)\;
+    $b_{\text{obs}} \gets$ \textit{DensityEstimator}($x_{\text{rand}}$, $\mathcal{X}_{\text{obs}}$)\;
+    $\gamma_{\text{free}} \gets b_{\text{free}} \cdot P_{\text{free}}$\;
+    $\gamma_{\text{obs}} \gets b_{\text{obs}} \cdot P_{\text{obs}}$\; 
+  }
+  $x \gets x_{\text{rand}}$\;
+  \Return $x$\;
+\end{algorithm} 
+%---------------------------------------------------------------------------------
+\vspace{1em}
+\noindent Now, leveraging our density estimator, let us proceed to Bayesian classifier.
 Firstly, it is necessary to introduce Bayes' theorem, which is formulated as follows:
 \[
   P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}.
@@ -1280,15 +1307,39 @@ So now our Bayesian theorem looks like this:
 where
 \[ P(x|y=1) = \hat{f}_{\mathcal{X}_{\text{obs}}}(x) = \frac{1}{|\mathcal{X}_{\text{obs}}|} \sum_{x' \in \mathcal{X}_{\text{obs}}} K \left( x - x' \right); \]
 \[ P(x|y=0) = \hat{f}_{\mathcal{X}_{\text{free}}}(x) = \frac{1}{|\mathcal{X}_{\text{free}}|} \sum_{x' \in \mathcal{X}_{\text{free}}} K \left( x - x' \right); \]
-\[ P(y=1) = \frac{|\mathcal{X}_{\text{obs}}|}{|\mathcal{X}_{\text{obs}}|+|\mathcal{X}_{\text{free}}|},\]
-\[ P(y=0) = \frac{|\mathcal{X}_{\text{free}}|}{|\mathcal{X}_{\text{obs}}|+|\mathcal{X}_{\text{free}}|},\]
-\[|\mathcal{X}_{\text{obs}}| \text{ denotes the number of points contained within the } \mathcal{X}_{\text{obs}} \text{ dataset},\]
-\[|\mathcal{X}_{\text{free}}| \text{ denotes the number of points contained within the } \mathcal{X}_{\text{free}} \text{ dataset}.\]
-Regarding \( P(x) \), further discussion will follow.
+\[ P(y=1) = \frac{|\mathcal{X}_{\text{obs}}|}{|\mathcal{X}_{\text{obs}}|+|\mathcal{X}_{\text{free}}|};\enspace
+P(y=0) = \frac{|\mathcal{X}_{\text{free}}|}{|\mathcal{X}_{\text{obs}}|+|\mathcal{X}_{\text{free}}|};\]
+\[|\mathcal{X}_{\text{obs}}| \text{ denotes the number of points contained within the } \mathcal{X}_{\text{obs}} \text{ dataset};\]
+\[|\mathcal{X}_{\text{free}}| \text{ denotes the number of points contained within the } \mathcal{X}_{\text{free}} \text{ dataset};\]
+\[\text{Regarding } P(x), \text{ further discussion will follow}.\]
+Now, the Bayesian decision rule can be formulated. 
+This rule will be represented as a function \( f: \mathcal{X} \mapsto \{0,1\} \), 
+which will predict the label of the given point:
+\[ f(x) = 
+  \begin{cases}
+  0 & \text{if } \gamma_{\text{free}}(x) \geq \gamma_{\text{obs}}(x), \\
+  1 & \text{otherwise,}
+  \end{cases} 
+\]
+where 
+\[\gamma_{\text{free}}(x) = P(y=0|x);\enspace \gamma_{\text{obs}}(x) = P(y=1|x).\]
 
-\textbf{so now left only describe bayesian decision rule: q-free >= q-obs -> 0 otherwise 1. 
-and address to pseudocode sample density. and tell that here q-free >= q-obs P(x) dont fluence.}
-
+In this decision rule, where $\gamma_{\text{free}}(x) \geq \gamma_{\text{obs}}(x)$, 
+it's evident that the computation of $P(x)$ is not necessarily required.
+\\[12pt]
+The proposed solution is outlined in Algorithm \ref{alg:sample_density}: Sample Density. 
+Default parameters for $\gamma_{\text{free}}$ and $\gamma_{\text{obs}}$ are defined 
+at Line 1 and Line 2, 
+where $\gamma_{\text{free}}$ should be less than $\gamma_{\text{obs}}$. 
+The main process occurs within a while loop at Line 3-10. 
+The condition in this loop is inverted compare to our decision rule 
+because the goal is to exit the loop when this condition is met. 
+Inside this loop, a random point is generated at each iteration. 
+\\[12pt]
+For each random point, the probability of belonging to each space 
+is computed as explained in this section.
+Subsequently, the point predicted to be in the $C_{\text{free}}$ space is returned.
+Now, let us explore how this method can be integrated with sampled-based methods.
 % In such cases, Kernel Density Estimator is employed to approximate the underlying 
 % distribution of the data. 
 % In this work, the Gaussian Kernel function was utilized, represented as follows:
@@ -1305,14 +1356,14 @@ and address to pseudocode sample density. and tell that here q-free >= q-obs P(x
 
 
 %---------------------------------------------------------------------------------
-
+%---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
     \includegraphics[width=0.5\textwidth]{figChap4/SimpleMaze.eps} 
   \caption{An example of the 2D $\mathcal{C}$-space.}
   \label{fig:GKDEmaze}
 \end{figure}
-
+%---------------------------------------------------------------------------------
 
 \begin{figure}[!ht]
   \centering 
@@ -1338,31 +1389,10 @@ and address to pseudocode sample density. and tell that here q-free >= q-obs P(x
 \end{figure}
 
 %---------------------------------------------------------------------------------
+
 %---------------------------------------------------------------------------------
-\begin{algorithm}[H]
-  \caption{Sample Density}
-  \label{alg:sample_density}
-  \KwData{$\mathcal{X}_{\text{obs}}$, $\mathcal{X}_{\text{free}}$}
-  \KwResult{Predicted sampled point $x$}
-  \vspace{0.1cm}
-  \hrule
-  \vspace{0.2cm}
-  $q_{\text{free}} \gets 0$\;
-  $q_{\text{obs}} \gets 1$\; 
-  \While{$q_{\text{free}} < q_{\text{obs}}$}{
-    $x_{\text{rand}} \gets$ \textit{RandomConfiguration}()\;
-    $P_{\text{free}} \gets \frac{|\mathcal{X}_{\text{free}}|}{|\mathcal{X}_{\text{free}}| + |\mathcal{X}_{\text{obs}}|}$\;
-    $P_{\text{obs}} \gets 1 - P_{\text{free}}$\;
-    $b_{\text{free}} \gets$ \textit{DensityEstimator}($x_{\text{rand}}$, $\mathcal{X}_{\text{free}}$)\;
-    $b_{\text{obs}} \gets$ \textit{DensityEstimator}($x_{\text{rand}}$, $\mathcal{X}_{\text{obs}}$)\;
-    $q_{\text{free}} \gets b_{\text{free}} \cdot P_{\text{free}}$\;
-    $q_{\text{obs}} \gets b_{\text{obs}} \cdot P_{\text{obs}}$\; 
-  }
-  
-  $x \gets x_{\text{rand}}$\;
-  \Return $x$\;
-\end{algorithm} 
-%---------------------------------------------------------------------------------
+
+\section{Integration to the RRT* algorithm}
 %---------------------------------------------------------------------------------
 \begin{algorithm}[H]
   \caption{Sample}
@@ -1382,9 +1412,6 @@ and address to pseudocode sample density. and tell that here q-free >= q-obs P(x
   \Return $x$\;
 \end{algorithm}
 %---------------------------------------------------------------------------------
-%---------------------------------------------------------------------------------
-
-\section{Integration to the RRT* algorithm}
 \section{Extension of the machine learning method to 3D configuration space}
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------

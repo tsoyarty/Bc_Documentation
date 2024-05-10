@@ -6,45 +6,46 @@ Database file #1: main.bib
 Warning--I didn't find a database entry for "gottschalk1996rapid"
 Warning--empty journal in Bishop2006Pattern
 Warning--empty journal in Jaroslaw2023KDEexplain
-You've used 14 entries,
+Warning--empty journal in Jaroslaw2023KDEmultidimensional
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            599 strings with 6775 characters,
-and the built_in function-call counts, 4372 in all, are:
-= -- 424
-> -- 208
+            603 strings with 6987 characters,
+and the built_in function-call counts, 4584 in all, are:
+= -- 445
+> -- 215
 < -- 1
-+ -- 84
-- -- 68
-* -- 294
-:= -- 760
-add.period$ -- 48
-call.type$ -- 14
-change.case$ -- 73
++ -- 87
+- -- 70
+* -- 302
+:= -- 800
+add.period$ -- 52
+call.type$ -- 15
+change.case$ -- 77
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 165
-empty$ -- 333
-format.name$ -- 68
-if$ -- 899
+cite$ -- 18
+duplicate$ -- 175
+empty$ -- 350
+format.name$ -- 70
+if$ -- 941
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 16
-newline$ -- 79
-num.names$ -- 28
-pop$ -- 69
+int.to.str$ -- 15
+missing$ -- 17
+newline$ -- 85
+num.names$ -- 30
+pop$ -- 74
 preamble$ -- 1
-purify$ -- 61
+purify$ -- 64
 quote$ -- 0
-skip$ -- 116
+skip$ -- 123
 stack$ -- 0
-substring$ -- 239
+substring$ -- 244
 swap$ -- 24
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 52
-warning$ -- 2
-while$ -- 38
-width$ -- 16
-write$ -- 161
-(There were 3 warnings)
+type$ -- 56
+warning$ -- 3
+while$ -- 40
+width$ -- 17
+write$ -- 172
+(There were 4 warnings)

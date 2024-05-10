@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.14)  10 MAY 2024 00:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.14)  10 MAY 2024 17:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1328,14 +1328,14 @@ Chapter 4.
 <figChap4/regular-transformed.jpeg, id=4644, 2569.6pt x 1140.26pt>
 File: figChap4/regular-transformed.jpeg Graphic file (type jpg)
 <use figChap4/regular-transformed.jpeg>
-Package pdftex.def Info: figChap4/regular-transformed.jpeg  used on input line 1220.
+Package pdftex.def Info: figChap4/regular-transformed.jpeg  used on input line 1222.
 (pdftex.def)             Requested size: 363.0pt x 161.07942pt.
 <figChap4/irregular-transformed.jpeg, id=4645, 2569.6pt x 1140.26pt>
 File: figChap4/irregular-transformed.jpeg Graphic file (type jpg)
 <use figChap4/irregular-transformed.jpeg>
-Package pdftex.def Info: figChap4/irregular-transformed.jpeg  used on input line 1225.
+Package pdftex.def Info: figChap4/irregular-transformed.jpeg  used on input line 1227.
 (pdftex.def)             Requested size: 363.0pt x 161.07942pt.
- [22] [23 <./figChap4/regular-transformed.jpeg> <./figChap4/irregular-transformed.jpeg>]
+ [22] [23 <./figChap4/regular-transformed.jpeg> <./figChap4/irregular-transformed.jpeg>] [24]
 Package epstopdf Info: Source file: <figChap4/SimpleMaze.eps>
 (epstopdf)                    date: 2024-05-09 14:34:34
 (epstopdf)                    size: 826682 bytes
@@ -1343,38 +1343,38 @@ Package epstopdf Info: Source file: <figChap4/SimpleMaze.eps>
 (epstopdf)                    date: 2024-05-09 14:34:44
 (epstopdf)                    size: 4772 bytes
 (epstopdf)             Command: <repstopdf --outfile=figChap4/SimpleMaze-eps-converted-to.pdf figChap4/SimpleMaze.eps>
-(epstopdf)             \includegraphics on input line 1311.
+(epstopdf)             \includegraphics on input line 1362.
 Package epstopdf Info: Output file is already uptodate.
-<figChap4/SimpleMaze-eps-converted-to.pdf, id=4670, 271.0125pt x 271.0125pt>
+<figChap4/SimpleMaze-eps-converted-to.pdf, id=4692, 271.0125pt x 271.0125pt>
 File: figChap4/SimpleMaze-eps-converted-to.pdf Graphic file (type pdf)
 <use figChap4/SimpleMaze-eps-converted-to.pdf>
-Package pdftex.def Info: figChap4/SimpleMaze-eps-converted-to.pdf  used on input line 1311.
+Package pdftex.def Info: figChap4/SimpleMaze-eps-converted-to.pdf  used on input line 1362.
 (pdftex.def)             Requested size: 181.5pt x 181.50713pt.
-<figChap4/GKDEobs2.pdf, id=4671, 1387.58403pt x 723.42267pt>
+<figChap4/GKDEobs2.pdf, id=4693, 1387.58403pt x 723.42267pt>
 File: figChap4/GKDEobs2.pdf Graphic file (type pdf)
 <use figChap4/GKDEobs2.pdf>
-Package pdftex.def Info: figChap4/GKDEobs2.pdf  used on input line 1320.
+Package pdftex.def Info: figChap4/GKDEobs2.pdf  used on input line 1371.
 (pdftex.def)             Requested size: 363.0pt x 189.24449pt.
-<figChap4/GKDEfree2.pdf, id=4672, 1387.58403pt x 723.42267pt>
+<figChap4/GKDEfree2.pdf, id=4694, 1387.58403pt x 723.42267pt>
 File: figChap4/GKDEfree2.pdf Graphic file (type pdf)
 <use figChap4/GKDEfree2.pdf>
-Package pdftex.def Info: figChap4/GKDEfree2.pdf  used on input line 1325.
+Package pdftex.def Info: figChap4/GKDEfree2.pdf  used on input line 1376.
 (pdftex.def)             Requested size: 363.0pt x 189.24449pt.
- [24]
+ [25 <./figChap4/SimpleMaze-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25 <./figChap4/SimpleMaze-eps-converted-to.pdf>] [26 <./figChap4/GKDEobs2.pdf> <./figChap4/GKDEfree2.pdf>]
-Chapter 5.
-[27
+ [26 <./figChap4/GKDEobs2.pdf> <./figChap4/GKDEfree2.pdf>] [27] [28
 
-] [28
+]
+Chapter 5.
+[29] [30
 
 ]
 Chapter 6.
 
-LaTeX Warning: Citation `gottschalk1996rapid' on page 29 undefined on input line 1414.
+LaTeX Warning: Citation `gottschalk1996rapid' on page 31 undefined on input line 1441.
 
-(./main.bbl [29] [30
+(./main.bbl [31] [32
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 17--22
@@ -1391,9 +1391,24 @@ Overfull \hbox (15.06252pt too wide) in paragraph at lines 17--22
 \T1/lmtt/m/n/10.95 kernel-[]density-[]estimation-[]explained-[]step-[]by-[]step-[]7cc5b5bc4517$[]\T1/lmr/m/n/10.95 (-20) . 
  []
 
-[31]) [32]
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--29
+[]\T1/lmr/m/n/10.95 (+20) Jaroslaw Dra-pala.  Ker-nel den-sity es-ti-ma-tor for mul-ti-di-
+ []
+
+
+Underfull \hbox (badness 6396) in paragraph at lines 24--29
+\T1/lmr/m/n/10.95 (+20) men-sional data.  2023.  []$\T1/lmtt/m/n/10.95 https : / / towardsdatascience . com /
+ []
+
+
+Overfull \hbox (26.05998pt too wide) in paragraph at lines 24--29
+\T1/lmtt/m/n/10.95 kernel-[]density-[]estimator-[]for-[]multidimensional-[]data-[]3e78c9779ed8$[]\T1/lmr/m/n/10.95 (-20) . 
+ []
+
+[33]) [34]
 Appendix A.
-[33
+[35
 
 ] (./main.aux)
 
@@ -1403,18 +1418,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 2B876DD95FEE55D4EF2891A30D8BAA9A;4667.
  ) 
 Here is how much of TeX's memory you used:
- 19686 strings out of 478287
- 330327 string characters out of 5849289
- 690524 words of memory out of 5000000
- 37002 multiletter control sequences out of 15000+600000
- 613937 words of font info for 252 fonts, out of 8000000 for 9000
+ 19692 strings out of 478287
+ 330432 string characters out of 5849289
+ 690594 words of memory out of 5000000
+ 37003 multiletter control sequences out of 15000+600000
+ 614009 words of font info for 253 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,20n,78p,1046b,814s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (41 pages, 9686664 bytes).
+Output written on main.pdf (43 pages, 9689013 bytes).
 PDF statistics:
- 4961 PDF objects out of 5155 (max. 8388607)
- 731 compressed objects within 8 object streams
- 187 named destinations out of 1000 (max. 500000)
+ 4975 PDF objects out of 5155 (max. 8388607)
+ 743 compressed objects within 8 object streams
+ 190 named destinations out of 1000 (max. 500000)
  78735 words of extra memory for PDF output out of 89155 (max. 10000000)
 
