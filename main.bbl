@@ -1,0 +1,90 @@
+\begin{thebibliography}{10}
+
+\bibitem{arslan2015machine}
+Oktay Arslan and Panagiotis Tsiotras.
+\newblock Machine learning guided exploration for sampling-based motion
+  planning algorithms.
+\newblock In {\em 2015 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)}, pages 2646--2652, 2015.
+
+\bibitem{Bishop2006Pattern}
+Christopher~M. Bishop.
+\newblock Pattern recognition and machine learning (information science and
+  statistics).
+\newblock 2006.
+
+\bibitem{Jaroslaw2023KDEexplain}
+Jaroslaw Drapala.
+\newblock Kernel density estimator explained step by step.
+\newblock 2023.
+\newblock
+  \url{https://towardsdatascience.com/kernel-density-estimation-explained-step-by-step-7cc5b5bc4517}.
+
+\bibitem{Goodfellow-et-al-2016DeepLearning}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock {\em Deep Learning}.
+\newblock MIT Press, 2016.
+\newblock \url{http://www.deeplearningbook.org}.
+
+\bibitem{ObjectDetection}
+Markus Hafellner.
+\newblock Object detection.
+\newblock {\em Bitmovin}, 2019.
+\newblock \url{https://bitmovin.com/object-detection}.
+
+\bibitem{Hart1968Astar}
+Peter Hart, Nils Nilsson, and Bertram Raphael.
+\newblock A formal basis for the heuristic determination of minimum cost paths.
+\newblock {\em {IEEE} Transactions on Systems Science and Cybernetics},
+  4(2):100--107, 1968.
+
+\bibitem{karaman2011rrtstar}
+Sertac Karaman and Emilio Frazzoli.
+\newblock Sampling-based algorithms for optimal motion planning.
+\newblock {\em The International Journal of Robotics Research}, 30(7):846--894,
+  2011.
+\newblock \url{https://doi.org/10.1177/0278364911406761}.
+
+\bibitem{Kavraki1996PRM}
+L.E. Kavraki, P.~Svestka, J.-C. Latombe, and M.H. Overmars.
+\newblock Probabilistic roadmaps for path planning in high-dimensional
+  configuration spaces.
+\newblock {\em IEEE Transactions on Robotics and Automation}, 12(4):566--580,
+  1996.
+
+\bibitem{Lavalle2006PlanningAlgos}
+S.~M. LaValle.
+\newblock {\em Planning Algorithms}.
+\newblock Cambridge University Press, Cambridge, U.K., 2006.
+\newblock Available at http://planning.cs.uiuc.edu/.
+
+\bibitem{lavalle1998rapidly}
+Steven~M LaValle et~al.
+\newblock Rapidly-exploring random trees: A new tool for path planning.
+\newblock {\em The annual research report}, 1998.
+
+\bibitem{Ahmed2019MotionPlanningNetworks}
+Ahmed~Hussain Qureshi, Yinglong Miao, Anthony Simeonov, and Michael~C. Yip.
+\newblock Motion planning networks: Bridging the gap between learning-based and
+  classical motion planners.
+\newblock {\em CoRR}, abs/1907.06013, 2019.
+
+\bibitem{rickert2014piano}
+Markus Rickert, Arne Sieverling, and Oliver Brock.
+\newblock Balancing exploration and exploitation in sampling-based motion
+  planning.
+\newblock {\em IEEE Transactions on Robotics}, 30:1305--1317, 12 2014.
+
+\bibitem{Ioan2012ompl}
+Ioan~A. {\c{S}}ucan, Mark Moll, and Lydia~E. Kavraki.
+\newblock The {O}pen {M}otion {P}lanning {L}ibrary.
+\newblock {\em {IEEE} Robotics \& Automation Magazine}, 19(4):72--82, December
+  2012.
+\newblock \url{https://ompl.kavrakilab.org}.
+
+\bibitem{Xie2022Astarfoto}
+Yuhang Xie, Chen Yihong, Ziyi Wang, and Yangjun Ou.
+\newblock Ai intelligent wayfinding based on unreal engine 4 static map.
+\newblock {\em Journal of Physics: Conference Series}, 2253:012016, 04 2022.
+
+\end{thebibliography}

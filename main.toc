@@ -1,0 +1,47 @@
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {paragraph}{Keywords:}{iv}{paragraph*.1}%
+\contentsline {paragraph}{Supervisor:}{iv}{paragraph*.2}%
+\babel@toc {czech}{}\relax 
+\contentsline {paragraph}{Kl\'i\v cov\'a\ slova:}{iv}{paragraph*.3}%
+\contentsline {paragraph}{P\v reklad\ n\'azvu:}{iv}{paragraph*.4}%
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Machine Learning}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Thesis structure}{5}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Task formulation}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Path planning problem}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Sampling-based path planning}{8}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Research Objectives}{8}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Components of the Path Planning Problem}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.5}The Challenge}{10}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Related works}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Rapidly-exploring Random Tree (RRT)}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Rapidly-exploring Random Tree star (RRT*)}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Probabilistic RoadMaps (PRM)}{17}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Motion Planning Networks (MPNet)}{18}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Summarize}{20}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Improving RRT* algorithm using machine learning method}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Approach}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Learning the Configuration Space}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Proposed Solution}{22}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Integration to the RRT* algorithm}{26}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Extension of the machine learning method to 3D configuration space}{26}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Results and discussion}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Comparison with OMPL}{27}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Conclusion}{29}{chapter.6}%
+\contentsline {chapter}{Bibliography}{31}{chapter*.5}%
+\contentsline {chapter}{\numberline {A}List of Notation}{33}{appendix.A}%

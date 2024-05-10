@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: main.bib
+Warning--I didn't find a database entry for "gottschalk1996rapid"
+Warning--empty journal in Bishop2006Pattern
+Warning--empty journal in Jaroslaw2023KDEexplain
+You've used 14 entries,
+            2118 wiz_defined-function locations,
+            599 strings with 6775 characters,
+and the built_in function-call counts, 4372 in all, are:
+= -- 424
+> -- 208
+< -- 1
++ -- 84
+- -- 68
+* -- 294
+:= -- 760
+add.period$ -- 48
+call.type$ -- 14
+change.case$ -- 73
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 165
+empty$ -- 333
+format.name$ -- 68
+if$ -- 899
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 16
+newline$ -- 79
+num.names$ -- 28
+pop$ -- 69
+preamble$ -- 1
+purify$ -- 61
+quote$ -- 0
+skip$ -- 116
+stack$ -- 0
+substring$ -- 239
+swap$ -- 24
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 52
+warning$ -- 2
+while$ -- 38
+width$ -- 16
+write$ -- 161
+(There were 3 warnings)

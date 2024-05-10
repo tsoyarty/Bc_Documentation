@@ -1,0 +1,1436 @@
+\documentclass{ctuthesis} 
+\usepackage{tabularx, array, booktabs}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+\ctusetup{
+	xdoctype = B,
+	xfaculty = F3,
+	mainlanguage = english,
+	titlelanguage = english,
+	title-english = {Improving path planning methods using machine learning},
+	title-czech = {Využití strojového učení v úloze plánování pohybu},
+	department-english = {Department of Cybernetics},
+	author = {Artyom Tsoy},
+	supervisor = {Ing. Vojtěch Vonásek, Ph.D.},  
+	month = 5,
+	year = 2024,
+        fieldofstudy-english = {Cybernetics and Robotics}, 
+        keywords-english = {Path planning optimization, Sampling-based methods enhancement, RRT and RRT* algorithms, Environmental adaptation, Learning-based planning, Machine learning},
+        keywords-czech = {Optimalizace plánování cest, Zlepšení metod založených na vzorkování, Algoritmy RRT a RRT*, Adaptace na prostředí, Plánování založené na učení, Strojové učení},
+}
+
+\ctuprocess
+
+\begin{thanks}
+I am sincerely thankful to my supervisor Ing. Vojtěch Vonásek, Ph.D., for his continuous support and invaluable feedback during my Bachelor project. His guidance and support have been instrumental in navigating the challenges and refining the outcomes of this research endeavor. Additionally, I am truly grateful for the opportunity to study at CTU University, where I have gained invaluable knowledge and skills that have greatly contributed to the successful completion of this project.
+\end{thanks}
+
+\begin{abstract-english}
+Path planning in robotics plays a critical role in enabling autonomous systems to navigate in complex environments efficiently. This project focuses on enhancing traditional sampling-based path planning methods, such as Rapidly-exploring Random Trees (RRT) and RRT*, by integrating machine learning techniques. The objective is to improve the efficiency and adaptability of path planning algorithms through the utilization of learned information about the environment.
+
+% Subsequently, a machine learning method was implemented to estimate optimal sampling regions for RRT-based planners. By leveraging techniques from the field of machine learning, this method predicts suitable locations for random samples based on environmental conditions and goal specifications. The initial implementation focused on 2D configuration spaces and extended to 3D configuration spaces, demonstrating promising results in improving planning efficiency.
+  
+To validate the efficacy of the proposed approach, comparisons were conducted against existing methods. Through experimentation and analysis, the performance and adaptability of the developed algorithms were assessed, highlighting their potential to outperform traditional techniques and contribute to the field of path planning.
+\end{abstract-english}
+
+\begin{abstract-czech}
+Plánování cest v robotice hraje kritickou roli při umožňování autonomním systémům efektivně navigovat složitými prostředími. Tento projekt se zaměřuje na zlepšení tradičních metod plánování cest založených na vzorkování, jako jsou Rapidly-exploring Random Trees (RRT) a RRT*, prostřednictvím integrování technik strojového učení. Cílem je zlepšit efektivitu a přizpůsobivost algoritmů plánování cest využitím informací o prostředí získaných ze strojového učení.
+
+% Následně byla implenetována metoda strojového učení pro odhad optimálních oblastí vzorkování pro plánovače založené na RRT. Tato metoda predikuje vhodná místa pro náhodné vzorky na základě podmínek prostředí a cílových specifikací. Původní implementace se zaměřila na 2D konfigurační prostory a rozšířena na 3D konfigurační prostory, přičemž prokázala slibné výsledky v zlepšení efektivity plánování.
+
+Pro ověření účinnosti navrženého přístupu byly provedeny srovnání s existujícími metodami. Skrz experimentování a analýzu byly zhodnoceny výkonnost a přizpůsobivost vyvinutých algoritmů, které zdůraznily jejich potenciál překonat tradiční techniky a přispět k oblasti plánování cest.
+\end{abstract-czech}
+
+% Declaration / Prohlaseni----------------------------------------
+\begin{declaration}
+I declare that the presented work was developed independently and that I have
+listed all sources of information used
+within it in accordance with the methodical instructions for observing the ethical
+principles in the preparation of university
+theses.
+\medskip
+\\\\
+Prague, \monthinlanguage{title} \ctufield{day}, \ctufield{year}
+\\
+\noindent
+\hspace*{1.5in}\makebox[1in]{\hrulefill} \\
+\hspace*{1.7in}Signature
+\end{declaration}
+% -----------------------------------------------------------------
+
+\begin{document}
+% 
+\maketitle
+
+\includepdf[pages=1]{BP.pdf}
+\includepdf[pages=2]{BP.pdf}
+
+%---------------------------------------------------------------------------------
+\chapter{Introduction}
+\label{chap:Introduction}
+Path planning is a fundamental challenge in the field of robotics, 
+essential for enabling autonomous systems to navigate through complex environments efficiently. 
+It allows vehicles or robots to find the shortest, 
+obstacle-free route from their starting point to their destination.
+This route, often represented as a series of states comprising position and orientation or as waypoints, 
+guides the vehicle or robot towards its goal effectively. 
+One of the famous examples is the Piano Movers Problem.
+Path planning involves determining the optimal route or path for transporting a 
+piano from one location to another while navigating through various obstacles and constraints. 
+In Figure \ref{fig:piano}, the illustration of the Piano Movers Problem is depicted.\\[12pt]
+%------
+Traditional path planning methods, such as Rapidly-exploring Random Trees (RRT)~\cite{lavalle1998rapidly} 
+and its enhanced variant RRT*~\cite{karaman2011rrtstar}, 
+have been widely used due to their effectiveness in handling high-dimensional configuration spaces.  
+The configuration space, often denoted as $\mathcal{C}$-space, is a fundamental concept in robotics and motion planning. 
+It represents all possible configurations or states that a robot or system can occupy within its environment.\\[12pt]
+%------
+To enhance clarity within the text, it is crucial to briefly explain how RRT works: 
+The algorithm incrementally builds a tree structure from an initial configuration towards randomly sampled configurations in the configuration space.
+At each iteration, a new configuration, known as a random sample, is generated within the configuration space. 
+The algorithm then extends the existing tree towards this random sample by selecting the nearest node (configuration) in the tree to the sample and moving towards it in small increments.
+The key idea behind RRT is to rapidly explore the configuration space by growing the tree towards unexplored regions. 
+This exploration strategy ensures that the algorithm efficiently covers the space while avoiding costly computation.
+RRT continues this process iteratively, gradually expanding the tree towards the goal configuration. 
+As the algorithm progresses, the tree becomes denser in regions that are closer to the goal, eventually converging to a path from the start to the goal configuration.
+In Figure \ref{fig:RRTsimple}, simple examples of how RRT looks can be seen.\\[12pt]
+%------
+However, with the increasing complexity of real-world environments, 
+such as systems with many obstacles or narrow passages, as illustrated in Figure \ref{fig:narrowpassage},
+there is a growing need to enhance these methods to improve their efficiency and
+adaptability.
+Efficiency in path planning denotes the capability of the algorithms to generate feasible paths within a reasonable timeframe, 
+while adaptability refers to its ability to dynamically adjust strategies in response to changes in environmental conditions or task requirements.
+%---------------------------------------------------------------------------------
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.5\linewidth]{figChap1/The-piano-movers-problem-EET.png}
+%   \caption{The Piano Movers Problem \cite{rickert2014piano}.} 
+%   \label{fig:piano}
+% \end{figure}
+ 
+% \begin{figure} 
+%   \centering 
+%   \begin{minipage}[t]{1\textwidth}
+%       \centering
+%       \includegraphics[width=0.7\textwidth]{figChap1/RRTsimple2.pdf} 
+%   \end{minipage} 
+%   \caption{Rapidly-exploring Random Trees examples.} 
+%   \label{fig:RRTsimple}
+% \end{figure}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+      \includegraphics[width=\textwidth]{figChap1/The-piano-movers-problem-EET.png}
+      \caption{The Piano Movers Problem. Image courtesy of~\cite{rickert2014piano}.}
+      \label{fig:piano}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.5\textwidth}
+      \includegraphics[width=\textwidth]{figChap1/RRTsimple2.pdf}
+      \caption{Rapidly-exploring Random Trees examples.}
+      \label{fig:RRTsimple}
+  \end{subfigure} 
+  \caption{Figure \ref{fig:piano} illustrates an example of a path planning problem, 
+  along with a representation of the Rapidly-exploring Random Tree (RRT) algorithm in Figure \ref{fig:RRTsimple}.}%\label{fig:animals}
+\end{figure}
+
+
+\begin{figure} 
+  \centering 
+  \begin{minipage}[t]{0.9\textwidth}
+      \centering
+      \includegraphics[width=0.9\textwidth]{figChap1/narrow_passage.pdf} 
+  \end{minipage} 
+  \caption{Illustration of the narrow passage where the aim is to maneuver a purple object through the limited space between black obstacles to reach the red goal configuration.} 
+  \label{fig:narrowpassage}
+\end{figure}
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Machine Learning}
+
+Understanding the concept of machine learning is pivotal for comprehending 
+its utilization within this thesis. 
+Therefore, this section will offer a brief explanation of machine learning without 
+delving into mathematical definitions and complex explanations.
+Main idea and inspiration for this section is drawn from~\cite{Goodfellow-et-al-2016DeepLearning}.\\[12pt]
+%------
+Machine learning is a field of artificial intelligence that focuses on developing algorithms 
+capable of learning patterns and making predictions from data without being explicitly programmed. 
+It enables computers to learn from past experiences and improve their performance over time.\\[12pt]
+%------
+Most machine learning algorithms can be categorized into supervised learning and unsupervised learning. 
+In supervised learning, the algorithm receives guidance from an instructor or teacher, 
+who provides the target output for each input example. 
+Conversely, unsupervised learning involves no external guidance, 
+requiring the algorithm to derive insights from the data independently.\\[12pt]
+%------
+Supervised learning tasks typically include classification, regression, 
+and density estimation or probability mass function estimation. 
+In classification tasks, the algorithm classifies input data into predefined categories or classes. 
+For instance, object recognition can be considered a classification task, 
+where the computer program identifies objects in images and assigns them to specific categories.
+In Figure \ref{fig:ObjectDetection}, an example of object recognition is depicted.\\[12pt]
+%------
+In regression tasks, the algorithm predicts a numerical value based on input data. 
+For example, predicting house prices based on features like location, 
+size, and amenities is a regression task.\\[12pt]
+%------
+Density estimation involves learning a function $p_{\text{model}}: \mathbb{R}^n \rightarrow \mathbb{R}$, 
+where $p_{\text{model}}(x)$ represents a probability density function for continuous data or a probability mass function for discrete data. 
+The algorithm learns the underlying data structure, 
+identifying regions where examples are densely clustered and areas where they are less likely to occur. 
+This understanding is crucial for effectively modeling the data distribution.\\[12pt]
+%------
+This thesis aims to improve path planning algorithms by using machine learning, 
+including classification and density estimation techniques.
+
+%---------------------------------------------------------------------------------
+\begin{figure}
+  \centering
+  \includegraphics[width=1\linewidth]{figChap1/Object_detection.pdf}
+  \caption{An example of an object classification problem, 
+  where the program classifies objects in the photo into their respective classes.
+  Image courtesy of~\cite{ObjectDetection}.}
+  \label{fig:ObjectDetection}
+\end{figure} 
+ 
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Thesis structure}
+
+% The primary objective of this thesis is to develop and implement machine learning-based approaches to improve the performance of sampling-based path planning methods. 
+% By integrating machine learning methods into the path planning process, 
+% we seek to enhance the ability of the algorithms to adapt to varying environmental conditions and goals.
+% \\\\
+Chapter \ref{chap:Introduction} introduces the concepts of path planning and machine learning. 
+It outlines the central objectives of this thesis, focusing on the integration of machine learning techniques to enhance path planning algorithms. 
+Additionally, Chapter \ref{chap:Introduction} provides a concise overview of the thesis structure.\\[12pt]
+%------
+Chapter \ref{chap:Task formulation} will delve deeper into the path planning problem, 
+offering an understanding of essential terms and notations. 
+Building on this foundation, the Chapter \ref{chap:Task formulation} will formulate the challenge of this thesis.\\[12pt]
+%------
+In Chapter \ref{chap:RelatedWorks}, familiarity with sampling-based methods, including RRT and RRT*, will be gained.\\[12pt]
+%------
+Chapter \ref{chap:Improving RRT*} will be pivotal, 
+as it will explain the machine learning methods employed in this study. 
+Additionally, it will detail the integration of these methods into the sampling-based algorithm RRT* in both 2D $\mathcal{C}$-space and its extension to 3D $\mathcal{C}$-space.\\[12pt]
+%------
+The effectiveness of the developed methods will be evaluated in Chapter \ref{chap:Result} through comparisons with existing algorithms 
+using the Open Motion Planning Library (OMPL)~\cite{Ioan2012ompl}.\\[12pt]
+%------
+In Chapter \ref{chap:Conclusion}, the thesis will be concluded by summarizing all results and findings.
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\chapter{Task formulation}   
+\label{chap:Task formulation}
+
+This chapter lays the foundation for better understanding the research objectives and motivations.
+Firstly, it will explain the path planning problem and provide a brief introduction to sampling-based path planning, 
+including an overview of its definition, advantages, and disadvantages. 
+Based on this, the main objective of the thesis is formulated. 
+Subsequently, key terms related to path planning are elucidated to ensure clarity and comprehension. 
+Finally, the chapter concludes by formulating the primary challenge addressed in the thesis.
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Path planning problem}
+% \textbf{u need to understand differnce btw path planning and motion planning. 
+% Here also u can add an example of piano mevers problem with better explanation.
+% In itroduction part u just briefly metioned about that. Here u can write more.
+% Reader will better understand text if u provide a simple and good explained exaple :)
+% use definition of motion planning from \cite{Moll2015BenchmarkingMotionPlanningAlgos}}
+% \\\\
+The path planning problem, also known as motion planning or the navigation problem, 
+is a fundamental challenge in robotics. 
+It involves finding a path that connects a start configuration to a goal configuration while 
+satisfying specified constraints, such as avoiding collisions.\\[12pt]
+%------
+The path planning problem and relevant terms will be explained using the Piano Movers Problem.
+An illustration of this problem can be seen in Figure \ref{fig:piano}. 
+In this scenario, the task is to move a piano from one room to another trying 
+not to collide with any objects.\\[12pt]
+%------
+The piano has six degrees of freedom (DoF), 
+meaning its position in space can be described using six coordinates: three for position ($x, y, z$) 
+and three for rotation ($yaw, roll, pitch$). 
+The position most often represents the coordinates of its center of mass or as a reference point of the robot.
+It can be stated that there a \textbf{6D $\mathcal{C}$-space} because to describe the configuration of the piano, we need six coordinates.
+These coordinates define configurations of the piano.\\[12pt]
+%------
+Our objective is to find a sequence of configurations that safely moves the piano 
+from its starting position to its destination without colliding with any objects in the room.
+Objects like tables, closets, walls represent \textbf{obstacles}, and the door represents \textbf{narrow passage}. 
+These obstacles must be avoided. 
+To avoid these obstacles, a sequence of configurations is sought. 
+This sequence is referred to as a \textbf{path}. 
+The problem of path planning can be stated as finding a collision-free path 
+from the initial point to the goal point.
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Sampling-based path planning}
+% \textbf{Put here sentences form Research objectives and in research objectives left only advanteges and disadvantages 
+% of sampling based planers. according on this u will formulate the main objective of research :)}
+% \\\\ 
+Sampling-based path planning~\cite{Lavalle2006PlanningAlgos} is a computational approach utilized in robotics to generate feasible paths for autonomous agents navigating through complex environments. 
+One of the sampling-based algorithms is the Rapidly-exploring Random Tree (RRT)~\cite{lavalle1998rapidly}.\\[12pt]
+%------
+Unlike traditional grid-based methods such as A*~\cite{Hart1968Astar}, 
+which discretize the environment into a grid and search for paths within this grid, as illustrated in Figure \ref{fig:Astargrid}, 
+sampling-based methods operate by randomly sampling points in the configuration space.
+In the case of the Piano Movers Problem, a random sample represents random values for ($x, y, z, yaw, roll, pitch$).
+Subsequently, these sampled points are used to construct a graph.
+This probabilistic approach allows for efficient exploration of high-dimensional spaces and is particularly well-suited for environments with complex obstacles.\\[12pt]
+%------
+The main goal of sampling-based algorithms in path planning is to efficiently explore the configuration space to find feasible paths from a start configuration to a goal configuration, 
+while avoiding obstacles.
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Research Objectives} 
+Sampling-based algorithms offer several advantages. 
+They are flexible and can handle high-dimensional configuration spaces, 
+making them suitable for complex environments with obstacles and constraints. 
+Additionally, they are computationally efficient, 
+focusing on sampling feasible configurations rather than exhaustive exploration.\\[12pt]
+%------
+However, sampling-based methods also have their disadvantages. 
+Random sampling can create biases in certain areas of the configuration space, 
+resulting in less-than-optimal paths or missing potential solutions.
+In highly cluttered environments or spaces with narrow passages, 
+these algorithms may struggle to adequately explore the configuration space, 
+resulting in incomplete coverage and suboptimal path generation. 
+It can be seen in Figure \ref{fig:narrowpassage2}.
+The performance of sampling-based algorithms can be sensitive to various parameters, 
+such as sampling density and collision checking threshold. 
+Additionally, while they offer computational efficiency, 
+they may not always generate the highest quality paths compared to other methods, 
+especially in scenarios where path smoothness or optimality is crucial.\\[12pt]
+%------
+The research objectives of this thesis will concentrate on enhancing 
+sampling-based algorithms by addressing their limitations in scenarios characterized by 
+numerous obstacles or narrow passages. 
+The primary goal is to enhance sampling-based algorithms through the integration of machine learning techniques to 
+more effectively generate points. 
+The proposed approach will improve random sampling by selectively sampling points 
+only from obstacle-free spaces, 
+thereby enhancing the efficiency and adaptability of the algorithms.
+%---------------------------------------------------------------------------------
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.4\linewidth]{figChap2/A-star-on-grid-map.png}
+%   \caption{A-star algorithm realizes path-finding on grid map.
+%   Image courtesy of \cite{Xie2022Astarfoto}.}
+%   \label{fig:Astargrid}
+% \end{figure} 
+
+% \begin{figure} 
+%   \centering 
+%   \begin{minipage}[t]{1\textwidth}
+%       \centering
+%       \includegraphics[width=0.9\textwidth]{figChap1/narrow_passage.pdf} 
+%   \end{minipage} 
+%   \caption{Illustration of the narrow passage, 
+%   where the blue lines represent RRT* exploration in configuration space.
+%   It can be seen that numerous samples were generated on the left side, 
+%   resulting in incomplete coverage of the space. 
+%   In summary, a large number of samples were generated in inappropriate locations.} 
+%   \label{fig:narrowpassage2}
+% \end{figure} 
+
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.36\textwidth}
+      \includegraphics[width=\textwidth]{figChap2/A-star-on-grid-map.png}
+      \caption{A* algorithm.
+        Image courtesy of~\cite{Xie2022Astarfoto}.}
+      \label{fig:Astargrid}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.61\textwidth}
+      \includegraphics[width=\textwidth]{figChap1/narrow_passage.pdf}
+      \caption{Narrow passage in 3D $\mathcal{C}$-space.}
+      \label{fig:narrowpassage2}
+  \end{subfigure} 
+  \caption{llustration of the A-satr algorithm realizes path-finding on grid map in Figure \ref{fig:Astargrid} and 
+  illustration of the narrow passage in Figure \ref{fig:narrowpassage2}, 
+  where the blue lines represent RRT* exploration in configuration space.
+  It can be seen in Figure \ref{fig:narrowpassage2} that numerous samples were generated on the left side, 
+  resulting in incomplete coverage of the space. 
+  In summary, a large number of samples were generated in inappropriate locations.} 
+\end{figure}
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Components of the Path Planning Problem}
+
+Let us begin by defining the configuration space, denoted as $\mathcal{C}$. 
+It serves as a critical component of motion planning, representing all possible states of system. 
+This space is a subset of $\mathbb{R}^d$, where $d \geq 2$ and $d \in \mathbb{N}$. 
+Within $\mathcal{C}$, there are three primary regions:
+
+\begin{itemize}
+    \item \textbf{Obstacle Space ($\mathcal{C}_{\text{obs}}$):} This region encompasses areas occupied by obstacles, constraining the motion of our system.
+    \item \textbf{Obstacle-Free Space ($\mathcal{C}_{\text{free}}$):} Defined as the complement of $\mathcal{C}_{\text{obs}}$ within $\mathcal{C}$, this space allows unrestricted movement for our system.
+    \item \textbf{Goal Region ($\mathcal{C}_{\text{goal}}$):} Representing the destination our system aims to reach. 
+    This region must be within the free space $\mathcal{C}_{\text{goal}} \subseteq \mathcal{C}_{\text{free}}$, 
+    as the system cannot reach regions outside of the free space. 
+    Within this region, 
+    there must exist a goal configuration, 
+    denoted as $q_{\text{goal}}\in \mathcal{C}_{\text{goal}}$, 
+    which represents the optimal configuration.
+    However, it is notable that in certain cases, 
+    the goal region may be represented just by $q_{\text{goal}}$.
+\end{itemize} 
+Path planning aim to find a feasible path from the initial configuration $q_{\text{start}} \in \mathcal{C}_{\text{free}}$ 
+to a goal configuration $q_{\text{goal}} \in \mathcal{C}_{\text{goal}}$, 
+ensuring avoidance of regions occupied by obstacles ($\mathcal{C}_{\text{obs}}$).\\[12pt]
+%------
+To represent the connectivity between configurations within $\mathcal{C}_{\text{free}}$, a graph $G = (V, E)$ is utilized. 
+Here, $V$ denotes the finite set of vertices, each corresponding to a configuration point, 
+and $E \subseteq V \times V$ denotes the set of edges, signifying connections between configurations.\\[12pt]
+%------
+In Figure \ref{fig:config_space}, a simple 2D $\mathcal{C}$-space is depicted. 
+The start configuration, denoted by $q_{\text{start}}$, is marked in green, 
+while the goal configuration, denoted by $q_{\text{goal}}$, is marked in red. 
+The black circle at the center of the space represents an obstacle. 
+The blue trajectory, comprising vertices and edges, 
+illustrates the path through the configuration space. 
+These vertices, represented as blue circles, illustrates configurations or nodes along the path.
+
+%---------------------------------------------------------------------------------
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\linewidth]{figChap2/ConfigSpace.eps}
+  \caption{2D $\mathcal{C}$-space.}
+  \label{fig:config_space}
+\end{figure} 
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{The Challenge}
+
+% The primary focus lies in improving the RRT* algorithm, 
+% which employs random sampling points to construct a graph representing feasible paths.  
+The challenge of this thesis is to reduce the number of 
+sampling points, or iterations, 
+required to converge on the optimal path. 
+This will be achieved by learning 
+the configuration space and generating points within $\mathcal{C}_{\text{free}}$ 
+and enhance the overall efficiency of the motion planning algorithm. 
+Further information is provided in Chapter \ref{chap:Improving RRT*}.
+ 
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\chapter{Related works} 
+\label{chap:RelatedWorks}
+% \textbf{Add here RRT, RRT star, PRM, RRT sharp, Informed RRT star LazyRRT, TRRT. 
+% Focus on algorithms where u find good explanations of them. Also bcz we are talking about ML and 
+% u have this as a bibliography source, add information about Motion Planning Networks \cite{Ahmed2019MotionPlanningNetworks}
+% Delete chapters about comparison RRT and RRT*, add this information to RRT* chapter and talk about his advantages
+% according to this show your examples in 2D and 6D Configguration Space. U can not talk about 3D Configuration Space, 
+% because u will show it in Chapter 4, where u will show enchance version of RRT star in 3D conf space. add new fotos of 6D cnof space 
+% in pdf format. You need also to describe how we found a path in RRT (explain Retrace function, just some sentences
+% that every point has only one parent blah blah blah and when we found goal we just strat finding parent of parent of parent etc..
+% maybe add some figure for this. but honestly this chapter has too many figures, try to left only relevant or maybe generate figure
+% where will be two features instead of one in two figures. Try to fully explain main idea for reader who nows nothing.
+% Explain RRT star, this is a hard algorithm which one u implement, u can )}
+% \\\\
+In this chapter, an overview of various path planning methods will be presented. 
+This exploration is crucial for gaining a deeper understanding of how 
+sampling algorithms function and how they can be enhanced. 
+Building upon this understanding, 
+the main idea of improvement was implemented, 
+and the foundation for this implementation was laid upon the knowledge of 
+sampling-based algorithms. 
+These methods will be described and analyzed to provide 
+insights into their effectiveness and limitations.
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Rapidly-exploring Random Tree (RRT)} 
+The Rapidly-exploring Random Tree (RRT)~\cite{lavalle1998rapidly} algorithm 
+is a versatile and widely used sampling-based motion planning algorithm in robotics. 
+A pseudocode is shown in Algorithm \hyperref[alg:rrt]{\ref*{alg:rrt}}.
+Its appeal lies in its efficiency in exploring high-dimensional configuration spaces, 
+making it suitable for various robotic applications. 
+RRT excels in systems with non-holonomic constraints, 
+which limit a robot's movement beyond just its position and orientation. 
+These constraints often involve restrictions on how the robot can change its velocity or direction. 
+In the Fig. \hyperref[fig:RRTgrowing]{\ref*{fig:RRTgrowing}}, 
+the progressive expansion in 2D $\mathcal{C}$-space of the RRT can be seen.
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering
+  \begin{subfigure}[b]{0.3\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/2RRTexpansion100.eps}
+      \caption{100 iterations}
+      % \label{fig:gull}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.3\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/2RRTexpansion1000.eps}
+      \caption{1000 iterations}
+      % \label{fig:tiger}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+  %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.3\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/2RRTexpansion2000.eps}
+      \caption{2000 iterations}
+      % \label{fig:mouse}
+  \end{subfigure}
+  \caption{Example of RRT expansion in 2D $\mathcal{C}$-space.}
+  \label{fig:RRTgrowing}
+\end{figure} 
+%---------------------------------------------------------------------------------
+\\
+Simplicity and effectiveness of the RRT algorithm have made it a popular choice among researchers and practitioners in the field.
+This highlights the importance of explainig its operational phases.\\[12pt]
+%------
+In the initialization phase, 
+the algorithm begins by establishing a tree structure with only the initial state, 
+which represents the root node. 
+This initial state represents the starting configuration of the robot or system.\\[12pt]
+%------
+During the expansion phase, 
+the algorithm iteratively executes the following steps until a predetermined number of iterations 
+or the goal state is reached: generating a random state within the configuration space, 
+identifying the nearest node in the existing tree to the randomly generated state, 
+extending the tree towards the random state by incrementally advancing in its direction 
+and creating a new node, 
+and subsequently verifying whether the new node collides with any obstacles. 
+If no collision occurs, 
+the new node is added to the tree, thereby expanding the coverage of the configuration space.\\[12pt]
+%------
+After completion of each iteration, 
+the algorithm conducts goal checking to determine if the goal state has been reached. 
+Upon reaching the goal state, 
+the algorithm terminates, 
+and the path to the goal is extracted from the tree structure.\\[12pt]
+%------
+To extract a path to the goal, a hierarchical structure within the tree must be established. 
+For every configuration added into the tree, 
+a parent configuration is assigned, typically being the nearest configuration in the tree. 
+This parent configuration acts as the reference point from which 
+the new configuration is generated or ``steered'' towards. 
+Consequently, each configuration has only one parent but can have many children, 
+thereby forming a hierarchical relationship within the tree.
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.8\linewidth]{figChap3/ParentChild4.pdf}
+  \caption{An illustration of a hierarchical structure, 
+  where black arrows indicate the parent-child relationships, 
+  with the origin of the arrow representing a parent node and 
+  its destination denoting a child node. 
+  Additionally, red arrows illustrate a retracing process, 
+  indicating the movement from the goal configuration back to 
+  the start configuration by moving through parent nodes.}
+  \label{fig:ParentChild}
+\end{figure} 
+%---------------------------------------------------------------------------------
+\\
+Upon reaching the goal configuration, 
+the path to the start configuration is retraced by traversing from the goal configuration 
+to its parent and then recursively traversing through each parent until 
+the start configuration is reached. 
+In Figure \ref{fig:ParentChild}, an illustration of this process is presented.
+This process capitalizes on the parent-child relationships established during 
+the tree construction phase, 
+enabling systematic navigation from the goal configuration back to the start configuration, 
+and thereby facilitating path extraction.\\[12pt]
+%------
+The RRT algorithm is known for its relatively straightforward implementation, 
+yet it effectively explores the configuration space. 
+This efficiency refers to its ability to rapidly expand the search space, 
+thereby quickly accessing various regions of the configuration space. 
+However, despite these advantages, RRTs are not without their limitations. 
+One notable drawback is their tendency towards suboptimality. 
+Unlike certain other algorithms, basic RRTs do not guarantee the discovery of the optimal path to the goal. 
+Consequently, the path found may not be the shortest or most efficient route. 
+Furthermore, RRTs often necessitate frequent collision checks, 
+particularly in environments characterized by clutter, 
+leading to a notable increase in computational time.\\[12pt]
+%---------------------------------------------------------------------------------
+\begin{algorithm}[H]
+  \caption{Rapidly-exploring Random Tree (RRT)}
+  \label{alg:rrt} 
+  \KwData{Start configuration $q_{\text{start}}$, Number of iterations $K$}
+  \KwResult{RRT tree $T$}
+  \vspace{0.1cm}
+  \hrule
+  \vspace{0.2cm}
+  Initialize tree $T$ with root $q_{\text{start}}$\;
+  \For{$k \gets 1$ \KwTo $K$}{
+    Generate random configuration $q_{\text{rand}} \in \mathcal{C}$\;
+    Find nearest node $q_{\text{near}}$ in $T$ to $q_{\text{rand}}$\;
+    Steer towards $q_{\text{rand}}$ to get new node $q_{\text{new}}$\;
+    
+    \If{Obstacle-free($q_{\text{near}}$, $q_{\text{new}}$)}{
+      Add $q_{\text{new}}$ to $T$ with an edge from $q_{\text{near}}$\;
+      \If{GoalFound($q_{\text{new}}$)}{
+      \textbf{break}\;
+      }
+    }
+  }
+  
+  \Return $T$\;
+\end{algorithm}
+ 
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Rapidly-exploring Random Tree star (RRT*)}
+ 
+The Rapidly-exploring Random Tree Star (RRT*)~\cite{karaman2011rrtstar} also known as 
+Optimal RRT is an extension of the original RRT algorithm 
+designed to enhance the efficiency and optimality of path planning in robotics.
+A pseudocode is shown in Algorithm \hyperref[alg:rrt_star]{\ref*{alg:rrt_star}}. 
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering
+  \begin{subfigure}[b]{0.3\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/RRTstar_expansion100.eps}
+      \caption{100 iterations}
+      % \label{fig:gull}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.3\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/RRTstar_expansion1000.eps}
+      \caption{1000 iterations}
+      % \label{fig:tiger}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+  %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.302\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/RRTstar_expansion2000.eps}
+      \caption{2000 iterations}
+      % \label{fig:mouse}
+  \end{subfigure}
+  \caption{Example of RRT* expansion in 2D $\mathcal{C}$-space.}
+  \label{fig:RRTstargrowing}
+\end{figure}
+%---------------------------------------------------------------------------------
+RRT* incorporates a rewiring step that allows the algorithm to dynamically adjust the tree structure, 
+thereby promoting the discovery of more optimal paths.
+In the Fig. \ref{fig:RRTstargrowing},
+the progressive expansion in 2D $\mathcal{C}$-space of the RRT* can be seen.\\[12pt]
+%------
+Similar to RRT, RRT* begins with an initialization phase and continues with an expansion phase.
+However, the key enhancement in RRT* lies in the \textbf{Rewiring phase}, 
+aimed at improving the optimality of paths discovered.
+This phase can be divided into three parts: Finding Nearest Nodes, 
+Choosing Parent Node and Rewiring \ref{fig:RRTstar_explanation}. 
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/RRTstarNearNodes40pt.pdf}
+      \caption{Finding Nearest Nodes.}
+      \label{fig:nearest_nodes}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/RRTstarChooseParent40pt.pdf}
+      \caption{Choosing Parent Node.}
+      \label{fig:choose_parent}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+  %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/RRTstarCostEvaluation40pt.pdf}
+      \caption{Rewiring.}
+      \label{fig:rewiring}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{figChap3/RRTstarFinalLook40pt.pdf}
+    \caption{Result.}
+    \label{fig:result}
+  \end{subfigure}
+  \caption{Illustration of the \textbf{Rewiring phase}: 
+  The green circle denotes the initial configuration (\( q_{\textit{start}} \)), 
+  while the yellow circle represents the new node to be added (\( q_{\textit{new}} \)), 
+  along with its transparent yellow circular area with certain radius (\( Q_{\textit{near}} \)). 
+  Figure \ref{fig:nearest_nodes} displays the nodes within this circular area. 
+  A parent node for the new node, identified by the red circle (\( q_{\textit{min}} \)), 
+  can be seen in Figure \ref{fig:choose_parent}. 
+  Figure \ref{fig:rewiring} exemplifies the rewiring step, 
+  with numerical values indicating the lengths of respective paths from the new node to nearby nodes. 
+  Finally, Figure \ref{fig:result} shows the final appearance of the rewired tree.}
+  \label{fig:RRTstar_explanation}
+\end{figure} 
+%---------------------------------------------------------------------------------
+\\
+Finding Nearest Nodes step involves identifying nearby nodes 
+within a certain radius from the new node. 
+After identifying nearby nodes, the algorithm proceeds to the Choosing Parent Node step. 
+Here, it calculates cost for each node 
+relative to the new node and selects the one with the lowest cost. 
+This cost evaluation considers both the path from the root to the current node and 
+the path from the current node to the nearby node. 
+It typically reflects the path length or other user-defined metrics. 
+This step is crucial because, 
+unlike in RRT where the algorithm simply identifies the nearest node, 
+the goal is to find the most optimal node,
+which may not always be the nearest one. 
+After adding a new node to our hierarchical tree structure, 
+the Rewiring step initiates. 
+Similar to the Choosing Parent Node step, 
+the algorithm evaluates the costs of all possible paths from our new node to all nearest nodes. 
+If a new path reduces the cost of the node, the algorithm removes the old path to the node
+and adds the new path.
+During this process, the rewired node gets a new parent, 
+and the old parent, from which the old path originated, may no longer have a child.\\[12pt]
+%------
+Through these iterative phases, RRT* continuously improves the tree structure, 
+resulting in progressively optimal and efficient paths. 
+By strategically rewiring the tree, 
+RRT* effectively converges towards an optimal solution while 
+efficiently exploring the configuration space.\\[12pt]
+%------
+The RRT* algorithm offers improved optimality over the original RRT, 
+making it particularly useful when precision and efficiency are crucial 
+considerations in robotic path planning.
+As illustrated in Figure \ref{fig:RRTvsRRTstar}, 
+RRT* typically generates more direct paths with fewer unnecessary zigzags compared to RRT, 
+thereby enhancing path quality.
+However, RRT* is more computationally complex, especially compared to RRT, 
+which can lead to increased time consumption.\\[12pt]
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/2RRTexpansion2000.eps}
+      \caption{RRT.}
+      \label{fig:rrt2k}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/RRTstar_expansion2000.eps}
+      \caption{RRT*.}
+      \label{fig:rrtstar2k}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/RRT_maze7748i119w.pdf}
+      \caption{RRT.}
+      \label{fig:rrtMaze}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.   
+    %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/RRTstar_maze_7060i_35w.pdf}
+      \caption{RRT*.}
+      \label{fig:rrtstarMaze}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=1.1\textwidth]{figChap3/6DRRT_new.pdf}
+      \caption{RRT.}
+      \label{fig:rrt6D}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=1.1\textwidth]{figChap3/6DRRTstar3_new.pdf}
+      \caption{RRT*.}
+      \label{fig:rrtstar6D}
+  \end{subfigure} 
+  \caption{Comparison in 2D $\mathcal{C}$-space without obstacles in \ref{fig:rrt2k} 
+  and \ref{fig:rrtstar2k} with obstacles in \ref{fig:rrtMaze} and \ref{fig:rrtstarMaze}.
+  Comparison in 6D $\mathcal{C}$-space with an object represented as a tree in \ref{fig:rrt6D} and \ref{fig:rrtstar6D}.}
+  \label{fig:RRTvsRRTstar}
+\end{figure}
+%---------------------------------------------------------------------------------
+\begin{algorithm}[H]
+  \caption{Rapidly-exploring Random Tree Star (RRT*)}
+  \label{alg:rrt_star}
+  \SetAlgoNlRelativeSize{0}
+  
+  \KwData{Start configuration $q_{\text{start}}$, Number of iterations $K$, Radius $r$}
+  \KwResult{RRT* tree $T$}
+  \vspace{0.1cm}
+  \hrule
+  \vspace{0.2cm}
+  $T \leftarrow$ InitializeTree($q_{\text{start}}$)\;
+  
+  \For{$k \leftarrow 1$ \KwTo $K$}{
+    $q_{\text{rand}} \leftarrow$ RandomConfiguration()\;
+    $q_{\text{near}} \leftarrow$ NearestNode($T, q_{\text{rand}}$)\;
+    $q_{\text{new}} \leftarrow$ Steer($q_{\text{near}}, q_{\text{rand}}$)\;
+    
+    \If{ObstacleFree($q_{\text{near}}, q_{\text{new}}$)}{
+      $Q_{\text{near}} \leftarrow$ NearNodes($T, q_{\text{new}}, r$)\;
+      $q_{\text{min}} \leftarrow$ ChooseParent($Q_{\text{near}}, q_{\text{new}}$)\;
+      $T \leftarrow$ AddNode($q_{\text{new}}, q_{\text{min}}$)\;
+      $T \leftarrow$ Rewire($T, Q_{\text{near}}, q_{\text{new}}$)\;
+    }
+  }
+
+  \Return $T$\; 
+\end{algorithm} 
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\clearpage
+\section{Probabilistic RoadMaps (PRM)}
+The Probabilistic Roadmap (PRM)~\cite{Kavraki1996PRM} algorithm is a 
+popular motion planning technique used in robotics to find feasible paths 
+for robots operating in complex, high-dimensional spaces. 
+Unlike traditional grid-based approaches, 
+PRM operates by constructing a roadmap of the configuration space, 
+which is then used to efficiently search for valid paths.
+The roadmap generated by PRM can be likened to a street network in a city. 
+Just as roads connect various locations in a city, 
+edges in the PRM roadmap connect different configurations in the configuration space. 
+This analogy helps to conceptualize how the PRM algorithm constructs a network of 
+feasible paths for the robot to navigate through the environment.\\[12pt]
+%------
+The PRM algorithm consists of the following main steps: 
+Roadmap Construction, Neighborhood Search, Edge Connection, and Path Planning.
+A pseudocode of construction step is shown in Algorithm \ref{alg:prm_constraction}.
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/PRMmaze40pt.pdf}
+      \caption{2D $\mathcal{C}$-space.}
+      \label{fig:prm_maze}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/PRMsamplePoints40pt.pdf}
+      \caption{Roadmap Construction.}
+      \label{fig:random_points}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+  %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/PRMconnecting40pt.pdf}
+      \caption{Edge Conecting.}
+      \label{fig:edges}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{figChap3/PRMpathFinding40pt.pdf}
+    \caption{Path Planning.}
+    \label{fig:prm_path_planning}
+  \end{subfigure}
+  \caption{
+    In the 2D $\mathcal{C}$-space depicted in Figure \ref{fig:prm_maze}, 
+    obstacles are represented in black. 
+    The initial configuration ($q_{\text{start}}$) is indicated by a green circle, 
+    while the goal configuration ($q_{\text{goal}}$) is marked with a red circle.
+    Additionally, randomly sampled valid configurations appear as blue circles \ref{fig:random_points}. 
+    The connections between these configurations can be seen in Figure \ref{fig:edges}.
+    The path discovered between the start and goal configurations is highlighted in red \ref{fig:prm_path_planning}.}
+  \label{fig:PRM_explanation}
+\end{figure} 
+%---------------------------------------------------------------------------------
+\\
+Roadmap Construction involves randomly sampling configurations from the configuration space and 
+checking each sampled configuration for collision with obstacles. 
+Valid configurations are added to the roadmap.
+In the Neighborhood Search step, for each sampled configuration, 
+a set of neighboring configurations is identified. 
+These neighbors serve as potential candidates for connecting edges in the roadmap.
+In the Edge Connection step, 
+pairs of neighboring configurations are evaluated to determine 
+if an edge should be added between them in the roadmap. 
+This evaluation typically involves checking for collision-free paths between the configurations.
+Finally, in the Path Planning step, once the roadmap is constructed, 
+path planning becomes a graph search problem. 
+Algorithm such as A*~\cite{Hart1968Astar} is commonly used to find the shortest path 
+between the start and goal configurations in the roadmap.
+These steps Can be seen in Figure \ref{fig:PRM_explanation}.
+\\[12pt]
+PRM can handle complex, high-dimensional configuration spaces and 
+environments with obstacles of varying shapes and sizes.
+Its straightforward implementation ensures efficient and fast solution finding.
+However, the quality of the roadmap depends heavily on the sampling strategy and 
+collision checking accuracy. 
+Poorly constructed roadmaps may lead to suboptimal or infeasible paths.
+Moreover, PRM encounters challenges when navigating through narrow passages, 
+as the likelihood of sampling configurations capable of traversing tight gaps diminishes 
+with decreasing gap.\\[12pt]
+%------
+Despite its drawbacks, 
+PRM remains a widely used and effective approach for motion planning in robotics, 
+particularly in scenarios with complex environments and obstacles.\\
+%---------------------------------------------------------------------------------
+
+\begin{algorithm}[H]
+  \caption{Probabilistic Roadmap (PRM) construction step}
+  \label{alg:prm_constraction} 
+  \KwData{Start configuration $q_{\text{start}}$, Number of iterations $K$}
+  \KwResult{PRM graph $G$}
+  \vspace{0.1cm}
+  \hrule
+  \vspace{0.2cm}
+  Initialize graph $G$ with vertices $V$ and edges $E$\;
+  \For{$i \gets 1$ \KwTo $K$}{
+    $q_{\text{rand}} \leftarrow$ a randomly choosen free configuration\;
+    $Q_{\text{near}} \leftarrow$ a set of candidate neighbors of $q_{\text{rand}}$ chosen from $V$\;
+    $V \gets V \cup \{q_{\text{rand}}\}$\;
+    \For{$q \in Q_{\text{near}}$}{
+      \If{not $\text{SameConnectedComponent}(q_{\text{rand}}, q)$}{
+        $E \gets E \cup \{(q_{\text{rand}}, q)\}$\;
+        \textbf{update} connected components in $G$\;
+      }
+    }
+  }
+  \Return $G$\;
+\end{algorithm}
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Motion Planning Networks (MPNet)}
+Motion Planning Networks (MPNet)~\cite{Ahmed2019MotionPlanningNetworks} is an 
+innovative learning-based neural planner.  
+MPNet  leverage neural networks to learn optimal path planning strategies, 
+making them highly efficient in navigating complex environments.  
+One of the primary reasons for using MPNets is their ability to 
+significantly reduce computation time compared to traditional methods like RRT*. 
+This speed advantage makes MPNets particularly suitable for real-time applications where 
+rapid decision-making is essential.
+\\[12pt]
+According to the documentation \cite{Ahmed2019MotionPlanningNetworks}, 
+MPNet comprises two key components: the Planner Network (Pnet) and the Encoder Network (Enet). 
+Enet processes information about the surrounding environment of the robot, 
+including a raw point cloud. 
+A raw point cloud refers to a collection of data points in a 3D space that 
+represents the surface of an object or scene.
+The output of Enet is a latent space embedding of this raw point cloud information. 
+Pnet utilizes the encoding of the environment, 
+along with information about the current state and goal state of the robot, 
+to generate samples for path or tree generation.
+\\[12pt]
+Let the environment surrounding the robot, 
+referred to as the workspace, 
+be denoted as \(\mathcal{X} \subseteq \mathbb{R}^m\), where \(m\) is the workspace dimension. 
+This workspace encompasses both obstacle regions \(\mathcal{X}_{obs}\) and 
+obstacle-free regions \(\mathcal{X}_{free} = \mathcal{X} \setminus \mathcal{X}_{obs}\). 
+MPNet plans feasible, 
+near-optimal paths using raw point-cloud of obstacles \(x_{obs} \subset \mathcal{X}_{obs}\). 
+Similar to other planning algorithms, 
+there is an assumed availability of a collision-checker 
+that verifies the feasibility of MPNet-generated paths based on \(\mathcal{X}_{obs}\).
+Precisely, Enet, parameterized by \( \theta^e \), 
+processes the raw point cloud information \( x_{obs} \) and 
+compresses it into a latent space \(Z\). 
+\[
+  Z \leftarrow \text{Enet}(x_{obs}; \theta^e)
+\]
+Pnet, parameterized by \( \theta^p \), utilizes this latent space encoding \(Z\), 
+as well as the current or initial configuration \(c_t \in \mathcal{C}_{\text{free}}\) and 
+the goal configuration \(c_{goal} \subset \mathcal{C}_{\text{free}}\) of the robot, 
+to produce a trajectory through incremental generation of 
+states \( \hat{c}_{t+1} \).
+\[
+  \hat{c}_{t+1} \leftarrow \text{Pnet}(Z, c_t, c_{goal}; \theta^p)  
+\]
+Together, these neural networks enable MPNet to plan paths efficiently in complex environments.
+\\[12pt]
+One notable feature of MPNet is its integration of classical 
+sample-based planners in a hybrid approach, 
+which allows for worst-case theoretical guarantees while retaining computational efficiency and 
+optimality improvements. 
+Additionally, an active continual learning approach is presented to train MPNet models, 
+enabling learning from streaming data and expert demonstrations as needed, 
+thus reducing training data significantly.
+\\[12pt]
+Despite their numerous advantages, MPNets also have some limitations. 
+The quality of the path generated by MPNets heavily depends on the training data and 
+the accuracy of the learned heuristic. 
+Poorly trained MPNets may produce suboptimal or infeasible paths. 
+\\[12pt]
+In the context of this thesis, 
+MPNets provide valuable insights into the diversity of path planning methodologies. 
+Moreover, through the integration of neural networks, 
+which is a fundamental machine learning technique, 
+MPNets aim to enhance sampling-based methods. 
+Consequently, they are particularly relevant for understanding the existing methods and 
+their advancements in the area of sampling-based approaches.
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Summarize}
+In the Related Works chapter, various approaches relevant to this thesis were explored, 
+including Motion Planning Networks (MPNet). 
+MPNet serves as a notable example, indicating the potential for improvement in 
+sampling-based planners. 
+Sampling-based methods such as RRT, RRT*, and PRM are widely used in path planning. 
+However, they all exhibit limitations when navigating through narrow passages and 
+environments dense with obstacles. 
+These limitations stem from their random sampling strategy, 
+which often results in scenarios with narrow passages and dense obstacle spaces, 
+leading to the generation of configurations within obstacle space. 
+Consequently, this leads to unnecessary collision checking for inappropriate configurations. 
+As a result, there is an increase in computational time and a decrease in the probability 
+of sampling configurations capable of traversing tight gaps as the gap size decreases. 
+To address these challenges and achieve improvements in the performance of sampling-based methods,
+akin to those seen in MPNet, 
+the proposed solution to the problem will be provided in the subsequent chapter
+% \section{Comparison of RRT and RRT* algorithms}
+% In this section, the focus will be on comparing RRT with its enhanced variant, RRT*.
+% \\\\ 
+% During the search for the first feasible path in the configuration space, 
+% RRT is typically faster than RRT*. 
+% It is evident from the provided Fig. 
+% \hyperref[fig:RRTvsRRT*Maze1]{\ref*{fig:RRTvsRRT*Maze1}} and 
+% Fig. \hyperref[fig:RRTvsRRT*Maze2]{\ref*{fig:RRTvsRRT*Maze2}} that RRT required less number of iterations to find a path compared to RRT*.
+% However, the path found by RRT* is often shorter.
+% \\\\
+% Another aspect of comparison involves observing how the algorithms explore 
+% the configuration space over a significant number of steps. 
+% The provided Fig. \hyperref[fig:RRTvsRRT*10k]{\ref*{fig:RRTvsRRT*10k}} illustrates that RRT* 
+% tends to have more direct paths without unnecessary zigzags compared to RRT.
+%---------------------------------------------------------------------------------
+% \begin{figure}
+% \centerline{\includegraphics[width=\columnwidth]{figures/RRTvsRRTstar_maze2.png}}
+% \caption{RRT and RRT* Maze1} 
+% \label{fig:RRTvsRRT*Maze1}
+% \end{figure}
+
+
+
+%---------------------------------------------------------------------------------
+%----------------------------MAYBE ADD TO APPENDIX--------------------------------
+% \section{Implementation in 2D space}
+
+% In this section, the practical implementation of the RRT and RRT* algorithms 
+% in a 2D configuration space is outlined. 
+% The objective is to represent the robot and obstacles as a list of coordinates 
+% representing the vertices of the polygon, 
+% allowing objects to have arbitrary shapes by specifying the coordinates of their vertices.  
+% \\\\ 
+% Collision detection between the robot and obstacles is accomplished 
+% by utilizing the \texttt{intersects} method of the \texttt{Polygon} class 
+% from the \texttt{shapely.geometry} library.  
+% To ensure accurate collision checking during motion, 
+% linear interpolation of the path is conducted, 
+% with collision detection performed at each interpolated point.
+% \\\\
+% In Fig. \hyperref[fig:RRTstar2D_mazes]{\ref*{fig:RRTstar2D_mazes}} can be seen 
+% how the algorithm attempted to navigate around obstacles. 
+% Additionally, the flexibility to create any necessary shapes is evident.
+% \\\\
+% Visualization is achieved using the \texttt{matplotlib} library.
+%---------------------------------------------------------------------------------
+% \begin{figure} 
+%     \centering
+%     \begin{minipage}[t]{0.45\textwidth}
+%         \centering
+%         \includegraphics[width=1.2\textwidth]{figures/RRTstar2D.png}  
+%     \end{minipage}
+%     \hfill
+%     \begin{minipage}[t]{0.45\textwidth}
+%         \centering
+%         \includegraphics[width=1.31\textwidth]{figures/RRTstar2D_2.png} 
+%     \end{minipage} 
+%     \caption{RRT* 2D Maze1 and Maze2} 
+%     \label{fig:RRTstar2D_mazes}
+% \end{figure}
+ 
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+% \section{Implementation in 3D space}
+
+% In the 3D implementation of the algorithm, 
+% the fundamental structure remains largely the same as in 2D.
+% However, there are some key additions, 
+% primarily the inclusion of new parameters such as the Z-component and rotations along the X, Y, and Z axes.
+% \\\\ 
+% To represent objects in the 3D space, a shift from polygons to object files (\texttt{.obj}) has been introduced. 
+% These files, which can be easily sourced from the internet, provide a structured representation of 3D objects. 
+% All objects must be represented as triangles. 
+% That is, each face of an object should be represented using three vertices in the form of triangles.  
+% For example, a cube in Fig. \hyperref[fig:cube]{\ref*{fig:cube}}.
+% The capability to load more difficult objects, like a tree, is a notable advantage of using \texttt{.obj} files, 
+% as demonstrated in Fig. \hyperref[fig:tree]{\ref*{fig:tree}}.
+% \\\\
+% For 3D collision detection, 
+% the preference is to use the \texttt{RAPID} library instead of the \texttt{shapely.geometry} library, 
+% given its significantly faster detection capabilities. 
+% \texttt{RAPID}(Robust and Accurate Polygon Interference Detection) \cite{gottschalk1997rapid}, written in \texttt{C++}, 
+% is a powerful tool for collision detection in 3D environments. 
+% It provides a narrow and easy-to-use API(Application Programming Interface) for programmers, 
+% facilitating the detection of intersections between polygons in various applications 
+% such as physically based modeling, virtual prototyping, and CAD.  
+% \\\\ 
+% Visualization is also achieved using the \texttt{matplotlib} library.
+
+
+%---------------------------------------------------------------------------------
+
+% \begin{figure}
+% \centerline{\includegraphics[width=0.7\columnwidth]{figures/RRTstar3Dcube.png}}
+% \caption{Cube representation} 
+% \label{fig:cube}
+% \end{figure}  
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\chapter{Improving RRT* algorithm using machine learning method}  
+\label{chap:Improving RRT*} 
+% \textbf{Here I will explain what i use from this~\cite{arslan2015machine}. The most part will be the same
+% as from main documentation which from i use ML methods. add here fotos of the algorithm work. 
+% and add fotos of 3D config space.}
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+In this chapter, 
+the proposed solution to the challenge formulated in 
+Chapter \ref{chap:Task formulation} will be explained. 
+As previously mentioned, 
+the focus on generating samples within 
+the \( \mathcal{C}_{\text{free}} \) ensures that configurations 
+within the \( \mathcal{C}_{\text{obs}} \) space are not sampled. 
+This strategic approach minimizes the number of iterations required, 
+as samples within the \( \mathcal{C}_{\text{obs}} \) space invariably result in collisions, 
+thus slowing down the process of achieving the optimal solution. 
+To solve this challenge, 
+the chapter will delve into the process of learning the configuration space, 
+elucidating the proposed sample strategy and its integration into the RRT* algorithm. 
+Furthermore, the extension of this approach to the 3D $\mathcal{C}$-space will be discussed.
+\\[12pt]
+The main idea and implementation of the approach presented in 
+this chapter are inspired by the work of~\cite{arslan2015machine}. 
+Consequently, many of the terminologies and concepts will closely resemble 
+those expounded upon in the referenced work.
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Approach} 
+To provide further clarity, 
+it is imperative to introduce some new terminology. 
+Let \( \mathcal{X} \) and \( \mathcal{Y} \) denote the spaces of inputs and outputs, 
+respectively. 
+In this context, 
+each \( x_i \in \mathcal{X} \) represents a sampled point or configuration within the configuration space, 
+while each \( y_i \in \mathcal{Y} \) signifies its label, 
+indicating whether the point is in $\mathcal{C}_{\text{obs}}$ or $\mathcal{C}_{\text{free}}$. 
+In this context, 
+the label \( y_i = 1 \) corresponds to points within \( \mathcal{C}_{\text{obs}} \), 
+while \( y_i = 0 \) denotes points within \( \mathcal{C}_{\text{free}} \).
+A pair \( ( x_i, y_i) \) is called a training example. 
+\( \mathcal{D} = \{(x_1, y_1), \ldots , (x_m, y_m)\} \) is called a training set 
+consisting of \( m \) training examples.
+\\[12pt]
+% The objective is to solve the classification problem by predicting 
+% the labels(${y}_i$) of new sample points(${x}_i$) 
+% before the collision detection procedure. 
+The objective is to solve the classification problem by 
+finding a function \( f: \mathcal{X} \mapsto \{0,1\} \) that provides 
+prediction of the label for a given point.
+Thus, if a point is generated within the obstacle space, 
+collision checking is unnecessary as the point is within the obstacle 
+and an object representing a robot will definitely collide. 
+Collision checking is only performed for points predicted by the program 
+to be in $\mathcal{C}_{\text{free}}$ space.
+To accomplish this, 
+learning the configuration space become important. 
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Learning the Configuration Space} 
+Function \( f: \mathcal{X} \mapsto \{0,1\} \)  makes predictions based on available data about 
+the configuration space at each program iteration. 
+Due to this, there is a significant need to learn the configuration space, 
+which underscores the importance of understanding how this available data is obtained.
+\\[12pt]
+This data, represented as a training set  \( \mathcal{D} = \{ (x_i, y_i) : i = 1, \ldots, m \} \) with points and their labels, 
+initially consists of randomly generated points along with their labels, 
+determined through collision checking. 
+During each program iteration, 
+function \( f \) predicts labels for randomly sampled points based on this available data in the training set.
+\\[12pt]
+However, at the beginning, our training set may not be sufficiently large for accurate predictions. 
+Therefore, if the program predicts that a point lies 
+within the \( \mathcal{C}_{\text{free}} \) space, 
+it must verify this prediction through collision checking. 
+If the point is indeed within \( \mathcal{C}_{\text{free}} \), 
+the program selects this point for sampling and adds it to the trainnig set $\mathcal{D}$ with 
+its corresponding label. 
+Conversely, if the point is predicted incorrectly and 
+lies within \( \mathcal{C}_{\text{obs}} \), 
+the program continues searching for a point within \( \mathcal{C}_{\text{free}} \). 
+Every point identified within \( \mathcal{C}_{\text{obs}} \) is also added to the trainnig set $\mathcal{D}$.
+Through this trainnig set $\mathcal{D}$, which increases after each iteration, 
+the algorithm learns the configuration space. 
+With each iteration, it improves its predictions and increasingly identifies points
+within \( \mathcal{C}_{\text{free}} \). 
+Consequently, the generation of points within \( \mathcal{C}_{\text{obs}} \) decreases, 
+thereby reducing the need for collision checking on unsuitable points.
+\\[12pt]
+The key question now arises: how does the program make predictions? 
+To address this, a Bayesian classifier~\cite{Bishop2006Pattern} is utilized in conjunction with a kernel density estimator to determine the function \( f: \mathcal{X} \mapsto \{0,1\} \).
+% With each iteration, it improves its predictions and increasingly identifies points
+% within \( \mathcal{C}_{\text{free}} \). 
+% Consequently, the generation of points within \( \mathcal{C}_{\text{obs}} \) decreases, 
+% thereby reducing the need for collision checking on unsuitable points.
+% \\[12pt] 
+% \\[12pt]
+% The key question now arises: 
+% how does the program make predictions? 
+% To address this challenge, 
+% we employ a Bayesian Classifier with a Gaussian kernel density estimator. 
+% A detailed explanation of the implementation procedure 
+% and functions will be provided in the section \ref{sec:ASS}.
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Proposed Solution} 
+Now that the method for learning the configuration space and the significance 
+of the training set are clear, let us delve deeper. 
+The training set can be divided into two datasets: 
+\( \mathcal{X}_{\text{free}} \)  comprising points in \( \mathcal{C}_{\text{free}} \) and 
+\( \mathcal{X}_{\text{obs}} \)  containing points within \( \mathcal{C}_{\text{obs}} \). 
+Based on these datasets, 
+probability density functions will be computed to 
+approximate the locations of obstacle and 
+obstacle-free spaces. 
+Using a Bayesian classifier, 
+predictions can then determine whether a given point 
+belongs to \( \mathcal{C}_{\text{free}} \) or \( \mathcal{C}_{\text{obs}} \).
+For clarity in the text, the probability density function that 
+will be utilized in the proposed solution will be described.
+\\[12pt]
+When the data fit well, it means that the data points closely match 
+the expected distribution or pattern \ref{fig:reg}. 
+In such cases, commonly used probability density functions include the Normal, Poisson, and 
+Geometric distributions, among others.
+However, in the case of our problem, the data consists of randomly sampled points, 
+resulting in an irregular data distribution \ref{fig:irreg}. 
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{1\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/regular-transformed.jpeg}
+      \caption{Regular.}
+      \label{fig:reg}
+  \end{subfigure}  
+  \begin{subfigure}[b]{1\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/irregular-transformed.jpeg}
+      \caption{Irregular.}
+      \label{fig:irreg}
+  \end{subfigure}
+  \caption{One-dimensional example of regular \ref{fig:reg} and irregular \ref{fig:irreg} 
+  data distribution.
+  Images courtesy of~\cite{Jaroslaw2023KDEexplain}.}
+  \label{fig:DataDistribution}
+\end{figure}
+%---------------------------------------------------------------------------------
+In such cases, 
+Kernel Density Estimator is employed to approximate the underlying distribution of the data. 
+The Kernel Density Estimator \( \hat{f}_\mathcal{X}(x) \) 
+for the estimation of the density value at point \( x \) is defined as:
+\[ \hat{f}_\mathcal{X}(x) = \frac{1}{m} \sum_{i=1}^{m} K \left( x - x^{(i)} \right), \]
+where $m$ is a number of points $x_i$ in respective dataset $\mathcal{X}$ and
+\( K(x) \) is the Gaussian Kernel function, represented as follows:
+\[
+K(x) = (2\pi)^{-\frac{d}{2}} \cdot \det(\textbf{H})^{-\frac{1}{2}} \cdot e^{-\frac{1}{2} x^T H^{-1} x},
+\]
+where \( x \) represents the input vector, 
+with a dimension of the input space \( d \), 
+\( \textbf{H} \) denotes the bandwidth matrix,
+\((2\pi)^{-\frac{d}{2}}\) is a normalization constant.
+Matrix \( \textbf{H} \) serves as a covariance matrix and 
+acts as a user-defined parameter influencing the kernel function. 
+When \( d = 2 \), it corresponds to a bivariate case. 
+For instance, in a 2D configuration space, as depicted in Figure \ref{fig:GKDEmaze}, 
+the input vector \( x \) comprises two coordinates of the point: \( x = [x_1, x_2] \), and 
+the bandwidth matrix takes the 
+form \( H = \left[ \begin{array}{cc} h_{11} & h_{12} \\ h_{21} & h_{22} \end{array} \right] \). 
+Here, \( h_{11} \) and \( h_{22} \) correspond to the variances 
+of \( x_1 \) and \( x_2 \) respectively, 
+while \( h_{12} = h_{21} \) represents the covariance between \( x_1 \) and \( x_2 \). 
+Because of this, the matrix \( \textbf{H} \) is symmetric. 
+An illustrative example of kernel estimation in the configuration space depicted 
+in Figure \ref{fig:GKDEmaze} can be observed in Figure \ref{fig:GKDEdensity}.
+\\[12pt]
+Now, leveraging our density estimator, let us proceed to Bayesian classifier.
+Firstly, it is necessary to introduce Bayes' theorem, which is formulated as follows:
+\[
+  P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}.
+\]
+In this context, 
+the aim is to determine the probability of a point \( x \) belonging to a particular space,
+denoted by \( P(y|x) \). 
+Our Kernel Density Estimator, on the other hand, represents \( P(x|y) \), 
+which is the probability distribution of points \( x \) given a specific space \( y \).
+As previously mentioned, the training set was divided into 
+two datasets: \( \mathcal{X}_\text{free} \) and \( \mathcal{X}_\text{obs} \). 
+These datasets were utilized to determine \( P(y) \) for each respective space.
+So now our Bayesian theorem looks like this:
+\[
+  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)},
+\]
+where
+\[ P(x|y=1) = \hat{f}_{\mathcal{X}_{\text{obs}}}(x) = \frac{1}{|\mathcal{X}_{\text{obs}}|} \sum_{x' \in \mathcal{X}_{\text{obs}}} K \left( x - x' \right); \]
+\[ P(x|y=0) = \hat{f}_{\mathcal{X}_{\text{free}}}(x) = \frac{1}{|\mathcal{X}_{\text{free}}|} \sum_{x' \in \mathcal{X}_{\text{free}}} K \left( x - x' \right); \]
+\[ P(y=1) = \frac{|\mathcal{X}_{\text{obs}}|}{|\mathcal{X}_{\text{obs}}|+|\mathcal{X}_{\text{free}}|},\]
+\[ P(y=0) = \frac{|\mathcal{X}_{\text{free}}|}{|\mathcal{X}_{\text{obs}}|+|\mathcal{X}_{\text{free}}|},\]
+\[|\mathcal{X}_{\text{obs}}| \text{ denotes the number of points contained within the } \mathcal{X}_{\text{obs}} \text{ dataset},\]
+\[|\mathcal{X}_{\text{free}}| \text{ denotes the number of points contained within the } \mathcal{X}_{\text{free}} \text{ dataset}.\]
+Regarding \( P(x) \), further discussion will follow.
+
+\textbf{so now left only describe bayesian decision rule: q-free >= q-obs -> 0 otherwise 1. 
+and address to pseudocode sample density. and tell that here q-free >= q-obs P(x) dont fluence.}
+
+% In such cases, Kernel Density Estimator is employed to approximate the underlying 
+% distribution of the data. 
+% In this work, the Gaussian Kernel function was utilized, represented as follows:
+% \[
+% K(x) = (2\pi)^{-\frac{d}{2}} \cdot \det(H)^{-\frac{1}{2}} \cdot e^{-\frac{1}{2} x^T H^{-1} x},
+% \]
+% where \( x \) represents the input vector, 
+% with a dimension of the input space \( d \), 
+% \( H \) denotes the bandwidth matrix, \((2\pi)^{-\frac{d}{2}}\) is a normalization constant,
+% and \( d \) signifies the dimensionality of the input space.
+% The Kernel Density Estimator \( \hat{f}_X(x) \) for 
+% the estimation of the density value \( f_X(x) \) at point \( x \) is defined as:
+% \[ \hat{f}_\mathcal{X}(x) = \frac{1}{m} \sum_{i=1}^{m} K \left( x - x^{(i)} \right) \]
+
+
+%---------------------------------------------------------------------------------
+
+\begin{figure}[!ht]
+  \centering 
+    \includegraphics[width=0.5\textwidth]{figChap4/SimpleMaze.eps} 
+  \caption{An example of the 2D $\mathcal{C}$-space.}
+  \label{fig:GKDEmaze}
+\end{figure}
+
+
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{1\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/GKDEobs2.pdf}
+      \caption{Obstacle density.}
+      \label{fig:GKDEobstacleSpace}
+  \end{subfigure}  
+  \begin{subfigure}[b]{1\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/GKDEfree2.pdf}
+      \caption{Obstacle-free density.}
+      \label{fig:GKDEfreeSpace}
+  \end{subfigure}
+  \caption{An example of density estimation with Gaussian Kernel function 
+  of the $\mathcal{C}$-space in Figure \ref{fig:GKDEmaze}. 
+  Circles represent randomly generated points in the $\mathcal{C}$-space. 
+  In Figure \ref{fig:GKDEobstacleSpace}, the density estimation of the 
+  obstacle space can be seen. 
+  Figure \ref{fig:GKDEfreeSpace} illustrates the density estimation of the free space. 
+  The higher the graph and the more yellow the color, 
+  the higher the density, indicating a higher probability for points to be in this space.}
+  \label{fig:GKDEdensity}
+\end{figure}
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\begin{algorithm}[H]
+  \caption{Sample Density}
+  \label{alg:sample_density}
+  \KwData{$\mathcal{X}_{\text{obs}}$, $\mathcal{X}_{\text{free}}$}
+  \KwResult{Predicted sampled point $x$}
+  \vspace{0.1cm}
+  \hrule
+  \vspace{0.2cm}
+  $q_{\text{free}} \gets 0$\;
+  $q_{\text{obs}} \gets 1$\; 
+  \While{$q_{\text{free}} < q_{\text{obs}}$}{
+    $x_{\text{rand}} \gets$ \textit{RandomConfiguration}()\;
+    $P_{\text{free}} \gets \frac{|\mathcal{X}_{\text{free}}|}{|\mathcal{X}_{\text{free}}| + |\mathcal{X}_{\text{obs}}|}$\;
+    $P_{\text{obs}} \gets 1 - P_{\text{free}}$\;
+    $b_{\text{free}} \gets$ \textit{DensityEstimator}($x_{\text{rand}}$, $\mathcal{X}_{\text{free}}$)\;
+    $b_{\text{obs}} \gets$ \textit{DensityEstimator}($x_{\text{rand}}$, $\mathcal{X}_{\text{obs}}$)\;
+    $q_{\text{free}} \gets b_{\text{free}} \cdot P_{\text{free}}$\;
+    $q_{\text{obs}} \gets b_{\text{obs}} \cdot P_{\text{obs}}$\; 
+  }
+  
+  $x \gets x_{\text{rand}}$\;
+  \Return $x$\;
+\end{algorithm} 
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\begin{algorithm}[H]
+  \caption{Sample}
+  \label{alg:ml_sample}
+  \KwData{$\mathcal{X}_{\text{obs}}$, $\mathcal{X}_{\text{free}}$}
+  \KwResult{Sampled point $x$}
+  \vspace{0.1cm}
+  \hrule
+  \vspace{0.2cm}
+  $x \gets$ \textit{Sample Density}()\; 
+  \While{OnObstacle($x$)}{ 
+    $\mathcal{X}_{\text{obs}} \gets \mathcal{X}_{\text{obs}} \cup$ \{x\}\;
+    $x \gets$ \textit{Sample Density}()\; 
+  }
+  $\mathcal{X}_{\text{free}} \gets \mathcal{X}_{\text{free}} \cup$ \{x\}\;
+  
+  \Return $x$\;
+\end{algorithm}
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+
+\section{Integration to the RRT* algorithm}
+\section{Extension of the machine learning method to 3D configuration space}
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\chapter{Results and discussion}
+\textbf{Here u need to generate graphs iteration/cost to show how fast method is converging to 
+optimal solution, also add fotos where u algorithm better covering the conf space. make a summary and
+describe in what situations your alg is better tham sampling based algos}
+\label{chap:Result} 
+\section{Comparison with OMPL}
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+
+\chapter{Conclusion} 
+\textbf{Briefly describe thesis chapters and make a conclusion where u say co se povedlo a co ne}
+\label{chap:Conclusion}
+\\[12pt]
+Where does it come from?
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+
+Where can I get some?
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+Lorep ipsum \cite{arslan2015machine} \cite{Ioan2012ompl} \cite{karaman2011rrtstar} \cite{lavalle1998rapidly}.
+\cite{gottschalk1996rapid}
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+
+\bibliographystyle{plain}
+\bibliography{main}
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\appendix
+\chapter*{List of Notation}
+\noindent
+\begin{tabularx}{\linewidth}
+  { l >{\raggedright\arraybackslash}X }
+\bfseries Symbol & \bfseries Meaning \\\Midrule
+$\alpha$ & The angle of attack \\
+$\mathbb{R}$ & The real numbers \\
+\end{tabularx}
+ 
+\end{document}
+
