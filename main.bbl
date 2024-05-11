@@ -33,6 +33,11 @@ Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
 \newblock MIT Press, 2016.
 \newblock \url{http://www.deeplearningbook.org}.
 
+\bibitem{gottschalk1997rapid}
+S.~Gottschalk, Ming Lin, and Dinesh Manocha.
+\newblock Obbtree: A hierarchical structure for rapid interference detection.
+\newblock {\em Computer Graphics}, 30, 10 1997.
+
 \bibitem{ObjectDetection}
 Markus Hafellner.
 \newblock Object detection.

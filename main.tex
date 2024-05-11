@@ -412,7 +412,7 @@ These vertices, represented as blue circles, illustrates configurations or nodes
   \centering
   \includegraphics[width=0.6\linewidth]{figChap2/ConfigSpace.eps}
   \caption{2D $\mathcal{C}$-space.}
-  \label{fig:config_space}
+  \label{fig:config_space} 
 \end{figure} 
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
@@ -1486,32 +1486,32 @@ Figure \ref{fig:LearningConfigSpace} illustrates
 the learning process of the $\mathcal{C}$-space by our enhanced RRT* algorithm.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
-\section{Extension of the machine learning method to 3D configuration space}
-\textbf{To extend the improven RRT* to 3D configuration space, where will be 2D objects with parameters of x and y coordinates and rotation of this object., 
-it is needed to understand that our obstacle space is also represent by constraints of objects shape.
-also add information about reference point of the objest. it will be at the center of math of the object.
-and because of this on the Figures which u add will be seen that obstacle space is a bit bigger than just obstacle shape.
-write something about polygons, maybe about rapid for 6D config space write why u dont make this actually.
-and add figures same as section before :)}
-
-
-
-%---------------------------------------------------------------------------------
-\begin{figure}[!ht]
-  \centering 
-  \begin{subfigure}[b]{0.45\textwidth}
-      \includegraphics[width=\textwidth]{figChap4/RRTstar2D_maze241.4.pdf}
-      \caption{RRT*.}
-      \label{fig:rrtstar2D_maze}
-  \end{subfigure}  
-  \begin{subfigure}[b]{0.45\textwidth}
-      \includegraphics[width=\textwidth]{figChap4/RRTstar2DML_maze237.2.pdf}
-      \caption{Improven RRT*.}
-      \label{fig:rrtstarML2D_maze}
-  \end{subfigure}
-  \caption{1}
-  \label{fig:RRTstar2D_vs_RRTstarML2D}
-\end{figure}
+\section{Extension of the machine learning method to 3D and 6D $\mathcal{C}$-space}
+In this problem, the robot is represented as a polygon. 
+To describe the position of the robot in space, three coordinates are utilized: 
+two for its position in $\mathcal{C}$-space and 
+a third one for its rotation angle. 
+The position of the robot is defined as its center of mass.
+The main difference from the implementation in 2D $\mathcal{C}$-space is that 
+the procedure for checking whether a point is inside the $\mathcal{C}_\text{obs}$,
+as shown in Algorithm \ref{alg:ml_sample} Line 2,
+is replaced by a function that checks if 
+at least one point of robot lies inside the $\mathcal{C}_\text{obs}$. 
+Also, verifying whether the path is obstacle-free, 
+it is essential to ensure that 
+the robot does not collide with obstacles while moving along the path.
+To address this, 
+linear interpolation between two points is utilized 
+to detect potential collisions between the robot and obstacles along the path.
+The linear interpolation formula \[ q(s) = (1 - s) \cdot q_{\text{near}} + s \cdot q_{\text{new}},\enspace s \in [0,1], \] 
+defines the points along the line segment connecting \( q_{\text{near}} \) and \( q_{\text{new}} \).
+Consequently, the $\mathcal{X}_\text{obs}$ space is not always represented just by the 
+area of the obstacle, but also includes points where the robot intersects 
+with the obstacle. 
+An example can be seen in Figure \ref{fig:LearningConfigSpace2D}.
+Similarly as in 2D $\mathcal{C}$-space, 
+the improved version of RRT* demonstrates better performance 
+in finding optimal paths \ref{fig:RRTstar2D_vs_RRTstarML2D}. 
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
@@ -1525,10 +1525,55 @@ and add figures same as section before :)}
       \caption{Improven RRT*.}
       % \label{fig:rrtstarML2D_maze}
   \end{subfigure}
-  \caption{2}
+  \caption{In Figure \ref{fig:rrtstarML2D_learning}, it can be seen 
+  that the $\mathcal{X}_{\text{obs}}$ dataset contains more data points. 
+  This is because the purple area contains not only points inside 
+  the $\mathcal{C}_{\text{obs}}$,
+  but also points where robot, 
+  represented as a polygon in the shape of a star, 
+  collides with obstacles.}
   \label{fig:LearningConfigSpace2D}
 \end{figure}
 %---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/RRTstar2D_maze241.4.pdf}
+      \caption{RRT*.}
+      \label{fig:rrtstar2D_maze}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/RRTstar2DML_maze237.2.pdf}
+      \caption{Improven RRT*.}
+      \label{fig:rrtstarML2D_maze}
+  \end{subfigure}
+  \caption{Both algorithms, 
+  RRT* \ref{fig:rrtstar2D_maze} and the improved RRT* using 
+  machine learning \ref{fig:rrtstarML2D_maze} methods, 
+  are presented, each consisting of 1000 iterations. 
+  The improved RRT* finds a path to the goal with 
+  the lowest cost of 237.2 u.d. (units of dimension), compared to RRT*, 
+  which finds a path to the goal with a cost of 241.4 u.d.}
+  \label{fig:RRTstar2D_vs_RRTstarML2D}
+\end{figure}
+%---------------------------------------------------------------------------------
+\\[12pt]
+To extend the improved RRT* to 6D $\mathcal{C}$-space, 
+such as in the Piano Movers Problem, similar procedures to those in 3D $\mathcal{C}$-space 
+need to be followed. 
+However, the robot will be represented as an object file (.obj). 
+These files, readily available from the internet, 
+offer a structured representation of objects, 
+with each object represented as a set of triangles. 
+This triangle representation, similar to a mesh, 
+decomposes every object into triangles. 
+Additionally, collision detection becomes more complex in this scenario. 
+To address this, the RAPID library~\cite{gottschalk1997rapid} can be utilized. 
+RAPID (Robust and Accurate Polygon Interference Detection), implemented in C++, 
+is a robust tool for collision detection in 3D environments. 
+It provides a narrow and user-friendly API (Application Programming Interface) for programmers, 
+simplifying the detection of intersections between polygons in various applications such as 
+physically based modeling, virtual prototyping, and CAD.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------

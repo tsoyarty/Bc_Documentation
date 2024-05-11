@@ -39,7 +39,7 @@
 \contentsline {section}{\numberline {4.2}Learning the Configuration Space}{22}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Proposed Solution}{22}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Integration to the RRT* algorithm}{26}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Extension of the machine learning method to 3D configuration space}{28}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Extension of the machine learning method to 3D and 6D $\mathcal {C}$-space}{28}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Results and discussion}{31}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Comparison with OMPL}{31}{section.5.1}%
 \contentsline {chapter}{\numberline {6}Conclusion}{33}{chapter.6}%
