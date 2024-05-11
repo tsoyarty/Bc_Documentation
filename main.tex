@@ -1480,13 +1480,18 @@ in Algorithm \ref{alg:rrt_star}, Line 3, thus demonstrating integration with the
 %---------------------------------------------------------------------------------
 \vspace{1em}
 \noindent To demonstrate how this enhancement works, 
-Figure \ref{fig:RRTstar_vs_RRTstarML} depicts the expansion of RRT* with enhanced RRT* using 
+in Figure \ref{fig:RRTstar_vs_RRTstarML} can be seen 
+the expansion of RRT* with enhanced RRT* using 
 machine learning, which explores $\mathcal{C}$-space. 
 Figure \ref{fig:LearningConfigSpace} illustrates 
 the learning process of the $\mathcal{C}$-space by our enhanced RRT* algorithm.
+\\[12pt]
+After explaining how the proposed solution was integrated into the RRT*, 
+it is crucial to evaluate its effectiveness compared to other planners. 
+Chapter \ref{chap:Result} provides further insights into this comparative analysis.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
-\section{Extension of the machine learning method to 3D and 6D $\mathcal{C}$-space}
+\section{Extension of the machine learning method to 3D and 6D configuration space}
 In this problem, the robot is represented as a polygon. 
 To describe the position of the robot in space, three coordinates are utilized: 
 two for its position in $\mathcal{C}$-space and 
@@ -1509,6 +1514,7 @@ Consequently, the $\mathcal{X}_\text{obs}$ space is not always represented just 
 area of the obstacle, but also includes points where the robot intersects 
 with the obstacle. 
 An example can be seen in Figure \ref{fig:LearningConfigSpace2D}.
+\\[12pt]
 Similarly as in 2D $\mathcal{C}$-space, 
 the improved version of RRT* demonstrates better performance 
 in finding optimal paths \ref{fig:RRTstar2D_vs_RRTstarML2D}. 
@@ -1553,7 +1559,7 @@ in finding optimal paths \ref{fig:RRTstar2D_vs_RRTstarML2D}.
   are presented, each consisting of 1000 iterations. 
   The improved RRT* finds a path to the goal with 
   the lowest cost of 237.2 u.d. (units of dimension), compared to RRT*, 
-  which finds a path to the goal with a cost of 241.4 u.d.}
+  which finds a path to the goal with a cost of 241.4 u.d..}
   \label{fig:RRTstar2D_vs_RRTstarML2D}
 \end{figure}
 %---------------------------------------------------------------------------------
@@ -1573,16 +1579,22 @@ RAPID (Robust and Accurate Polygon Interference Detection), implemented in C++,
 is a robust tool for collision detection in 3D environments. 
 It provides a narrow and user-friendly API (Application Programming Interface) for programmers, 
 simplifying the detection of intersections between polygons in various applications such as 
-physically based modeling, virtual prototyping, and CAD.
+physically based modeling, virtual prototyping, and CAD.  
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
-\chapter{Results and discussion}
-\textbf{Here u need to generate graphs iteration/cost to show how fast method is converging to 
-optimal solution, also add fotos where u algorithm better covering the conf space. make a summary and
-describe in what situations your alg is better tham sampling based algos}
+\chapter{Results and discussion} 
 \label{chap:Result} 
+Throughout this chapter, 
+the performance of the implemented RRT* with machine learning methods will be presented and discussed, 
+alongside other planners, across various configuration spaces. 
+Graphs depicting convergence to optimal solutions, 
+with the Y-axis representing path cost and the X-axis representing iteration count, 
+will be used to evaluate the effectiveness of the machine learning method in different scenarios.
 \section{Comparison with OMPL}
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\section{Result}
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
