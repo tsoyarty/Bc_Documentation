@@ -180,8 +180,8 @@
 \newlabel{sub@fig:GKDEobstacleSpace}{{a}{26}{Obstacle density.\relax }{subfigure.4.3.1}{}}
 \newlabel{fig:GKDEfreeSpace}{{4.3b}{26}{Obstacle-free density.\relax }{subfigure.4.3.2}{}}
 \newlabel{sub@fig:GKDEfreeSpace}{{b}{26}{Obstacle-free density.\relax }{subfigure.4.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces An example of density estimation with Gaussian Kernel function of the $\mathcal  {C}$-space in Figure \ref  {fig:GKDEmaze}. Circles represent randomly generated points in the $\mathcal  {C}$-space. In Figure \ref  {fig:GKDEobstacleSpace}, the density estimation of the obstacle space can be seen. Figure \ref  {fig:GKDEfreeSpace} illustrates the density estimation of the free space. The higher the graph and the more yellow the color, the higher the density, indicating a higher probability for points to be in this space.\relax }}{26}{figure.4.3}\protected@file@percent }
-\newlabel{fig:GKDEdensity}{{4.3}{26}{An example of density estimation with Gaussian Kernel function of the $\mathcal {C}$-space in Figure \ref {fig:GKDEmaze}. Circles represent randomly generated points in the $\mathcal {C}$-space. In Figure \ref {fig:GKDEobstacleSpace}, the density estimation of the obstacle space can be seen. Figure \ref {fig:GKDEfreeSpace} illustrates the density estimation of the free space. The higher the graph and the more yellow the color, the higher the density, indicating a higher probability for points to be in this space.\relax }{figure.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces An example of density estimation with Gaussian Kernel function of the $\mathcal  {C}$-space in Figure \ref  {fig:GKDEmaze}. Circles represent randomly generated points in the $\mathcal  {C}$-space. In Figure \ref  {fig:GKDEobstacleSpace}, the density estimation of the obstacle space can be seen. Figure \ref  {fig:GKDEfreeSpace} illustrates the density estimation of the free space. The higher the graph, the higher the density, indicating a higher probability for points to be in this space.\relax }}{26}{figure.4.3}\protected@file@percent }
+\newlabel{fig:GKDEdensity}{{4.3}{26}{An example of density estimation with Gaussian Kernel function of the $\mathcal {C}$-space in Figure \ref {fig:GKDEmaze}. Circles represent randomly generated points in the $\mathcal {C}$-space. In Figure \ref {fig:GKDEobstacleSpace}, the density estimation of the obstacle space can be seen. Figure \ref {fig:GKDEfreeSpace} illustrates the density estimation of the free space. The higher the graph, the higher the density, indicating a higher probability for points to be in this space.\relax }{figure.4.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.4}Integration to the RRT* algorithm}{26}{section.4.4}\protected@file@percent }
 \newlabel{fig:rrtstar_maze}{{4.4a}{27}{RRT*.\relax }{subfigure.4.4.1}{}}
 \newlabel{sub@fig:rrtstar_maze}{{a}{27}{RRT*.\relax }{subfigure.4.4.1}{}}
@@ -191,19 +191,27 @@
 \newlabel{fig:RRTstar_vs_RRTstarML}{{4.4}{27}{Both algorithms, RRT* \ref {fig:rrtstar_maze} and the improved RRT* using machine learning \ref {fig:rrtstarML_maze} methods, are presented, each consisting of 1000 iterations. It is evident that the improved RRT* efficiently explores the configuration space and eventually finds a path to the goal with the lowest cost of 206 u.d.(units of dimension), compared to RRT*, which finds a path to the goal with a cost of 216 u.d.. Additionally, despite both algorithms having the same number of iterations, the improved RRT* exhibits a higher number of collision-free paths found. This difference arises from the strategy of sampling points in the $\mathcal {C}$-space, which increases the probability of finding a collision-free path after each iteration.\relax }{figure.4.4}{}}
 \newlabel{fig:rrtstarML_learning}{{4.5a}{27}{Learning the $\mathcal {C}$-space.\relax }{subfigure.4.5.1}{}}
 \newlabel{sub@fig:rrtstarML_learning}{{a}{27}{Learning the $\mathcal {C}$-space.\relax }{subfigure.4.5.1}{}}
-\newlabel{fig:rrtstarML_maze}{{4.5b}{27}{Improven RRT*.\relax }{subfigure.4.5.2}{}}
-\newlabel{sub@fig:rrtstarML_maze}{{b}{27}{Improven RRT*.\relax }{subfigure.4.5.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces In Figure \ref  {fig:rrtstarML_learning}, the information about the $\mathcal  {C}$-space can be seen. The purple color represents the \( \mathcal  {X}_{\text  {obs}} \) dataset, while the green color represents the \( \mathcal  {X}_{\text  {free}} \) dataset. Utilizing these datasets, the algorithm learns the $\mathcal  {C}$-space.\relax }}{27}{figure.4.5}\protected@file@percent }
 \newlabel{fig:LearningConfigSpace}{{4.5}{27}{In Figure \ref {fig:rrtstarML_learning}, the information about the $\mathcal {C}$-space can be seen. The purple color represents the \( \mathcal {X}_{\text {obs}} \) dataset, while the green color represents the \( \mathcal {X}_{\text {free}} \) dataset. Utilizing these datasets, the algorithm learns the $\mathcal {C}$-space.\relax }{figure.4.5}{}}
 \@writefile{loa}{\contentsline {algocf}{\numberline {5}{\ignorespaces Sample\relax }}{28}{algocf.5}\protected@file@percent }
 \newlabel{alg:ml_sample}{{5}{28}{Integration to the RRT* algorithm}{algocf.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.5}Extension of the machine learning method to 3D configuration space}{28}{section.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Results and discussion}{29}{chapter.5}\protected@file@percent }
+\newlabel{fig:rrtstar2D_maze}{{4.6a}{29}{RRT*.\relax }{subfigure.4.6.1}{}}
+\newlabel{sub@fig:rrtstar2D_maze}{{a}{29}{RRT*.\relax }{subfigure.4.6.1}{}}
+\newlabel{fig:rrtstarML2D_maze}{{4.6b}{29}{Improven RRT*.\relax }{subfigure.4.6.2}{}}
+\newlabel{sub@fig:rrtstarML2D_maze}{{b}{29}{Improven RRT*.\relax }{subfigure.4.6.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces 1\relax }}{29}{figure.4.6}\protected@file@percent }
+\newlabel{fig:RRTstar2D_vs_RRTstarML2D}{{4.6}{29}{1\relax }{figure.4.6}{}}
+\newlabel{fig:rrtstarML2D_learning}{{4.7a}{29}{Learning the $\mathcal {C}$-space.\relax }{subfigure.4.7.1}{}}
+\newlabel{sub@fig:rrtstarML2D_learning}{{a}{29}{Learning the $\mathcal {C}$-space.\relax }{subfigure.4.7.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces 2\relax }}{29}{figure.4.7}\protected@file@percent }
+\newlabel{fig:LearningConfigSpace2D}{{4.7}{29}{2\relax }{figure.4.7}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Results and discussion}{31}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:Result}{{5}{29}{Results and discussion}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Comparison with OMPL}{29}{section.5.1}\protected@file@percent }
+\newlabel{chap:Result}{{5}{31}{Results and discussion}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Comparison with OMPL}{31}{section.5.1}\protected@file@percent }
 \citation{arslan2015machine}
 \citation{Ioan2012ompl}
 \citation{karaman2011rrtstar}
@@ -211,11 +219,11 @@
 \citation{gottschalk1996rapid}
 \bibstyle{plain}
 \bibdata{main}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{31}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{33}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:Conclusion}{{6}{31}{Conclusion}{chapter.6}{}}
+\newlabel{chap:Conclusion}{{6}{33}{Conclusion}{chapter.6}{}}
 \bibcite{arslan2015machine}{1}
 \bibcite{Bishop2006Pattern}{2}
 \bibcite{Jaroslaw2023KDEexplain}{3}
@@ -227,13 +235,13 @@
 \bibcite{Kavraki1996PRM}{9}
 \bibcite{Lavalle2006PlanningAlgos}{10}
 \bibcite{lavalle1998rapidly}{11}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{33}{chapter*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{35}{chapter*.5}\protected@file@percent }
 \bibcite{Ahmed2019MotionPlanningNetworks}{12}
 \bibcite{rickert2014piano}{13}
 \bibcite{Ioan2012ompl}{14}
 \bibcite{Xie2022Astarfoto}{15}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}List of Notation}{35}{appendix.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}List of Notation}{37}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\gdef \@abspage@last{43}
+\gdef \@abspage@last{45}

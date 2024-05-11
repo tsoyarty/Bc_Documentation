@@ -1368,12 +1368,12 @@ Now, let us explore how this method can be integrated with sampled-based methods
 \begin{figure}[!ht]
   \centering 
   \begin{subfigure}[b]{1\textwidth}
-      \includegraphics[width=\textwidth]{figChap4/GKDEobs2.pdf}
+      \includegraphics[width=\textwidth]{figChap4/GKDE_obsU.pdf}
       \caption{Obstacle density.}
       \label{fig:GKDEobstacleSpace}
   \end{subfigure}  
   \begin{subfigure}[b]{1\textwidth}
-      \includegraphics[width=\textwidth]{figChap4/GKDEfree2.pdf}
+      \includegraphics[width=\textwidth]{figChap4/GKDE_freeU.pdf}
       \caption{Obstacle-free density.}
       \label{fig:GKDEfreeSpace}
   \end{subfigure}
@@ -1383,7 +1383,7 @@ Now, let us explore how this method can be integrated with sampled-based methods
   In Figure \ref{fig:GKDEobstacleSpace}, the density estimation of the 
   obstacle space can be seen. 
   Figure \ref{fig:GKDEfreeSpace} illustrates the density estimation of the free space. 
-  The higher the graph and the more yellow the color, 
+  The higher the graph, 
   the higher the density, indicating a higher probability for points to be in this space.}
   \label{fig:GKDEdensity}
 \end{figure}
@@ -1434,7 +1434,7 @@ efficiently towards an optimal solution while effectively exploring the configur
   \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=\textwidth]{figChap4/RRTstarML_maze206.0.pdf}
       \caption{Improven RRT*.}
-      \label{fig:rrtstarML_maze}
+      % \label{fig:rrtstarML_maze}
   \end{subfigure}
   \caption{In Figure \ref{fig:rrtstarML_learning}, 
   the information about the $\mathcal{C}$-space can be seen. 
@@ -1493,6 +1493,42 @@ also add information about reference point of the objest. it will be at the cent
 and because of this on the Figures which u add will be seen that obstacle space is a bit bigger than just obstacle shape.
 write something about polygons, maybe about rapid for 6D config space write why u dont make this actually.
 and add figures same as section before :)}
+
+
+
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/RRTstar2D_maze241.4.pdf}
+      \caption{RRT*.}
+      \label{fig:rrtstar2D_maze}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/RRTstar2DML_maze237.2.pdf}
+      \caption{Improven RRT*.}
+      \label{fig:rrtstarML2D_maze}
+  \end{subfigure}
+  \caption{1}
+  \label{fig:RRTstar2D_vs_RRTstarML2D}
+\end{figure}
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/RRTstar2DML_learning237.2.pdf}
+      \caption{Learning the $\mathcal{C}$-space.}
+      \label{fig:rrtstarML2D_learning}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{figChap4/RRTstar2DML_maze237.2.pdf}
+      \caption{Improven RRT*.}
+      % \label{fig:rrtstarML2D_maze}
+  \end{subfigure}
+  \caption{2}
+  \label{fig:LearningConfigSpace2D}
+\end{figure}
+%---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
