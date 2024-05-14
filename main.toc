@@ -42,7 +42,7 @@
 \contentsline {section}{\numberline {4.5}Extension of the machine learning method to 3D and 6D configuration space}{28}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Results and discussion}{31}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Comparison with OMPL}{31}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Result}{31}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Conclusion}{33}{chapter.6}%
-\contentsline {chapter}{Bibliography}{35}{chapter*.5}%
-\contentsline {chapter}{\numberline {A}List of Notation}{37}{appendix.A}%
+\contentsline {section}{\numberline {5.2}Result}{33}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusion}{35}{chapter.6}%
+\contentsline {chapter}{Bibliography}{37}{chapter*.5}%
+\contentsline {chapter}{\numberline {A}List of Notation}{39}{appendix.A}%

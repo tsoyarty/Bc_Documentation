@@ -1,19 +1,19 @@
 # Fdb version 3
-["bibtex main"] 1715444997 "main.aux" "main.bbl" "main" 1715444999
+["bibtex main"] 1715721575 "main.aux" "main.bbl" "main" 1715721577
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1715444999 27547 de30ec6f24f8a3adafdaa72b77c429ba "pdflatex"
-  "main.bib" 1715267453 6374 b60e2e7b5e2bbc3f1272f16cf43a5a3c ""
+  "main.aux" 1715721577 31155 95430f76b7967d3e56efc08c849aa820 "pdflatex"
+  "main.bib" 1715687753 9317 6af37c698ca437a127fa7ac2cb67385f ""
   (generated)
   "main.bbl"
   "main.blg"
-["makeindex main.idx"] 1715444883 "main.idx" "main.ind" "main" 1715444999
-  "main.idx" 1715444998 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1715721574 "main.idx" "main.ind" "main" 1715721577
+  "main.idx" 1715721576 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
-["pdflatex"] 1715444997 "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" "main.pdf" "main" 1715444999
+["pdflatex"] 1715721576 "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" "main.pdf" "main" 1715721577
   "/etc/texmf/web2c/texmf.cnf" 1713119362 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" 1715444996 93055 f525a48c4ba274883971c4458d3f1fe9 ""
+  "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" 1715721574 99649 db1b70f42b6dd97668b2924b0db05b22 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -245,14 +245,22 @@
   "figChap4/SimpleMaze.eps" 1715426221 826683 64647b5147dbb583062e8bc00b47e652 ""
   "figChap4/irregular-transformed.jpeg" 1715268000 885287 178fbb77bc618225b8c1509ed5f5433c ""
   "figChap4/regular-transformed.jpeg" 1715268049 955520 0af8a6cabb04214578d9423a62b4ad10 ""
-  "main.aux" 1715444999 27547 de30ec6f24f8a3adafdaa72b77c429ba "pdflatex"
-  "main.bbl" 1715444997 3725 2f392c5f492675841174b4636e3d8bb2 "bibtex main"
-  "main.ind" 1715444883 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1715444999 7688 f1540627272aa7599c81f3f8eed9f161 "pdflatex"
-  "main.lot" 1715444999 646 6c770720dce8f1bd8e2a0b9cd75e2fbc "pdflatex"
-  "main.out" 1715444999 4793 1a3225d0ac93cae04a3ddc094ae7d02c "pdflatex"
-  "main.tex" 1715444996 93055 f525a48c4ba274883971c4458d3f1fe9 ""
-  "main.toc" 1715444999 2991 85d6aeaa50064c27ccbb2e39edf4bce2 "pdflatex"
+  "figChap5/Maze_E.pdf" 1715631792 2821 d5bb78caf40d80ca559c0571c67b2f7a ""
+  "figChap5/Maze_U.pdf" 1715631547 3034 5b736311c544386eee5e33bc7de7cc25 ""
+  "figChap5/Maze_clutter.pdf" 1715631803 15659 dac9661ab592f1b0bffdd24ddaa72127 ""
+  "figChap5/Maze_narrow.pdf" 1715713647 4215 ad982e2f284cc5d6d3c6fb40eaaf2f87 ""
+  "figChap5/graph_E_20pt.pdf" 1715633721 17411 68fa517e203941e9d94e2bee12786f38 ""
+  "figChap5/graph_U_20pt.pdf" 1715633225 14456 da7e0c378ef0c6bb25d833c5eef94f5b ""
+  "figChap5/graph_clutter_20pt.pdf" 1715633639 16036 c02bea29173f7a4a342f8fc3336aac45 ""
+  "figChap5/graph_narrow_20pt.pdf" 1715717047 16324 7b7be39ac09589753fb2e17a54d592ca ""
+  "main.aux" 1715721577 31155 95430f76b7967d3e56efc08c849aa820 "pdflatex"
+  "main.bbl" 1715721576 4398 da77c37f6187f845da5372d5f483b33d "bibtex main"
+  "main.ind" 1715721574 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.lof" 1715721577 8654 c20069699e49ea3495de2bc1a7b01984 "pdflatex"
+  "main.lot" 1715721577 646 6c770720dce8f1bd8e2a0b9cd75e2fbc "pdflatex"
+  "main.out" 1715721577 4793 1a3225d0ac93cae04a3ddc094ae7d02c "pdflatex"
+  "main.tex" 1715721574 99649 db1b70f42b6dd97668b2924b0db05b22 ""
+  "main.toc" 1715721577 2991 fd9c9dae78abe720af895b4f7e7073fc "pdflatex"
   (generated)
   "main.aux"
   "main.idx"

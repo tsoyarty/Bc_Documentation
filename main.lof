@@ -38,5 +38,9 @@
 \contentsline {figure}{\numberline {4.6}{\ignorespaces In Figure \ref {fig:rrtstarML2D_learning}, it can be seen that the $\mathcal {X}_{\text {obs}}$ dataset contains more data points. This is because the purple area contains not only points inside the $\mathcal {C}_{\text {obs}}$, but also points where robot, represented as a polygon in the shape of a star, collides with obstacles.\relax }}{29}{figure.4.6}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Both algorithms, RRT* \ref {fig:rrtstar2D_maze} and the improved RRT* using machine learning \ref {fig:rrtstarML2D_maze} methods, are presented, each consisting of 1000 iterations. The improved RRT* finds a path to the goal with the lowest cost of 237.2 u.d. (units of dimension), compared to RRT*, which finds a path to the goal with a cost of 241.4 u.d..\relax }}{29}{figure.4.7}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces $\mathcal {C}$-space with small $\mathcal {C}_\text {obs} $\ref {fig:maze_U_Cspace} and corresponding convergence graphs \ref {fig:maze_U_graphs} of selected planners.\relax }}{31}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces $\mathcal {C}$-space with narrow passages \ref {fig:maze_E_Cspace} and corresponding convergence graphs \ref {fig:maze_E_graphs} of selected planners.\relax }}{32}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Cluttered $\mathcal {C}$-space \ref {fig:maze_clutter_Cspace} and corresponding convergence graphs \ref {fig:maze_E_graphs} of selected planners.\relax }}{32}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Difficult $\mathcal {C}$-space with numerouse narrow passages \ref {fig:maze_clutter_Cspace} and corresponding convergence graphs \ref {fig:maze_E_graphs} of selected planners.\relax }}{33}{figure.5.4}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

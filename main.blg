@@ -3,49 +3,49 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: main.bib
-Warning--I didn't find a database entry for "gottschalk1996rapid"
 Warning--empty journal in Bishop2006Pattern
 Warning--empty journal in Jaroslaw2023KDEexplain
 Warning--empty journal in Jaroslaw2023KDEmultidimensional
-You've used 16 entries,
+Warning--can't use both author and editor fields in Otte2015RRTX
+You've used 19 entries,
             2118 wiz_defined-function locations,
-            609 strings with 7143 characters,
-and the built_in function-call counts, 4861 in all, are:
-= -- 471
-> -- 233
-< -- 1
-+ -- 94
-- -- 76
-* -- 322
-:= -- 852
-add.period$ -- 55
-call.type$ -- 16
-change.case$ -- 83
+            627 strings with 7891 characters,
+and the built_in function-call counts, 5898 in all, are:
+= -- 572
+> -- 277
+< -- 2
++ -- 112
+- -- 90
+* -- 389
+:= -- 1012
+add.period$ -- 63
+call.type$ -- 19
+change.case$ -- 98
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 185
-empty$ -- 367
-format.name$ -- 76
-if$ -- 995
+cite$ -- 23
+duplicate$ -- 225
+empty$ -- 454
+format.name$ -- 90
+if$ -- 1222
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 18
-newline$ -- 90
-num.names$ -- 32
-pop$ -- 78
+int.to.str$ -- 19
+missing$ -- 21
+newline$ -- 104
+num.names$ -- 38
+pop$ -- 100
 preamble$ -- 1
-purify$ -- 69
+purify$ -- 82
 quote$ -- 0
-skip$ -- 131
+skip$ -- 166
 stack$ -- 0
-substring$ -- 249
-swap$ -- 25
-text.length$ -- 1
+substring$ -- 318
+swap$ -- 38
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
-warning$ -- 3
-while$ -- 42
-width$ -- 18
-write$ -- 183
+type$ -- 70
+warning$ -- 4
+while$ -- 52
+width$ -- 21
+write$ -- 214
 (There were 4 warnings)

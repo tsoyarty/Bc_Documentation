@@ -787,6 +787,9 @@ which can lead to increased time consumption.\\[12pt]
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \clearpage
+% \section{Informed RRT*}
+% \section{RRT sharp (RRT\#)}
+% \section{RRT$^X$ static}
 \section{Probabilistic RoadMaps (PRM)}
 The Probabilistic Roadmap (PRM)~\cite{Kavraki1996PRM} algorithm is a 
 popular motion planning technique used in robotics to find feasible paths 
@@ -814,7 +817,7 @@ A pseudocode of construction step is shown in Algorithm \ref{alg:prm_constractio
   ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
     %(or a blank line to force the subfigure onto a new line)
   \begin{subfigure}[b]{0.45\textwidth}
-      \includegraphics[width=\textwidth]{figChap3/PRMsamplePoints40pt.pdf}
+      \includegraphics[width=\textwidth]{figChap3/PRMsamplePoints40pt.pdf} 
       \caption{Roadmap Construction.}
       \label{fig:random_points}
   \end{subfigure}
@@ -1588,30 +1591,193 @@ physically based modeling, virtual prototyping, and CAD.
 Throughout this chapter, 
 the performance of the implemented RRT* with machine learning methods will be presented and discussed, 
 alongside other planners, across various configuration spaces. 
-Graphs depicting convergence to optimal solutions, 
+Graphs illustrating convergence to optimal solutions, 
 with the Y-axis representing path cost and the X-axis representing iteration count, 
 will be used to evaluate the effectiveness of the machine learning method in different scenarios.
+Through this analysis, 
+the strengths and limitations of our method compared to the selected planners will be elucidated.
 \section{Comparison with OMPL}
+To assess the effectiveness of the implemented enhanced RRT* algorithm across various scenarios, 
+planners from the Open Motion Planning Library (OMPL)~\cite{Ioan2012ompl} 
+will serve as benchmarks. 
+OMPL is a widely-used library that provides an extensive collection of motion planning algorithms,
+making it a valuable resource for comparing and evaluating different planning strategies. 
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.48\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/Maze_U.pdf}
+      \caption{$\mathcal{C}$-space.}
+      \label{fig:maze_U_Cspace} 
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.5\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/graph_U_20pt.pdf}  
+      \caption{Graph.}
+      \label{fig:maze_U_graphs}
+  \end{subfigure}
+  \caption{$\mathcal{C}$-space with small $\mathcal{C}_\text{obs} $\ref{fig:maze_U_Cspace} and 
+  corresponding convergence graphs \ref{fig:maze_U_graphs} of selected planners.}
+  \label{fig:maze_U}
+\end{figure}
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.48\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/Maze_E.pdf}
+      \caption{$\mathcal{C}$-space.}
+      \label{fig:maze_E_Cspace} 
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.5\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/graph_E_20pt.pdf}  
+      \caption{Graph.}
+      \label{fig:maze_E_graphs}
+  \end{subfigure}
+  \caption{$\mathcal{C}$-space with narrow passages \ref{fig:maze_E_Cspace} and 
+  corresponding convergence graphs \ref{fig:maze_E_graphs} of selected planners.}
+  \label{fig:maze_E}
+\end{figure}
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.48\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/Maze_clutter.pdf}
+      \caption{$\mathcal{C}$-space.}
+      \label{fig:maze_clutter_Cspace} 
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.5\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/graph_clutter_20pt.pdf}  
+      \caption{Graph.}
+      \label{fig:maze_clutter_graphs}
+  \end{subfigure}
+  \caption{Cluttered $\mathcal{C}$-space \ref{fig:maze_clutter_Cspace} and 
+  corresponding convergence graphs \ref{fig:maze_E_graphs} of selected planners.}
+  \label{fig:maze_clutter}
+\end{figure}
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.48\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/Maze_narrow.pdf}
+      \caption{$\mathcal{C}$-space.}
+      \label{fig:maze_narrow_Cspace} 
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.5\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/graph_narrow_20pt.pdf}  
+      \caption{Graph.}
+      \label{fig:maze_narrow_graphs}
+  \end{subfigure}
+  \caption{Difficult  $\mathcal{C}$-space with numerouse narrow passages \ref{fig:maze_clutter_Cspace} 
+  and corresponding convergence graphs \ref{fig:maze_E_graphs} of selected planners.}
+  \label{fig:maze_narrow}
+\end{figure}
+%---------------------------------------------------------------------------------
+\\
+The primary objective of this comparison is to evaluate how integrating 
+machine learning methods enhances the performance of the RRT* algorithm. 
+Additionally, 
+the implemented method will be compared against similar planners that provide 
+information about the cost of the path, 
+such as RRT$^\#$ (sharp)~\cite{arslan2012rrtsharp}, $\text{RRT}^X$ static~\cite{Otte2015RRTX}, 
+and Informed RRT*~\cite{Gammell2018InformedRRTstar}. 
+This comparative analysis will offer insights into how our approach 
+performs in terms of optimizing path costs compared to these existing algorithms. 
+\\[12pt]
+Figures \ref{fig:maze_U}, \ref{fig:maze_E}, \ref{fig:maze_clutter}, \ref{fig:maze_narrow} 
+depict the configuration spaces and convergence graphs of each planner. 
+All tests were conducted up to a point where the graphs showed minimal change.
+Path costs were computed the same way across all planners, as the path length.
+\\[12pt]
+In Figure \ref{fig:maze_U}, 
+a simple configuration space, previously discussed, is shown. 
+The implemented machine learning method, denoted as RRT*\_ML, 
+notably converges faster to the optimal solution compared to RRT*. 
+Other planners, while slightly slower, also find solutions. 
+However, the performance of the implemented machine learning method surpasses 
+that of the other planners in this scenario.
+\\[12pt]
+Figure \ref{fig:maze_E} illustrates a simple example of narrow passages. 
+The implemented method discovers a solution slightly earlier than other planners, 
+although its performance becomes comparable to RRT* after 2000 iterations.
+\\[12pt]
+Figure \ref{fig:maze_clutter} presents a cluttered configuration space where all methods exhibit similar behavior. 
+However, improven RRT* initiates convergence to the first possible solution earlier than the others and 
+demonstrates better convergence to the optimal solution than RRT*.
+\\[12pt]
+In Figure \ref{fig:maze_narrow}, 
+a more challenging scenario with numerous narrow passages is demonstrated. 
+In this case, 
+the implemented enhanced RRT* once again discovers the first possible solution earlier than RRT*. 
+However, in terms of convergence, it behaves similarly to RRT*.
+% \begin{table}[htbp]
+%   \centering
+%   \begin{tabular}{|c|c|}
+%       \hline
+%       \textbf{Abbreviation} & \textbf{Name} \\
+%       \hline
+%       Abbrev1 & Name1 \\
+%       Abbrev2 & Name2 \\
+%       Abbrev3 & Name3 \\
+%       % Add more rows as needed
+%       \hline
+%   \end{tabular}
+%   \caption{Abbreviations and Names}
+%   \label{tab:abbrev}
+% \end{table}
+
+
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \section{Result}
+As a result, 
+it can be concluded that the implemented enhanced RRT* utilizing machine learning methods 
+performs better in terms of converging to the optimal solution in certain situations. 
+Most of the time, the enhanced version of RRT* discovers the first possible solution earlier 
+than other planners. 
+However, in challenging scenarios, such as in Figure \ref{fig:maze_narrow}, 
+it behaves similarly to RRT*. 
+In other instances, 
+it achieves either equivalent or superior convergence to the optimal solution compared to RRT*.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 
 \chapter{Conclusion} 
-\textbf{Briefly describe thesis chapters and make a conclusion where u say co se povedlo a co ne}
 \label{chap:Conclusion}
+In this study, the limitations of sampling-based algorithms were addressed. 
+Specifically, in scenarios characterized by numerous obstacles or narrow passages, 
+these challenges were tackled through the integration of machine learning techniques.
+It was identified that while sampling-based methods offer flexibility and 
+computational efficiency, exploring cluttered configuration spaces can be challenging, 
+potentially resulting in suboptimal path generation.
 \\[12pt]
-Where does it come from?
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-
-Where can I get some?
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-Lorep ipsum \cite{arslan2015machine} \cite{Ioan2012ompl} \cite{karaman2011rrtstar} \cite{lavalle1998rapidly}.
-\cite{gottschalk1996rapid}
+To enhance the efficiency and adaptability of sampling-based algorithms, 
+an approach was proposed to selectively sample points only from obstacle-free spaces, 
+leveraging machine learning to learn the configuration space.
+Through testing and comparison with planners from the Open Motion Planning Library (OMPL)~\cite{Ioan2012ompl}, 
+including RRT$^\#$ (sharp)~\cite{arslan2012rrtsharp}, $\text{RRT}^X$ static~\cite{Otte2015RRTX}, 
+and Informed RRT*~\cite{Gammell2018InformedRRTstar}, 
+the effectiveness of our approach was evaluated.
+\\[12pt]
+Our results demonstrate that the implemented enhanced RRT* algorithm, 
+leveraging machine learning methods, 
+performs better in terms of converging to optimal solutions in certain situations. 
+The enhanced version consistently discovers the first possible solution earlier 
+and achieves equivalent or superior convergence to 
+the optimal solution compared to traditional RRT*~\cite{karaman2011rrtstar}.
+\\[12pt]
+While our approach exhibits promising results, 
+it is essential to acknowledge its limitations. 
+In challenging scenarios, such as those demonstrated in Figure \ref{fig:maze_narrow}, 
+the enhanced RRT* behaves similarly to traditional RRT*. 
+\\[12pt]
+Overall, 
+this research contributes to advancing sampling-based 
+path planning algorithms by addressing their limitations 
+through the integration of machine learning techniques. 
+Moving forward, future research could focus on refining our approach, 
+particularly in real-world applications, 
+and exploring its integration into other path planners such as RRT$^\#$ to further enhance 
+their capabilities in complex environments.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------

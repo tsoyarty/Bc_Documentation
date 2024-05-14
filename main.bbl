@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{arslan2012rrtsharp}
+Oktay Arslan and Panagiotis Tsiotras.
+\newblock The role of vertex consistency in sampling-based algorithms for
+  optimal motion planning, 2012.
+
 \bibitem{arslan2015machine}
 Oktay Arslan and Panagiotis Tsiotras.
 \newblock Machine learning guided exploration for sampling-based motion
@@ -26,6 +31,11 @@ Jaroslaw Drapala.
 \newblock 2023.
 \newblock
   \url{https://towardsdatascience.com/kernel-density-estimator-for-multidimensional-data-3e78c9779ed8}.
+
+\bibitem{Gammell2018InformedRRTstar}
+Jonathan~D. Gammell, Timothy~D. Barfoot, and Siddhartha~S. Srinivasa.
+\newblock Informed sampling for asymptotically optimal path planning.
+\newblock {\em IEEE Transactions on Robotics}, 34(4):966--984, 2018.
 
 \bibitem{Goodfellow-et-al-2016DeepLearning}
 Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
@@ -74,6 +84,12 @@ S.~M. LaValle.
 Steven~M LaValle et~al.
 \newblock Rapidly-exploring random trees: A new tool for path planning.
 \newblock {\em The annual research report}, 1998.
+
+\bibitem{Otte2015RRTX}
+Michael Otte and Emilio Frazzoli.
+\newblock {\em $\mathrm{RRT}^X$: Real-Time Motion Planning/Replanning for
+  Environments with Unpredictable Obstacles}, pages 461--478.
+\newblock Springer International Publishing, Cham, 2015.
 
 \bibitem{Ahmed2019MotionPlanningNetworks}
 Ahmed~Hussain Qureshi, Yinglong Miao, Anthony Simeonov, and Michael~C. Yip.
