@@ -3,7 +3,8 @@
 \bibitem{arslan2012rrtsharp}
 Oktay Arslan and Panagiotis Tsiotras.
 \newblock The role of vertex consistency in sampling-based algorithms for
-  optimal motion planning, 2012.
+  optimal motion planning.
+\newblock 2012.
 
 \bibitem{arslan2015machine}
 Oktay Arslan and Panagiotis Tsiotras.
@@ -59,6 +60,12 @@ Peter Hart, Nils Nilsson, and Bertram Raphael.
 \newblock A formal basis for the heuristic determination of minimum cost paths.
 \newblock {\em {IEEE} Transactions on Systems Science and Cybernetics},
   4(2):100--107, 1968.
+
+\bibitem{Karaman2009RRG}
+Sertac Karaman and Emilio Frazzoli.
+\newblock Sampling-based motion planning with deterministic $\mu$-calculus
+  specifications.
+\newblock pages 2222--2229, 2009.
 
 \bibitem{karaman2011rrtstar}
 Sertac Karaman and Emilio Frazzoli.

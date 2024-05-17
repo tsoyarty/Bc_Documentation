@@ -3,49 +3,51 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: main.bib
+Warning--empty journal in arslan2012rrtsharp
 Warning--empty journal in Bishop2006Pattern
 Warning--empty journal in Jaroslaw2023KDEexplain
 Warning--empty journal in Jaroslaw2023KDEmultidimensional
+Warning--empty journal in Karaman2009RRG
 Warning--can't use both author and editor fields in Otte2015RRTX
-You've used 19 entries,
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            627 strings with 7891 characters,
-and the built_in function-call counts, 5898 in all, are:
-= -- 572
-> -- 277
-< -- 2
-+ -- 112
-- -- 90
-* -- 389
-:= -- 1012
-add.period$ -- 63
-call.type$ -- 19
-change.case$ -- 98
+            634 strings with 8170 characters,
+and the built_in function-call counts, 6355 in all, are:
+= -- 622
+> -- 290
+< -- 3
++ -- 117
+- -- 94
+* -- 415
+:= -- 1080
+add.period$ -- 67
+call.type$ -- 20
+change.case$ -- 103
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 225
-empty$ -- 454
-format.name$ -- 90
-if$ -- 1222
+cite$ -- 26
+duplicate$ -- 250
+empty$ -- 484
+format.name$ -- 94
+if$ -- 1325
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 21
-newline$ -- 104
-num.names$ -- 38
-pop$ -- 100
+int.to.str$ -- 20
+missing$ -- 23
+newline$ -- 110
+num.names$ -- 40
+pop$ -- 104
 preamble$ -- 1
-purify$ -- 82
+purify$ -- 86
 quote$ -- 0
-skip$ -- 166
+skip$ -- 188
 stack$ -- 0
-substring$ -- 318
-swap$ -- 38
-text.length$ -- 2
+substring$ -- 359
+swap$ -- 48
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 70
-warning$ -- 4
-while$ -- 52
-width$ -- 21
-write$ -- 214
-(There were 4 warnings)
+type$ -- 74
+warning$ -- 6
+while$ -- 56
+width$ -- 22
+write$ -- 225
+(There were 6 warnings)
