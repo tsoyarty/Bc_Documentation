@@ -1,19 +1,19 @@
 # Fdb version 3
-["bibtex main"] 1716051440 "main.aux" "main.bbl" "main" 1716051509
+["bibtex main"] 1716056556 "main.aux" "main.bbl" "main" 1716056573
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1716051509 34522 d70d4628aa2fdbec95fdd4eaf87dd908 "pdflatex"
+  "main.aux" 1716056573 34968 bcd8e798200e28525e8ded1fdb472a7e "pdflatex"
   "main.bib" 1715976406 9894 591d752ad227423600fc85e3dd5aedec ""
   (generated)
   "main.bbl"
   "main.blg"
-["makeindex main.idx"] 1716051439 "main.idx" "main.ind" "main" 1716051509
-  "main.idx" 1716051508 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1716055809 "main.idx" "main.ind" "main" 1716056573
+  "main.idx" 1716056572 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
-["pdflatex"] 1716051507 "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" "main.pdf" "main" 1716051509
+["pdflatex"] 1716056571 "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" "main.pdf" "main" 1716056573
   "/etc/texmf/web2c/texmf.cnf" 1713119362 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" 1716051507 114748 d07543a0ccce6994bd5266fad66e5d7c ""
+  "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" 1716056571 115678 11a2028423c5cd0ace3c8718c8c7af3b ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -267,15 +267,16 @@
   "figChap5/graph_U_20pt_ticks.pdf" 1715952363 14866 87867df95e5063f2c5ed8e6de749a0af ""
   "figChap5/graph_U_20pt_ticks_big.pdf" 1715952656 14319 e6e734296120992c51e58ed27e6cb349 ""
   "figChap5/graph_clutter_20pt_ticks.pdf" 1715952253 16612 83d60714a8cfb3678a8cf4e1bd6ad758 ""
+  "figChap5/graph_clutter_learning_time.pdf" 1716056428 18711 58f3e03e23b6f0a1165416ac3fbabdc1 ""
   "figChap5/graph_narrow_20pt_ticks.pdf" 1715952092 16717 61a20bed857be2393f0eaa4ed73b18fc ""
-  "main.aux" 1716051509 34522 d70d4628aa2fdbec95fdd4eaf87dd908 "pdflatex"
-  "main.bbl" 1716051440 4597 5254af5bd128f58ec00fc6ccf10200c5 "bibtex main"
-  "main.ind" 1716051439 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1716051509 9508 4e36ea176e31c2b1cb6727face23ef0d "pdflatex"
-  "main.lot" 1716051509 887 cfa38124a6c1cec4c33335b21f0592db "pdflatex"
-  "main.out" 1716051509 5978 af93e78d3329803d410f1fe3d94bf500 "pdflatex"
-  "main.tex" 1716051507 114748 d07543a0ccce6994bd5266fad66e5d7c ""
-  "main.toc" 1716051509 3580 2f69a36ccebf745aa2363aea5887abc0 "pdflatex"
+  "main.aux" 1716056573 34968 bcd8e798200e28525e8ded1fdb472a7e "pdflatex"
+  "main.bbl" 1716056556 4597 5254af5bd128f58ec00fc6ccf10200c5 "bibtex main"
+  "main.ind" 1716055809 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.lof" 1716056573 9695 c1a1601c45c199c27f10b87744251f69 "pdflatex"
+  "main.lot" 1716056573 910 6e4eeb6c45993261efb9ba4cd8ff797a "pdflatex"
+  "main.out" 1716056573 5960 40cbd8c7c2fd73dc2b5598a5691b123c "pdflatex"
+  "main.tex" 1716056571 115678 11a2028423c5cd0ace3c8718c8c7af3b ""
+  "main.toc" 1716056573 3577 58abb7e34672b963aa317ff2b4279571 "pdflatex"
   (generated)
   "main.aux"
   "main.idx"

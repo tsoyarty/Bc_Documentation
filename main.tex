@@ -1870,6 +1870,10 @@ the initial solutions found by each planner are illustrated in Figure \ref{fig:f
 Figure \ref{fig:final_sol_clutter} shows the final solutions provided by each planner. 
 Figure \ref{fig:learning_clutter} demonstrates how 
 the RRT*\_ML algorithm learns and adapts to the cluttered $\mathcal{C}$-space. 
+The final solution is found after 5000 iterations, 
+while the initial solution is the first found possible solution.
+The cluttered configuration space was selected for its potential to offer a greater diversity 
+of paths compared to other configuration spaces due to the multitude of possible path variations.
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering
@@ -1959,11 +1963,40 @@ the RRT*\_ML algorithm learns and adapts to the cluttered $\mathcal{C}$-space.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \clearpage
-\subsection{Time spent}
+\subsection{Runtime}
 It is important to note that while the RRT*\_ML method was programmed in Python, 
 the OMPL planners were implemented in C++, 
 contributing to potential differences in computation time.
-\\[12pt]
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \includegraphics[width=0.5\textwidth]{figChap5/graph_clutter_learning_time.pdf}   
+  \caption{Time taken to learn predicting points in cluttered configuration space 
+  to be in the \(C_{\text{free}}\).}
+  \label{fig:graph_learning_time}
+\end{figure}
+%--------------------------------------------------------------------------------- 
+%---------------------------------------------------------------------------------  
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{ |p{3cm}|c|c| }
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Runtime}} \\
+    \hline
+    \textbf{Planner} & \textbf{Initial solution $[s]$} & \textbf{Final solution $[s]$} \\
+    \hline
+    RRT*\_ML         & $0.278594 \pm 0.157754$ & $289.625891 \pm 2.611068$ \\
+    RRT*             & $0.006518 \pm 0.001462$ & $0.321272 \pm 0.014779$ \\
+    Informed RRT*    & $0.007330 \pm 0.000536$ & $0.259046 \pm 0.003154$ \\
+    RRT$^\#$         & $0.011917 \pm 0.002803$ & $0.305096 \pm 0.010232$ \\
+    RRT$^X$ static   & $0.011775 \pm 0.002566$ & $0.305259 \pm 0.008140$ \\
+    \hline
+  \end{tabular}
+  \caption{Time spent to find the first and final solutions in a cluttered configuration space.}
+  \label{tab:time_clutter2D}
+\end{table}
+%--------------------------------------------------------------------------------- 
+\\
 In Table \ref{tab:time_clutter2D}, 
 the computational times to find the first and final solutions in the cluttered configuration space 
 are presented. 
@@ -1971,37 +2004,28 @@ All values were computed as the mean of ten measurements,
 along with their standard deviations. 
 The mean value $\bar{x}$ and the variance $\sigma^2$ were calculated using the following formulas:
 \[
-\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
-\]
-\[
-\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i; \enspace \sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2, 
 \]
 where the standard deviation $\sigma$ is the square root of the variance:
 \[
 \sigma = \sqrt{\sigma^2}
 \] 
+The average time spent by RRT*\_ML to predict point in the $\mathcal{C}_\text{fere}$ 
+is $(0.037988 \pm 0.030603)$ seconds (Figure \ref{fig:graph_learning_time}). 
+\\[12pt]
 The computation time for the implemented RRT*\_ML code is significantly longer 
 compared to the planners from the OMPL library. 
 
-%---------------------------------------------------------------------------------  
-\begin{tabular}{ |p{3cm}|c|c|}
-  \hline
-  \multicolumn{3}{|c|}{\textbf{Time}} \\
-  \hline
-  \textbf{Planner} & \textbf{First solution} & \textbf{Final solution}\\
-  \hline
-  RRT*\_ML         &   $0.278594 \pm 0.157754$ &   $289.625891 \pm 2.611068$ \\
-  RRT*             &   $0.006518 \pm 0.001462$ &   $0.321272 \pm 0.014779$ \\
-  Informed RRT*    &   $0.007330 \pm 0.000536$ &   $0.259046 \pm 0.003154$ \\
-  RRT$^\#$         &   $0.011917 \pm 0.002803$ &   $0.305096 \pm 0.010232$ \\
-  RRT$^X$ static   &   $0.011775 \pm 0.002566$ &   $0.305259 \pm 0.008140$ \\
-  \hline
-  \caption{Time spent to find the first and final solutions in cluttered configuraion space.}
-  \label{tab:time_clutter2D}
- \end{tabular}
-%---------------------------------------------------------------------------------  
+%---------------------------------------------------------------------------------
 \section{3D and 6D Configuration Spaces}
-acs
+In comparing the implemented method with OMPL planners in 3D and 6D spaces, 
+it is not feasible due to the initial implementation of RRT*\_ML in Python. 
+OMPL doesn't directly provide the capability to represent objects in the same manner 
+as implemented in RRT*\_ML. 
+Additionally, OMPL does not directly provide collision checking for 2D and 3D objects.
+As a result, 
+the RRT*\_ML method will be compared with RRT*, 
+which is also implemented in Python and into which RRT*\_ML was integrated.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \clearpage
