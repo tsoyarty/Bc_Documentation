@@ -1734,6 +1734,18 @@ In certain scenarios, a larger or smaller rewiring radius or step size might be 
 As a consequence, 
 the OMPL implementation may outperform the custom Python implementation in terms of speed. 
 \\[12pt]
+To determine the bandwidth matrix $\mathbf{H}$ for RRT*\_ML, 
+Scott's rule was utilized \cite{Scott1992MultivariateDE}. 
+Thanks to this rule, the bandwidth matrix is not searched manually, 
+and during program execution, Scott's rule dynamically adjusts 
+the bandwidth matrix $\mathbf{H}$. 
+In the case of a 2D configuration space, 
+the bandwidth matrix $\mathbf{H}$ is a symmetric 
+matrix $\left[ \begin{array}{cc} h & 0 \\ 0 & h \end{array} \right]$, 
+where $h$ is calculated using Scott's rule:
+\[ h = n^{-\frac{1}{d+4}}. \]
+Here, $n$ represents the number of data points, and $d$ represents the number of dimensions.
+\\[12pt]
 All parameters are listed in Table \ref{tab:params}.
 %--------------------------------------------------------------------------------- 
 %--------------------------------------------------------------------------------- 

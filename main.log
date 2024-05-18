@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.14)  18 MAY 2024 20:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.14)  18 MAY 2024 21:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1399,124 +1399,127 @@ Chapter 5.
 [33
 
 ]
-<figChap5/graph_U_20pt_ticks_big.pdf, id=8790, 515.66057pt x 500.00519pt>
+<figChap5/graph_U_20pt_ticks_big.pdf, id=8791, 515.66057pt x 500.00519pt>
 File: figChap5/graph_U_20pt_ticks_big.pdf Graphic file (type pdf)
 <use figChap5/graph_U_20pt_ticks_big.pdf>
-Package pdftex.def Info: figChap5/graph_U_20pt_ticks_big.pdf  used on input line 1757.
+Package pdftex.def Info: figChap5/graph_U_20pt_ticks_big.pdf  used on input line 1769.
 (pdftex.def)             Requested size: 177.872pt x 172.47145pt.
-<figChap5/graph_U_20pt_ticks.pdf, id=8791, 515.66057pt x 500.00519pt>
+<figChap5/graph_U_20pt_ticks.pdf, id=8792, 515.66057pt x 500.00519pt>
 File: figChap5/graph_U_20pt_ticks.pdf Graphic file (type pdf)
 <use figChap5/graph_U_20pt_ticks.pdf>
-Package pdftex.def Info: figChap5/graph_U_20pt_ticks.pdf  used on input line 1762.
+Package pdftex.def Info: figChap5/graph_U_20pt_ticks.pdf  used on input line 1774.
 (pdftex.def)             Requested size: 177.872pt x 172.47145pt.
 File: figChap5/graph_U_20pt_ticks.pdf Graphic file (type pdf)
 <use figChap5/graph_U_20pt_ticks.pdf>
-Package pdftex.def Info: figChap5/graph_U_20pt_ticks.pdf  used on input line 1792.
+Package pdftex.def Info: figChap5/graph_U_20pt_ticks.pdf  used on input line 1804.
 (pdftex.def)             Requested size: 174.23845pt x 168.94664pt.
-<figChap5/Maze_U_ticks.pdf, id=8798, 291.49316pt x 283.84431pt>
+<figChap5/Maze_U_ticks.pdf, id=8799, 291.49316pt x 283.84431pt>
 File: figChap5/Maze_U_ticks.pdf Graphic file (type pdf)
 <use figChap5/Maze_U_ticks.pdf>
-Package pdftex.def Info: figChap5/Maze_U_ticks.pdf  used on input line 1797.
+Package pdftex.def Info: figChap5/Maze_U_ticks.pdf  used on input line 1809.
 (pdftex.def)             Requested size: 177.872pt x 173.2054pt.
-<figChap5/graph_E_20pt_ticks.pdf, id=8803, 515.8236pt x 500.00519pt>
+<figChap5/graph_E_20pt_ticks.pdf, id=8804, 515.8236pt x 500.00519pt>
 File: figChap5/graph_E_20pt_ticks.pdf Graphic file (type pdf)
 <use figChap5/graph_E_20pt_ticks.pdf>
-Package pdftex.def Info: figChap5/graph_E_20pt_ticks.pdf  used on input line 1809.
+Package pdftex.def Info: figChap5/graph_E_20pt_ticks.pdf  used on input line 1821.
 (pdftex.def)             Requested size: 174.23845pt x 168.89323pt.
-<figChap5/Maze_E_ticks.pdf, id=8804, 291.49316pt x 283.84431pt>
+<figChap5/Maze_E_ticks.pdf, id=8805, 291.49316pt x 283.84431pt>
 File: figChap5/Maze_E_ticks.pdf Graphic file (type pdf)
 <use figChap5/Maze_E_ticks.pdf>
-Package pdftex.def Info: figChap5/Maze_E_ticks.pdf  used on input line 1814.
+Package pdftex.def Info: figChap5/Maze_E_ticks.pdf  used on input line 1826.
 (pdftex.def)             Requested size: 177.872pt x 173.2054pt.
-<figChap5/graph_clutter_20pt_ticks.pdf, id=8809, 515.66057pt x 500.00519pt>
+<figChap5/graph_clutter_20pt_ticks.pdf, id=8810, 515.66057pt x 500.00519pt>
 File: figChap5/graph_clutter_20pt_ticks.pdf Graphic file (type pdf)
 <use figChap5/graph_clutter_20pt_ticks.pdf>
-Package pdftex.def Info: figChap5/graph_clutter_20pt_ticks.pdf  used on input line 1826.
+Package pdftex.def Info: figChap5/graph_clutter_20pt_ticks.pdf  used on input line 1838.
 (pdftex.def)             Requested size: 174.23845pt x 168.94664pt.
-<figChap5/Maze_clutter_ticks.pdf, id=8810, 291.49316pt x 283.84431pt>
+<figChap5/Maze_clutter_ticks.pdf, id=8811, 291.49316pt x 283.84431pt>
 File: figChap5/Maze_clutter_ticks.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_ticks.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_ticks.pdf  used on input line 1831.
+Package pdftex.def Info: figChap5/Maze_clutter_ticks.pdf  used on input line 1843.
 (pdftex.def)             Requested size: 177.872pt x 173.2054pt.
-<figChap5/graph_narrow_20pt_ticks.pdf, id=8815, 521.40862pt x 500.00519pt>
+<figChap5/graph_narrow_20pt_ticks.pdf, id=8816, 521.40862pt x 500.00519pt>
 File: figChap5/graph_narrow_20pt_ticks.pdf Graphic file (type pdf)
 <use figChap5/graph_narrow_20pt_ticks.pdf>
-Package pdftex.def Info: figChap5/graph_narrow_20pt_ticks.pdf  used on input line 1843.
+Package pdftex.def Info: figChap5/graph_narrow_20pt_ticks.pdf  used on input line 1855.
 (pdftex.def)             Requested size: 174.23845pt x 167.08505pt.
-<figChap5/Maze_narrow_ticks.pdf, id=8816, 293.28584pt x 283.84431pt>
+<figChap5/Maze_narrow_ticks.pdf, id=8817, 293.28584pt x 283.84431pt>
 File: figChap5/Maze_narrow_ticks.pdf Graphic file (type pdf)
 <use figChap5/Maze_narrow_ticks.pdf>
-Package pdftex.def Info: figChap5/Maze_narrow_ticks.pdf  used on input line 1848.
+Package pdftex.def Info: figChap5/Maze_narrow_ticks.pdf  used on input line 1860.
 (pdftex.def)             Requested size: 177.872pt x 172.14429pt.
-<figChap5/Maze_clutter_first_solution_RRTstarML.pdf, id=8827, 294.09875pt x 285.065pt>
+<figChap5/Maze_clutter_first_solution_RRTstarML.pdf, id=8828, 294.09875pt x 285.065pt>
 File: figChap5/Maze_clutter_first_solution_RRTstarML.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_first_solution_RRTstarML.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTstarML.pdf  used on input line 1881.
+Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTstarML.pdf  used on input line 1893.
 (pdftex.def)             Requested size: 174.23845pt x 168.88719pt.
-<figChap5/Maze_clutter_first_solution_RRTstar.pdf, id=8828, 293.28584pt x 283.84431pt>
+<figChap5/Maze_clutter_first_solution_RRTstar.pdf, id=8829, 293.28584pt x 283.84431pt>
 File: figChap5/Maze_clutter_first_solution_RRTstar.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_first_solution_RRTstar.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTstar.pdf  used on input line 1886.
+Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTstar.pdf  used on input line 1898.
 (pdftex.def)             Requested size: 174.23845pt x 168.62743pt.
-<figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf, id=8829, 293.28584pt x 283.84431pt>
+<figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf, id=8830, 293.28584pt x 283.84431pt>
 File: figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf  used on input line 1891.
+Package pdftex.def Info: figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf  used on input line 1903.
 (pdftex.def)             Requested size: 116.16266pt x 112.4226pt.
-<figChap5/Maze_clutter_first_solution_RRTsharp.pdf, id=8830, 293.28584pt x 283.84431pt>
+<figChap5/Maze_clutter_first_solution_RRTsharp.pdf, id=8831, 293.28584pt x 283.84431pt>
 File: figChap5/Maze_clutter_first_solution_RRTsharp.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_first_solution_RRTsharp.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTsharp.pdf  used on input line 1896.
+Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTsharp.pdf  used on input line 1908.
 (pdftex.def)             Requested size: 116.16266pt x 112.4226pt.
-<figChap5/Maze_clutter_first_solution_RRTXstatic.pdf, id=8831, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_first_solution_RRTXstatic.pdf, id=8832, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_first_solution_RRTXstatic.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_first_solution_RRTXstatic.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTXstatic.pdf  used on input line 1901.
+Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTXstatic.pdf  used on input line 1913.
 (pdftex.def)             Requested size: 116.16266pt x 112.19644pt.
-<figChap5/Maze_clutter_final_solution_RRTstarML.pdf, id=8832, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_final_solution_RRTstarML.pdf, id=8833, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_final_solution_RRTstarML.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_RRTstarML.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTstarML.pdf  used on input line 1914.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTstarML.pdf  used on input line 1926.
 (pdftex.def)             Requested size: 174.23845pt x 168.29251pt.
-<figChap5/Maze_clutter_final_solution_RRTstar2.pdf, id=8833, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_final_solution_RRTstar2.pdf, id=8834, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_final_solution_RRTstar2.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_RRTstar2.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTstar2.pdf  used on input line 1919.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTstar2.pdf  used on input line 1931.
 (pdftex.def)             Requested size: 174.23845pt x 168.29251pt.
-<figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf, id=8834, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf, id=8835, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf  used on input line 1924.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf  used on input line 1936.
 (pdftex.def)             Requested size: 116.16266pt x 112.19644pt.
-<figChap5/Maze_clutter_final_solution_RRTsharp.pdf, id=8835, 293.28584pt x 283.84431pt>
+<figChap5/Maze_clutter_final_solution_RRTsharp.pdf, id=8836, 293.28584pt x 283.84431pt>
 File: figChap5/Maze_clutter_final_solution_RRTsharp.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_RRTsharp.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTsharp.pdf  used on input line 1929.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTsharp.pdf  used on input line 1941.
 (pdftex.def)             Requested size: 116.16266pt x 112.4226pt.
-<figChap5/Maze_clutter_final_solution_RRTXstatic.pdf, id=8836, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_final_solution_RRTXstatic.pdf, id=8837, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_final_solution_RRTXstatic.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_RRTXstatic.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTXstatic.pdf  used on input line 1934.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTXstatic.pdf  used on input line 1946.
 (pdftex.def)             Requested size: 116.16266pt x 112.19644pt.
-<figChap5/Maze_clutter_RRTstarML_learning500.pdf, id=8837, 270.62305pt x 270.62305pt>
+<figChap5/Maze_clutter_RRTstarML_learning500.pdf, id=8838, 270.62305pt x 270.62305pt>
 File: figChap5/Maze_clutter_RRTstarML_learning500.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_RRTstarML_learning500.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning500.pdf  used on input line 1946.
+Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning500.pdf  used on input line 1958.
 (pdftex.def)             Requested size: 116.16266pt x 116.1633pt.
-<figChap5/Maze_clutter_RRTstarML_learning1000.pdf, id=8838, 270.62305pt x 270.62305pt>
+<figChap5/Maze_clutter_RRTstarML_learning1000.pdf, id=8839, 270.62305pt x 270.62305pt>
 File: figChap5/Maze_clutter_RRTstarML_learning1000.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_RRTstarML_learning1000.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning1000.pdf  used on input line 1951.
+Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning1000.pdf  used on input line 1963.
 (pdftex.def)             Requested size: 116.16266pt x 116.1633pt.
-<figChap5/Maze_clutter_RRTstarML_learning5000.pdf, id=8839, 270.62305pt x 270.62305pt>
+<figChap5/Maze_clutter_RRTstarML_learning5000.pdf, id=8840, 270.62305pt x 270.62305pt>
 File: figChap5/Maze_clutter_RRTstarML_learning5000.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_RRTstarML_learning5000.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning5000.pdf  used on input line 1956.
+Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning5000.pdf  used on input line 1968.
 (pdftex.def)             Requested size: 116.16266pt x 116.1633pt.
- [34] [35 <./figChap5/graph_U_20pt_ticks_big.pdf> <./figChap5/graph_U_20pt_ticks.pdf> <./figChap5/Maze_U_ticks.pdf>] [36 <./figChap5/graph_E_20pt_ticks.pdf> <./figChap5/Maze_E_ticks.pdf> <./figChap5/graph_clutter_20pt_ticks.pdf> <./figChap5/Maze_clutter_ticks.pdf>] [37 <./figChap5/graph_narrow_20pt_ticks.pdf> <./figChap5/Maze_narrow_ticks.pdf> <./figChap5/Maze_clutter_first_solution_RRTstarML.pdf> <./figChap5/Maze_clutter_first_solution_RRTstar.pdf> <./figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf> <./figChap5/Maze_clutter_first_solution_RRTsharp.pdf> <./figChap5/Maze_clutter_first_solution_RRTXstatic.pdf
+ [34]
+Underfull \vbox (badness 7704) has occurred while \output is active []
+
+ [35 <./figChap5/graph_U_20pt_ticks_big.pdf> <./figChap5/graph_U_20pt_ticks.pdf>] [36 <./figChap5/Maze_U_ticks.pdf> <./figChap5/graph_E_20pt_ticks.pdf> <./figChap5/Maze_E_ticks.pdf>] [37 <./figChap5/graph_clutter_20pt_ticks.pdf> <./figChap5/Maze_clutter_ticks.pdf> <./figChap5/graph_narrow_20pt_ticks.pdf> <./figChap5/Maze_narrow_ticks.pdf>] [38 <./figChap5/Maze_clutter_first_solution_RRTstarML.pdf> <./figChap5/Maze_clutter_first_solution_RRTstar.pdf> <./figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf> <./figChap5/Maze_clutter_first_solution_RRTsharp.pdf> <./figChap5/Maze_clutter_first_solution_RRTXstatic.pdf
 
 pdfTeX warning: pdflatex (file ./figChap5/Maze_clutter_first_solution_RRTXstatic.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [38 <./figChap5/Maze_clutter_final_solution_RRTstarML.pdf> <./figChap5/Maze_clutter_final_solution_RRTstar2.pdf
+>] [39 <./figChap5/Maze_clutter_final_solution_RRTstarML.pdf> <./figChap5/Maze_clutter_final_solution_RRTstar2.pdf
 
 pdfTeX warning: pdflatex (file ./figChap5/Maze_clutter_final_solution_RRTstar2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf
@@ -1526,25 +1529,25 @@ pdfTeX warning: pdflatex (file ./figChap5/Maze_clutter_final_solution_InformedRR
 
 pdfTeX warning: pdflatex (file ./figChap5/Maze_clutter_final_solution_RRTXstatic.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figChap5/Maze_clutter_RRTstarML_learning500.pdf> <./figChap5/Maze_clutter_RRTstarML_learning1000.pdf> <./figChap5/Maze_clutter_RRTstarML_learning5000.pdf>]
-<figChap5/graph_clutter_learning_time.pdf, id=16731, 533.71318pt x 500.00519pt>
+<figChap5/graph_clutter_learning_time.pdf, id=16738, 533.71318pt x 500.00519pt>
 File: figChap5/graph_clutter_learning_time.pdf Graphic file (type pdf)
 <use figChap5/graph_clutter_learning_time.pdf>
-Package pdftex.def Info: figChap5/graph_clutter_learning_time.pdf  used on input line 1973.
+Package pdftex.def Info: figChap5/graph_clutter_learning_time.pdf  used on input line 1985.
 (pdftex.def)             Requested size: 181.5pt x 170.03766pt.
 
-Overfull \hbox (2.37349pt too wide) in paragraph at lines 2012--2018
+Overfull \hbox (2.37349pt too wide) in paragraph at lines 2024--2030
 \T1/lmr/m/n/10.95 (-20) The av-er-age time spent by RRT*_ML to pre-dict point in the $\OMS/lmsy/m/n/10.95 C[]$ \T1/lmr/m/n/10.95 (-20) is $\OT1/lmr/m/n/10.95 (-20) (0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 (-20) 037988 \OMS/lmsy/m/n/10.95 ^^F
  []
 
-[39
+[40
 
- <./figChap5/graph_clutter_learning_time.pdf>] [40] [41
-
-] [42
+ <./figChap5/graph_clutter_learning_time.pdf>] [41] [42
 
 ]
 Chapter 6.
-(./main.bbl [43] [44
+(./main.bbl [43
+
+] [44
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 23--28
@@ -1585,18 +1588,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 40CBD8C7C2FD73DC2B5598A5691B123C;5960.
  ) 
 Here is how much of TeX's memory you used:
- 20065 strings out of 478287
- 342841 string characters out of 5849289
- 695304 words of memory out of 5000000
- 37247 multiletter control sequences out of 15000+600000
- 617960 words of font info for 267 fonts, out of 8000000 for 9000
+ 20117 strings out of 478287
+ 343550 string characters out of 5849289
+ 695350 words of memory out of 5000000
+ 37262 multiletter control sequences out of 15000+600000
+ 639867 words of font info for 289 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,20n,78p,1046b,989s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (55 pages, 15523749 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (55 pages, 15526132 bytes).
 PDF statistics:
- 16984 PDF objects out of 18468 (max. 8388607)
- 1573 compressed objects within 16 object streams
- 262 named destinations out of 1000 (max. 500000)
- 80997 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 16989 PDF objects out of 18468 (max. 8388607)
+ 1577 compressed objects within 16 object streams
+ 263 named destinations out of 1000 (max. 500000)
+ 95333 words of extra memory for PDF output out of 106986 (max. 10000000)
 

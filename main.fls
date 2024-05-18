@@ -1459,6 +1459,9 @@ INPUT ./figChap4/RRTstar2DML_maze237.2.pdf
 INPUT figChap4/RRTstar2DML_maze237.2.pdf
 INPUT ./figChap4/RRTstar2DML_maze237.2.pdf
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmssbx10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx8.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx6.tfm
 INPUT ./figChap5/graph_U_20pt_ticks_big.pdf
 INPUT ./figChap5/graph_U_20pt_ticks_big.pdf
 INPUT figChap5/graph_U_20pt_ticks_big.pdf
@@ -1478,6 +1481,10 @@ INPUT ./figChap5/Maze_U_ticks.pdf
 INPUT figChap5/Maze_U_ticks.pdf
 INPUT ./figChap5/Maze_U_ticks.pdf
 INPUT ./figChap5/Maze_U_ticks.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx9.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx5.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx7.tfm
 INPUT ./figChap5/graph_E_20pt_ticks.pdf
 INPUT ./figChap5/graph_E_20pt_ticks.pdf
 INPUT figChap5/graph_E_20pt_ticks.pdf
@@ -1586,8 +1593,8 @@ INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc
-INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb

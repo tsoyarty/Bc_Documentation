@@ -9,45 +9,46 @@ Warning--empty journal in Jaroslaw2023KDEexplain
 Warning--empty journal in Jaroslaw2023KDEmultidimensional
 Warning--empty journal in Karaman2009RRG
 Warning--can't use both author and editor fields in Otte2015RRTX
-You've used 20 entries,
+Warning--empty booktitle in Scott1992MultivariateDE
+You've used 21 entries,
             2118 wiz_defined-function locations,
-            634 strings with 8170 characters,
-and the built_in function-call counts, 6355 in all, are:
-= -- 622
-> -- 290
+            639 strings with 8298 characters,
+and the built_in function-call counts, 6583 in all, are:
+= -- 641
+> -- 297
 < -- 3
-+ -- 117
-- -- 94
-* -- 415
-:= -- 1080
-add.period$ -- 67
-call.type$ -- 20
-change.case$ -- 103
++ -- 120
+- -- 96
+* -- 423
+:= -- 1118
+add.period$ -- 70
+call.type$ -- 21
+change.case$ -- 107
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 250
-empty$ -- 484
-format.name$ -- 94
-if$ -- 1325
+cite$ -- 28
+duplicate$ -- 263
+empty$ -- 510
+format.name$ -- 96
+if$ -- 1374
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 23
-newline$ -- 110
-num.names$ -- 40
-pop$ -- 104
+int.to.str$ -- 21
+missing$ -- 24
+newline$ -- 115
+num.names$ -- 42
+pop$ -- 113
 preamble$ -- 1
-purify$ -- 86
+purify$ -- 89
 quote$ -- 0
-skip$ -- 188
+skip$ -- 195
 stack$ -- 0
-substring$ -- 359
-swap$ -- 48
+substring$ -- 364
+swap$ -- 49
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 74
-warning$ -- 6
-while$ -- 56
-width$ -- 22
-write$ -- 225
-(There were 6 warnings)
+type$ -- 78
+warning$ -- 7
+while$ -- 58
+width$ -- 23
+write$ -- 234
+(There were 7 warnings)
