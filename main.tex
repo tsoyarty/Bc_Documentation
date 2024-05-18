@@ -1675,7 +1675,25 @@ planners from the Open Motion Planning Library (OMPL)~\cite{Ioan2012ompl}
 will serve as benchmarks. 
 OMPL is a widely-used library that provides an extensive collection of motion planning algorithms,
 making it a valuable resource for comparing and evaluating different planning strategies. 
-\\[12pt]
+%---------------------------------------------------------------------------------
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|p{3cm}|c|c|}
+      \hline
+      \textbf{Name} & \textbf{Parameter} & \textbf{Value}\\
+      \hline
+      Goal bias       & $p_{goal}$ & 0.05 \\
+      Epsilon         & $\epsilon$ & 0.01 \\
+      Rewire Factor   & $k$        & 1.1  \\
+      Rewiring radius & $r$        & 40   \\
+      Step size       & $s$        & 10   \\
+      % Add more rows as needed
+      \hline
+  \end{tabular}
+  \caption{Planners parameters.}
+  \label{tab:params}
+\end{table}
+%--------------------------------------------------------------------------------- 
 The primary objective of this comparison is to evaluate how integrating 
 machine learning methods enhances the performance of the RRT* algorithm. 
 Additionally, 
@@ -1685,6 +1703,7 @@ such as RRT$^\#$ (sharp)~\cite{arslan2012rrtsharp}, $\text{RRT}^X$ static~\cite{
 and Informed RRT*~\cite{Gammell2018InformedRRTstar}. 
 This comparative analysis will offer insights into how our approach 
 performs in terms of optimizing path costs compared to these existing algorithms. 
+
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \subsection{Planners parameters}
@@ -1703,24 +1722,23 @@ This factor, applied multiplicatively,
 determines the size of the neighbor ball or the number of neighbors 
 considered during tree expansion. 
 %---------------------------------------------------------------------------------
-\begin{table}[htbp]
-  \centering
-  \begin{tabular}{|p{3cm}|c|c|}
-      \hline
-      \textbf{Name} & \textbf{Parameter} & \textbf{Value}\\
-      \hline
-      Goal bias       & $p_{goal}$ & 0.05 \\
-      Epsilon         & $\epsilon$ & 0.01 \\
-      Rewire Factor   & $k$        & 1.1  \\
-      Rewiring radius & $r$        & 40   \\
-      Step size       & $s$        & 10   \\
-      % Add more rows as needed
-      \hline
-  \end{tabular}
-  \caption{Planners parameters.}
-  \label{tab:params}
-\end{table}
-%--------------------------------------------------------------------------------- 
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/graph_U_20pt_ticks_big.pdf}
+    \caption{Original unscaled graph.}
+    % \label{fig:maze_E_Cspace} 
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/graph_U_20pt_ticks.pdf}  
+    \caption{Scaled graph.}
+    % \label{fig:maze_U_graphs}
+  \end{subfigure} 
+  \caption{To enhance visualization of the graphs, all will be scaled to depict changes more clearly. 
+  Consequently, the cost axes will not necessarily start at zero.}
+  \label{fig:graph_scale}
+\end{figure}
+%---------------------------------------------------------------------------------
 \\
 In the implementation of RRT*\_ML, 
 the rewiring radius is set to 40 and the step size to 10. 
@@ -1743,7 +1761,7 @@ In the case of a 2D configuration space,
 the bandwidth matrix $\mathbf{H}$ is a symmetric 
 matrix $\left[ \begin{array}{cc} h & 0 \\ 0 & h \end{array} \right]$, 
 where $h$ is calculated using Scott's rule:
-\[ h = n^{-\frac{1}{d+4}}. \]
+\[ h = n^{-\frac{1}{d+4}} \]
 Here, $n$ represents the number of data points, and $d$ represents the number of dimensions.
 \\[12pt]
 All parameters are listed in Table \ref{tab:params}.
@@ -1765,19 +1783,19 @@ Black areas represent obstacles.
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
-  \begin{subfigure}[b]{0.49\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/graph_U_20pt_ticks_big.pdf}
-    \caption{Original unscaled graph.}
-    % \label{fig:maze_E_Cspace} 
-  \end{subfigure}  
-  \begin{subfigure}[b]{0.49\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \includegraphics[width=\textwidth]{figChap5/graph_U_20pt_ticks.pdf}  
-    \caption{Scaled graph.}
-    % \label{fig:maze_U_graphs}
-  \end{subfigure} 
-  \caption{To enhance visualization of the graphs, all will be scaled to depict changes more clearly. 
-  Consequently, the cost axes will not necessarily start at zero.}
-  \label{fig:graph_scale}
+    \caption{Graph.}
+    \label{fig:maze_U_graphs}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.49\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/Maze_U_ticks.pdf}
+      \caption{$\mathcal{C}$-space.}
+      \label{fig:maze_U_Cspace} 
+  \end{subfigure}  
+  \caption{$\mathcal{C}$-space with small $\mathcal{C}_\text{obs} $ \ref{fig:maze_U_Cspace} and 
+  corresponding convergence graphs \ref{fig:maze_U_graphs} of selected planners.}
+  \label{fig:maze_U}
 \end{figure}
 %---------------------------------------------------------------------------------
 \\
@@ -1797,23 +1815,6 @@ that of the other planners in this scenario.
 Figure \ref{fig:maze_E} illustrates a simple example of narrow passages. 
 The implemented method discovers a solution slightly earlier than other planners, 
 although its performance becomes comparable to RRT* after 2000 iterations.
-%---------------------------------------------------------------------------------
-\begin{figure}[!ht]
-  \centering 
-  \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/graph_U_20pt_ticks.pdf}  
-    \caption{Graph.}
-    \label{fig:maze_U_graphs}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.49\textwidth}
-      \includegraphics[width=\textwidth]{figChap5/Maze_U_ticks.pdf}
-      \caption{$\mathcal{C}$-space.}
-      \label{fig:maze_U_Cspace} 
-  \end{subfigure}  
-  \caption{$\mathcal{C}$-space with small $\mathcal{C}_\text{obs} $ \ref{fig:maze_U_Cspace} and 
-  corresponding convergence graphs \ref{fig:maze_U_graphs} of selected planners.}
-  \label{fig:maze_U}
-\end{figure}
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
@@ -1877,80 +1878,15 @@ In this case,
 the implemented enhanced RRT* once again discovers the first possible solution earlier than RRT*. 
 However, in terms of convergence, it behaves similarly to RRT*.
 \\[12pt]
+Figure \ref{fig:learning_clutter} demonstrates how 
+the RRT*\_ML algorithm learns and adapts to the cluttered $\mathcal{C}$-space. 
 Using the example of a cluttered configuration space in Figure \ref{fig:maze_clutter}, 
 the initial solutions found by each planner are illustrated in Figure \ref{fig:first_sol_clutter}. 
 Figure \ref{fig:final_sol_clutter} shows the final solutions provided by each planner. 
-Figure \ref{fig:learning_clutter} demonstrates how 
-the RRT*\_ML algorithm learns and adapts to the cluttered $\mathcal{C}$-space. 
 The final solution is found after 5000 iterations, 
 while the initial solution is the first found possible solution.
 The cluttered configuration space was selected for its potential to offer a greater diversity 
 of paths compared to other configuration spaces due to the multitude of possible path variations.
-%---------------------------------------------------------------------------------
-\begin{figure}[!ht]
-  \centering
-  \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_first_solution_RRTstarML.pdf}  
-    \caption{RRT*\_ML.}
-    % \label{fig:maze_E_graphs}
-  \end{subfigure}  
-  \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_first_solution_RRTstar.pdf}  
-    \caption{RRT*.}
-    % \label{fig:maze_E_graphs}
-  \end{subfigure}     
-  \begin{subfigure}[b]{0.32\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf}  
-    \caption{Informed RRT*.}
-    % \label{fig:maze_E_graphs}
-  \end{subfigure}  
-  \begin{subfigure}[b]{0.32\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_first_solution_RRTsharp.pdf}  
-    \caption{RRT$^\#$.}
-    % \label{fig:maze_E_graphs}
-  \end{subfigure}  
-  \begin{subfigure}[b]{0.32\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_first_solution_RRTXstatic.pdf}  
-    \caption{RRT$^X$ static.}
-    % \label{fig:maze_E_graphs}
-  \end{subfigure}   
-  \caption{An example of the initial solutions found by each planner 
-  in a cluttered $\mathcal{C}$-space.}
-  \label{fig:first_sol_clutter}
-\end{figure}
-%---------------------------------------------------------------------------------
-%---------------------------------------------------------------------------------
-\begin{figure}[!ht]
-  \centering
-  \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTstarML.pdf}  
-    \caption{RRT*\_ML.}
-    % \label{fig:maze_E_graphs}
-  \end{subfigure}  
-  \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTstar2.pdf}  
-    \caption{RRT*.}
-    % \label{fig:maze_E_graphs}
-  \end{subfigure}    
-  \begin{subfigure}[b]{0.32\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf}  
-    \caption{Informed RRT*.}
-    % \label{fig:maze_E_graphs}
-  \end{subfigure}  
-  \begin{subfigure}[b]{0.32\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTsharp.pdf}  
-    \caption{RRT$^\#$.}
-    % \label{fig:maze_E_graphs}
-  \end{subfigure}  
-  \begin{subfigure}[b]{0.32\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTXstatic.pdf}  
-    \caption{RRT$^X$ static.}
-    % \label{fig:maze_E_graphs}
-  \end{subfigure}   
-  \caption{An example of the final solutions found by each planner 
-  in a cluttered $\mathcal{C}$-space.}
-  \label{fig:final_sol_clutter}
-\end{figure}
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering
@@ -1973,6 +1909,72 @@ of paths compared to other configuration spaces due to the multitude of possible
   \label{fig:learning_clutter}
 \end{figure}
 %---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering
+  \begin{subfigure}[b]{0.435\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_first_solution_RRTstarML.pdf}  
+    \caption{RRT*\_ML.}
+    % \label{fig:maze_E_graphs}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.435\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_first_solution_RRTstar.pdf}  
+    \caption{RRT*.}
+    % \label{fig:maze_E_graphs}
+  \end{subfigure}     
+  \begin{subfigure}[t]{0.264\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf}  
+    \caption{Informed RRT*.}
+    % \label{fig:maze_E_graphs}
+  \end{subfigure}  
+  \begin{subfigure}[t]{0.264\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_first_solution_RRTsharp.pdf}  
+    \caption{RRT$^\#$.}
+    % \label{fig:maze_E_graphs}
+  \end{subfigure}  
+  \begin{subfigure}[t]{0.264\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_first_solution_RRTXstatic.pdf}  
+    \caption{RRT$^X$ static.}
+    % \label{fig:maze_E_graphs}
+  \end{subfigure}   
+  \caption{An example of the initial solutions found by each planner 
+  in a cluttered $\mathcal{C}$-space.}
+  \label{fig:first_sol_clutter}
+\end{figure}
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering
+  \begin{subfigure}[b]{0.435\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTstarML.pdf}  
+    \caption{RRT*\_ML.}
+    % \label{fig:maze_E_graphs}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.435\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTstar2.pdf}  
+    \caption{RRT*.}
+    % \label{fig:maze_E_graphs}
+  \end{subfigure}    
+  \begin{subfigure}[t]{0.264\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf}  
+    \caption{Informed RRT*.}
+    % \label{fig:maze_E_graphs}
+  \end{subfigure}  
+  \begin{subfigure}[t]{0.264\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTsharp.pdf}  
+    \caption{RRT$^\#$.}
+    % \label{fig:maze_E_graphs}
+  \end{subfigure}  
+  \begin{subfigure}[t]{0.264\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTXstatic.pdf}  
+    \caption{RRT$^X$ static.}
+    % \label{fig:maze_E_graphs}
+  \end{subfigure}   
+  \caption{An example of the final solutions found by each planner 
+  in a cluttered $\mathcal{C}$-space.}
+  \label{fig:final_sol_clutter}
+\end{figure}
+
 %---------------------------------------------------------------------------------
 \clearpage
 \subsection{Runtime}
@@ -2032,7 +2034,7 @@ compared to the planners from the OMPL library.
 \section{3D and 6D Configuration Spaces}
 In comparing the implemented method with OMPL planners in 3D and 6D spaces, 
 it is not feasible due to the initial implementation of RRT*\_ML in Python. 
-OMPL doesn't directly provide the capability to represent objects in the same manner 
+OMPL does not directly provide the capability to represent objects in the same manner 
 as implemented in RRT*\_ML. 
 Additionally, OMPL does not directly provide collision checking for 2D and 3D objects.
 As a result, 
