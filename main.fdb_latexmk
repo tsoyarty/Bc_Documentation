@@ -1,19 +1,19 @@
 # Fdb version 3
-["bibtex main"] 1715980000 "main.aux" "main.bbl" "main" 1715980002
+["bibtex main"] 1716051440 "main.aux" "main.bbl" "main" 1716051509
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1715980002 34643 3ab2c26af2a927a4abb1b5a16c6976f7 "pdflatex"
+  "main.aux" 1716051509 34522 d70d4628aa2fdbec95fdd4eaf87dd908 "pdflatex"
   "main.bib" 1715976406 9894 591d752ad227423600fc85e3dd5aedec ""
   (generated)
   "main.bbl"
   "main.blg"
-["makeindex main.idx"] 1715979958 "main.idx" "main.ind" "main" 1715980002
-  "main.idx" 1715980001 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1716051439 "main.idx" "main.ind" "main" 1716051509
+  "main.idx" 1716051508 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
-["pdflatex"] 1715980000 "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" "main.pdf" "main" 1715980002
+["pdflatex"] 1716051507 "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" "main.pdf" "main" 1716051509
   "/etc/texmf/web2c/texmf.cnf" 1713119362 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" 1715979998 113759 0cd53b4da2274549ffe26affaa474cf2 ""
+  "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" 1716051507 114748 d07543a0ccce6994bd5266fad66e5d7c ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -268,14 +268,14 @@
   "figChap5/graph_U_20pt_ticks_big.pdf" 1715952656 14319 e6e734296120992c51e58ed27e6cb349 ""
   "figChap5/graph_clutter_20pt_ticks.pdf" 1715952253 16612 83d60714a8cfb3678a8cf4e1bd6ad758 ""
   "figChap5/graph_narrow_20pt_ticks.pdf" 1715952092 16717 61a20bed857be2393f0eaa4ed73b18fc ""
-  "main.aux" 1715980002 34643 3ab2c26af2a927a4abb1b5a16c6976f7 "pdflatex"
-  "main.bbl" 1715980000 4597 5254af5bd128f58ec00fc6ccf10200c5 "bibtex main"
-  "main.ind" 1715979958 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1715980002 9508 4e36ea176e31c2b1cb6727face23ef0d "pdflatex"
-  "main.lot" 1715980002 976 fd37a3d5e3eaa0e4047094d5d0200c25 "pdflatex"
-  "main.out" 1715980002 6098 7ff679ea9268ef375351e6a4abff336f "pdflatex"
-  "main.tex" 1715979998 113759 0cd53b4da2274549ffe26affaa474cf2 ""
-  "main.toc" 1715980002 3654 e6407e18c76396010e89b4344d3936c6 "pdflatex"
+  "main.aux" 1716051509 34522 d70d4628aa2fdbec95fdd4eaf87dd908 "pdflatex"
+  "main.bbl" 1716051440 4597 5254af5bd128f58ec00fc6ccf10200c5 "bibtex main"
+  "main.ind" 1716051439 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.lof" 1716051509 9508 4e36ea176e31c2b1cb6727face23ef0d "pdflatex"
+  "main.lot" 1716051509 887 cfa38124a6c1cec4c33335b21f0592db "pdflatex"
+  "main.out" 1716051509 5978 af93e78d3329803d410f1fe3d94bf500 "pdflatex"
+  "main.tex" 1716051507 114748 d07543a0ccce6994bd5266fad66e5d7c ""
+  "main.toc" 1716051509 3580 2f69a36ccebf745aa2363aea5887abc0 "pdflatex"
   (generated)
   "main.aux"
   "main.idx"

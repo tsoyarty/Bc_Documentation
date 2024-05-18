@@ -1568,7 +1568,7 @@ it is crucial to evaluate its effectiveness compared to other planners.
 Chapter \ref{chap:Result} provides further insights into this comparative analysis.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
-\section{Extension of the machine learning method to 3D and 6D configuration space}
+\section{Extension of the machine learning method to 3D and 6D configuration spaces}
 In this problem, the robot is represented as a polygon. 
 To describe the position of the robot in space, three coordinates are utilized: 
 two for its position in $\mathcal{C}$-space and 
@@ -1963,46 +1963,45 @@ the RRT*\_ML algorithm learns and adapts to the cluttered $\mathcal{C}$-space.
 It is important to note that while the RRT*\_ML method was programmed in Python, 
 the OMPL planners were implemented in C++, 
 contributing to potential differences in computation time.
-%---------------------------------------------------------------------------------
-\begin{table}[htbp]
-  \centering
-  \begin{tabular}{|p{3cm}|c|}
-      \hline
-      \textbf{Planner} & \textbf{Time}\\
-      \hline
-      RRT*\_ML         &   ??? \\
-      RRT*             &   ??? \\
-      Informed RRT*    &   ??? \\
-      RRT$^\#$         &   ??? \\
-      RRT$^X$ static   &   ??? \\
-      % Add more rows as needed
-      \hline
-  \end{tabular}
-  \caption{Time spaent to find first solution.}
-  % \label{tab:params}
-\end{table}
-%--------------------------------------------------------------------------------- 
-%---------------------------------------------------------------------------------
-\begin{table}[htbp]
-  \centering
-  \begin{tabular}{|p{3cm}|c|}
-      \hline
-      \textbf{Planner} & \textbf{Time}\\
-      \hline
-      RRT*\_ML         &   ??? \\
-      RRT*             &   ??? \\
-      Informed RRT*    &   ??? \\
-      RRT$^\#$         &   ??? \\
-      RRT$^X$ static   &   ??? \\
-      % Add more rows as needed
-      \hline
-  \end{tabular}
-  \caption{Time spaent to find final solution.}
-  % \label{tab:params}
-\end{table}
-%--------------------------------------------------------------------------------- 
-\section{3D configuration space}
-\section{6D configuration space}
+\\[12pt]
+In Table \ref{tab:time_clutter2D}, 
+the computational times to find the first and final solutions in the cluttered configuration space 
+are presented. 
+All values were computed as the mean of ten measurements, 
+along with their standard deviations. 
+The mean value $\bar{x}$ and the variance $\sigma^2$ were calculated using the following formulas:
+\[
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+\]
+\[
+\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
+\]
+where the standard deviation $\sigma$ is the square root of the variance:
+\[
+\sigma = \sqrt{\sigma^2}
+\] 
+The computation time for the implemented RRT*\_ML code is significantly longer 
+compared to the planners from the OMPL library. 
+
+%---------------------------------------------------------------------------------  
+\begin{tabular}{ |p{3cm}|c|c|}
+  \hline
+  \multicolumn{3}{|c|}{\textbf{Time}} \\
+  \hline
+  \textbf{Planner} & \textbf{First solution} & \textbf{Final solution}\\
+  \hline
+  RRT*\_ML         &   $0.278594 \pm 0.157754$ &   $289.625891 \pm 2.611068$ \\
+  RRT*             &   $0.006518 \pm 0.001462$ &   $0.321272 \pm 0.014779$ \\
+  Informed RRT*    &   $0.007330 \pm 0.000536$ &   $0.259046 \pm 0.003154$ \\
+  RRT$^\#$         &   $0.011917 \pm 0.002803$ &   $0.305096 \pm 0.010232$ \\
+  RRT$^X$ static   &   $0.011775 \pm 0.002566$ &   $0.305259 \pm 0.008140$ \\
+  \hline
+  \caption{Time spent to find the first and final solutions in cluttered configuraion space.}
+  \label{tab:time_clutter2D}
+ \end{tabular}
+%---------------------------------------------------------------------------------  
+\section{3D and 6D Configuration Spaces}
+acs
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \clearpage
