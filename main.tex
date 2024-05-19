@@ -935,7 +935,8 @@ at start configuration \( \textbf{x}_{\text{start}} \) and goal configuration
 \( \textbf{x}_{\text{goal}} \), a transverse diameter of current solution cost \( c_i \), 
 and conjugate diameters of \(\sqrt{( c_i^2 - c_{\text{min}}^2)} \), 
 where \[ c_{\text{min}} := \| \textbf{x}_{\text{goal}} - \textbf{x}_{\text{start}} \|_2 \]
-is the theoretical minimum cost.
+is the theoretical minimum cost. 
+Figure \ref{fig:informedrrtstarExp} presents an illustrative example of Informed RRT*.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \section{\texorpdfstring{RRT sharp (RRT$^\#$)}{Title without Superscript}}
@@ -945,6 +946,7 @@ The RRT$^\#$ algorithm utilizes informed sampling techniques to bias the selecti
 points towards relevant regions with lower estimated costs or higher likelihoods of containing the optimal solution. 
 This information enhances the convergence speed of the algorithm and 
 enables more efficient exploration of the obstacle-free space.
+Figure \ref{fig:rrtsharpExp} presents an illustrative example of RRT$^\#$.
 \\[12pt]
 To find the relevant region, the following formula is used:
 \[
@@ -971,6 +973,23 @@ $\epsilon$, representing the minimum threshold for cost improvement required to 
 In simpler terms, 
 $\epsilon$ specifies the minimum amount by which a new path must improve over the existing path 
 for the algorithm to justify rewiring the tree.
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figChap3/InformedRRTstar_example.png}  
+    \caption{Informed RRT*.}
+    \label{fig:informedrrtstarExp}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.49\textwidth}
+      \includegraphics[width=\textwidth]{figChap3/RRTsharp_example.png}
+      \caption{RRT$^\#$.}
+      \label{fig:rrtsharpExp} 
+  \end{subfigure}   
+  \caption{An example of Informed RRT* \ref{fig:informedrrtstarExp} and RRT$^\#$ \ref{fig:rrtsharpExp}. 
+  Images courtesy of~\cite{Gammell2018InformedRRTstar} and~\cite{arslan2012rrtsharp} respectively.}
+  % \label{fig:maze_E}
+\end{figure}
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \section{Motion Planning Networks (MPNet)}
@@ -1985,7 +2004,7 @@ contributing to potential differences in computation time.
 \begin{figure}[!ht]
   \centering 
   \includegraphics[width=0.5\textwidth]{figChap5/graph_clutter_learning_time.pdf}   
-  \caption{Time taken to learn predicting points in cluttered configuration space 
+  \caption{Time taken to learn predicting points in cluttered $\mathcal{C}$-space \ref{fig:maze_clutter_Cspace} 
   to be in the \(C_{\text{free}}\).}
   \label{fig:graph_learning_time}
 \end{figure}
@@ -2026,6 +2045,12 @@ where the standard deviation $\sigma$ is the square root of the variance:
 \] 
 The average time spent by RRT*\_ML to predict point in the $\mathcal{C}_\text{fere}$ 
 is $(0.037988 \pm 0.030603)$ seconds (Figure \ref{fig:graph_learning_time}). 
+It can also be observed that as the number of iterations increases, 
+the computation time tends to rise. 
+This is because both datasets, \( \mathcal{X}_{\text{free}} \) and \( \mathcal{X}_{\text{obs}} \), 
+grow linearly with each iteration, 
+gradually accumulating more data points. 
+Consequently, the density estimation process becomes more time-consuming.
 \\[12pt]
 The computation time for the implemented RRT*\_ML code is significantly longer 
 compared to the planners from the OMPL library. 
@@ -2040,9 +2065,52 @@ Additionally, OMPL does not directly provide collision checking for 2D and 3D ob
 As a result, 
 the RRT*\_ML method will be compared with RRT*, 
 which is also implemented in Python and into which RRT*\_ML was integrated.
+
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/graph_E_2D.pdf}  
+    \caption{Graph.}
+    \label{fig:maze_E_2D_graphs}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.49\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/Maze_E_2D.pdf}
+      \caption{$\mathcal{C}$-space.}
+      \label{fig:maze_E_2D_Cspace} 
+  \end{subfigure}   
+  \caption{Cluttered $\mathcal{C}$-space \ref{fig:maze_clutter_Cspace} and 
+  corresponding convergence graphs \ref{fig:maze_E_graphs} of selected planners.}
+  \label{fig:maze_E_2D}
+\end{figure}
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
-\clearpage
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[t]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/graph_E_2D_learning_time.pdf}   
+    \caption{Time taken to learn predicting points in narrow 3D $\mathcal{C}$-space \ref{fig:maze_E_2D_Cspace}
+    to be in the \(C_{\text{free}}\).}
+    \label{fig:graph_learning_time_2D}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.49\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/RRTstar_ML_Maze_E_2D_solution.pdf}
+      \caption{Solution.}
+      \label{fig:maze_E_2D_solution} 
+  \end{subfigure}   
+  \caption{.}
+  % \label{fig:maze_E_2D}
+\end{figure}
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  
+\end{figure}
+%--------------------------------------------------------------------------------- 
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\clearpage 
 \section{Result}
 As a result, 
 it can be concluded that the implemented enhanced RRT* utilizing machine learning methods 
