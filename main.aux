@@ -227,6 +227,16 @@
 \newlabel{sub@fig:rrtstarML2D_maze}{{b}{31}{Improven RRT*.\relax }{subfigure.4.7.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Both algorithms, RRT* \ref  {fig:rrtstar2D_maze} and the improved RRT* using machine learning \ref  {fig:rrtstarML2D_maze} methods, are presented, each consisting of 1000 iterations. The improved RRT* finds a path to the goal with the lowest cost of 237.2 u.d. (units of dimension), compared to RRT*, which finds a path to the goal with a cost of 241.4 u.d..\relax }}{31}{figure.4.7}\protected@file@percent }
 \newlabel{fig:RRTstar2D_vs_RRTstarML2D}{{4.7}{31}{Both algorithms, RRT* \ref {fig:rrtstar2D_maze} and the improved RRT* using machine learning \ref {fig:rrtstarML2D_maze} methods, are presented, each consisting of 1000 iterations. The improved RRT* finds a path to the goal with the lowest cost of 237.2 u.d. (units of dimension), compared to RRT*, which finds a path to the goal with a cost of 241.4 u.d..\relax }{figure.4.7}{}}
+\newlabel{fig:rrtstar3D_maze_front}{{4.8a}{32}{Front view.\relax }{subfigure.4.8.1}{}}
+\newlabel{sub@fig:rrtstar3D_maze_front}{{a}{32}{Front view.\relax }{subfigure.4.8.1}{}}
+\newlabel{fig:rrtstarML3D_maze_left}{{4.8b}{32}{Left view.\relax }{subfigure.4.8.2}{}}
+\newlabel{sub@fig:rrtstarML3D_maze_left}{{b}{32}{Left view.\relax }{subfigure.4.8.2}{}}
+\newlabel{fig:rrtstarML3D_maze_right}{{4.8c}{32}{Right view.\relax }{subfigure.4.8.3}{}}
+\newlabel{sub@fig:rrtstarML3D_maze_right}{{c}{32}{Right view.\relax }{subfigure.4.8.3}{}}
+\newlabel{fig:rrtstarML3D_maze_top}{{4.8d}{32}{Top view.\relax }{subfigure.4.8.4}{}}
+\newlabel{sub@fig:rrtstarML3D_maze_top}{{d}{32}{Top view.\relax }{subfigure.4.8.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces An example of a 6D configuration space with the found solution path. The green color represents obstacle object (tree). The purple color indicates the cube object representing our robot. The red line shows the found solution path, and the blue lines illustrate the paths explored in the $\mathcal  {C}$-space.\relax }}{32}{figure.4.8}\protected@file@percent }
+\newlabel{fig:6Dconfig-space}{{4.8}{32}{An example of a 6D configuration space with the found solution path. The green color represents obstacle object (tree). The purple color indicates the cube object representing our robot. The red line shows the found solution path, and the blue lines illustrate the paths explored in the $\mathcal {C}$-space.\relax }{figure.4.8}{}}
 \citation{Ioan2012ompl}
 \citation{arslan2012rrtsharp}
 \citation{Otte2015RRTX}
@@ -280,18 +290,19 @@
 \@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Time spent to find the first and final solutions in a cluttered configuration space.\relax }}{39}{table.5.2}\protected@file@percent }
 \newlabel{tab:time_clutter2D}{{5.2}{39}{Time spent to find the first and final solutions in a cluttered configuration space.\relax }{table.5.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.2}3D and 6D Configuration Spaces}{40}{section.5.2}\protected@file@percent }
-\newlabel{fig:maze_E_2D_graphs}{{5.10a}{40}{Graph.\relax }{subfigure.5.10.1}{}}
-\newlabel{sub@fig:maze_E_2D_graphs}{{a}{40}{Graph.\relax }{subfigure.5.10.1}{}}
-\newlabel{fig:maze_E_2D_Cspace}{{5.10b}{40}{$\mathcal {C}$-space.\relax }{subfigure.5.10.2}{}}
-\newlabel{sub@fig:maze_E_2D_Cspace}{{b}{40}{$\mathcal {C}$-space.\relax }{subfigure.5.10.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Cluttered $\mathcal  {C}$-space \ref  {fig:maze_clutter_Cspace} and corresponding convergence graphs \ref  {fig:maze_E_graphs} of selected planners.\relax }}{40}{figure.5.10}\protected@file@percent }
-\newlabel{fig:maze_E_2D}{{5.10}{40}{Cluttered $\mathcal {C}$-space \ref {fig:maze_clutter_Cspace} and corresponding convergence graphs \ref {fig:maze_E_graphs} of selected planners.\relax }{figure.5.10}{}}
-\newlabel{fig:graph_learning_time_2D}{{5.11a}{41}{Time taken to learn predicting points in narrow 3D $\mathcal {C}$-space \ref {fig:maze_E_2D_Cspace} to be in the \(C_{\text {free}}\).\relax }{subfigure.5.11.1}{}}
-\newlabel{sub@fig:graph_learning_time_2D}{{a}{41}{Time taken to learn predicting points in narrow 3D $\mathcal {C}$-space \ref {fig:maze_E_2D_Cspace} to be in the \(C_{\text {free}}\).\relax }{subfigure.5.11.1}{}}
-\newlabel{fig:maze_E_2D_solution}{{5.11b}{41}{Solution.\relax }{subfigure.5.11.2}{}}
-\newlabel{sub@fig:maze_E_2D_solution}{{b}{41}{Solution.\relax }{subfigure.5.11.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces .\relax }}{41}{figure.5.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Result}{42}{section.5.3}\protected@file@percent }
+\newlabel{fig:maze_E_2D_Cspace}{{5.10a}{40}{$\mathcal {C}$-space.\relax }{subfigure.5.10.1}{}}
+\newlabel{sub@fig:maze_E_2D_Cspace}{{a}{40}{$\mathcal {C}$-space.\relax }{subfigure.5.10.1}{}}
+\newlabel{fig:maze_E_2D_solution}{{5.10b}{40}{Solution.\relax }{subfigure.5.10.2}{}}
+\newlabel{sub@fig:maze_E_2D_solution}{{b}{40}{Solution.\relax }{subfigure.5.10.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Narrow $\mathcal  {C}$-space \ref  {fig:maze_E_2D_Cspace} and founded solution \ref  {fig:maze_E_2D_solution}. The initial configuration of our robot is denoted in purple, and the goal configuration is shown in red.\relax }}{40}{figure.5.10}\protected@file@percent }
+\newlabel{fig:maze_E_2D}{{5.10}{40}{Narrow $\mathcal {C}$-space \ref {fig:maze_E_2D_Cspace} and founded solution \ref {fig:maze_E_2D_solution}. The initial configuration of our robot is denoted in purple, and the goal configuration is shown in red.\relax }{figure.5.10}{}}
+\newlabel{fig:graph_E_2D}{{5.11a}{41}{Convergence graph of RRT*\_ML and RRT*.\relax }{subfigure.5.11.1}{}}
+\newlabel{sub@fig:graph_E_2D}{{a}{41}{Convergence graph of RRT*\_ML and RRT*.\relax }{subfigure.5.11.1}{}}
+\newlabel{fig:graph_learning_time_2D}{{5.11b}{41}{Time taken to learn predicting points in narrow 3D $\mathcal {C}$-space \ref {fig:maze_E_2D_Cspace} to be in the \(C_{\text {free}}\).\relax }{subfigure.5.11.2}{}}
+\newlabel{sub@fig:graph_learning_time_2D}{{b}{41}{Time taken to learn predicting points in narrow 3D $\mathcal {C}$-space \ref {fig:maze_E_2D_Cspace} to be in the \(C_{\text {free}}\).\relax }{subfigure.5.11.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Graphs.\relax }}{41}{figure.5.11}\protected@file@percent }
+\newlabel{fig:graphs_2D}{{5.11}{41}{Graphs.\relax }{figure.5.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Result}{41}{section.5.3}\protected@file@percent }
 \citation{Ioan2012ompl}
 \citation{arslan2012rrtsharp}
 \citation{Otte2015RRTX}
@@ -326,8 +337,4 @@
 \bibcite{Scott1992MultivariateDE}{19}
 \bibcite{Ioan2012ompl}{20}
 \bibcite{Xie2022Astarfoto}{21}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}List of Notation}{47}{appendix.A}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{loa}{\addvspace {10\p@ }}
-\gdef \@abspage@last{55}
+\gdef \@abspage@last{54}

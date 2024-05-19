@@ -216,11 +216,14 @@ Chapter \ref{chap:Task formulation} will delve deeper into the path planning pro
 offering an understanding of essential terms and notations. 
 Building on this foundation, the Chapter \ref{chap:Task formulation} will formulate the challenge of this thesis.\\[12pt]
 %------
-In Chapter \ref{chap:RelatedWorks}, familiarity with sampling-based methods, including RRT and RRT*, will be gained.\\[12pt]
+In Chapter \ref{chap:RelatedWorks}, familiarity with related works, including RRT and RRT*, 
+will be gained, which also contributes to better understanding the text.\\[12pt]
 %------
 Chapter \ref{chap:Improving RRT*} will be pivotal, 
 as it will explain the machine learning methods employed in this study. 
-Additionally, it will detail the integration of these methods into the sampling-based algorithm RRT* in both 2D $\mathcal{C}$-space and its extension to 3D $\mathcal{C}$-space.\\[12pt]
+Additionally, 
+it will detail the integration of these methods into 
+the sampling-based algorithm RRT* in 2D $\mathcal{C}$-space and its extension to 3D $\mathcal{C}$-space and 6D $\mathcal{C}$-space.\\[12pt]
 %------
 The effectiveness of the developed methods will be evaluated in Chapter \ref{chap:Result} through comparisons with existing algorithms 
 using the Open Motion Planning Library (OMPL)~\cite{Ioan2012ompl}.\\[12pt]
@@ -1676,6 +1679,40 @@ is a robust tool for collision detection in 3D environments.
 It provides a narrow and user-friendly API (Application Programming Interface) for programmers, 
 simplifying the detection of intersections between polygons in various applications such as 
 physically based modeling, virtual prototyping, and CAD.  
+In Python 3.7 and later, the Trimesh library can be utilized for collision detection. 
+This library is well-tested for handling triangle mesh objects. 
+Figure \ref{fig:6Dconfig-space} shows an example of a 6D configuration.
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.49\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/3D_exampleNew471it.pdf}
+      \caption{Front view.}
+      \label{fig:rrtstar3D_maze_front}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.49\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/3D_exampleNew471it_2.pdf}
+      \caption{Left view.}
+      \label{fig:rrtstarML3D_maze_left}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/3D_exampleNew471it_3.pdf}
+    \caption{Right view.}
+    \label{fig:rrtstarML3D_maze_right}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/3D_exampleNew471it_4.pdf}
+    \caption{Top view.}
+    \label{fig:rrtstarML3D_maze_top}
+\end{subfigure}
+  \caption{An example of a 6D configuration space with the found solution path. 
+  The green color represents obstacle object (tree). 
+  The purple color indicates the cube object representing our robot. 
+  The red line shows the found solution path, 
+  and the blue lines illustrate the paths explored in the $\mathcal{C}$-space.}
+  \label{fig:6Dconfig-space}
+\end{figure}
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
@@ -2057,7 +2094,7 @@ compared to the planners from the OMPL library.
 
 %---------------------------------------------------------------------------------
 \section{3D and 6D Configuration Spaces}
-In comparing the implemented method with OMPL planners in 3D and 6D spaces, 
+In comparing the implemented method with OMPL planners in 3D and 6D $\mathcal{C}$-spaces, 
 it is not feasible due to the initial implementation of RRT*\_ML in Python. 
 OMPL does not directly provide the capability to represent objects in the same manner 
 as implemented in RRT*\_ML. 
@@ -2065,55 +2102,82 @@ Additionally, OMPL does not directly provide collision checking for 2D and 3D ob
 As a result, 
 the RRT*\_ML method will be compared with RRT*, 
 which is also implemented in Python and into which RRT*\_ML was integrated.
-
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
-  \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/graph_E_2D.pdf}  
-    \caption{Graph.}
-    \label{fig:maze_E_2D_graphs}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.49\textwidth}
+  \begin{subfigure}[t]{0.49\textwidth}
       \includegraphics[width=\textwidth]{figChap5/Maze_E_2D.pdf}
       \caption{$\mathcal{C}$-space.}
       \label{fig:maze_E_2D_Cspace} 
-  \end{subfigure}   
-  \caption{Cluttered $\mathcal{C}$-space \ref{fig:maze_clutter_Cspace} and 
-  corresponding convergence graphs \ref{fig:maze_E_graphs} of selected planners.}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/RRTstar_ML_Maze_E_2D_solution.pdf}
+    \caption{Solution.}
+    \label{fig:maze_E_2D_solution} 
+\end{subfigure}    
+  \caption{Narrow $\mathcal{C}$-space \ref{fig:maze_E_2D_Cspace} and 
+  founded solution \ref{fig:maze_E_2D_solution}.
+  The initial configuration of our robot is denoted in purple, 
+  and the goal configuration is shown in red.}
   \label{fig:maze_E_2D}
 \end{figure}
 %---------------------------------------------------------------------------------
+\\
+All parameters are the same as in the 2D $\mathcal{C}$-space, 
+but now the robot is represented in 3D $\mathcal{C}$-space as an 'L'-shaped polygon. 
+The cost is computed with respect to the rotation angle of the robot, as follows:
+\begin{equation}
+\text{cost} = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2 + (\alpha_1 - \alpha_2)^2,}
+\end{equation}
+where \( x_1 \), \( y_1 \), \( \alpha_1 \) represent the configuration of the first point, 
+and \( x_2 \), \( y_2 \), \( \alpha_2 \) represent the configuration of the second point.
+This allows the algorithm to search for not only the shortest path but also a path 
+where the robot makes fewer rotations.
+\\[12pt]
+In Figure \ref{fig:maze_E_2D}, the selected $\mathcal{C}$-space and 
+the solution found by RRT*\_ML are shown.  
+The solutions found from both RRT*\_ML and RRT are mostly similar, 
+so it is unnecessary to show the solution found by RRT*.  
+\\[12pt]
+According to the Figure \ref{fig:graph_E_2D}, 
+the implemented RRT*\_ML algorithm finds the first solution with fewer iterations. 
+However, as illustrated in Figure \ref{fig:graph_learning_time_2D},
+the computational time for prediction increases with each iteration. 
+As a result, RRT* is significantly faster, 
+completing 5000 iterations in 30.11 seconds, while RRT*\_ML took 1041.42 seconds 
+for the same number of iterations.
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
-  \begin{subfigure}[t]{0.48\textwidth}
+  \begin{subfigure}[t]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/graph_E_2D.pdf}  
+    \caption{Convergence graph of RRT*\_ML and RRT*.}
+    \label{fig:graph_E_2D}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.49\textwidth}
     \includegraphics[width=\textwidth]{figChap5/graph_E_2D_learning_time.pdf}   
     \caption{Time taken to learn predicting points in narrow 3D $\mathcal{C}$-space \ref{fig:maze_E_2D_Cspace}
     to be in the \(C_{\text{free}}\).}
     \label{fig:graph_learning_time_2D}
-  \end{subfigure}
-  \begin{subfigure}[t]{0.49\textwidth}
-      \includegraphics[width=\textwidth]{figChap5/RRTstar_ML_Maze_E_2D_solution.pdf}
-      \caption{Solution.}
-      \label{fig:maze_E_2D_solution} 
-  \end{subfigure}   
-  \caption{.}
-  % \label{fig:maze_E_2D}
+  \end{subfigure} 
+  \caption{Graphs.}
+  \label{fig:graphs_2D}
 \end{figure}
 %---------------------------------------------------------------------------------
+\\
+Due to time complexities, 
+there was no testing in the 6D configuration space. 
+This is because there would be significantly more computations for collision checking, 
+predicting samples, and computing costs based on the shortest path and rotations along the XYZ axes. 
+Given the trend in time complexity, 
+it can be concluded that in the 6D configuration space, 
+the implemented RRT*\_ML method will be much slower than the existing RRT* path planner.
+ 
 %---------------------------------------------------------------------------------
-\begin{figure}[!ht]
-  \centering 
-  
-\end{figure}
-%--------------------------------------------------------------------------------- 
 %---------------------------------------------------------------------------------
-%---------------------------------------------------------------------------------
-\clearpage 
 \section{Result}
 As a result, 
-it can be concluded that the implemented enhanced RRT* utilizing machine learning methods 
+it can be concluded that the implemented enhanced RRT* algorithm utilizing machine learning methods 
 performs better in terms of converging to the optimal solution in certain situations. 
 Most of the time, the enhanced version of RRT* discovers the first possible solution earlier 
 than other planners. 
@@ -2121,6 +2185,7 @@ However, in challenging scenarios, such as in Figure \ref{fig:maze_narrow},
 it behaves similarly to RRT*. 
 In other instances, 
 it achieves either equivalent or superior convergence to the optimal solution compared to RRT*.
+However, predicting points is computationally intensive, causing RRT*\_ML to work much slower.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
@@ -2152,15 +2217,16 @@ While our approach exhibits promising results,
 it is essential to acknowledge its limitations. 
 In challenging scenarios, such as those demonstrated in Figure \ref{fig:maze_narrow}, 
 the enhanced RRT* behaves similarly to traditional RRT*. 
+And the implemented algorithm runs significantly slower.
 \\[12pt]
 Overall, 
-this research contributes to advancing sampling-based 
-path planning algorithms by addressing their limitations 
-through the integration of machine learning techniques. 
-Moving forward, future research could focus on refining our approach, 
-particularly in real-world applications, 
-and exploring its integration into other path planners such as RRT$^\#$ to further enhance 
-their capabilities in complex environments.
+this research contributes to the advancement of sampling-based path planning algorithms 
+by mitigating their limitations through the integration of machine learning techniques. 
+One potential improvement could involve exploring the integration of these techniques 
+into other path planners, such as RRT$^\#$, 
+to further enhance their capabilities in complex environments. 
+Additionally, 
+implementing the algorithm in C++ could help reduce time complexity and improve efficiency.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
@@ -2171,15 +2237,15 @@ their capabilities in complex environments.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
-\appendix
-\chapter*{List of Notation}
-\noindent
-\begin{tabularx}{\linewidth}
-  { l >{\raggedright\arraybackslash}X }
-\bfseries Symbol & \bfseries Meaning \\\Midrule
-$\alpha$ & The angle of attack \\
-$\mathbb{R}$ & The real numbers \\
-\end{tabularx}
+% \appendix
+% \chapter*{List of Notation}
+% \noindent
+% \begin{tabularx}{\linewidth}
+%   { l >{\raggedright\arraybackslash}X }
+% \bfseries Symbol & \bfseries Meaning \\\Midrule
+% $\alpha$ & The angle of attack \\
+% $\mathbb{R}$ & The real numbers \\
+% \end{tabularx}
  
 \end{document}
 

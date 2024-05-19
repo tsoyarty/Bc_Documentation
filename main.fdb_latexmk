@@ -1,19 +1,19 @@
 # Fdb version 3
-["bibtex main"] 1716145238 "main.aux" "main.bbl" "main" 1716145239
+["bibtex main"] 1716156411 "main.aux" "main.bbl" "main" 1716156720
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1716145239 37514 d99725a419d5d90d0f3f79fad40b33b2 "pdflatex"
+  "main.aux" 1716156720 39051 c2f0f3110956b3312eb5403db7b43372 "pdflatex"
   "main.bib" 1716065434 10117 6a2b55fc4635a0ec26352c0f8dce7992 ""
   (generated)
   "main.bbl"
   "main.blg"
-["makeindex main.idx"] 1716144965 "main.idx" "main.ind" "main" 1716145239
-  "main.idx" 1716145238 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1716156359 "main.idx" "main.ind" "main" 1716156720
+  "main.idx" 1716156719 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
-["pdflatex"] 1716145238 "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" "main.pdf" "main" 1716145239
+["pdflatex"] 1716156718 "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" "main.pdf" "main" 1716156720
   "/etc/texmf/web2c/texmf.cnf" 1713119362 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" 1716145237 119468 ffdf5e37834e77d87c72e8f1f5298fd5 ""
+  "/home/tsoyarty/Desktop/Bc_work/Documentation/main.tex" 1716156718 123040 ec8736cd9e7e196bd4bfc7b67596704d ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -255,6 +255,10 @@
   "figChap4/SimpleMaze.eps" 1715426221 826683 64647b5147dbb583062e8bc00b47e652 ""
   "figChap4/irregular-transformed.jpeg" 1715268000 885287 178fbb77bc618225b8c1509ed5f5433c ""
   "figChap4/regular-transformed.jpeg" 1715268049 955520 0af8a6cabb04214578d9423a62b4ad10 ""
+  "figChap5/3D_exampleNew471it.pdf" 1716151031 1073134 c1f1798d3f2f287f501773e1f0a4ea93 ""
+  "figChap5/3D_exampleNew471it_2.pdf" 1716150978 1072927 29a67bea8e0c5081a581d46fa4dba50b ""
+  "figChap5/3D_exampleNew471it_3.pdf" 1716151089 1072856 4f1a8d9d64a062a2436680ae330ba433 ""
+  "figChap5/3D_exampleNew471it_4.pdf" 1716151157 1073334 e2377485893ddba1f7b6c86c3e3e4ead ""
   "figChap5/Maze_E_2D.pdf" 1716138677 6408 bd5f8d530d78f910ca8b7be1be9ec098 ""
   "figChap5/Maze_E_ticks.pdf" 1715951083 7035 e93561e941a8c70fba4c69020ed46079 ""
   "figChap5/Maze_U_ticks.pdf" 1715951132 7241 c5ba53762b12dae792a9d0b3af17a3e7 ""
@@ -282,14 +286,14 @@
   "figChap5/graph_clutter_20pt_ticks.pdf" 1715952253 16612 83d60714a8cfb3678a8cf4e1bd6ad758 ""
   "figChap5/graph_clutter_learning_time.pdf" 1716143710 18377 f834c15db8a3ddc89018009766447a80 ""
   "figChap5/graph_narrow_20pt_ticks.pdf" 1715952092 16717 61a20bed857be2393f0eaa4ed73b18fc ""
-  "main.aux" 1716145239 37514 d99725a419d5d90d0f3f79fad40b33b2 "pdflatex"
-  "main.bbl" 1716145238 4781 7b46d58fec2e00a0f40865fd8d99de19 "bibtex main"
-  "main.ind" 1716144965 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1716145239 10316 511d4f50a42af02af1f38b8ae64340b3 "pdflatex"
-  "main.lot" 1716145239 910 81539fddc9e164de57dfe19577cece37 "pdflatex"
-  "main.out" 1716145239 5960 40cbd8c7c2fd73dc2b5598a5691b123c "pdflatex"
-  "main.tex" 1716145237 119468 ffdf5e37834e77d87c72e8f1f5298fd5 ""
-  "main.toc" 1716145239 3577 34c4e86b876ea506f7a28e1499335dcc "pdflatex"
+  "main.aux" 1716156720 39051 c2f0f3110956b3312eb5403db7b43372 "pdflatex"
+  "main.bbl" 1716156411 4781 7b46d58fec2e00a0f40865fd8d99de19 "bibtex main"
+  "main.ind" 1716156359 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.lof" 1716156720 10759 18dc380a2282ae836a75efe5d0c51ae1 "pdflatex"
+  "main.lot" 1716156720 890 49ae819d2eaa1fe14b3632b9b39b5c0f "pdflatex"
+  "main.out" 1716156720 5829 e45b6046d3405c78fd001c2f3827f106 "pdflatex"
+  "main.tex" 1716156718 123040 ec8736cd9e7e196bd4bfc7b67596704d ""
+  "main.toc" 1716156720 3503 185d2088d64767cac0b431e82f039da4 "pdflatex"
   (generated)
   "main.aux"
   "main.idx"

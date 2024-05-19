@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.14)  19 MAY 2024 21:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.14)  20 MAY 2024 00:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -842,7 +842,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<ctu_logo_black.pdf, id=140, 366.36874pt x 279.0425pt>
+<ctu_logo_black.pdf, id=136, 366.36874pt x 279.0425pt>
 File: ctu_logo_black.pdf Graphic file (type pdf)
 <use ctu_logo_black.pdf>
 Package pdftex.def Info: ctu_logo_black.pdf  used on input line 66.
@@ -930,17 +930,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--66
 
 ] (./main.lof [6
 
-])
+] [7])
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [7] (./main.lot)
+ (./main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [8
-
-]
+ [8]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -974,7 +972,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--66
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<BP.pdf, id=378, 597.50829pt x 845.0471pt>
+<BP.pdf, id=377, 597.50829pt x 845.0471pt>
 File: BP.pdf Graphic file (type pdf)
 <use BP.pdf>
 Package pdftex.def Info: BP.pdf  used on input line 68.
@@ -983,7 +981,7 @@ File: BP.pdf Graphic file (type pdf)
 <use BP.pdf>
 Package pdftex.def Info: BP.pdf  used on input line 68.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<BP.pdf, id=381, page=1, 597.50829pt x 845.0471pt>
+<BP.pdf, id=380, page=1, 597.50829pt x 845.0471pt>
 File: BP.pdf Graphic file (type pdf)
 <use BP.pdf, page 1>
 Package pdftex.def Info: BP.pdf , page1 used on input line 68.
@@ -1018,7 +1016,7 @@ File: BP.pdf Graphic file (type pdf)
 <use BP.pdf>
 Package pdftex.def Info: BP.pdf  used on input line 69.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<BP.pdf, id=427, page=2, 597.50829pt x 845.0471pt>
+<BP.pdf, id=426, page=2, 597.50829pt x 845.0471pt>
 File: BP.pdf Graphic file (type pdf)
 <use BP.pdf, page 2>
 Package pdftex.def Info: BP.pdf , page2 used on input line 69.
@@ -1044,17 +1042,17 @@ Chapter 1.
 [3
 
 ]
-<figChap1/The-piano-movers-problem-EET.png, id=447, 853.1875pt x 853.1875pt>
+<figChap1/The-piano-movers-problem-EET.png, id=446, 853.1875pt x 853.1875pt>
 File: figChap1/The-piano-movers-problem-EET.png Graphic file (type png)
 <use figChap1/The-piano-movers-problem-EET.png>
 Package pdftex.def Info: figChap1/The-piano-movers-problem-EET.png  used on input line 127.
 (pdftex.def)             Requested size: 145.19778pt x 145.19618pt.
-<figChap1/RRTsimple2.pdf, id=450, 462.52798pt x 346.89601pt>
+<figChap1/RRTsimple2.pdf, id=449, 462.52798pt x 346.89601pt>
 File: figChap1/RRTsimple2.pdf Graphic file (type pdf)
 <use figChap1/RRTsimple2.pdf>
 Package pdftex.def Info: figChap1/RRTsimple2.pdf  used on input line 134.
 (pdftex.def)             Requested size: 181.5pt x 136.12521pt.
-<figChap1/narrow_passage.pdf, id=455, 462.52798pt x 346.89601pt>
+<figChap1/narrow_passage.pdf, id=454, 462.52798pt x 346.89601pt>
 File: figChap1/narrow_passage.pdf Graphic file (type pdf)
 <use figChap1/narrow_passage.pdf>
 Package pdftex.def Info: figChap1/narrow_passage.pdf  used on input line 147.
@@ -1062,7 +1060,7 @@ Package pdftex.def Info: figChap1/narrow_passage.pdf  used on input line 147.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 192.
  [4 <./figChap1/The-piano-movers-problem-EET.png> <./figChap1/RRTsimple2.pdf>]
-<figChap1/Object_detection.pdf, id=670, 1927.2pt x 963.6pt>
+<figChap1/Object_detection.pdf, id=669, 1927.2pt x 963.6pt>
 File: figChap1/Object_detection.pdf Graphic file (type pdf)
 <use figChap1/Object_detection.pdf>
 Package pdftex.def Info: figChap1/Object_detection.pdf  used on input line 196.
@@ -1072,19 +1070,19 @@ Chapter 2.
 [7
 
 ] [8]
-<figChap2/A-star-on-grid-map.png, id=1075, 167.96083pt x 168.29541pt>
+<figChap2/A-star-on-grid-map.png, id=1074, 167.96083pt x 168.29541pt>
 File: figChap2/A-star-on-grid-map.png Graphic file (type png)
 <use figChap2/A-star-on-grid-map.png>
-Package pdftex.def Info: figChap2/A-star-on-grid-map.png  used on input line 351.
+Package pdftex.def Info: figChap2/A-star-on-grid-map.png  used on input line 354.
 (pdftex.def)             Requested size: 130.68022pt x 130.94374pt.
 File: figChap1/narrow_passage.pdf Graphic file (type pdf)
 <use figChap1/narrow_passage.pdf>
-Package pdftex.def Info: figChap1/narrow_passage.pdf  used on input line 359.
+Package pdftex.def Info: figChap1/narrow_passage.pdf  used on input line 362.
 (pdftex.def)             Requested size: 221.43022pt x 166.07414pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 360.
+(Font)              <9> on input line 363.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 360.
+(Font)              <5> on input line 363.
  [9 <./figChap2/A-star-on-grid-map.png>]
 Package epstopdf Info: Source file: <figChap2/ConfigSpace.eps>
 (epstopdf)                    date: 2024-05-11 14:58:44
@@ -1093,12 +1091,12 @@ Package epstopdf Info: Source file: <figChap2/ConfigSpace.eps>
 (epstopdf)                    date: 2024-05-11 14:59:04
 (epstopdf)                    size: 14417 bytes
 (epstopdf)             Command: <repstopdf --outfile=figChap2/ConfigSpace-eps-converted-to.pdf figChap2/ConfigSpace.eps>
-(epstopdf)             \includegraphics on input line 412.
+(epstopdf)             \includegraphics on input line 415.
 Package epstopdf Info: Output file is already uptodate.
-<figChap2/ConfigSpace-eps-converted-to.pdf, id=1094, 271.0125pt x 271.0125pt>
+<figChap2/ConfigSpace-eps-converted-to.pdf, id=1093, 271.0125pt x 271.0125pt>
 File: figChap2/ConfigSpace-eps-converted-to.pdf Graphic file (type pdf)
 <use figChap2/ConfigSpace-eps-converted-to.pdf>
-Package pdftex.def Info: figChap2/ConfigSpace-eps-converted-to.pdf  used on input line 412.
+Package pdftex.def Info: figChap2/ConfigSpace-eps-converted-to.pdf  used on input line 415.
 (pdftex.def)             Requested size: 217.80222pt x 217.81102pt.
  [10 <./figChap2/ConfigSpace-eps-converted-to.pdf>]
 Chapter 3.
@@ -1109,12 +1107,12 @@ Package epstopdf Info: Source file: <figChap3/2RRTexpansion100.eps>
 (epstopdf)                    date: 2024-04-25 14:11:49
 (epstopdf)                    size: 5263 bytes
 (epstopdf)             Command: <repstopdf --outfile=figChap3/2RRTexpansion100-eps-converted-to.pdf figChap3/2RRTexpansion100.eps>
-(epstopdf)             \includegraphics on input line 473.
+(epstopdf)             \includegraphics on input line 476.
 Package epstopdf Info: Output file is already uptodate.
-<figChap3/2RRTexpansion100-eps-converted-to.pdf, id=1125, 271.0125pt x 271.0125pt>
+<figChap3/2RRTexpansion100-eps-converted-to.pdf, id=1124, 271.0125pt x 271.0125pt>
 File: figChap3/2RRTexpansion100-eps-converted-to.pdf Graphic file (type pdf)
 <use figChap3/2RRTexpansion100-eps-converted-to.pdf>
-Package pdftex.def Info: figChap3/2RRTexpansion100-eps-converted-to.pdf  used on input line 473.
+Package pdftex.def Info: figChap3/2RRTexpansion100-eps-converted-to.pdf  used on input line 476.
 (pdftex.def)             Requested size: 108.90111pt x 108.8993pt.
 Package epstopdf Info: Source file: <figChap3/2RRTexpansion1000.eps>
 (epstopdf)                    date: 2024-04-25 14:11:02
@@ -1123,12 +1121,12 @@ Package epstopdf Info: Source file: <figChap3/2RRTexpansion1000.eps>
 (epstopdf)                    date: 2024-04-25 14:11:46
 (epstopdf)                    size: 15743 bytes
 (epstopdf)             Command: <repstopdf --outfile=figChap3/2RRTexpansion1000-eps-converted-to.pdf figChap3/2RRTexpansion1000.eps>
-(epstopdf)             \includegraphics on input line 480.
+(epstopdf)             \includegraphics on input line 483.
 Package epstopdf Info: Output file is already uptodate.
-<figChap3/2RRTexpansion1000-eps-converted-to.pdf, id=1126, 271.0125pt x 271.0125pt>
+<figChap3/2RRTexpansion1000-eps-converted-to.pdf, id=1125, 271.0125pt x 271.0125pt>
 File: figChap3/2RRTexpansion1000-eps-converted-to.pdf Graphic file (type pdf)
 <use figChap3/2RRTexpansion1000-eps-converted-to.pdf>
-Package pdftex.def Info: figChap3/2RRTexpansion1000-eps-converted-to.pdf  used on input line 480.
+Package pdftex.def Info: figChap3/2RRTexpansion1000-eps-converted-to.pdf  used on input line 483.
 (pdftex.def)             Requested size: 108.90111pt x 108.8993pt.
 Package epstopdf Info: Source file: <figChap3/2RRTexpansion2000.eps>
 (epstopdf)                    date: 2024-04-25 14:11:08
@@ -1137,17 +1135,17 @@ Package epstopdf Info: Source file: <figChap3/2RRTexpansion2000.eps>
 (epstopdf)                    date: 2024-04-25 14:11:46
 (epstopdf)                    size: 27780 bytes
 (epstopdf)             Command: <repstopdf --outfile=figChap3/2RRTexpansion2000-eps-converted-to.pdf figChap3/2RRTexpansion2000.eps>
-(epstopdf)             \includegraphics on input line 487.
+(epstopdf)             \includegraphics on input line 490.
 Package epstopdf Info: Output file is already uptodate.
-<figChap3/2RRTexpansion2000-eps-converted-to.pdf, id=1127, 271.0125pt x 271.0125pt>
+<figChap3/2RRTexpansion2000-eps-converted-to.pdf, id=1126, 271.0125pt x 271.0125pt>
 File: figChap3/2RRTexpansion2000-eps-converted-to.pdf Graphic file (type pdf)
 <use figChap3/2RRTexpansion2000-eps-converted-to.pdf>
-Package pdftex.def Info: figChap3/2RRTexpansion2000-eps-converted-to.pdf  used on input line 487.
+Package pdftex.def Info: figChap3/2RRTexpansion2000-eps-converted-to.pdf  used on input line 490.
 (pdftex.def)             Requested size: 108.90111pt x 108.8993pt.
-<figChap3/ParentChild4.pdf, id=1128, 558.085pt x 241.90375pt>
+<figChap3/ParentChild4.pdf, id=1127, 558.085pt x 241.90375pt>
 File: figChap3/ParentChild4.pdf Graphic file (type pdf)
 <use figChap3/ParentChild4.pdf>
-Package pdftex.def Info: figChap3/ParentChild4.pdf  used on input line 530.
+Package pdftex.def Info: figChap3/ParentChild4.pdf  used on input line 533.
 (pdftex.def)             Requested size: 290.40111pt x 125.87926pt.
 [11
 
@@ -1159,12 +1157,12 @@ Package epstopdf Info: Source file: <figChap3/RRTstar_expansion100.eps>
 (epstopdf)                    date: 2024-04-25 14:05:32
 (epstopdf)                    size: 5192 bytes
 (epstopdf)             Command: <repstopdf --outfile=figChap3/RRTstar_expansion100-eps-converted-to.pdf figChap3/RRTstar_expansion100.eps>
-(epstopdf)             \includegraphics on input line 603.
+(epstopdf)             \includegraphics on input line 606.
 Package epstopdf Info: Output file is already uptodate.
-<figChap3/RRTstar_expansion100-eps-converted-to.pdf, id=1153, 271.0125pt x 271.0125pt>
+<figChap3/RRTstar_expansion100-eps-converted-to.pdf, id=1152, 271.0125pt x 271.0125pt>
 File: figChap3/RRTstar_expansion100-eps-converted-to.pdf Graphic file (type pdf)
 <use figChap3/RRTstar_expansion100-eps-converted-to.pdf>
-Package pdftex.def Info: figChap3/RRTstar_expansion100-eps-converted-to.pdf  used on input line 603.
+Package pdftex.def Info: figChap3/RRTstar_expansion100-eps-converted-to.pdf  used on input line 606.
 (pdftex.def)             Requested size: 108.90111pt x 108.8993pt.
 Package epstopdf Info: Source file: <figChap3/RRTstar_expansion1000.eps>
 (epstopdf)                    date: 2024-04-22 19:08:06
@@ -1173,12 +1171,12 @@ Package epstopdf Info: Source file: <figChap3/RRTstar_expansion1000.eps>
 (epstopdf)                    date: 2024-04-25 14:05:40
 (epstopdf)                    size: 14931 bytes
 (epstopdf)             Command: <repstopdf --outfile=figChap3/RRTstar_expansion1000-eps-converted-to.pdf figChap3/RRTstar_expansion1000.eps>
-(epstopdf)             \includegraphics on input line 610.
+(epstopdf)             \includegraphics on input line 613.
 Package epstopdf Info: Output file is already uptodate.
-<figChap3/RRTstar_expansion1000-eps-converted-to.pdf, id=1154, 271.0125pt x 271.0125pt>
+<figChap3/RRTstar_expansion1000-eps-converted-to.pdf, id=1153, 271.0125pt x 271.0125pt>
 File: figChap3/RRTstar_expansion1000-eps-converted-to.pdf Graphic file (type pdf)
 <use figChap3/RRTstar_expansion1000-eps-converted-to.pdf>
-Package pdftex.def Info: figChap3/RRTstar_expansion1000-eps-converted-to.pdf  used on input line 610.
+Package pdftex.def Info: figChap3/RRTstar_expansion1000-eps-converted-to.pdf  used on input line 613.
 (pdftex.def)             Requested size: 108.90111pt x 108.8993pt.
 Package epstopdf Info: Source file: <figChap3/RRTstar_expansion2000.eps>
 (epstopdf)                    date: 2024-04-22 19:08:20
@@ -1187,32 +1185,32 @@ Package epstopdf Info: Source file: <figChap3/RRTstar_expansion2000.eps>
 (epstopdf)                    date: 2024-04-25 14:05:50
 (epstopdf)                    size: 25985 bytes
 (epstopdf)             Command: <repstopdf --outfile=figChap3/RRTstar_expansion2000-eps-converted-to.pdf figChap3/RRTstar_expansion2000.eps>
-(epstopdf)             \includegraphics on input line 617.
+(epstopdf)             \includegraphics on input line 620.
 Package epstopdf Info: Output file is already uptodate.
-<figChap3/RRTstar_expansion2000-eps-converted-to.pdf, id=1155, 271.0125pt x 271.0125pt>
+<figChap3/RRTstar_expansion2000-eps-converted-to.pdf, id=1154, 271.0125pt x 271.0125pt>
 File: figChap3/RRTstar_expansion2000-eps-converted-to.pdf Graphic file (type pdf)
 <use figChap3/RRTstar_expansion2000-eps-converted-to.pdf>
-Package pdftex.def Info: figChap3/RRTstar_expansion2000-eps-converted-to.pdf  used on input line 617.
+Package pdftex.def Info: figChap3/RRTstar_expansion2000-eps-converted-to.pdf  used on input line 620.
 (pdftex.def)             Requested size: 109.62671pt x 109.62712pt.
-<figChap3/RRTstarNearNodes40pt.pdf, id=1158, 506.89375pt x 322.20375pt>
+<figChap3/RRTstarNearNodes40pt.pdf, id=1157, 506.89375pt x 322.20375pt>
 File: figChap3/RRTstarNearNodes40pt.pdf Graphic file (type pdf)
 <use figChap3/RRTstarNearNodes40pt.pdf>
-Package pdftex.def Info: figChap3/RRTstarNearNodes40pt.pdf  used on input line 639.
+Package pdftex.def Info: figChap3/RRTstarNearNodes40pt.pdf  used on input line 642.
 (pdftex.def)             Requested size: 163.34889pt x 103.83002pt.
-<figChap3/RRTstarChooseParent40pt.pdf, id=1159, 506.89375pt x 322.20375pt>
+<figChap3/RRTstarChooseParent40pt.pdf, id=1158, 506.89375pt x 322.20375pt>
 File: figChap3/RRTstarChooseParent40pt.pdf Graphic file (type pdf)
 <use figChap3/RRTstarChooseParent40pt.pdf>
-Package pdftex.def Info: figChap3/RRTstarChooseParent40pt.pdf  used on input line 646.
+Package pdftex.def Info: figChap3/RRTstarChooseParent40pt.pdf  used on input line 649.
 (pdftex.def)             Requested size: 163.34889pt x 103.83002pt.
-<figChap3/RRTstarCostEvaluation40pt.pdf, id=1160, 506.89375pt x 323.2075pt>
+<figChap3/RRTstarCostEvaluation40pt.pdf, id=1159, 506.89375pt x 323.2075pt>
 File: figChap3/RRTstarCostEvaluation40pt.pdf Graphic file (type pdf)
 <use figChap3/RRTstarCostEvaluation40pt.pdf>
-Package pdftex.def Info: figChap3/RRTstarCostEvaluation40pt.pdf  used on input line 653.
+Package pdftex.def Info: figChap3/RRTstarCostEvaluation40pt.pdf  used on input line 656.
 (pdftex.def)             Requested size: 163.34889pt x 104.15347pt.
-<figChap3/RRTstarFinalLook40pt.pdf, id=1161, 506.89375pt x 322.20375pt>
+<figChap3/RRTstarFinalLook40pt.pdf, id=1160, 506.89375pt x 322.20375pt>
 File: figChap3/RRTstarFinalLook40pt.pdf Graphic file (type pdf)
 <use figChap3/RRTstarFinalLook40pt.pdf>
-Package pdftex.def Info: figChap3/RRTstarFinalLook40pt.pdf  used on input line 658.
+Package pdftex.def Info: figChap3/RRTstarFinalLook40pt.pdf  used on input line 661.
 (pdftex.def)             Requested size: 163.34889pt x 103.83002pt.
 Package epstopdf Info: Source file: <figChap3/2RRTexpansion2000.eps>
 (epstopdf)                    date: 2024-04-25 14:11:08
@@ -1221,11 +1219,11 @@ Package epstopdf Info: Source file: <figChap3/2RRTexpansion2000.eps>
 (epstopdf)                    date: 2024-04-25 14:11:46
 (epstopdf)                    size: 27780 bytes
 (epstopdf)             Command: <repstopdf --outfile=figChap3/2RRTexpansion2000-eps-converted-to.pdf figChap3/2RRTexpansion2000.eps>
-(epstopdf)             \includegraphics on input line 716.
+(epstopdf)             \includegraphics on input line 719.
 Package epstopdf Info: Output file is already uptodate.
 File: figChap3/2RRTexpansion2000-eps-converted-to.pdf Graphic file (type pdf)
 <use figChap3/2RRTexpansion2000-eps-converted-to.pdf>
-Package pdftex.def Info: figChap3/2RRTexpansion2000-eps-converted-to.pdf  used on input line 716.
+Package pdftex.def Info: figChap3/2RRTexpansion2000-eps-converted-to.pdf  used on input line 719.
 (pdftex.def)             Requested size: 163.34889pt x 163.3531pt.
 Package epstopdf Info: Source file: <figChap3/RRTstar_expansion2000.eps>
 (epstopdf)                    date: 2024-04-22 19:08:20
@@ -1234,31 +1232,31 @@ Package epstopdf Info: Source file: <figChap3/RRTstar_expansion2000.eps>
 (epstopdf)                    date: 2024-04-25 14:05:50
 (epstopdf)                    size: 25985 bytes
 (epstopdf)             Command: <repstopdf --outfile=figChap3/RRTstar_expansion2000-eps-converted-to.pdf figChap3/RRTstar_expansion2000.eps>
-(epstopdf)             \includegraphics on input line 723.
+(epstopdf)             \includegraphics on input line 726.
 Package epstopdf Info: Output file is already uptodate.
 File: figChap3/RRTstar_expansion2000-eps-converted-to.pdf Graphic file (type pdf)
 <use figChap3/RRTstar_expansion2000-eps-converted-to.pdf>
-Package pdftex.def Info: figChap3/RRTstar_expansion2000-eps-converted-to.pdf  used on input line 723.
+Package pdftex.def Info: figChap3/RRTstar_expansion2000-eps-converted-to.pdf  used on input line 726.
 (pdftex.def)             Requested size: 163.34889pt x 163.3531pt.
-<figChap3/RRT_maze7748i119w.pdf, id=1171, 270.62305pt x 270.62305pt>
+<figChap3/RRT_maze7748i119w.pdf, id=1170, 270.62305pt x 270.62305pt>
 File: figChap3/RRT_maze7748i119w.pdf Graphic file (type pdf)
 <use figChap3/RRT_maze7748i119w.pdf>
-Package pdftex.def Info: figChap3/RRT_maze7748i119w.pdf  used on input line 728.
+Package pdftex.def Info: figChap3/RRT_maze7748i119w.pdf  used on input line 731.
 (pdftex.def)             Requested size: 163.34889pt x 163.35373pt.
-<figChap3/RRTstar_maze_7060i_35w.pdf, id=1172, 270.62305pt x 270.62305pt>
+<figChap3/RRTstar_maze_7060i_35w.pdf, id=1171, 270.62305pt x 270.62305pt>
 File: figChap3/RRTstar_maze_7060i_35w.pdf Graphic file (type pdf)
 <use figChap3/RRTstar_maze_7060i_35w.pdf>
-Package pdftex.def Info: figChap3/RRTstar_maze_7060i_35w.pdf  used on input line 735.
+Package pdftex.def Info: figChap3/RRTstar_maze_7060i_35w.pdf  used on input line 738.
 (pdftex.def)             Requested size: 163.34889pt x 163.35373pt.
-<figChap3/6DRRT_new.pdf, id=1173, 273.85573pt x 267.10992pt>
+<figChap3/6DRRT_new.pdf, id=1172, 273.85573pt x 267.10992pt>
 File: figChap3/6DRRT_new.pdf Graphic file (type pdf)
 <use figChap3/6DRRT_new.pdf>
-Package pdftex.def Info: figChap3/6DRRT_new.pdf  used on input line 740.
+Package pdftex.def Info: figChap3/6DRRT_new.pdf  used on input line 743.
 (pdftex.def)             Requested size: 163.34889pt x 159.32976pt.
-<figChap3/6DRRTstar3_new.pdf, id=1174, 273.85573pt x 267.10992pt>
+<figChap3/6DRRTstar3_new.pdf, id=1173, 273.85573pt x 267.10992pt>
 File: figChap3/6DRRTstar3_new.pdf Graphic file (type pdf)
 <use figChap3/6DRRTstar3_new.pdf>
-Package pdftex.def Info: figChap3/6DRRTstar3_new.pdf  used on input line 747.
+Package pdftex.def Info: figChap3/6DRRTstar3_new.pdf  used on input line 750.
 (pdftex.def)             Requested size: 163.34889pt x 159.32976pt.
  [13] [14 <./figChap3/RRTstar_expansion100-eps-converted-to.pdf> <./figChap3/RRTstar_expansion1000-eps-converted-to.pdf> <./figChap3/RRTstar_expansion2000-eps-converted-to.pdf> <./figChap3/RRTstarNearNodes40pt.pdf> <./figChap3/RRTstarChooseParent40pt.pdf
 
@@ -1270,28 +1268,28 @@ pdfTeX warning: pdflatex (file ./figChap3/RRTstarCostEvaluation40pt.pdf): PDF in
 
 pdfTeX warning: pdflatex (file ./figChap3/RRTstarFinalLook40pt.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] [15] [16 <./figChap3/RRT_maze7748i119w.pdf> <./figChap3/RRTstar_maze_7060i_35w.pdf> <./figChap3/6DRRT_new.pdf> <./figChap3/6DRRTstar3_new.pdf>]
-<figChap3/PRMmaze40pt.pdf, id=4695, 506.89375pt x 324.21124pt>
+<figChap3/PRMmaze40pt.pdf, id=4694, 506.89375pt x 324.21124pt>
 File: figChap3/PRMmaze40pt.pdf Graphic file (type pdf)
 <use figChap3/PRMmaze40pt.pdf>
-Package pdftex.def Info: figChap3/PRMmaze40pt.pdf  used on input line 809.
+Package pdftex.def Info: figChap3/PRMmaze40pt.pdf  used on input line 812.
 (pdftex.def)             Requested size: 163.34889pt x 104.47693pt.
-<figChap3/PRMsamplePoints40pt.pdf, id=4696, 506.89375pt x 324.21124pt>
+<figChap3/PRMsamplePoints40pt.pdf, id=4695, 506.89375pt x 324.21124pt>
 File: figChap3/PRMsamplePoints40pt.pdf Graphic file (type pdf)
 <use figChap3/PRMsamplePoints40pt.pdf>
-Package pdftex.def Info: figChap3/PRMsamplePoints40pt.pdf  used on input line 816.
+Package pdftex.def Info: figChap3/PRMsamplePoints40pt.pdf  used on input line 819.
 (pdftex.def)             Requested size: 163.34889pt x 104.47693pt.
-<figChap3/PRMconnecting40pt.pdf, id=4697, 506.89375pt x 324.21124pt>
+<figChap3/PRMconnecting40pt.pdf, id=4696, 506.89375pt x 324.21124pt>
 File: figChap3/PRMconnecting40pt.pdf Graphic file (type pdf)
 <use figChap3/PRMconnecting40pt.pdf>
-Package pdftex.def Info: figChap3/PRMconnecting40pt.pdf  used on input line 823.
+Package pdftex.def Info: figChap3/PRMconnecting40pt.pdf  used on input line 826.
 (pdftex.def)             Requested size: 163.34889pt x 104.47693pt.
-<figChap3/PRMpathFinding40pt.pdf, id=4698, 506.89375pt x 324.21124pt>
+<figChap3/PRMpathFinding40pt.pdf, id=4697, 506.89375pt x 324.21124pt>
 File: figChap3/PRMpathFinding40pt.pdf Graphic file (type pdf)
 <use figChap3/PRMpathFinding40pt.pdf>
-Package pdftex.def Info: figChap3/PRMpathFinding40pt.pdf  used on input line 828.
+Package pdftex.def Info: figChap3/PRMpathFinding40pt.pdf  used on input line 831.
 (pdftex.def)             Requested size: 163.34889pt x 104.47693pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--874
+Underfull \hbox (badness 10000) in paragraph at lines 793--877
 
  []
 
@@ -1307,21 +1305,21 @@ pdfTeX warning: pdflatex (file ./figChap3/PRMconnecting40pt.pdf): PDF inclusion:
 
 pdfTeX warning: pdflatex (file ./figChap3/PRMpathFinding40pt.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figChap3/InformedRRTstar_elips.png, id=4723, 1539.7525pt x 623.32875pt>
+<figChap3/InformedRRTstar_elips.png, id=4722, 1539.7525pt x 623.32875pt>
 File: figChap3/InformedRRTstar_elips.png Graphic file (type png)
 <use figChap3/InformedRRTstar_elips.png>
-Package pdftex.def Info: figChap3/InformedRRTstar_elips.png  used on input line 927.
+Package pdftex.def Info: figChap3/InformedRRTstar_elips.png  used on input line 930.
 (pdftex.def)             Requested size: 363.0pt x 146.94832pt.
  [18] [19 <./figChap3/InformedRRTstar_elips.png>]
-<figChap3/InformedRRTstar_example.png, id=4753, 472.76625pt x 469.755pt>
+<figChap3/InformedRRTstar_example.png, id=4751, 472.76625pt x 469.755pt>
 File: figChap3/InformedRRTstar_example.png Graphic file (type png)
 <use figChap3/InformedRRTstar_example.png>
-Package pdftex.def Info: figChap3/InformedRRTstar_example.png  used on input line 980.
+Package pdftex.def Info: figChap3/InformedRRTstar_example.png  used on input line 983.
 (pdftex.def)             Requested size: 174.23845pt x 173.13284pt.
-<figChap3/RRTsharp_example.png, id=4754, 606.265pt x 604.2575pt>
+<figChap3/RRTsharp_example.png, id=4752, 606.265pt x 604.2575pt>
 File: figChap3/RRTsharp_example.png Graphic file (type png)
 <use figChap3/RRTsharp_example.png>
-Package pdftex.def Info: figChap3/RRTsharp_example.png  used on input line 985.
+Package pdftex.def Info: figChap3/RRTsharp_example.png  used on input line 988.
 (pdftex.def)             Requested size: 177.872pt x 177.28629pt.
 
 Underfull \vbox (badness 1184) has occurred while \output is active []
@@ -1331,15 +1329,15 @@ Chapter 4.
 [23
 
 ]
-<figChap4/regular-transformed.jpeg, id=4796, 2569.6pt x 1140.26pt>
+<figChap4/regular-transformed.jpeg, id=4795, 2569.6pt x 1140.26pt>
 File: figChap4/regular-transformed.jpeg Graphic file (type jpg)
 <use figChap4/regular-transformed.jpeg>
-Package pdftex.def Info: figChap4/regular-transformed.jpeg  used on input line 1318.
+Package pdftex.def Info: figChap4/regular-transformed.jpeg  used on input line 1321.
 (pdftex.def)             Requested size: 363.0pt x 161.07942pt.
-<figChap4/irregular-transformed.jpeg, id=4797, 2569.6pt x 1140.26pt>
+<figChap4/irregular-transformed.jpeg, id=4796, 2569.6pt x 1140.26pt>
 File: figChap4/irregular-transformed.jpeg Graphic file (type jpg)
 <use figChap4/irregular-transformed.jpeg>
-Package pdftex.def Info: figChap4/irregular-transformed.jpeg  used on input line 1323.
+Package pdftex.def Info: figChap4/irregular-transformed.jpeg  used on input line 1326.
 (pdftex.def)             Requested size: 363.0pt x 161.07942pt.
  [24] [25 <./figChap4/regular-transformed.jpeg> <./figChap4/irregular-transformed.jpeg>] [26]
 Package epstopdf Info: Source file: <figChap4/SimpleMaze.eps>
@@ -1349,76 +1347,105 @@ Package epstopdf Info: Source file: <figChap4/SimpleMaze.eps>
 (epstopdf)                    date: 2024-05-11 13:17:13
 (epstopdf)                    size: 5470 bytes
 (epstopdf)             Command: <repstopdf --outfile=figChap4/SimpleMaze-eps-converted-to.pdf figChap4/SimpleMaze.eps>
-(epstopdf)             \includegraphics on input line 1458.
+(epstopdf)             \includegraphics on input line 1461.
 Package epstopdf Info: Output file is already uptodate.
-<figChap4/SimpleMaze-eps-converted-to.pdf, id=4840, 271.0125pt x 271.0125pt>
+<figChap4/SimpleMaze-eps-converted-to.pdf, id=4839, 271.0125pt x 271.0125pt>
 File: figChap4/SimpleMaze-eps-converted-to.pdf Graphic file (type pdf)
 <use figChap4/SimpleMaze-eps-converted-to.pdf>
-Package pdftex.def Info: figChap4/SimpleMaze-eps-converted-to.pdf  used on input line 1458.
+Package pdftex.def Info: figChap4/SimpleMaze-eps-converted-to.pdf  used on input line 1461.
 (pdftex.def)             Requested size: 181.5pt x 181.50713pt.
-<figChap4/GKDE_obsU.pdf, id=4841, 1387.58403pt x 723.42267pt>
+<figChap4/GKDE_obsU.pdf, id=4840, 1387.58403pt x 723.42267pt>
 File: figChap4/GKDE_obsU.pdf Graphic file (type pdf)
 <use figChap4/GKDE_obsU.pdf>
-Package pdftex.def Info: figChap4/GKDE_obsU.pdf  used on input line 1467.
+Package pdftex.def Info: figChap4/GKDE_obsU.pdf  used on input line 1470.
 (pdftex.def)             Requested size: 363.0pt x 189.24449pt.
-<figChap4/GKDE_freeU.pdf, id=4842, 1387.58403pt x 723.42267pt>
+<figChap4/GKDE_freeU.pdf, id=4841, 1387.58403pt x 723.42267pt>
 File: figChap4/GKDE_freeU.pdf Graphic file (type pdf)
 <use figChap4/GKDE_freeU.pdf>
-Package pdftex.def Info: figChap4/GKDE_freeU.pdf  used on input line 1472.
+Package pdftex.def Info: figChap4/GKDE_freeU.pdf  used on input line 1475.
 (pdftex.def)             Requested size: 363.0pt x 189.24449pt.
-<figChap4/RRTstar_maze216.0.pdf, id=4849, 270.62305pt x 270.62305pt>
+<figChap4/RRTstar_maze216.0.pdf, id=4848, 270.62305pt x 270.62305pt>
 File: figChap4/RRTstar_maze216.0.pdf Graphic file (type pdf)
 <use figChap4/RRTstar_maze216.0.pdf>
-Package pdftex.def Info: figChap4/RRTstar_maze216.0.pdf  used on input line 1500.
+Package pdftex.def Info: figChap4/RRTstar_maze216.0.pdf  used on input line 1503.
 (pdftex.def)             Requested size: 163.34889pt x 163.35373pt.
-<figChap4/RRTstarML_maze206.0.pdf, id=4850, 270.62305pt x 270.62305pt>
+<figChap4/RRTstarML_maze206.0.pdf, id=4849, 270.62305pt x 270.62305pt>
 File: figChap4/RRTstarML_maze206.0.pdf Graphic file (type pdf)
 <use figChap4/RRTstarML_maze206.0.pdf>
-Package pdftex.def Info: figChap4/RRTstarML_maze206.0.pdf  used on input line 1505.
+Package pdftex.def Info: figChap4/RRTstarML_maze206.0.pdf  used on input line 1508.
 (pdftex.def)             Requested size: 163.34889pt x 163.35373pt.
-<figChap4/RRTstarML_learning206.0.pdf, id=4855, 270.62305pt x 270.62305pt>
+<figChap4/RRTstarML_learning206.0.pdf, id=4854, 270.62305pt x 270.62305pt>
 File: figChap4/RRTstarML_learning206.0.pdf Graphic file (type pdf)
 <use figChap4/RRTstarML_learning206.0.pdf>
-Package pdftex.def Info: figChap4/RRTstarML_learning206.0.pdf  used on input line 1526.
+Package pdftex.def Info: figChap4/RRTstarML_learning206.0.pdf  used on input line 1529.
 (pdftex.def)             Requested size: 163.34889pt x 163.35373pt.
 File: figChap4/RRTstarML_maze206.0.pdf Graphic file (type pdf)
 <use figChap4/RRTstarML_maze206.0.pdf>
-Package pdftex.def Info: figChap4/RRTstarML_maze206.0.pdf  used on input line 1531.
+Package pdftex.def Info: figChap4/RRTstarML_maze206.0.pdf  used on input line 1534.
 (pdftex.def)             Requested size: 163.34889pt x 163.35373pt.
  [27 <./figChap4/SimpleMaze-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28 <./figChap4/GKDE_obsU.pdf> <./figChap4/GKDE_freeU.pdf>] [29 <./figChap4/RRTstar_maze216.0.pdf> <./figChap4/RRTstarML_maze206.0.pdf> <./figChap4/RRTstarML_learning206.0.pdf>]
-<figChap4/RRTstar2DML_learning237.2.pdf, id=7121, 270.62305pt x 270.62305pt>
+<figChap4/RRTstar2DML_learning237.2.pdf, id=7120, 270.62305pt x 270.62305pt>
 File: figChap4/RRTstar2DML_learning237.2.pdf Graphic file (type pdf)
 <use figChap4/RRTstar2DML_learning237.2.pdf>
-Package pdftex.def Info: figChap4/RRTstar2DML_learning237.2.pdf  used on input line 1621.
+Package pdftex.def Info: figChap4/RRTstar2DML_learning237.2.pdf  used on input line 1624.
 (pdftex.def)             Requested size: 163.34889pt x 163.35373pt.
-<figChap4/RRTstar2DML_maze237.2.pdf, id=7122, 270.62305pt x 270.62305pt>
+<figChap4/RRTstar2DML_maze237.2.pdf, id=7121, 270.62305pt x 270.62305pt>
 File: figChap4/RRTstar2DML_maze237.2.pdf Graphic file (type pdf)
 <use figChap4/RRTstar2DML_maze237.2.pdf>
-Package pdftex.def Info: figChap4/RRTstar2DML_maze237.2.pdf  used on input line 1626.
+Package pdftex.def Info: figChap4/RRTstar2DML_maze237.2.pdf  used on input line 1629.
 (pdftex.def)             Requested size: 163.34889pt x 163.35373pt.
-<figChap4/RRTstar2D_maze241.4.pdf, id=7125, 270.62305pt x 270.62305pt>
+<figChap4/RRTstar2D_maze241.4.pdf, id=7124, 270.62305pt x 270.62305pt>
 File: figChap4/RRTstar2D_maze241.4.pdf Graphic file (type pdf)
 <use figChap4/RRTstar2D_maze241.4.pdf>
-Package pdftex.def Info: figChap4/RRTstar2D_maze241.4.pdf  used on input line 1643.
+Package pdftex.def Info: figChap4/RRTstar2D_maze241.4.pdf  used on input line 1646.
 (pdftex.def)             Requested size: 163.34889pt x 163.35373pt.
 File: figChap4/RRTstar2DML_maze237.2.pdf Graphic file (type pdf)
 <use figChap4/RRTstar2DML_maze237.2.pdf>
-Package pdftex.def Info: figChap4/RRTstar2DML_maze237.2.pdf  used on input line 1648.
+Package pdftex.def Info: figChap4/RRTstar2DML_maze237.2.pdf  used on input line 1651.
 (pdftex.def)             Requested size: 163.34889pt x 163.35373pt.
- [30] [31 <./figChap4/RRTstar2DML_learning237.2.pdf> <./figChap4/RRTstar2DML_maze237.2.pdf> <./figChap4/RRTstar2D_maze241.4.pdf>] [32]
+<figChap5/3D_exampleNew471it.pdf, id=7131, 543.02875pt x 543.02875pt>
+File: figChap5/3D_exampleNew471it.pdf Graphic file (type pdf)
+<use figChap5/3D_exampleNew471it.pdf>
+Package pdftex.def Info: figChap5/3D_exampleNew471it.pdf  used on input line 1690.
+(pdftex.def)             Requested size: 177.872pt x 177.87428pt.
+<figChap5/3D_exampleNew471it_2.pdf, id=7132, 543.02875pt x 543.02875pt>
+File: figChap5/3D_exampleNew471it_2.pdf Graphic file (type pdf)
+<use figChap5/3D_exampleNew471it_2.pdf>
+Package pdftex.def Info: figChap5/3D_exampleNew471it_2.pdf  used on input line 1695.
+(pdftex.def)             Requested size: 177.872pt x 177.87428pt.
+<figChap5/3D_exampleNew471it_3.pdf, id=7133, 543.02875pt x 543.02875pt>
+File: figChap5/3D_exampleNew471it_3.pdf Graphic file (type pdf)
+<use figChap5/3D_exampleNew471it_3.pdf>
+Package pdftex.def Info: figChap5/3D_exampleNew471it_3.pdf  used on input line 1700.
+(pdftex.def)             Requested size: 177.872pt x 177.87428pt.
+<figChap5/3D_exampleNew471it_4.pdf, id=7134, 543.02875pt x 543.02875pt>
+File: figChap5/3D_exampleNew471it_4.pdf Graphic file (type pdf)
+<use figChap5/3D_exampleNew471it_4.pdf>
+Package pdftex.def Info: figChap5/3D_exampleNew471it_4.pdf  used on input line 1705.
+(pdftex.def)             Requested size: 177.872pt x 177.87428pt.
+ [30] [31 <./figChap4/RRTstar2DML_learning237.2.pdf> <./figChap4/RRTstar2DML_maze237.2.pdf> <./figChap4/RRTstar2D_maze241.4.pdf>] [32 <./figChap5/3D_exampleNew471it.pdf> <./figChap5/3D_exampleNew471it_2.pdf
+
+pdfTeX warning: pdflatex (file ./figChap5/3D_exampleNew471it_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figChap5/3D_exampleNew471it_3.pdf
+
+pdfTeX warning: pdflatex (file ./figChap5/3D_exampleNew471it_3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figChap5/3D_exampleNew471it_4.pdf
+
+pdfTeX warning: pdflatex (file ./figChap5/3D_exampleNew471it_4.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
 Chapter 5.
-<figChap5/graph_U_20pt_ticks_big.pdf, id=8814, 515.66057pt x 500.00519pt>
+<figChap5/graph_U_20pt_ticks_big.pdf, id=29436, 515.66057pt x 500.00519pt>
 File: figChap5/graph_U_20pt_ticks_big.pdf Graphic file (type pdf)
 <use figChap5/graph_U_20pt_ticks_big.pdf>
-Package pdftex.def Info: figChap5/graph_U_20pt_ticks_big.pdf  used on input line 1747.
+Package pdftex.def Info: figChap5/graph_U_20pt_ticks_big.pdf  used on input line 1784.
 (pdftex.def)             Requested size: 177.872pt x 172.47145pt.
-<figChap5/graph_U_20pt_ticks.pdf, id=8815, 515.66057pt x 500.00519pt>
+<figChap5/graph_U_20pt_ticks.pdf, id=29437, 515.66057pt x 500.00519pt>
 File: figChap5/graph_U_20pt_ticks.pdf Graphic file (type pdf)
 <use figChap5/graph_U_20pt_ticks.pdf>
-Package pdftex.def Info: figChap5/graph_U_20pt_ticks.pdf  used on input line 1752.
+Package pdftex.def Info: figChap5/graph_U_20pt_ticks.pdf  used on input line 1789.
 (pdftex.def)             Requested size: 177.872pt x 172.47145pt.
 
 Underfull \vbox (badness 5302) has occurred while \output is active []
@@ -1431,107 +1458,107 @@ Underfull \vbox (badness 4416) has occurred while \output is active []
  [34 <./figChap5/graph_U_20pt_ticks_big.pdf> <./figChap5/graph_U_20pt_ticks.pdf>]
 File: figChap5/graph_U_20pt_ticks.pdf Graphic file (type pdf)
 <use figChap5/graph_U_20pt_ticks.pdf>
-Package pdftex.def Info: figChap5/graph_U_20pt_ticks.pdf  used on input line 1806.
+Package pdftex.def Info: figChap5/graph_U_20pt_ticks.pdf  used on input line 1843.
 (pdftex.def)             Requested size: 174.23845pt x 168.94664pt.
-<figChap5/Maze_U_ticks.pdf, id=8897, 291.49316pt x 283.84431pt>
+<figChap5/Maze_U_ticks.pdf, id=29519, 291.49316pt x 283.84431pt>
 File: figChap5/Maze_U_ticks.pdf Graphic file (type pdf)
 <use figChap5/Maze_U_ticks.pdf>
-Package pdftex.def Info: figChap5/Maze_U_ticks.pdf  used on input line 1811.
+Package pdftex.def Info: figChap5/Maze_U_ticks.pdf  used on input line 1848.
 (pdftex.def)             Requested size: 177.872pt x 173.2054pt.
-<figChap5/graph_E_20pt_ticks.pdf, id=8908, 515.8236pt x 500.00519pt>
+<figChap5/graph_E_20pt_ticks.pdf, id=29530, 515.8236pt x 500.00519pt>
 File: figChap5/graph_E_20pt_ticks.pdf Graphic file (type pdf)
 <use figChap5/graph_E_20pt_ticks.pdf>
-Package pdftex.def Info: figChap5/graph_E_20pt_ticks.pdf  used on input line 1841.
+Package pdftex.def Info: figChap5/graph_E_20pt_ticks.pdf  used on input line 1878.
 (pdftex.def)             Requested size: 174.23845pt x 168.89323pt.
-<figChap5/Maze_E_ticks.pdf, id=8909, 291.49316pt x 283.84431pt>
+<figChap5/Maze_E_ticks.pdf, id=29531, 291.49316pt x 283.84431pt>
 File: figChap5/Maze_E_ticks.pdf Graphic file (type pdf)
 <use figChap5/Maze_E_ticks.pdf>
-Package pdftex.def Info: figChap5/Maze_E_ticks.pdf  used on input line 1846.
+Package pdftex.def Info: figChap5/Maze_E_ticks.pdf  used on input line 1883.
 (pdftex.def)             Requested size: 177.872pt x 173.2054pt.
-<figChap5/graph_clutter_20pt_ticks.pdf, id=8914, 515.66057pt x 500.00519pt>
+<figChap5/graph_clutter_20pt_ticks.pdf, id=29536, 515.66057pt x 500.00519pt>
 File: figChap5/graph_clutter_20pt_ticks.pdf Graphic file (type pdf)
 <use figChap5/graph_clutter_20pt_ticks.pdf>
-Package pdftex.def Info: figChap5/graph_clutter_20pt_ticks.pdf  used on input line 1858.
+Package pdftex.def Info: figChap5/graph_clutter_20pt_ticks.pdf  used on input line 1895.
 (pdftex.def)             Requested size: 174.23845pt x 168.94664pt.
-<figChap5/Maze_clutter_ticks.pdf, id=8915, 291.49316pt x 283.84431pt>
+<figChap5/Maze_clutter_ticks.pdf, id=29537, 291.49316pt x 283.84431pt>
 File: figChap5/Maze_clutter_ticks.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_ticks.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_ticks.pdf  used on input line 1863.
+Package pdftex.def Info: figChap5/Maze_clutter_ticks.pdf  used on input line 1900.
 (pdftex.def)             Requested size: 177.872pt x 173.2054pt.
-<figChap5/graph_narrow_20pt_ticks.pdf, id=8920, 521.40862pt x 500.00519pt>
+<figChap5/graph_narrow_20pt_ticks.pdf, id=29542, 521.40862pt x 500.00519pt>
 File: figChap5/graph_narrow_20pt_ticks.pdf Graphic file (type pdf)
 <use figChap5/graph_narrow_20pt_ticks.pdf>
-Package pdftex.def Info: figChap5/graph_narrow_20pt_ticks.pdf  used on input line 1875.
+Package pdftex.def Info: figChap5/graph_narrow_20pt_ticks.pdf  used on input line 1912.
 (pdftex.def)             Requested size: 174.23845pt x 167.08505pt.
-<figChap5/Maze_narrow_ticks.pdf, id=8921, 293.28584pt x 283.84431pt>
+<figChap5/Maze_narrow_ticks.pdf, id=29543, 293.28584pt x 283.84431pt>
 File: figChap5/Maze_narrow_ticks.pdf Graphic file (type pdf)
 <use figChap5/Maze_narrow_ticks.pdf>
-Package pdftex.def Info: figChap5/Maze_narrow_ticks.pdf  used on input line 1880.
+Package pdftex.def Info: figChap5/Maze_narrow_ticks.pdf  used on input line 1917.
 (pdftex.def)             Requested size: 177.872pt x 172.14429pt.
-<figChap5/Maze_clutter_RRTstarML_learning500.pdf, id=8932, 270.62305pt x 270.62305pt>
+<figChap5/Maze_clutter_RRTstarML_learning500.pdf, id=29554, 270.62305pt x 270.62305pt>
 File: figChap5/Maze_clutter_RRTstarML_learning500.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_RRTstarML_learning500.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning500.pdf  used on input line 1913.
+Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning500.pdf  used on input line 1950.
 (pdftex.def)             Requested size: 116.16266pt x 116.1633pt.
-<figChap5/Maze_clutter_RRTstarML_learning1000.pdf, id=8933, 270.62305pt x 270.62305pt>
+<figChap5/Maze_clutter_RRTstarML_learning1000.pdf, id=29555, 270.62305pt x 270.62305pt>
 File: figChap5/Maze_clutter_RRTstarML_learning1000.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_RRTstarML_learning1000.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning1000.pdf  used on input line 1918.
+Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning1000.pdf  used on input line 1955.
 (pdftex.def)             Requested size: 116.16266pt x 116.1633pt.
-<figChap5/Maze_clutter_RRTstarML_learning5000.pdf, id=8934, 270.62305pt x 270.62305pt>
+<figChap5/Maze_clutter_RRTstarML_learning5000.pdf, id=29556, 270.62305pt x 270.62305pt>
 File: figChap5/Maze_clutter_RRTstarML_learning5000.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_RRTstarML_learning5000.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning5000.pdf  used on input line 1923.
+Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning5000.pdf  used on input line 1960.
 (pdftex.def)             Requested size: 116.16266pt x 116.1633pt.
-<figChap5/Maze_clutter_first_solution_RRTstarML.pdf, id=8935, 294.09875pt x 285.065pt>
+<figChap5/Maze_clutter_first_solution_RRTstarML.pdf, id=29557, 294.09875pt x 285.065pt>
 File: figChap5/Maze_clutter_first_solution_RRTstarML.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_first_solution_RRTstarML.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTstarML.pdf  used on input line 1935.
+Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTstarML.pdf  used on input line 1972.
 (pdftex.def)             Requested size: 157.90411pt x 153.05415pt.
-<figChap5/Maze_clutter_first_solution_RRTstar.pdf, id=8936, 293.28584pt x 283.84431pt>
+<figChap5/Maze_clutter_first_solution_RRTstar.pdf, id=29558, 293.28584pt x 283.84431pt>
 File: figChap5/Maze_clutter_first_solution_RRTstar.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_first_solution_RRTstar.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTstar.pdf  used on input line 1940.
+Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTstar.pdf  used on input line 1977.
 (pdftex.def)             Requested size: 157.90411pt x 152.81888pt.
-<figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf, id=8937, 293.28584pt x 283.84431pt>
+<figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf, id=29559, 293.28584pt x 283.84431pt>
 File: figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf  used on input line 1945.
+Package pdftex.def Info: figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf  used on input line 1982.
 (pdftex.def)             Requested size: 95.83475pt x 92.7507pt.
-<figChap5/Maze_clutter_first_solution_RRTsharp.pdf, id=8938, 293.28584pt x 283.84431pt>
+<figChap5/Maze_clutter_first_solution_RRTsharp.pdf, id=29560, 293.28584pt x 283.84431pt>
 File: figChap5/Maze_clutter_first_solution_RRTsharp.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_first_solution_RRTsharp.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTsharp.pdf  used on input line 1950.
+Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTsharp.pdf  used on input line 1987.
 (pdftex.def)             Requested size: 95.83475pt x 92.7507pt.
-<figChap5/Maze_clutter_first_solution_RRTXstatic.pdf, id=8939, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_first_solution_RRTXstatic.pdf, id=29561, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_first_solution_RRTXstatic.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_first_solution_RRTXstatic.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTXstatic.pdf  used on input line 1955.
+Package pdftex.def Info: figChap5/Maze_clutter_first_solution_RRTXstatic.pdf  used on input line 1992.
 (pdftex.def)             Requested size: 95.83475pt x 92.56152pt.
-<figChap5/Maze_clutter_final_solution_RRTstarML.pdf, id=8940, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_final_solution_RRTstarML.pdf, id=29562, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_final_solution_RRTstarML.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_RRTstarML.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTstarML.pdf  used on input line 1968.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTstarML.pdf  used on input line 2005.
 (pdftex.def)             Requested size: 157.90411pt x 152.51521pt.
-<figChap5/Maze_clutter_final_solution_RRTstar2.pdf, id=8941, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_final_solution_RRTstar2.pdf, id=29563, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_final_solution_RRTstar2.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_RRTstar2.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTstar2.pdf  used on input line 1973.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTstar2.pdf  used on input line 2010.
 (pdftex.def)             Requested size: 157.90411pt x 152.51521pt.
-<figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf, id=8942, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf, id=29564, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf  used on input line 1978.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf  used on input line 2015.
 (pdftex.def)             Requested size: 95.83475pt x 92.56152pt.
-<figChap5/Maze_clutter_final_solution_RRTsharp.pdf, id=8943, 293.28584pt x 283.84431pt>
+<figChap5/Maze_clutter_final_solution_RRTsharp.pdf, id=29565, 293.28584pt x 283.84431pt>
 File: figChap5/Maze_clutter_final_solution_RRTsharp.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_RRTsharp.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTsharp.pdf  used on input line 1983.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTsharp.pdf  used on input line 2020.
 (pdftex.def)             Requested size: 95.83475pt x 92.7507pt.
-<figChap5/Maze_clutter_final_solution_RRTXstatic.pdf, id=8944, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_final_solution_RRTXstatic.pdf, id=29566, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_final_solution_RRTXstatic.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_RRTXstatic.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTXstatic.pdf  used on input line 1988.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTXstatic.pdf  used on input line 2025.
 (pdftex.def)             Requested size: 95.83475pt x 92.56152pt.
  [35 <./figChap5/Maze_U_ticks.pdf>] [36 <./figChap5/graph_E_20pt_ticks.pdf> <./figChap5/Maze_E_ticks.pdf> <./figChap5/graph_clutter_20pt_ticks.pdf> <./figChap5/Maze_clutter_ticks.pdf>] [37 <./figChap5/graph_narrow_20pt_ticks.pdf> <./figChap5/Maze_narrow_ticks.pdf> <./figChap5/Maze_clutter_RRTstarML_learning500.pdf> <./figChap5/Maze_clutter_RRTstarML_learning1000.pdf> <./figChap5/Maze_clutter_RRTstarML_learning5000.pdf>] [38 <./figChap5/Maze_clutter_first_solution_RRTstarML.pdf> <./figChap5/Maze_clutter_first_solution_RRTstar.pdf> <./figChap5/Maze_clutter_first_solution_InformedRRTstar.pdf> <./figChap5/Maze_clutter_first_solution_RRTsharp.pdf> <./figChap5/Maze_clutter_first_solution_RRTXstatic.pdf
 
@@ -1549,46 +1576,44 @@ pdfTeX warning: pdflatex (file ./figChap5/Maze_clutter_final_solution_InformedRR
 
 pdfTeX warning: pdflatex (file ./figChap5/Maze_clutter_final_solution_RRTXstatic.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figChap5/graph_clutter_learning_time.pdf, id=16763, 522.21712pt x 500.00519pt>
+<figChap5/graph_clutter_learning_time.pdf, id=37384, 522.21712pt x 500.00519pt>
 File: figChap5/graph_clutter_learning_time.pdf Graphic file (type pdf)
 <use figChap5/graph_clutter_learning_time.pdf>
-Package pdftex.def Info: figChap5/graph_clutter_learning_time.pdf  used on input line 2006.
+Package pdftex.def Info: figChap5/graph_clutter_learning_time.pdf  used on input line 2043.
 (pdftex.def)             Requested size: 181.5pt x 173.78372pt.
 
-Overfull \hbox (2.37349pt too wide) in paragraph at lines 2045--2057
+Overfull \hbox (2.37349pt too wide) in paragraph at lines 2082--2094
 \T1/lmr/m/n/10.95 (-20) The av-er-age time spent by RRT*_ML to pre-dict point in the $\OMS/lmsy/m/n/10.95 C[]$ \T1/lmr/m/n/10.95 (-20) is $\OT1/lmr/m/n/10.95 (-20) (0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 (-20) 037988 \OMS/lmsy/m/n/10.95 ^^F
  []
 
 [39
 
  <./figChap5/graph_clutter_learning_time.pdf>]
-<figChap5/graph_E_2D.pdf, id=16798, 541.77565pt x 500.00519pt>
-File: figChap5/graph_E_2D.pdf Graphic file (type pdf)
-<use figChap5/graph_E_2D.pdf>
-Package pdftex.def Info: figChap5/graph_E_2D.pdf  used on input line 2073.
-(pdftex.def)             Requested size: 174.23845pt x 160.80602pt.
-<figChap5/Maze_E_2D.pdf, id=16799, 293.28584pt x 283.84431pt>
+<figChap5/Maze_E_2D.pdf, id=37419, 293.28584pt x 283.84431pt>
 File: figChap5/Maze_E_2D.pdf Graphic file (type pdf)
 <use figChap5/Maze_E_2D.pdf>
-Package pdftex.def Info: figChap5/Maze_E_2D.pdf  used on input line 2078.
+Package pdftex.def Info: figChap5/Maze_E_2D.pdf  used on input line 2109.
 (pdftex.def)             Requested size: 177.872pt x 172.14429pt.
-<figChap5/graph_E_2D_learning_time.pdf, id=16804, 515.65273pt x 500.00519pt>
-File: figChap5/graph_E_2D_learning_time.pdf Graphic file (type pdf)
-<use figChap5/graph_E_2D_learning_time.pdf>
-Package pdftex.def Info: figChap5/graph_E_2D_learning_time.pdf  used on input line 2091.
-(pdftex.def)             Requested size: 174.23845pt x 168.95427pt.
-<figChap5/RRTstar_ML_Maze_E_2D_solution.pdf, id=16807, 293.28584pt x 283.84431pt>
+<figChap5/RRTstar_ML_Maze_E_2D_solution.pdf, id=37420, 293.28584pt x 283.84431pt>
 File: figChap5/RRTstar_ML_Maze_E_2D_solution.pdf Graphic file (type pdf)
 <use figChap5/RRTstar_ML_Maze_E_2D_solution.pdf>
-Package pdftex.def Info: figChap5/RRTstar_ML_Maze_E_2D_solution.pdf  used on input line 2097.
+Package pdftex.def Info: figChap5/RRTstar_ML_Maze_E_2D_solution.pdf  used on input line 2114.
 (pdftex.def)             Requested size: 177.872pt x 172.14429pt.
- [40 <./figChap5/graph_E_2D.pdf> <./figChap5/Maze_E_2D.pdf>] [41 <./figChap5/graph_E_2D_learning_time.pdf> <./figChap5/RRTstar_ML_Maze_E_2D_solution.pdf>] [42
+<figChap5/graph_E_2D.pdf, id=37428, 541.77565pt x 500.00519pt>
+File: figChap5/graph_E_2D.pdf Graphic file (type pdf)
+<use figChap5/graph_E_2D.pdf>
+Package pdftex.def Info: figChap5/graph_E_2D.pdf  used on input line 2153.
+(pdftex.def)             Requested size: 177.872pt x 164.15535pt.
+<figChap5/graph_E_2D_learning_time.pdf, id=37429, 515.65273pt x 500.00519pt>
+File: figChap5/graph_E_2D_learning_time.pdf Graphic file (type pdf)
+<use figChap5/graph_E_2D_learning_time.pdf>
+Package pdftex.def Info: figChap5/graph_E_2D_learning_time.pdf  used on input line 2158.
+(pdftex.def)             Requested size: 177.872pt x 172.47145pt.
+ [40 <./figChap5/Maze_E_2D.pdf> <./figChap5/RRTstar_ML_Maze_E_2D_solution.pdf>] [41 <./figChap5/graph_E_2D.pdf> <./figChap5/graph_E_2D_learning_time.pdf>] [42
 
 ]
 Chapter 6.
-(./main.bbl [43
-
-] [44
+(./main.bbl [43] [44
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 23--28
@@ -1620,27 +1645,23 @@ Overfull \hbox (26.05998pt too wide) in paragraph at lines 30--35
 \T1/lmtt/m/n/10.95 kernel-[]density-[]estimator-[]for-[]multidimensional-[]data-[]3e78c9779ed8$[]\T1/lmr/m/n/10.95 (-20) . 
  []
 
-[45]) [46]
-Appendix A.
-[47
-
-] (./main.aux)
+[45]) [46] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 40CBD8C7C2FD73DC2B5598A5691B123C;5960.
+(rerunfilecheck)             Checksum: E45B6046D3405C78FD001C2F3827F106;5829.
  ) 
 Here is how much of TeX's memory you used:
- 20191 strings out of 478287
- 345662 string characters out of 5849289
- 696261 words of memory out of 5000000
- 37311 multiletter control sequences out of 15000+600000
- 640318 words of font info for 294 fonts, out of 8000000 for 9000
+ 20238 strings out of 478287
+ 347124 string characters out of 5849289
+ 696099 words of memory out of 5000000
+ 37344 multiletter control sequences out of 15000+600000
+ 640577 words of font info for 297 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,20n,78p,1046b,989s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (55 pages, 15920835 bytes).
+Output written on main.pdf (54 pages, 18841479 bytes).
 PDF statistics:
- 17143 PDF objects out of 18468 (max. 8388607)
- 1634 compressed objects within 17 object streams
- 272 named destinations out of 1000 (max. 500000)
- 95363 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 37761 PDF objects out of 38293 (max. 8388607)
+ 15289 compressed objects within 153 object streams
+ 276 named destinations out of 1000 (max. 500000)
+ 95375 words of extra memory for PDF output out of 106986 (max. 10000000)
 
