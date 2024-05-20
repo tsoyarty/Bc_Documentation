@@ -740,20 +740,21 @@ which can lead to increased time consumption.\\[12pt]
       \label{fig:rrtstarMaze}
   \end{subfigure}  
   \begin{subfigure}[b]{0.45\textwidth}
-      \includegraphics[width=\textwidth]{figChap3/6DRRT_new.pdf}
+      \includegraphics[width=\textwidth]{figChap5/3D_exampleRRT.pdf}
       \caption{RRT.}
       \label{fig:rrt6D} 
   \end{subfigure}
   ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
     %(or a blank line to force the subfigure onto a new line)
   \begin{subfigure}[b]{0.45\textwidth}
-      \includegraphics[width=\textwidth]{figChap3/6DRRTstar3_new.pdf}
+      \includegraphics[width=\textwidth]{figChap5/3D_exampleNew471it_cropped.pdf}
       \caption{RRT*.}
       \label{fig:rrtstar6D}
   \end{subfigure} 
   \caption{Comparison in 2D $\mathcal{C}$-space without obstacles in \ref{fig:rrt2k} 
   and \ref{fig:rrtstar2k} with obstacles in \ref{fig:rrtMaze} and \ref{fig:rrtstarMaze}.
-  Comparison in 6D $\mathcal{C}$-space with an object represented as a tree in \ref{fig:rrt6D} and \ref{fig:rrtstar6D}.}
+  Comparison in 6D $\mathcal{C}$-space with a robot represented as a purple cube and obstacle 
+  represented as a green tree in \ref{fig:rrt6D} and \ref{fig:rrtstar6D}.}
   \label{fig:RRTvsRRTstar}
 \end{figure}
 %---------------------------------------------------------------------------------
@@ -1682,34 +1683,34 @@ simplifying the detection of intersections between polygons in various applicati
 physically based modeling, virtual prototyping, and CAD.  
 In Python 3.7 and later, the Trimesh library can be utilized for collision detection. 
 This library is well-tested for handling triangle mesh objects. 
-Figure \ref{fig:6Dconfig-space} shows an example of a 6D configuration.
+Figure \ref{fig:6Dconfig-space} shows an example of a 6D $\mathcal{C}$-space.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
   \begin{subfigure}[b]{0.49\textwidth}
-      \includegraphics[width=\textwidth]{figChap5/3D_exampleNew471it.pdf}
-      \caption{Front view.}
+      \includegraphics[width=\textwidth]{figChap4/6D_RRTstar173it_loc_m135to35.pdf}
+      \caption{RRT* front view.}
       \label{fig:rrtstar3D_maze_front}
   \end{subfigure}  
   \begin{subfigure}[b]{0.49\textwidth}
-      \includegraphics[width=\textwidth]{figChap5/3D_exampleNew471it_2.pdf}
-      \caption{Left view.}
+      \includegraphics[width=\textwidth]{figChap4/6D_RRTstar1773it_loc_135to10.pdf}
+      \caption{RRT* left view.}
       \label{fig:rrtstarML3D_maze_left}
   \end{subfigure}
   \begin{subfigure}[b]{0.49\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/3D_exampleNew471it_3.pdf}
-    \caption{Right view.}
+    \includegraphics[width=\textwidth]{figChap4/6D_RRTstarML193it_loc_m135to35.pdf}
+    \caption{Improven RRT* front view.}
     \label{fig:rrtstarML3D_maze_right}
   \end{subfigure}
   \begin{subfigure}[b]{0.49\textwidth}
-    \includegraphics[width=\textwidth]{figChap5/3D_exampleNew471it_4.pdf}
-    \caption{Top view.}
+    \includegraphics[width=\textwidth]{figChap4/6D_RRTstarML193it_loc_135to10.pdf}
+    \caption{Improven RRT* left view.}
     \label{fig:rrtstarML3D_maze_top}
 \end{subfigure}
-  \caption{An example of a 6D configuration space with the found solution path. 
-  The green color represents obstacle object (tree). 
-  The purple color indicates the cube object representing our robot. 
+  \caption{An example of a 6D $\mathcal{C}$-space with the found solution path. 
+  The green color represents obstacle object. 
+  The purple color indicates object representing our robot. 
   The red line shows the found solution path, 
   and the blue lines illustrate the paths explored in the $\mathcal{C}$-space.}
   \label{fig:6Dconfig-space}
@@ -2157,7 +2158,7 @@ for the same number of iterations.
   \end{subfigure}
   \begin{subfigure}[t]{0.49\textwidth}
     \includegraphics[width=\textwidth]{figChap5/graph_E_2D_learning_time.pdf}   
-    \caption{Time taken to learn predicting points in narrow 6D $\mathcal{C}$-space \ref{fig:maze_E_2D_Cspace}
+    \caption{Time taken to learn predicting points in narrow 3D $\mathcal{C}$-space \ref{fig:maze_E_2D_Cspace}
     to be in the \(C_{\text{free}}\).}
     \label{fig:graph_learning_time_2D}
   \end{subfigure} 
@@ -2166,14 +2167,76 @@ for the same number of iterations.
 \end{figure}
 %---------------------------------------------------------------------------------
 \\
-Due to time complexities, 
-there was no testing in the 6D configuration space. 
-This is because there would be significantly more computations for collision checking, 
-predicting samples, and computing costs based on the shortest path and rotations along the XYZ axes. 
-Given the trend in time complexity, 
-it can be concluded that in the 6D configuration space, 
-the implemented RRT*\_ML method will be much slower than the existing RRT* path planner.
- 
+Computation in 6D configuration space is significantly more complex; 
+therefore, tests were conducted for 200 iterations. 
+In Figure \ref{fig:6Dconfig-space_chap5}, the workspace is shown with the robot represented as a purple cube and 
+obstacles represented as green cubes. 
+The cost is computed as the Euclidean distance, 
+with the reference point of the robot located at its center of mass. 
+This map is 25x25x25, so the step size was changed to 3 and the rewire radius to 12. 
+The goal bias remains at 0.05. 
+According to the graph illustrated in Figure \ref{fig:graph_6D}, 
+the implemented RRT*\_ML converges to the optimal solution faster. 
+However, in this case, RRT* found the first feasible solution earlier. 
+Similar to previous tests, RRT*\_ML is slower than RRT*.
+The runtime for RRT*\_ML over 200 iterations is 503.83 seconds,
+while the runtime for RRT* is 379.44 seconds. 
+Figure \ref{fig:graph_learning_time_6D} shows the time taken to predict a sample 
+in \( \mathcal{C}_{\text{free}} \), and as before, 
+this time increases over iterations. 
+This increase is due to the \( X_{\text{free}} \) 
+and \( X_{\text{obs}} \) datasets accumulating more data points over time, 
+making them larger.
+
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[t]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/graph_6D.pdf}  
+    \caption{Convergence graph of RRT*\_ML and RRT*.}
+    \label{fig:graph_6D}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/graph_6D_learning.pdf}   
+    \caption{Time taken to learn predicting points in narrow 6D $\mathcal{C}$-space \ref{fig:maze_E_2D_Cspace}
+    to be in the \(C_{\text{free}}\).}
+    \label{fig:graph_learning_time_6D}
+  \end{subfigure} 
+  \caption{Graphs.}
+  % \label{fig:graphs_2D}
+\end{figure}
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{subfigure}[b]{0.49\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/6D_RRTstarFront.pdf}
+      \caption{RRT* front view.}
+      % \label{fig:rrtstar3D_maze_front}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.49\textwidth}
+      \includegraphics[width=\textwidth]{figChap5/6D_RRTstarRight.pdf}
+      \caption{RRT* right view.}
+      % \label{fig:rrtstarML3D_maze_left}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/6D_RRTstarFront_ML.pdf}
+    \caption{RRT*\_ML front view.}
+    % \label{fig:rrtstarML3D_maze_right}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{figChap5/6D_RRTstraRight_ML.pdf}
+    \caption{RRT*\_ML right view.}
+    % \label{fig:rrtstarML3D_maze_top}
+\end{subfigure}
+  \caption{An example of a 6D $\mathcal{C}$-space with the found solution path. 
+  The green color represents obstacle object. 
+  The purple color indicates object representing our robot. 
+  The red line shows the found solution path, 
+  and the blue lines illustrate the paths explored in the $\mathcal{C}$-space.}
+  \label{fig:6Dconfig-space_chap5}
+\end{figure}
+%---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \section{Result}
