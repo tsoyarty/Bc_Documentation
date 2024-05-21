@@ -1354,11 +1354,11 @@ INPUT ./figChap3/RRTstar_maze_7060i_35w.pdf
 INPUT figChap3/RRTstar_maze_7060i_35w.pdf
 INPUT ./figChap3/RRTstar_maze_7060i_35w.pdf
 INPUT ./figChap3/RRTstar_maze_7060i_35w.pdf
-INPUT ./figChap5/3D_exampleRRT.pdf
-INPUT ./figChap5/3D_exampleRRT.pdf
-INPUT figChap5/3D_exampleRRT.pdf
-INPUT ./figChap5/3D_exampleRRT.pdf
-INPUT ./figChap5/3D_exampleRRT.pdf
+INPUT ./figChap5/3D_exampleRRT314it_big.pdf
+INPUT ./figChap5/3D_exampleRRT314it_big.pdf
+INPUT figChap5/3D_exampleRRT314it_big.pdf
+INPUT ./figChap5/3D_exampleRRT314it_big.pdf
+INPUT ./figChap5/3D_exampleRRT314it_big.pdf
 INPUT ./figChap5/3D_exampleNew471it_cropped.pdf
 INPUT ./figChap5/3D_exampleNew471it_cropped.pdf
 INPUT figChap5/3D_exampleNew471it_cropped.pdf
@@ -1511,10 +1511,6 @@ INPUT ./figChap5/Maze_U_ticks.pdf
 INPUT figChap5/Maze_U_ticks.pdf
 INPUT ./figChap5/Maze_U_ticks.pdf
 INPUT ./figChap5/Maze_U_ticks.pdf
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx9.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx5.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx7.tfm
 INPUT ./figChap5/graph_E_20pt_ticks.pdf
 INPUT ./figChap5/graph_E_20pt_ticks.pdf
 INPUT figChap5/graph_E_20pt_ticks.pdf
@@ -1560,6 +1556,9 @@ INPUT ./figChap5/Maze_clutter_RRTstarML_learning5000.pdf
 INPUT figChap5/Maze_clutter_RRTstarML_learning5000.pdf
 INPUT ./figChap5/Maze_clutter_RRTstarML_learning5000.pdf
 INPUT ./figChap5/Maze_clutter_RRTstarML_learning5000.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx5.tfm
 INPUT ./figChap5/Maze_clutter_first_solution_RRTstarML.pdf
 INPUT ./figChap5/Maze_clutter_first_solution_RRTstarML.pdf
 INPUT figChap5/Maze_clutter_first_solution_RRTstarML.pdf
@@ -1580,6 +1579,7 @@ INPUT ./figChap5/Maze_clutter_first_solution_RRTsharp.pdf
 INPUT figChap5/Maze_clutter_first_solution_RRTsharp.pdf
 INPUT ./figChap5/Maze_clutter_first_solution_RRTsharp.pdf
 INPUT ./figChap5/Maze_clutter_first_solution_RRTsharp.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx9.tfm
 INPUT ./figChap5/Maze_clutter_first_solution_RRTXstatic.pdf
 INPUT ./figChap5/Maze_clutter_first_solution_RRTXstatic.pdf
 INPUT figChap5/Maze_clutter_first_solution_RRTXstatic.pdf

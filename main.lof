@@ -42,10 +42,10 @@
 \contentsline {figure}{\numberline {4.8}{\ignorespaces An example of a 6D $\mathcal {C}$-space with the found solution path. The green color represents obstacle object. The purple color indicates object representing our robot. The red line shows the found solution path, and the blue lines illustrate the paths explored in the $\mathcal {C}$-space.\relax }}{32}{figure.4.8}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces To enhance visualization of the graphs, all will be scaled to depict changes more clearly. Consequently, the cost axes will not necessarily start at zero.\relax }}{34}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces $\mathcal {C}$-space with small $\mathcal {C}_\text {obs} $ \ref {fig:maze_U_Cspace} and corresponding convergence graphs \ref {fig:maze_U_graphs} of selected planners.\relax }}{35}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces $\mathcal {C}$-space with narrow passages \ref {fig:maze_E_Cspace} and corresponding convergence graphs \ref {fig:maze_E_graphs} of selected planners.\relax }}{36}{figure.5.3}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Cluttered $\mathcal {C}$-space \ref {fig:maze_clutter_Cspace} and corresponding convergence graphs \ref {fig:maze_E_graphs} of selected planners.\relax }}{36}{figure.5.4}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Difficult $\mathcal {C}$-space with numerouse narrow passages \ref {fig:maze_clutter_Cspace} and corresponding convergence graphs \ref {fig:maze_E_graphs} of selected planners.\relax }}{37}{figure.5.5}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Map \ref {fig:maze_U_Cspace} and corresponding convergence graphs \ref {fig:maze_U_graphs} of selected planners.\relax }}{35}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Map with narrow passages \ref {fig:maze_E_Cspace} and corresponding convergence graphs \ref {fig:maze_E_graphs} of selected planners.\relax }}{36}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Cluttered map \ref {fig:maze_clutter_Cspace} and corresponding convergence graphs \ref {fig:maze_E_graphs} of selected planners.\relax }}{36}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Difficult map with numerouse narrow passages \ref {fig:maze_clutter_Cspace} and corresponding convergence graphs \ref {fig:maze_E_graphs} of selected planners.\relax }}{37}{figure.5.5}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Learning in cluttered $\mathcal {C}$-space.\relax }}{37}{figure.5.6}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces An example of the initial solutions found by each planner in a cluttered $\mathcal {C}$-space.\relax }}{38}{figure.5.7}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces An example of the final solutions found by each planner in a cluttered $\mathcal {C}$-space.\relax }}{38}{figure.5.8}%
@@ -54,4 +54,5 @@
 \contentsline {figure}{\numberline {5.11}{\ignorespaces Graphs.\relax }}{41}{figure.5.11}%
 \contentsline {figure}{\numberline {5.12}{\ignorespaces Graphs.\relax }}{42}{figure.5.12}%
 \contentsline {figure}{\numberline {5.13}{\ignorespaces An example of a 6D $\mathcal {C}$-space with the found solution path. The green color represents obstacle object. The purple color indicates object representing our robot. The red line shows the found solution path, and the blue lines illustrate the paths explored in the $\mathcal {C}$-space.\relax }}{42}{figure.5.13}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -5,12 +5,27 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 
+\newcommand{\smallsim}{\smallsym{\mathrel}{\sim}}
+
+\makeatletter
+\newcommand{\smallsym}[2]{#1{\mathpalette\make@small@sym{#2}}}
+\newcommand{\make@small@sym}[2]{%
+  \vcenter{\hbox{$\m@th\downgrade@style#1#2$}}%
+}
+\newcommand{\downgrade@style}[1]{%
+  \ifx#1\displaystyle\scriptstyle\else
+    \ifx#1\textstyle\scriptstyle\else
+      \scriptscriptstyle
+  \fi\fi
+}
+\makeatother
+
 \ctusetup{
 	xdoctype = B,
 	xfaculty = F3,
 	mainlanguage = english,
 	titlelanguage = english,
-	title-english = {Improving path planning methods using machine learning},
+	title-english = {Improving Path Planning Methods Using Machine Learning},
 	title-czech = {Využití strojového učení v úloze plánování pohybu},
 	department-english = {Department of Cybernetics},
 	author = {Artyom Tsoy},
@@ -50,7 +65,7 @@ I declare that the presented work was developed independently and that I have
 listed all sources of information used
 within it in accordance with the methodical instructions for observing the ethical
 principles in the preparation of university
-theses.
+theses. I utilized artificial intelligence for grammar correction.
 \medskip
 \\\\
 Prague, \monthinlanguage{title} \ctufield{day}, \ctufield{year}
@@ -64,7 +79,6 @@ Prague, \monthinlanguage{title} \ctufield{day}, \ctufield{year}
 \begin{document}
 % 
 \maketitle
-
 \includepdf[pages=1]{BP.pdf}
 \includepdf[pages=2]{BP.pdf} 
 %---------------------------------------------------------------------------------
@@ -740,12 +754,10 @@ which can lead to increased time consumption.\\[12pt]
       \label{fig:rrtstarMaze}
   \end{subfigure}  
   \begin{subfigure}[b]{0.45\textwidth}
-      \includegraphics[width=\textwidth]{figChap5/3D_exampleRRT.pdf}
+      \includegraphics[width=\textwidth]{figChap5/3D_exampleRRT314it_big.pdf}
       \caption{RRT.}
       \label{fig:rrt6D} 
-  \end{subfigure}
-  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
-    %(or a blank line to force the subfigure onto a new line)
+  \end{subfigure} 
   \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=\textwidth]{figChap5/3D_exampleNew471it_cropped.pdf}
       \caption{RRT*.}
@@ -928,7 +940,7 @@ than traditional RRT* algorithms.
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
-      \includegraphics[width=\textwidth]{figChap3/InformedRRTstar_elips.png}
+      \includegraphics[width=0.9\textwidth]{figChap3/InformedRRTstar_elips.png}
       \caption{An example of a two-dimensional prolate hyperspheroid. 
       Image courtesy of \cite{Gammell2018InformedRRTstar}}
       \label{fig:elips}  
@@ -1508,7 +1520,7 @@ efficiently towards an optimal solution while effectively exploring the configur
   \end{subfigure}  
   \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=\textwidth]{figChap4/RRTstarML_maze206.0.pdf}
-      \caption{Improven RRT*.}
+      \caption{Improved RRT*.}
       \label{fig:rrtstarML_maze}
   \end{subfigure}
   \caption{
@@ -1534,7 +1546,7 @@ efficiently towards an optimal solution while effectively exploring the configur
   \end{subfigure}  
   \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=\textwidth]{figChap4/RRTstarML_maze206.0.pdf}
-      \caption{Improven RRT*.}
+      \caption{Improved RRT*.}
       % \label{fig:rrtstarML_maze}
   \end{subfigure}
   \caption{In Figure \ref{fig:rrtstarML_learning}, 
@@ -1629,7 +1641,7 @@ in finding optimal paths \ref{fig:RRTstar2D_vs_RRTstarML2D}.
   \end{subfigure}  
   \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=\textwidth]{figChap4/RRTstar2DML_maze237.2.pdf}
-      \caption{Improven RRT*.}
+      \caption{Improved RRT*.}
       % \label{fig:rrtstarML2D_maze}
   \end{subfigure}
   \caption{In Figure \ref{fig:rrtstarML2D_learning}, it can be seen 
@@ -1651,7 +1663,7 @@ in finding optimal paths \ref{fig:RRTstar2D_vs_RRTstarML2D}.
   \end{subfigure}  
   \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=\textwidth]{figChap4/RRTstar2DML_maze237.2.pdf}
-      \caption{Improven RRT*.}
+      \caption{Improved RRT*.}
       \label{fig:rrtstarML2D_maze}
   \end{subfigure}
   \caption{Both algorithms, 
@@ -1668,7 +1680,7 @@ in finding optimal paths \ref{fig:RRTstar2D_vs_RRTstarML2D}.
 To extend the improved RRT* to 6D $\mathcal{C}$-space, 
 such as in the Piano Movers Problem, similar procedures to those in 3D $\mathcal{C}$-space 
 need to be followed. 
-However, the robot will be represented by a 3D triangle mesh, such as objecct files(.obj). 
+However, the robot will be represented by a 3D triangle mesh, such as object files(.obj). 
 These files, readily available from the internet, 
 offer a structured representation of objects, 
 with each object represented as a set of triangles. 
@@ -1700,12 +1712,12 @@ Figure \ref{fig:6Dconfig-space} shows an example of a 6D $\mathcal{C}$-space.
   \end{subfigure}
   \begin{subfigure}[b]{0.49\textwidth}
     \includegraphics[width=\textwidth]{figChap4/6D_RRTstarML193it_loc_m135to35.pdf}
-    \caption{Improven RRT* front view.}
+    \caption{Improved RRT* front view.}
     \label{fig:rrtstarML3D_maze_right}
   \end{subfigure}
   \begin{subfigure}[b]{0.49\textwidth}
     \includegraphics[width=\textwidth]{figChap4/6D_RRTstarML193it_loc_135to10.pdf}
-    \caption{Improven RRT* left view.}
+    \caption{Improved RRT* left view.}
     \label{fig:rrtstarML3D_maze_top}
 \end{subfigure}
   \caption{An example of a 6D $\mathcal{C}$-space with the found solution path. 
@@ -1727,12 +1739,34 @@ will be presented and discussed
 alongside other planners across various configuration spaces. 
 In this work, the specification of units of measurement is not necessary 
 as the choice of units can vary depending on the preferences or requirements.
+In addition to testing the runtime of the code, 
+the experiments were conducted on a computer with 
+the specifications detailed in Table \ref{tab:PC_params}  
+This information is provided to ensure transparency of the results.
+%---------------------------------------------------------------------------------
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|p{3cm}|c|}
+      \hline
+      \textbf{Parameter} & \textbf{Value}\\
+      \hline
+      OS    & Ubuntu 22.04.4 LTS x86\_64 \\
+      CPU   & 11th Gen Intel i5-11400H \\
+      GPU   & NVIDIA GeForce RTX 3050 Mobile\\
+      RAM   & 16GB        \\
+      \hline
+  \end{tabular}
+  \caption{Computer Specifications.}
+  \label{tab:PC_params}
+\end{table}
+%---------------------------------------------------------------------------------
 \section{Comparison with OMPL}
 To assess the effectiveness of the implemented enhanced RRT* algorithm across various scenarios, 
 planners from the Open Motion Planning Library (OMPL)~\cite{Ioan2012ompl} 
 will serve as benchmarks. 
 OMPL is a widely-used library that provides an extensive collection of motion planning algorithms,
 making it a valuable resource for comparing and evaluating different planning strategies. 
+% \\[12pt]
 %---------------------------------------------------------------------------------
 \begin{table}[!ht]
   \centering
@@ -1752,6 +1786,7 @@ making it a valuable resource for comparing and evaluating different planning st
   \label{tab:params}
 \end{table}
 %--------------------------------------------------------------------------------- 
+\\
 The primary objective of this comparison is to evaluate how integrating 
 machine learning methods enhances the performance of the RRT* algorithm. 
 Additionally, 
@@ -1773,12 +1808,7 @@ they diverge in their use of the parameter \( \epsilon \).
 In the case of RRT$^\#$, \( \epsilon \) is set to 0, 
 whereas in RRT$^X$ static, it is initially set to 0.01. 
 $\epsilon$ representing the minimum
-threshold for cost improvement required to rewire the tree
-\\[12pt]
-Additionally, all OMPL planners start with a rewiring factor of 1.1. 
-This factor, applied multiplicatively, 
-determines the size of the neighbor ball or the number of neighbors 
-considered during tree expansion. 
+threshold for cost improvement required to rewire the tree.
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
@@ -1798,8 +1828,12 @@ considered during tree expansion.
 \end{figure}
 %---------------------------------------------------------------------------------
 \\
+Additionally, all OMPL planners start with a rewiring factor of $k=1.1$. 
+This factor, applied multiplicatively, 
+determines the size of the neighbor ball or the number of neighbors 
+considered during tree expansion.  
 In the implementation of RRT*\_ML, 
-the rewiring radius is set to 40 and the step size to 10. 
+the rewiring radius is set to $r = 40$ and the step size to $s = 10$. 
 The rewiring radius represents the radius within which nearest neighbor 
 searches are conducted, 
 while the step size represents the maximum length of a path segment.
@@ -1819,7 +1853,7 @@ In the case of a 2D configuration space,
 the bandwidth matrix $\mathbf{H}$ is a symmetric 
 matrix $\left[ \begin{array}{cc} h & 0 \\ 0 & h \end{array} \right]$, 
 where $h$ is calculated using Scott's rule:
-\[ h = n^{-\frac{1}{d+4}} \]
+\( h = n^{-\frac{1}{d+4}}. \)
 Here, $n$ represents the number of data points, and $d$ represents the number of dimensions.
 \\[12pt]
 All parameters are listed in Table \ref{tab:params}.
@@ -1848,10 +1882,10 @@ Black areas represent obstacles.
   \end{subfigure}
   \begin{subfigure}[b]{0.49\textwidth}
       \includegraphics[width=\textwidth]{figChap5/Maze_U_ticks.pdf}
-      \caption{$\mathcal{C}$-space.}
+      \caption{Map.}
       \label{fig:maze_U_Cspace} 
   \end{subfigure}  
-  \caption{$\mathcal{C}$-space with small $\mathcal{C}_\text{obs} $ \ref{fig:maze_U_Cspace} and 
+  \caption{Map \ref{fig:maze_U_Cspace} and 
   corresponding convergence graphs \ref{fig:maze_U_graphs} of selected planners.}
   \label{fig:maze_U}
 \end{figure}
@@ -1864,15 +1898,11 @@ Path costs were computed the same way across all planners, as the path length.
 \\[12pt]
 In Figure \ref{fig:maze_U}, 
 a simple configuration space, previously discussed, is shown. 
-The implemented machine learning method, denoted as RRT*\_ML, 
+The implemented RRT*\_ML 
 notably converges faster to the optimal solution compared to RRT*. 
 Other planners, while slightly slower, also find solutions. 
 However, the performance of the implemented machine learning method surpasses 
-that of the other planners in this scenario.
-\\[12pt]
-Figure \ref{fig:maze_E} illustrates a simple example of narrow passages. 
-The implemented method discovers a solution slightly earlier than other planners, 
-although its performance becomes comparable to RRT* after 2000 iterations.
+that of the other planners in this scenario. 
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
@@ -1883,10 +1913,10 @@ although its performance becomes comparable to RRT* after 2000 iterations.
   \end{subfigure}
   \begin{subfigure}[b]{0.49\textwidth}
       \includegraphics[width=\textwidth]{figChap5/Maze_E_ticks.pdf}
-      \caption{$\mathcal{C}$-space.}
+      \caption{Map.}
       \label{fig:maze_E_Cspace} 
   \end{subfigure}   
-  \caption{$\mathcal{C}$-space with narrow passages \ref{fig:maze_E_Cspace} and 
+  \caption{Map with narrow passages \ref{fig:maze_E_Cspace} and 
   corresponding convergence graphs \ref{fig:maze_E_graphs} of selected planners.}
   \label{fig:maze_E}
 \end{figure}
@@ -1900,15 +1930,27 @@ although its performance becomes comparable to RRT* after 2000 iterations.
   \end{subfigure}
   \begin{subfigure}[b]{0.49\textwidth}
       \includegraphics[width=\textwidth]{figChap5/Maze_clutter_ticks.pdf}
-      \caption{$\mathcal{C}$-space.}
+      \caption{Map.}
       \label{fig:maze_clutter_Cspace} 
   \end{subfigure}   
-  \caption{Cluttered $\mathcal{C}$-space \ref{fig:maze_clutter_Cspace} and 
+  \caption{Cluttered map \ref{fig:maze_clutter_Cspace} and 
   corresponding convergence graphs \ref{fig:maze_E_graphs} of selected planners.}
   \label{fig:maze_clutter}
 \end{figure}
+\\
+Figure \ref{fig:maze_E} illustrates a simple example of narrow passages. 
+The implemented method discovers a solution slightly earlier than other planners, 
+although its performance becomes comparable to RRT* after 2000 iterations.
+Figure \ref{fig:maze_clutter} presents a cluttered configuration space where all methods exhibit similar behavior. 
+However, Improved RRT* initiates convergence to the first possible solution earlier than the others and 
+demonstrates better convergence to the optimal solution than RRT*. 
+In Figure \ref{fig:maze_narrow}, 
+a more challenging scenario with numerous narrow passages is demonstrated. 
+In this case, 
+the implemented enhanced RRT* once again discovers the first possible solution earlier than RRT*. 
+However, in terms of convergence, it behaves similarly to RRT*.
 %---------------------------------------------------------------------------------
-\begin{figure}[!ht]
+\begin{figure}
   \centering 
   \begin{subfigure}[b]{0.48\textwidth}
     \includegraphics[width=\textwidth]{figChap5/graph_narrow_20pt_ticks.pdf}  
@@ -1917,24 +1959,14 @@ although its performance becomes comparable to RRT* after 2000 iterations.
   \end{subfigure}
   \begin{subfigure}[b]{0.49\textwidth}
       \includegraphics[width=\textwidth]{figChap5/Maze_narrow_ticks.pdf}
-      \caption{$\mathcal{C}$-space.}
+      \caption{Map.}
       \label{fig:maze_narrow_Cspace}  
   \end{subfigure}  
-  \caption{Difficult  $\mathcal{C}$-space with numerouse narrow passages \ref{fig:maze_clutter_Cspace} 
+  \caption{Difficult map with numerouse narrow passages \ref{fig:maze_clutter_Cspace} 
   and corresponding convergence graphs \ref{fig:maze_E_graphs} of selected planners.}
   \label{fig:maze_narrow}
 \end{figure}
 %---------------------------------------------------------------------------------
-\\
-Figure \ref{fig:maze_clutter} presents a cluttered configuration space where all methods exhibit similar behavior. 
-However, improven RRT* initiates convergence to the first possible solution earlier than the others and 
-demonstrates better convergence to the optimal solution than RRT*.
-\\[12pt]
-In Figure \ref{fig:maze_narrow}, 
-a more challenging scenario with numerous narrow passages is demonstrated. 
-In this case, 
-the implemented enhanced RRT* once again discovers the first possible solution earlier than RRT*. 
-However, in terms of convergence, it behaves similarly to RRT*.
 \\[12pt]
 Figure \ref{fig:learning_clutter} demonstrates how 
 the RRT*\_ML algorithm learns and adapts to the cluttered $\mathcal{C}$-space. 
@@ -1946,7 +1978,7 @@ while the initial solution is the first found possible solution.
 The cluttered configuration space was selected for its potential to offer a greater diversity 
 of paths compared to other configuration spaces due to the multitude of possible path variations.
 %---------------------------------------------------------------------------------
-\begin{figure}[!ht]
+\begin{figure}
   \centering
   \begin{subfigure}[b]{0.32\textwidth}
     \includegraphics[width=\textwidth]{figChap5/Maze_clutter_RRTstarML_learning500.pdf}  
@@ -2032,7 +2064,6 @@ of paths compared to other configuration spaces due to the multitude of possible
   in a cluttered $\mathcal{C}$-space.}
   \label{fig:final_sol_clutter}
 \end{figure}
-
 %---------------------------------------------------------------------------------
 \clearpage
 \subsection{Runtime}
@@ -2146,7 +2177,7 @@ the implemented RRT*\_ML algorithm finds the first solution with fewer iteration
 However, as illustrated in Figure \ref{fig:graph_learning_time_2D},
 the computational time for prediction increases with each iteration. 
 As a result, RRT* is significantly faster, 
-completing 5000 iterations in 30.11 seconds, while RRT*\_ML took 1041.42 seconds 
+completing 5000 iterations in $\smallsim$30 seconds, while RRT*\_ML took $\smallsim$1041 seconds 
 for the same number of iterations.
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
@@ -2173,14 +2204,14 @@ In Figure \ref{fig:6Dconfig-space_chap5}, the workspace is shown with the robot 
 obstacles represented as green cubes. 
 The cost is computed as the Euclidean distance, 
 with the reference point of the robot located at its center of mass. 
-This map is 25x25x25, so the step size was changed to 3 and the rewire radius to 12. 
-The goal bias remains at 0.05. 
+This map is 25x25x25, so the $s$ was changed to 3 and the $r$ to 12. 
+The $p_{goal}$ remains at 0.05. 
 According to the graph illustrated in Figure \ref{fig:graph_6D}, 
 the implemented RRT*\_ML converges to the optimal solution faster. 
 However, in this case, RRT* found the first feasible solution earlier. 
 Similar to previous tests, RRT*\_ML is slower than RRT*.
-The runtime for RRT*\_ML over 200 iterations is 503.83 seconds,
-while the runtime for RRT* is 379.44 seconds. 
+The runtime for RRT*\_ML over 200 iterations is ${\smallsim}504$ seconds,
+while the runtime for RRT* is $\smallsim$379 seconds. 
 Figure \ref{fig:graph_learning_time_6D} shows the time taken to predict a sample 
 in \( \mathcal{C}_{\text{free}} \), and as before, 
 this time increases over iterations. 
@@ -2239,6 +2270,7 @@ making them larger.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
+\clearpage
 \section{Result}
 As a result, 
 it can be concluded that the implemented enhanced RRT* algorithm utilizing machine learning methods 
@@ -2301,15 +2333,10 @@ implementing the algorithm in C++ could help reduce time complexity and improve 
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
-% \appendix
-% \chapter*{List of Notation}
-% \noindent
-% \begin{tabularx}{\linewidth}
-%   { l >{\raggedright\arraybackslash}X }
-% \bfseries Symbol & \bfseries Meaning \\\Midrule
-% $\alpha$ & The angle of attack \\
-% $\mathbb{R}$ & The real numbers \\
-% \end{tabularx}
+\appendix
+\chapter*{Attachments}
+\textbf{Inforamation about attached file, how to run code, what i have, 
+also add latex code to attachments}
  
 \end{document}
 
