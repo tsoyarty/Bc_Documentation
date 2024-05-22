@@ -99,8 +99,27 @@ Traditional path planning methods, such as Rapidly-exploring Random Trees (RRT)~
 and its enhanced variant RRT*~\cite{karaman2011rrtstar}, 
 have been widely used due to their effectiveness in handling high-dimensional configuration spaces.  
 The configuration space, often denoted as $\mathcal{C}$-space, is a fundamental concept in robotics and motion planning. 
-It represents all possible configurations or states that a robot or system can occupy within its environment.\\[12pt]
-%------
+It represents all possible configurations or states that a robot or system can occupy within its environment.
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+      \includegraphics[width=\textwidth]{figChap1/The-piano-movers-problem-EET.png}
+      \caption{The Piano Movers Problem. Image courtesy of~\cite{rickert2014piano}.}
+      \label{fig:piano}
+  \end{subfigure}
+  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+  \begin{subfigure}[b]{0.36\textwidth}
+      \includegraphics[width=\textwidth]{figChap1/RRTsimple2_cropped.pdf}
+      \caption{Rapidly-exploring Random Trees examples.}
+      \label{fig:RRTsimple}
+  \end{subfigure} 
+  \caption{Figure \ref{fig:piano} illustrates an example of a path planning problem, 
+  along with a representation of the Rapidly-exploring Random Tree (RRT) algorithm in Figure \ref{fig:RRTsimple}.}%\label{fig:animals}
+\end{figure}
+%---------------------------------------------------------------------------------
+\\
 To enhance clarity within the text, it is crucial to briefly explain how RRT works: 
 The algorithm incrementally builds a tree structure from an initial configuration towards randomly sampled configurations in the configuration space.
 At each iteration, a new configuration, known as a random sample, is generated within the configuration space. 
@@ -109,8 +128,19 @@ The key idea behind RRT is to rapidly explore the configuration space by growing
 This exploration strategy ensures that the algorithm efficiently covers the space while avoiding costly computation.
 RRT continues this process iteratively, gradually expanding the tree towards the goal configuration. 
 As the algorithm progresses, the tree becomes denser in regions that are closer to the goal, eventually converging to a path from the start to the goal configuration.
-In Figure \ref{fig:RRTsimple}, simple examples of how RRT looks can be seen.\\[12pt]
-%------
+In Figure \ref{fig:RRTsimple}, simple examples of how RRT looks can be seen.
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering 
+  \begin{minipage}[t]{0.9\textwidth}
+      \centering
+      \includegraphics[width=0.49\textwidth]{figChap1/narrow_passage_cropped.pdf} 
+  \end{minipage} 
+  \caption{Illustration of the narrow passage where the aim is to maneuver a purple object through the limited space between black obstacles to reach the red goal configuration.} 
+  \label{fig:narrowpassage}
+\end{figure}
+%---------------------------------------------------------------------------------
+\\
 However, with the increasing complexity of real-world environments, 
 such as systems with many obstacles or narrow passages, as illustrated in Figure \ref{fig:narrowpassage},
 there is a growing need to enhance these methods to improve their efficiency and
@@ -135,35 +165,6 @@ while adaptability refers to its ability to dynamically adjust strategies in res
 %   \label{fig:RRTsimple}
 % \end{figure}
 
-\begin{figure}
-  \centering
-  \begin{subfigure}[b]{0.4\textwidth}
-      \includegraphics[width=\textwidth]{figChap1/The-piano-movers-problem-EET.png}
-      \caption{The Piano Movers Problem. Image courtesy of~\cite{rickert2014piano}.}
-      \label{fig:piano}
-  \end{subfigure}
-  ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
-    %(or a blank line to force the subfigure onto a new line)
-  \begin{subfigure}[b]{0.5\textwidth}
-      \includegraphics[width=\textwidth]{figChap1/RRTsimple2.pdf}
-      \caption{Rapidly-exploring Random Trees examples.}
-      \label{fig:RRTsimple}
-  \end{subfigure} 
-  \caption{Figure \ref{fig:piano} illustrates an example of a path planning problem, 
-  along with a representation of the Rapidly-exploring Random Tree (RRT) algorithm in Figure \ref{fig:RRTsimple}.}%\label{fig:animals}
-\end{figure}
-
-
-\begin{figure} 
-  \centering 
-  \begin{minipage}[t]{0.9\textwidth}
-      \centering
-      \includegraphics[width=0.9\textwidth]{figChap1/narrow_passage.pdf} 
-  \end{minipage} 
-  \caption{Illustration of the narrow passage where the aim is to maneuver a purple object through the limited space between black obstacles to reach the red goal configuration.} 
-  \label{fig:narrowpassage}
-\end{figure}
-
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \section{Machine Learning}
@@ -182,8 +183,18 @@ Most machine learning algorithms can be categorized into supervised learning and
 In supervised learning, the algorithm receives guidance from an instructor or teacher, 
 who provides the target output for each input example. 
 Conversely, unsupervised learning involves no external guidance, 
-requiring the algorithm to derive insights from the data independently.\\[12pt]
-%------
+requiring the algorithm to derive insights from the data independently.
+%---------------------------------------------------------------------------------
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=1\linewidth]{figChap1/Object_detection.pdf}
+  \caption{An example of an object classification problem, 
+  where the program classifies objects in the photo into their respective classes.
+  Image courtesy of~\cite{ObjectDetection}.}
+  \label{fig:ObjectDetection}
+\end{figure} 
+%---------------------------------------------------------------------------------
+\\
 Supervised learning tasks typically include classification, regression, 
 and density estimation or probability mass function estimation. 
 In classification tasks, the algorithm classifies input data into predefined categories or classes. 
@@ -204,17 +215,7 @@ This understanding is crucial for effectively modeling the data distribution.\\[
 This thesis aims to improve path planning algorithms by using machine learning, 
 including classification and density estimation techniques.
 
-%---------------------------------------------------------------------------------
-\begin{figure}
-  \centering
-  \includegraphics[width=1\linewidth]{figChap1/Object_detection.pdf}
-  \caption{An example of an object classification problem, 
-  where the program classifies objects in the photo into their respective classes.
-  Image courtesy of~\cite{ObjectDetection}.}
-  \label{fig:ObjectDetection}
-\end{figure} 
- 
-%---------------------------------------------------------------------------------
+
 %---------------------------------------------------------------------------------
 \section{Thesis structure}
 
@@ -282,7 +283,7 @@ The position most often represents the coordinates of its center of mass or as a
 It can be stated that there a \textbf{6D $\mathcal{C}$-space} because to describe the configuration of the piano, we need six coordinates.
 These coordinates define configurations of the piano.\\[12pt]
 %------
-Our objective is to find a sequence of configurations that safely moves the piano 
+Our objective is to find a sequence of configurations that safely moves the piano (our \textbf{robot})
 from its starting position to its destination without colliding with any objects in the room.
 Objects like tables, closets, walls represent \textbf{obstacles}, and the door represents \textbf{narrow passage}. 
 These obstacles must be avoided. 
@@ -364,7 +365,7 @@ thereby enhancing the efficiency and adaptability of the algorithms.
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.36\textwidth}
+  \begin{subfigure}[b]{0.4\textwidth}
       \includegraphics[width=\textwidth]{figChap2/A-star-on-grid-map.png}
       \caption{A* algorithm.
         Image courtesy of~\cite{Xie2022Astarfoto}.}
@@ -372,14 +373,14 @@ thereby enhancing the efficiency and adaptability of the algorithms.
   \end{subfigure}
   ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
     %(or a blank line to force the subfigure onto a new line)
-  \begin{subfigure}[b]{0.61\textwidth}
-      \includegraphics[width=\textwidth]{figChap1/narrow_passage.pdf}
-      \caption{Narrow passage in 3D $\mathcal{C}$-space.}
+  \begin{subfigure}[b]{0.4\textwidth}
+      \includegraphics[width=\textwidth]{figChap1/narrow_passage_cropped.pdf}
+      \caption{Narrow passage in the 2D workspace with a 3D $\mathcal{C}$-space.}
       \label{fig:narrowpassage2}
   \end{subfigure} 
-  \caption{llustration of the A-satr algorithm realizes path-finding on grid map in Figure \ref{fig:Astargrid} and 
+  \caption{llustration of the A* algorithm realizes path-finding on grid map in Figure \ref{fig:Astargrid} and 
   illustration of the narrow passage in Figure \ref{fig:narrowpassage2}, 
-  where the blue lines represent RRT* exploration in configuration space.
+  where the blue lines represent RRT* exploration in the workspace.
   It can be seen in Figure \ref{fig:narrowpassage2} that numerous samples were generated on the left side, 
   resulting in incomplete coverage of the space. 
   In summary, a large number of samples were generated in inappropriate locations.} 
@@ -415,10 +416,17 @@ To represent the connectivity between configurations within $\mathcal{C}_{\text{
 Here, $V$ denotes the finite set of vertices, each corresponding to a configuration point, 
 and $E \subseteq V \times V$ denotes the set of edges, signifying connections between configurations.\\[12pt]
 %------
-In Figure \ref{fig:config_space}, a simple 2D $\mathcal{C}$-space is depicted. 
+In Figure \ref{fig:config_space}, a simple  2D workspace is depicted, 
+wherein the robot is represented by a point.
+A workspace is the area within which a robot operates, 
+and in this context, the configuration of the robot 
+can be described by two coordinates, such as $q=(x,y)$.
+Therefore, it has a 2D $\mathcal{C}$-space. 
 The start configuration, denoted by $q_{\text{start}}$, is marked in green, 
 while the goal configuration, denoted by $q_{\text{goal}}$, is marked in red. 
-The black circle at the center of the space represents an obstacle. 
+The black circle at the center of the space represents the $\mathcal{C}_\text{obs}$. 
+The red ring represents the boundary of the $\mathcal{C}$-space, 
+with points inside it corresponding to the $\mathcal{C}_\text{goal}$.
 The blue trajectory, comprising vertices and edges, 
 illustrates the path through the configuration space. 
 These vertices, represented as blue circles, illustrates configurations or nodes along the path.
@@ -427,7 +435,7 @@ These vertices, represented as blue circles, illustrates configurations or nodes
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{figChap2/ConfigSpace.eps}
-  \caption{2D $\mathcal{C}$-space.}
+  \caption{2D workspace with a 2D $\mathcal{C}$-space.}
   \label{fig:config_space} 
 \end{figure} 
 %---------------------------------------------------------------------------------
@@ -677,11 +685,11 @@ Choosing Parent Node and Rewiring \ref{fig:RRTstar_explanation}.
     \label{fig:result}
   \end{subfigure}
   \caption{Illustration of the \textbf{Rewiring phase}: 
-  The green circle denotes the initial configuration (\( q_{\textit{start}} \)), 
-  while the yellow circle represents the new node to be added (\( q_{\textit{new}} \)), 
-  along with its transparent yellow circular area with certain radius (\( Q_{\textit{near}} \)). 
+  The green circle denotes the initial configuration (\( q_{\text{start}} \)), 
+  while the yellow circle represents the new node to be added (\( q_{\text{new}} \)), 
+  along with its transparent yellow circular area with certain radius (\( Q_{\text{near}} \)). 
   Figure \ref{fig:nearest_nodes} displays the nodes within this circular area. 
-  A parent node for the new node, identified by the red circle (\( q_{\textit{min}} \)), 
+  A parent node for the new node, identified by the red circle (\( q_{\text{min}} \)), 
   can be seen in Figure \ref{fig:choose_parent}. 
   Figure \ref{fig:rewiring} exemplifies the rewiring step, 
   with numerical values indicating the lengths of respective paths from the new node to nearby nodes. 
@@ -765,7 +773,8 @@ which can lead to increased time consumption.\\[12pt]
   \end{subfigure} 
   \caption{Comparison in 2D $\mathcal{C}$-space without obstacles in \ref{fig:rrt2k} 
   and \ref{fig:rrtstar2k} with obstacles in \ref{fig:rrtMaze} and \ref{fig:rrtstarMaze}.
-  Comparison in 6D $\mathcal{C}$-space with a robot represented as a purple cube and obstacle 
+  Comparison in a 3D workspace with a 6D $\mathcal{C}$-space, with the robot represented 
+  as a purple cube and the obstacle 
   represented as a green tree in \ref{fig:rrt6D} and \ref{fig:rrtstar6D}.}
   \label{fig:RRTvsRRTstar}
 \end{figure}
@@ -846,7 +855,8 @@ A pseudocode of construction step is shown in Algorithm \ref{alg:prm_constractio
     \label{fig:prm_path_planning}
   \end{subfigure}
   \caption{
-    In the 2D $\mathcal{C}$-space depicted in Figure \ref{fig:prm_maze}, 
+    In the 2D workspace depicted in Figure \ref{fig:prm_maze}, 
+    with a corresponding 2D $\mathcal{C}$-space, 
     obstacles are represented in black. 
     The initial configuration ($q_{\text{start}}$) is indicated by a green circle, 
     while the goal configuration ($q_{\text{goal}}$) is marked with a red circle.
@@ -1473,7 +1483,7 @@ Now, let us explore how this method can be integrated with sampled-based methods
 \begin{figure}[!ht]
   \centering 
     \includegraphics[width=0.5\textwidth]{figChap4/SimpleMaze.eps} 
-  \caption{An example of the 2D $\mathcal{C}$-space.}
+  \caption{An example of the 2D workspace with a 2D $\mathcal{C}$-space.}
   \label{fig:GKDEmaze}
 \end{figure}
 %---------------------------------------------------------------------------------
@@ -1608,7 +1618,7 @@ Chapter \ref{chap:Result} provides further insights into this comparative analys
 In this problem, the robot is represented as a polygon. 
 To describe the position of the robot in space, three coordinates are utilized: 
 two for its position in $\mathcal{C}$-space and 
-a third one for its rotation angle. 
+a third one for its rotation angle, denoted as $q=(x,y,\alpha)$. 
 The position of the robot is defined as its center of mass.
 The main difference from the implementation in 2D $\mathcal{C}$-space is that 
 the procedure for checking whether a point is inside the $\mathcal{C}_\text{obs}$,
@@ -1677,25 +1687,29 @@ in finding optimal paths \ref{fig:RRTstar2D_vs_RRTstarML2D}.
 \end{figure}
 %---------------------------------------------------------------------------------
 \\[12pt]
-To extend the improved RRT* to 6D $\mathcal{C}$-space, 
-such as in the Piano Movers Problem, similar procedures to those in 3D $\mathcal{C}$-space 
+To extend the improved RRT* algorithm to a 6D $\mathcal{C}$-space, 
+such as in the Piano Movers Problem, 
+similar procedures to those in 3D $\mathcal{C}$-space 
 need to be followed. 
-However, the robot will be represented by a 3D triangle mesh, such as object files(.obj). 
-These files, readily available from the internet, 
-offer a structured representation of objects, 
-with each object represented as a set of triangles. 
-This triangle representation, similar to a mesh, 
-decomposes every object into triangles. 
-Additionally, collision detection becomes more complex in this scenario. 
-To address this, the RAPID library~\cite{gottschalk1997rapid} can be utilized. 
+However, 
+now six coordinates are required to describe the configuration of the robot, 
+denoted as $q=(x,y,z,yaw,roll,pitch)$. 
+Additionally, the robot will be represented by a 3D triangle mesh.
+With the adoption of a 3D triangle mesh representation, 
+collision detection becomes more complex. 
+To address this challenge,
+the RAPID library~\cite{gottschalk1997rapid} can be utilized. 
 RAPID (Robust and Accurate Polygon Interference Detection), implemented in C++, 
 is a robust tool for collision detection in 3D environments. 
-It provides a narrow and user-friendly API (Application Programming Interface) for programmers, 
-simplifying the detection of intersections between polygons in various applications such as 
-physically based modeling, virtual prototyping, and CAD.  
+It provides a narrow and user-friendly API (Application Programming Interface) 
+for programmers, 
+simplifying the detection of intersections between objects 
+in various applications such as physically based modeling, 
+virtual prototyping, and CAD.  
 In Python 3.7 and later, the Trimesh library can be utilized for collision detection. 
 This library is well-tested for handling triangle mesh objects. 
-Figure \ref{fig:6Dconfig-space} shows an example of a 6D $\mathcal{C}$-space.
+Figure \ref{fig:6Dconfig-space} shows an example of a 3D workspace 
+with a corresponding 6D $\mathcal{C}$-space.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
@@ -1720,11 +1734,14 @@ Figure \ref{fig:6Dconfig-space} shows an example of a 6D $\mathcal{C}$-space.
     \caption{Improved RRT* left view.}
     \label{fig:rrtstarML3D_maze_top}
 \end{subfigure}
-  \caption{An example of a 6D $\mathcal{C}$-space with the found solution path. 
+  \caption{An example of path planning in the 3D workspace 
+  with the 6D $\mathcal{C}$-space.
   The green color represents obstacle object. 
   The purple color indicates object representing our robot. 
   The red line shows the found solution path, 
-  and the blue lines illustrate the paths explored in the $\mathcal{C}$-space.}
+  and the blue lines illustrate the paths explored in the $\mathcal{C}$-space.
+  It can be seen that improved RRT* demonstrates better performance 
+  than RRT* by finding a shorter path to the goal from the same number of iterations.}
   \label{fig:6Dconfig-space}
 \end{figure}
 %---------------------------------------------------------------------------------
@@ -1756,11 +1773,11 @@ This information is provided to ensure transparency of the results.
       RAM   & 16GB        \\
       \hline
   \end{tabular}
-  \caption{Computer Specifications.}
+  \caption{Computer specifications.}
   \label{tab:PC_params}
 \end{table}
 %---------------------------------------------------------------------------------
-\section{Comparison with OMPL}
+\section{2D Configuration Space}
 To assess the effectiveness of the implemented enhanced RRT* algorithm across various scenarios, 
 planners from the Open Motion Planning Library (OMPL)~\cite{Ioan2012ompl} 
 will serve as benchmarks. 
@@ -1772,9 +1789,9 @@ making it a valuable resource for comparing and evaluating different planning st
   \centering
   \begin{tabular}{|p{3cm}|c|c|}
       \hline
-      \textbf{Name} & \textbf{Parameter} & \textbf{Value}\\
+      \textbf{Name} & \textbf{Parameter} & \textbf{Value [ - ]}\\
       \hline
-      Goal bias       & $p_{goal}$ & 0.05 \\
+      Goal bias        & $p_{goal}$ & 0.05 \\
       Epsilon         & $\epsilon$ & 0.01 \\
       Rewire Factor   & $k$        & 1.1  \\
       Rewiring radius & $r$        & 40   \\
@@ -1866,12 +1883,14 @@ To enhance visibility and emphasize changes, the graphs will be scaled.
 Therefore, the Y-axis will be adjusted to start 
 at a value just below the convergence line of the graph, 
 ensuring larger and clearer graph representation (Figure \ref{fig:graph_scale}).
-In all configuration spaces discussed in this subsection, 
-the robot is represented by a point. 
-A green circle indicates the start configuration, 
-a red area signifies the goal configuration space, 
-and a red point denotes the goal configuration. 
-Black areas represent obstacles.
+In all maps discussed in this subsection, 
+the robot is represented by a point,
+with its configuration denoted by two coordiniates $q=(x,y)$,
+indicatind a 2D $\mathcal{C}$-space. 
+A green circle indicates the $q_\text{start}$, 
+a red ring signifies the $\mathcal{C}_\text{goal}$, 
+and a red point denotes the $q_\text{goal}$. 
+Black areas represent the $\mathcal{C}_\text{obs}$.
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
@@ -1892,12 +1911,12 @@ Black areas represent obstacles.
 %---------------------------------------------------------------------------------
 \\
 Figures \ref{fig:maze_U}, \ref{fig:maze_E}, \ref{fig:maze_clutter}, \ref{fig:maze_narrow} 
-depict the configuration spaces and convergence graphs of each planner. 
+depict the maps and convergence graphs of each planner. 
 All tests were conducted up to a point where the graphs showed minimal change.
 Path costs were computed the same way across all planners, as the path length.
 \\[12pt]
 In Figure \ref{fig:maze_U}, 
-a simple configuration space, previously discussed, is shown. 
+a simple map, previously discussed, is shown. 
 The implemented RRT*\_ML 
 notably converges faster to the optimal solution compared to RRT*. 
 Other planners, while slightly slower, also find solutions. 
@@ -1938,10 +1957,10 @@ that of the other planners in this scenario.
   \label{fig:maze_clutter}
 \end{figure}
 \\
-Figure \ref{fig:maze_E} illustrates a simple example of narrow passages. 
+Figure \ref{fig:maze_E_Cspace} illustrates a simple example of a map with narrow passages. 
 The implemented method discovers a solution slightly earlier than other planners, 
 although its performance becomes comparable to RRT* after 2000 iterations.
-Figure \ref{fig:maze_clutter} presents a cluttered configuration space where all methods exhibit similar behavior. 
+Figure \ref{fig:maze_clutter} presents a cluttered map where all methods exhibit similar behavior. 
 However, Improved RRT* initiates convergence to the first possible solution earlier than the others and 
 demonstrates better convergence to the optimal solution than RRT*. 
 In Figure \ref{fig:maze_narrow}, 
@@ -1969,14 +1988,14 @@ However, in terms of convergence, it behaves similarly to RRT*.
 %---------------------------------------------------------------------------------
 \\[12pt]
 Figure \ref{fig:learning_clutter} demonstrates how 
-the RRT*\_ML algorithm learns and adapts to the cluttered $\mathcal{C}$-space. 
-Using the example of a cluttered configuration space in Figure \ref{fig:maze_clutter}, 
+the RRT*\_ML algorithm learns and adapts to the cluttered map. 
+Using the example of a cluttered map in Figure \ref{fig:maze_clutter_Cspace}, 
 the initial solutions found by each planner are illustrated in Figure \ref{fig:first_sol_clutter}. 
 Figure \ref{fig:final_sol_clutter} shows the final solutions provided by each planner. 
 The final solution is found after 5000 iterations, 
 while the initial solution is the first found possible solution.
-The cluttered configuration space was selected for its potential to offer a greater diversity 
-of paths compared to other configuration spaces due to the multitude of possible path variations.
+The cluttered map was selected for its potential to offer a greater diversity 
+of paths compared to other maps due to the multitude of possible path variations.
 %---------------------------------------------------------------------------------
 \begin{figure}
   \centering
@@ -1995,7 +2014,7 @@ of paths compared to other configuration spaces due to the multitude of possible
     \caption{5000 iterations.}
     % \label{fig:maze_E_graphs} 
   \end{subfigure}  
-  \caption{Learning in cluttered $\mathcal{C}$-space.}
+  \caption{Learning $\mathcal{C}$-space in the cluttered map \ref{fig:maze_clutter_Cspace}.}
   \label{fig:learning_clutter}
 \end{figure}
 %---------------------------------------------------------------------------------
@@ -2028,7 +2047,7 @@ of paths compared to other configuration spaces due to the multitude of possible
     % \label{fig:maze_E_graphs}
   \end{subfigure}   
   \caption{An example of the initial solutions found by each planner 
-  in a cluttered $\mathcal{C}$-space.}
+  in the cluttered map.}
   \label{fig:first_sol_clutter}
 \end{figure}
 %---------------------------------------------------------------------------------
@@ -2061,7 +2080,7 @@ of paths compared to other configuration spaces due to the multitude of possible
     % \label{fig:maze_E_graphs}
   \end{subfigure}   
   \caption{An example of the final solutions found by each planner 
-  in a cluttered $\mathcal{C}$-space.}
+  in the cluttered map.}
   \label{fig:final_sol_clutter}
 \end{figure}
 %---------------------------------------------------------------------------------
@@ -2074,8 +2093,8 @@ contributing to potential differences in computation time.
 \begin{figure}[!ht]
   \centering 
   \includegraphics[width=0.5\textwidth]{figChap5/graph_clutter_learning_time.pdf}   
-  \caption{Time taken to learn predicting points in cluttered $\mathcal{C}$-space \ref{fig:maze_clutter_Cspace} 
-  to be in the \(C_{\text{free}}\).}
+  \caption{Time taken to learn predicting points (Algorithm \ref{alg:ml_sample}) in the
+  cluttered map \ref{fig:maze_clutter_Cspace} to be in the \(C_{\text{free}}\).}
   \label{fig:graph_learning_time}
 \end{figure}
 %--------------------------------------------------------------------------------- 
@@ -2086,7 +2105,7 @@ contributing to potential differences in computation time.
     \hline
     \multicolumn{3}{|c|}{\textbf{Runtime}} \\
     \hline
-    \textbf{Planner} & \textbf{Initial solution $[s]$} & \textbf{Final solution $[s]$} \\
+    \textbf{Planner} & \textbf{Initial solution [ s ]} & \textbf{Final solution [ s ]} \\
     \hline
     RRT*\_ML         & $0.278594 \pm 0.157754$ & $289.625891 \pm 2.611068$ \\
     RRT*             & $0.006518 \pm 0.001462$ & $0.321272 \pm 0.014779$ \\
@@ -2095,7 +2114,7 @@ contributing to potential differences in computation time.
     RRT$^X$ static   & $0.011775 \pm 0.002566$ & $0.305259 \pm 0.008140$ \\
     \hline
   \end{tabular}
-  \caption{Time spent to find the first and final solutions in a cluttered configuration space.}
+  \caption{Time spent to find the first and final solutions in the cluttered map.}
   \label{tab:time_clutter2D}
 \end{table}
 %--------------------------------------------------------------------------------- 
@@ -2113,18 +2132,17 @@ where the standard deviation $\sigma$ is the square root of the variance:
 \[
 \sigma = \sqrt{\sigma^2}
 \] 
-The average time spent by RRT*\_ML to predict point in the $\mathcal{C}_\text{fere}$ 
+The average time spent by RRT*\_ML to predict point (Algorithm \ref{alg:ml_sample}) in the $\mathcal{C}_\text{fere}$ 
 is $(0.037988 \pm 0.030603)$ seconds (Figure \ref{fig:graph_learning_time}). 
 It can also be observed that as the number of iterations increases, 
 the computation time tends to rise. 
 This is because both datasets, \( \mathcal{X}_{\text{free}} \) and \( \mathcal{X}_{\text{obs}} \), 
 grow linearly with each iteration, 
 gradually accumulating more data points. 
-Consequently, the density estimation process becomes more time-consuming.
-\\[12pt]
-The computation time for the implemented RRT*\_ML code is significantly longer 
-compared to the planners from the OMPL library. 
-
+Consequently, the density estimation process becomes more time-consuming.  
+After 5000 iterations, 
+the $\mathcal{X}_{\text{free}}$ dataset contains 4816 datapoints, 
+and the $\mathcal{X}_{\text{obs}}$ dataset contains 1954 datapoints.
 %---------------------------------------------------------------------------------
 \section{3D and 6D Configuration Spaces}
 In comparing the implemented method with OMPL planners in 3D and 6D $\mathcal{C}$-spaces, 
@@ -2140,7 +2158,7 @@ which is also implemented in Python and into which RRT*\_ML was integrated.
   \centering 
   \begin{subfigure}[t]{0.49\textwidth}
       \includegraphics[width=\textwidth]{figChap5/Maze_E_2D.pdf}
-      \caption{$\mathcal{C}$-space.}
+      \caption{Workspace and robot.}
       \label{fig:maze_E_2D_Cspace} 
   \end{subfigure}
   \begin{subfigure}[t]{0.49\textwidth}
@@ -2148,8 +2166,9 @@ which is also implemented in Python and into which RRT*\_ML was integrated.
     \caption{Solution.}
     \label{fig:maze_E_2D_solution} 
 \end{subfigure}    
-  \caption{Narrow $\mathcal{C}$-space \ref{fig:maze_E_2D_Cspace} and 
-  founded solution \ref{fig:maze_E_2D_solution}.
+  \caption{In Figure \ref{fig:maze_E_2D_Cspace}, 2D workspace and 
+  robot are depicted, 
+  while Figure \ref{fig:maze_E_2D_solution} shows the found solution.
   The initial configuration of our robot is denoted in purple, 
   and the goal configuration is shown in red.}
   \label{fig:maze_E_2D}
@@ -2157,17 +2176,16 @@ which is also implemented in Python and into which RRT*\_ML was integrated.
 %---------------------------------------------------------------------------------
 \\
 All parameters are the same as in the 2D $\mathcal{C}$-space, 
-but now the robot is represented in 3D $\mathcal{C}$-space as an 'L'-shaped polygon. 
+but now the robot is represented in 3D $\mathcal{C}$-space as an 'L'-shaped polygon, 
+with its configuration denoted by $q=(x,y,\alpha)$. 
 The cost is computed with respect to the rotation angle of the robot, as follows:
-\begin{equation}
-\text{cost} = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2 + (\alpha_1 - \alpha_2)^2,}
-\end{equation}
-where \( x_1 \), \( y_1 \), \( \alpha_1 \) represent the configuration of the first point, 
-and \( x_2 \), \( y_2 \), \( \alpha_2 \) represent the configuration of the second point.
+\[\text{cost} = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2 + (\alpha_1 - \alpha_2)^2,}\]
+where $q_1=$(\( x_1 \), \( y_1 \), \( \alpha_1 \)), 
+and $q_2=$(\( x_2 \), \( y_2 \), \( \alpha_2 \)).
 This allows the algorithm to search for not only the shortest path but also a path 
 where the robot makes fewer rotations.
 \\[12pt]
-In Figure \ref{fig:maze_E_2D}, the selected $\mathcal{C}$-space and 
+In Figure \ref{fig:maze_E_2D}, the selected workspace and 
 the solution found by RRT*\_ML are shown.  
 The solutions found from both RRT*\_ML and RRT are mostly similar, 
 so it is unnecessary to show the solution found by RRT*.  
@@ -2175,10 +2193,14 @@ so it is unnecessary to show the solution found by RRT*.
 According to the Figure \ref{fig:graph_E_2D}, 
 the implemented RRT*\_ML algorithm finds the first solution with fewer iterations. 
 However, as illustrated in Figure \ref{fig:graph_learning_time_2D},
-the computational time for prediction increases with each iteration. 
+the computational time for prediction ((Algorithm \ref{alg:ml_sample})) 
+increases with each iteration. 
 As a result, RRT* is significantly faster, 
 completing 5000 iterations in $\smallsim$30 seconds, while RRT*\_ML took $\smallsim$1041 seconds 
 for the same number of iterations.
+After 10000 iterations, 
+the $\mathcal{X}_{\text{free}}$ dataset contains 6551 datapoints, 
+and the $\mathcal{X}_{\text{obs}}$ dataset contains 19246 datapoints.
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
   \centering 
@@ -2189,23 +2211,26 @@ for the same number of iterations.
   \end{subfigure}
   \begin{subfigure}[t]{0.49\textwidth}
     \includegraphics[width=\textwidth]{figChap5/graph_E_2D_learning_time.pdf}   
-    \caption{Time taken to learn predicting points in narrow 3D $\mathcal{C}$-space \ref{fig:maze_E_2D_Cspace}
+    \caption{Time taken to learn predicting points (Algorithm \ref{alg:ml_sample}) 
+    in the 2D workspace with the 3D $\mathcal{C}$-space (\ref{fig:maze_E_2D_Cspace})
     to be in the \(C_{\text{free}}\).}
     \label{fig:graph_learning_time_2D}
   \end{subfigure} 
-  \caption{Graphs.}
+  \caption{Convergence and time graphs for the 3D $\mathcal{C}$-space.}
   \label{fig:graphs_2D}
 \end{figure}
 %---------------------------------------------------------------------------------
 \\
-Computation in 6D configuration space is significantly more complex; 
-therefore, tests were conducted for 200 iterations. 
+Computation in 6D $\mathcal{C}$-space is significantly more complex. 
+Therefore, tests were conducted for 200 iterations.  
 In Figure \ref{fig:6Dconfig-space_chap5}, the workspace is shown with the robot represented as a purple cube and 
 obstacles represented as green cubes. 
+The configuration of the robot is denoted by $q=(x,y,z,yaw,roll,pitch)$.
 The cost is computed as the Euclidean distance, 
 with the reference point of the robot located at its center of mass. 
 This map is 25x25x25, so the $s$ was changed to 3 and the $r$ to 12. 
 The $p_{goal}$ remains at 0.05. 
+\\[12pt]
 According to the graph illustrated in Figure \ref{fig:graph_6D}, 
 the implemented RRT*\_ML converges to the optimal solution faster. 
 However, in this case, RRT* found the first feasible solution earlier. 
@@ -2215,9 +2240,12 @@ while the runtime for RRT* is $\smallsim$379 seconds.
 Figure \ref{fig:graph_learning_time_6D} shows the time taken to predict a sample 
 in \( \mathcal{C}_{\text{free}} \), and as before, 
 this time increases over iterations. 
-This increase is due to the \( X_{\text{free}} \) 
-and \( X_{\text{obs}} \) datasets accumulating more data points over time, 
+This increase is due to the \( \mathcal{X}_{\text{free}} \) 
+and \( \mathcal{X}_{\text{obs}} \) datasets accumulating more data points over time, 
 making them larger.
+After 200 iterations, 
+the $\mathcal{X}_{\text{free}}$ dataset contains 440 datapoints, 
+and the $\mathcal{X}_{\text{obs}}$ dataset contains 46 datapoints.
 
 %---------------------------------------------------------------------------------
 \begin{figure}[!ht]
@@ -2229,11 +2257,12 @@ making them larger.
   \end{subfigure}
   \begin{subfigure}[t]{0.49\textwidth}
     \includegraphics[width=\textwidth]{figChap5/graph_6D_learning.pdf}   
-    \caption{Time taken to learn predicting points in narrow 6D $\mathcal{C}$-space \ref{fig:maze_E_2D_Cspace}
+    \caption{Time taken to learn predicting points (Algorithm \ref{alg:ml_sample}) 
+    in the 3D workspace with the 6D $\mathcal{C}$-space (\ref{fig:6Dconfig-space})
     to be in the \(C_{\text{free}}\).}
     \label{fig:graph_learning_time_6D}
   \end{subfigure} 
-  \caption{Graphs.}
+  \caption{Convergence and time graphs for the 6D $\mathcal{C}$-space.}
   % \label{fig:graphs_2D}
 \end{figure}
 %---------------------------------------------------------------------------------
@@ -2260,7 +2289,8 @@ making them larger.
     \caption{RRT*\_ML right view.}
     % \label{fig:rrtstarML3D_maze_top}
 \end{subfigure}
-  \caption{An example of a 6D $\mathcal{C}$-space with the found solution path. 
+  \caption{An example of a 3D workspace with a 6D $\mathcal{C}$-space, 
+  showing the found solution path. 
   The green color represents obstacle object. 
   The purple color indicates object representing our robot. 
   The red line shows the found solution path, 
@@ -2273,7 +2303,7 @@ making them larger.
 \clearpage
 \section{Result}
 As a result, 
-it can be concluded that the implemented enhanced RRT* algorithm utilizing machine learning methods 
+it can be concluded that the implemented RRT*\_ML algorithm utilizing machine learning methods 
 performs better in terms of converging to the optimal solution in certain situations. 
 Most of the time, the enhanced version of RRT* discovers the first possible solution earlier 
 than other planners. 
@@ -2281,7 +2311,9 @@ However, in challenging scenarios, such as in Figure \ref{fig:maze_narrow},
 it behaves similarly to RRT*. 
 In other instances, 
 it achieves either equivalent or superior convergence to the optimal solution compared to RRT*.
-However, predicting points is computationally intensive, causing RRT*\_ML to work much slower.
+However, implementation in Python and computationally intensive function
+to predicting points (Algorithm \ref{alg:ml_sample}), causing RRT*\_ML to work much slower
+than other planners.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
@@ -2305,7 +2337,7 @@ the effectiveness of our approach was evaluated.
 Our results demonstrate that the implemented enhanced RRT* algorithm, 
 leveraging machine learning methods, 
 performs better in terms of converging to optimal solutions in certain situations. 
-The enhanced version consistently discovers the first possible solution earlier 
+The enhanced version often discovers the first possible solution earlier 
 and achieves equivalent or superior convergence to 
 the optimal solution compared to traditional RRT*~\cite{karaman2011rrtstar}.
 \\[12pt]
@@ -2313,7 +2345,17 @@ While our approach exhibits promising results,
 it is essential to acknowledge its limitations. 
 In challenging scenarios, such as those demonstrated in Figure \ref{fig:maze_narrow}, 
 the enhanced RRT* behaves similarly to traditional RRT*. 
-And the implemented algorithm runs significantly slower.
+Additionally, the implemented algorithm runs significantly slower due to its 
+implementation in Python and the method used to predict points 
+in $\mathcal{C_\text{free}}$ space (Algorithm \ref{alg:ml_sample}). 
+Although this method is crucial for our implementation, 
+it takes considerable time to predict points, 
+and as the $\mathcal{C}$-space is learned, 
+more data points are needed to store. 
+However, the main objective is to implement and 
+assess the performance of the method
+in terms of convergence to the optimal solution through iterations 
+and this goal is reached.
 \\[12pt]
 Overall, 
 this research contributes to the advancement of sampling-based path planning algorithms 
@@ -2322,7 +2364,7 @@ One potential improvement could involve exploring the integration of these techn
 into other path planners, such as RRT$^\#$, 
 to further enhance their capabilities in complex environments. 
 Additionally, 
-implementing the algorithm in C++ could help reduce time complexity and improve efficiency.
+implementing the algorithm in C++ could help reduce runtime and improve efficiency.
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------
