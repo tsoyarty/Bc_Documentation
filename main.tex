@@ -40,7 +40,16 @@
 \ctuprocess
 
 \begin{thanks}
-I am sincerely thankful to my supervisor Ing. Vojtěch Vonásek, Ph.D., for his continuous support and invaluable feedback during my Bachelor project. His guidance and support have been instrumental in navigating the challenges and refining the outcomes of this research endeavor. Additionally, I am truly grateful for the opportunity to study at CTU University, where I have gained invaluable knowledge and skills that have greatly contributed to the successful completion of this project.
+I am sincerely thankful to my supervisor Ing. Vojtěch Vonásek, Ph.D., 
+for his assistance and invaluable feedback. 
+His guidance has been instrumental in navigating 
+the challenges and refining the outcomes of this research endeavor. 
+Additionally, I am truly grateful for the opportunity to study at 
+CTU, where I have gained knowledge and skills 
+that have greatly contributed to the successful completion of 
+this thesis. 
+I would also like to express my gratitude to my family and 
+friends for their support.
 \end{thanks}
 
 \begin{abstract-english}
@@ -65,7 +74,8 @@ I declare that the presented work was developed independently and that I have
 listed all sources of information used
 within it in accordance with the methodical instructions for observing the ethical
 principles in the preparation of university
-theses. I utilized artificial intelligence for grammar correction.
+theses. 
+Furthermore, I utilized artificial intelligence for grammar correction.
 \medskip
 \\\\
 Prague, \monthinlanguage{title} \ctufield{day}, \ctufield{year}
@@ -116,7 +126,7 @@ It represents all possible configurations or states that a robot or system can o
       \label{fig:RRTsimple}
   \end{subfigure} 
   \caption{Figure \ref{fig:piano} illustrates an example of a path planning problem, 
-  along with a representation of the Rapidly-exploring Random Tree (RRT) algorithm in Figure \ref{fig:RRTsimple}.}%\label{fig:animals}
+  along with a representation of the Rapidly-exploring Random Trees (RRT) algorithm in Figure \ref{fig:RRTsimple}.}%\label{fig:animals}
 \end{figure}
 %---------------------------------------------------------------------------------
 \\
@@ -952,7 +962,7 @@ than traditional RRT* algorithms.
   \centering 
       \includegraphics[width=0.9\textwidth]{figChap3/InformedRRTstar_elips.png}
       \caption{An example of a two-dimensional prolate hyperspheroid. 
-      Image courtesy of \cite{Gammell2018InformedRRTstar}}
+      Image courtesy of \cite{Gammell2018InformedRRTstar}.}
       \label{fig:elips}  
 \end{figure} 
 %---------------------------------------------------------------------------------
@@ -1374,7 +1384,7 @@ with a dimension of the input space \( d \),
 Matrix \( \textbf{H} \) serves as a covariance matrix and 
 acts as a user-defined parameter influencing the kernel function. 
 When \( d = 2 \), it corresponds to a bivariate case. 
-For instance, in a 2D configuration space, as depicted in Figure \ref{fig:GKDEmaze}, 
+For instance, in a 2D $\mathcal{C}$-space, as depicted in Figure \ref{fig:GKDEmaze}, 
 the input vector \( x \) comprises two coordinates of the point: \( x = [x_1, x_2] \), and 
 the bandwidth matrix takes the 
 form \( H = \left[ \begin{array}{cc} h_{11} & h_{12} \\ h_{21} & h_{22} \end{array} \right] \). 
@@ -1382,7 +1392,7 @@ Here, \( h_{11} \) and \( h_{22} \) correspond to the variances
 of \( x_1 \) and \( x_2 \) respectively, 
 while \( h_{12} = h_{21} \) represents the covariance between \( x_1 \) and \( x_2 \). 
 Because of this, the matrix \( \textbf{H} \) is symmetric. 
-An illustrative example of kernel estimation in the configuration space depicted 
+An illustrative example of kernel estimation in the $\mathcal{C}$-space depicted 
 in Figure \ref{fig:GKDEmaze} can be observed in Figure \ref{fig:GKDEdensity}.
 \\[12pt]
 %---------------------------------------------------------------------------------
@@ -1915,7 +1925,7 @@ depict the maps and convergence graphs of each planner.
 All tests were conducted up to a point where the graphs showed minimal change.
 Path costs were computed the same way across all planners, as the path length.
 \\[12pt]
-In Figure \ref{fig:maze_U}, 
+In Figure \ref{fig:maze_U_Cspace}, 
 a simple map, previously discussed, is shown. 
 The implemented RRT*\_ML 
 notably converges faster to the optimal solution compared to RRT*. 
@@ -1953,17 +1963,17 @@ that of the other planners in this scenario.
       \label{fig:maze_clutter_Cspace} 
   \end{subfigure}   
   \caption{Cluttered map \ref{fig:maze_clutter_Cspace} and 
-  corresponding convergence graphs \ref{fig:maze_E_graphs} of selected planners.}
+  corresponding convergence graphs \ref{fig:maze_clutter_graphs} of selected planners.}
   \label{fig:maze_clutter}
 \end{figure}
 \\
 Figure \ref{fig:maze_E_Cspace} illustrates a simple example of a map with narrow passages. 
 The implemented method discovers a solution slightly earlier than other planners, 
 although its performance becomes comparable to RRT* after 2000 iterations.
-Figure \ref{fig:maze_clutter} presents a cluttered map where all methods exhibit similar behavior. 
+Figure \ref{fig:maze_clutter_Cspace} presents a cluttered map where all methods exhibit similar behavior. 
 However, Improved RRT* initiates convergence to the first possible solution earlier than the others and 
 demonstrates better convergence to the optimal solution than RRT*. 
-In Figure \ref{fig:maze_narrow}, 
+In Figure \ref{fig:maze_narrow_Cspace}, 
 a more challenging scenario with numerous narrow passages is demonstrated. 
 In this case, 
 the implemented enhanced RRT* once again discovers the first possible solution earlier than RRT*. 
@@ -1981,8 +1991,8 @@ However, in terms of convergence, it behaves similarly to RRT*.
       \caption{Map.}
       \label{fig:maze_narrow_Cspace}  
   \end{subfigure}  
-  \caption{Difficult map with numerouse narrow passages \ref{fig:maze_clutter_Cspace} 
-  and corresponding convergence graphs \ref{fig:maze_E_graphs} of selected planners.}
+  \caption{Difficult map with numerouse narrow passages \ref{fig:maze_narrow_Cspace} 
+  and corresponding convergence graphs \ref{fig:maze_narrow_graphs} of selected planners.}
   \label{fig:maze_narrow}
 \end{figure}
 %---------------------------------------------------------------------------------
@@ -2047,7 +2057,7 @@ of paths compared to other maps due to the multitude of possible path variations
     % \label{fig:maze_E_graphs}
   \end{subfigure}   
   \caption{An example of the initial solutions found by each planner 
-  in the cluttered map.}
+  in the cluttered map \ref{fig:maze_clutter_Cspace}.}
   \label{fig:first_sol_clutter}
 \end{figure}
 %---------------------------------------------------------------------------------
@@ -2080,7 +2090,7 @@ of paths compared to other maps due to the multitude of possible path variations
     % \label{fig:maze_E_graphs}
   \end{subfigure}   
   \caption{An example of the final solutions found by each planner 
-  in the cluttered map.}
+  in the cluttered map \ref{fig:maze_clutter_Cspace}.}
   \label{fig:final_sol_clutter}
 \end{figure}
 %---------------------------------------------------------------------------------
@@ -2124,20 +2134,12 @@ the computational times to find the first and final solutions in the cluttered c
 are presented. 
 All values were computed as the mean of ten measurements, 
 along with their standard deviations. 
-The mean value $\bar{x}$ and the variance $\sigma^2$ were calculated using the following formulas:
-\[
-\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i; \enspace \sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2, 
-\]
-where the standard deviation $\sigma$ is the square root of the variance:
-\[
-\sigma = \sqrt{\sigma^2}
-\] 
 The average time spent by RRT*\_ML to predict point (Algorithm \ref{alg:ml_sample}) in the $\mathcal{C}_\text{fere}$ 
 is $(0.037988 \pm 0.030603)$ seconds (Figure \ref{fig:graph_learning_time}). 
 It can also be observed that as the number of iterations increases, 
 the computation time tends to rise. 
 This is because both datasets, \( \mathcal{X}_{\text{free}} \) and \( \mathcal{X}_{\text{obs}} \), 
-grow linearly with each iteration, 
+grow with each iteration, 
 gradually accumulating more data points. 
 Consequently, the density estimation process becomes more time-consuming.  
 After 5000 iterations, 
@@ -2175,8 +2177,8 @@ which is also implemented in Python and into which RRT*\_ML was integrated.
 \end{figure}
 %---------------------------------------------------------------------------------
 \\
-All parameters are the same as in the 2D $\mathcal{C}$-space, 
-but now the robot is represented in 3D $\mathcal{C}$-space as an 'L'-shaped polygon, 
+All parameters in 3D $\mathcal{C}$-space are the same as in the 2D $\mathcal{C}$-space, 
+but now the robot is represented as an 'L'-shaped polygon, 
 with its configuration denoted by $q=(x,y,\alpha)$. 
 The cost is computed with respect to the rotation angle of the robot, as follows:
 \[\text{cost} = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2 + (\alpha_1 - \alpha_2)^2,}\]
@@ -2196,7 +2198,7 @@ However, as illustrated in Figure \ref{fig:graph_learning_time_2D},
 the computational time for prediction ((Algorithm \ref{alg:ml_sample})) 
 increases with each iteration. 
 As a result, RRT* is significantly faster, 
-completing 5000 iterations in $\smallsim$30 seconds, while RRT*\_ML took $\smallsim$1041 seconds 
+completing 10000 iterations in $\smallsim$30 seconds, while RRT*\_ML took $\smallsim$1041 seconds 
 for the same number of iterations.
 After 10000 iterations, 
 the $\mathcal{X}_{\text{free}}$ dataset contains 6551 datapoints, 
@@ -2206,7 +2208,8 @@ and the $\mathcal{X}_{\text{obs}}$ dataset contains 19246 datapoints.
   \centering 
   \begin{subfigure}[t]{0.49\textwidth}
     \includegraphics[width=\textwidth]{figChap5/graph_E_2D.pdf}  
-    \caption{Convergence graph of RRT*\_ML and RRT*.}
+    \caption{Convergence graph of RRT*\_ML and RRT*
+    in the 2D workspace with the 3D $\mathcal{C}$-space.}
     \label{fig:graph_E_2D}
   \end{subfigure}
   \begin{subfigure}[t]{0.49\textwidth}
@@ -2252,13 +2255,14 @@ and the $\mathcal{X}_{\text{obs}}$ dataset contains 46 datapoints.
   \centering 
   \begin{subfigure}[t]{0.49\textwidth}
     \includegraphics[width=\textwidth]{figChap5/graph_6D.pdf}  
-    \caption{Convergence graph of RRT*\_ML and RRT*.}
+    \caption{Convergence graph of RRT*\_ML and RRT* in 
+    the 3D workspace with the 6D $\mathcal{C}$-space.}
     \label{fig:graph_6D}
   \end{subfigure}
   \begin{subfigure}[t]{0.49\textwidth}
     \includegraphics[width=\textwidth]{figChap5/graph_6D_learning.pdf}   
     \caption{Time taken to learn predicting points (Algorithm \ref{alg:ml_sample}) 
-    in the 3D workspace with the 6D $\mathcal{C}$-space (\ref{fig:6Dconfig-space})
+    in the 3D workspace with the 6D $\mathcal{C}$-space (\ref{fig:6Dconfig-space_chap5})
     to be in the \(C_{\text{free}}\).}
     \label{fig:graph_learning_time_6D}
   \end{subfigure} 
@@ -2307,7 +2311,7 @@ it can be concluded that the implemented RRT*\_ML algorithm utilizing machine le
 performs better in terms of converging to the optimal solution in certain situations. 
 Most of the time, the enhanced version of RRT* discovers the first possible solution earlier 
 than other planners. 
-However, in challenging scenarios, such as in Figure \ref{fig:maze_narrow}, 
+However, in challenging scenarios, such as in Figure \ref{fig:maze_narrow_Cspace}, 
 it behaves similarly to RRT*. 
 In other instances, 
 it achieves either equivalent or superior convergence to the optimal solution compared to RRT*.
@@ -2343,7 +2347,7 @@ the optimal solution compared to traditional RRT*~\cite{karaman2011rrtstar}.
 \\[12pt]
 While our approach exhibits promising results, 
 it is essential to acknowledge its limitations. 
-In challenging scenarios, such as those demonstrated in Figure \ref{fig:maze_narrow}, 
+In challenging scenarios, such as those demonstrated in Figure \ref{fig:maze_narrow_Cspace}, 
 the enhanced RRT* behaves similarly to traditional RRT*. 
 Additionally, the implemented algorithm runs significantly slower due to its 
 implementation in Python and the method used to predict points 
