@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.14)  6 JUN 2024 19:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.14)  10 JUN 2024 12:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -924,18 +924,11 @@ Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on in
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./files/symbol_cvut_plna_samostatna_verze.pdf>]
-<figChap1/The-piano-movers-problem-EET.png, id=41, 853.1875pt x 853.1875pt>
-File: figChap1/The-piano-movers-problem-EET.png Graphic file (type png)
-<use figChap1/The-piano-movers-problem-EET.png>
-Package pdftex.def Info: figChap1/The-piano-movers-problem-EET.png  used on input line 100.
-(pdftex.def)             Requested size: 188.26346pt x 188.26163pt.
-File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
-<use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 100.
-(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [2
-
- <./figChap1/The-piano-movers-problem-EET.png>]
+<figChap3/RRT_maze7748i119w.pdf, id=41, 270.62305pt x 270.62305pt>
+File: figChap3/RRT_maze7748i119w.pdf Graphic file (type pdf)
+<use figChap3/RRT_maze7748i119w.pdf>
+Package pdftex.def Info: figChap3/RRT_maze7748i119w.pdf  used on input line 118.
+(pdftex.def)             Requested size: 154.03183pt x 154.03787pt.
 Package epstopdf Info: Source file: <figChap2/ConfigSpace.eps>
 (epstopdf)                    date: 2024-05-11 14:58:44
 (epstopdf)                    size: 218098 bytes
@@ -943,134 +936,62 @@ Package epstopdf Info: Source file: <figChap2/ConfigSpace.eps>
 (epstopdf)                    date: 2024-05-11 14:59:04
 (epstopdf)                    size: 14417 bytes
 (epstopdf)             Command: <repstopdf --outfile=figChap2/ConfigSpace-eps-converted-to.pdf figChap2/ConfigSpace.eps>
-(epstopdf)             \includegraphics on input line 112.
+(epstopdf)             \includegraphics on input line 118.
 Package epstopdf Info: Output file is already uptodate.
-<figChap2/ConfigSpace-eps-converted-to.pdf, id=53, 271.0125pt x 271.0125pt>
+<figChap2/ConfigSpace-eps-converted-to.pdf, id=42, 271.0125pt x 271.0125pt>
 File: figChap2/ConfigSpace-eps-converted-to.pdf Graphic file (type pdf)
 <use figChap2/ConfigSpace-eps-converted-to.pdf>
-Package pdftex.def Info: figChap2/ConfigSpace-eps-converted-to.pdf  used on input line 112.
-(pdftex.def)             Requested size: 171.14764pt x 171.1523pt.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 112.
+Package pdftex.def Info: figChap2/ConfigSpace-eps-converted-to.pdf  used on input line 118.
+(pdftex.def)             Requested size: 154.03183pt x 154.03624pt.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 118.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 112.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 118.
  (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 112.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 118.
  (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 112.
+(Font)              <9> on input line 118.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 112.
+(Font)              <6> on input line 118.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 112.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 112.
+(Font)              <5> on input line 118.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 118.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 112.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 118.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 112.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 112.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <9> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 118.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 118.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <5> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 112.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 112.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 118.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 118.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <10> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 112.
-LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <7> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 112.
+LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <9> not available
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 118.
+LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 118.
 LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <5> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 112.
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 118.
 File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
 <use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 112.
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 118.
 (pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [3
+ [2
 
- <./figChap2/ConfigSpace-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <figChap3/2RRTexpansion2000.eps>
-(epstopdf)                    date: 2024-04-25 14:11:08
-(epstopdf)                    size: 1025663 bytes
-(epstopdf)             Output file: <figChap3/2RRTexpansion2000-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-04-25 14:11:46
-(epstopdf)                    size: 27780 bytes
-(epstopdf)             Command: <repstopdf --outfile=figChap3/2RRTexpansion2000-eps-converted-to.pdf figChap3/2RRTexpansion2000.eps>
-(epstopdf)             \includegraphics on input line 135.
-Package epstopdf Info: Output file is already uptodate.
-<figChap3/2RRTexpansion2000-eps-converted-to.pdf, id=85, 271.0125pt x 271.0125pt>
-File: figChap3/2RRTexpansion2000-eps-converted-to.pdf Graphic file (type pdf)
-<use figChap3/2RRTexpansion2000-eps-converted-to.pdf>
-Package pdftex.def Info: figChap3/2RRTexpansion2000-eps-converted-to.pdf  used on input line 135.
-(pdftex.def)             Requested size: 154.03183pt x 154.03624pt.
-Package epstopdf Info: Source file: <figChap3/RRTstar_expansion2000.eps>
-(epstopdf)                    date: 2024-04-22 19:08:20
-(epstopdf)                    size: 1033786 bytes
-(epstopdf)             Output file: <figChap3/RRTstar_expansion2000-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-04-25 14:05:50
-(epstopdf)                    size: 25985 bytes
-(epstopdf)             Command: <repstopdf --outfile=figChap3/RRTstar_expansion2000-eps-converted-to.pdf figChap3/RRTstar_expansion2000.eps>
-(epstopdf)             \includegraphics on input line 135.
-Package epstopdf Info: Output file is already uptodate.
-<figChap3/RRTstar_expansion2000-eps-converted-to.pdf, id=86, 271.0125pt x 271.0125pt>
-File: figChap3/RRTstar_expansion2000-eps-converted-to.pdf Graphic file (type pdf)
-<use figChap3/RRTstar_expansion2000-eps-converted-to.pdf>
-Package pdftex.def Info: figChap3/RRTstar_expansion2000-eps-converted-to.pdf  used on input line 135.
-(pdftex.def)             Requested size: 154.03183pt x 154.03624pt.
-File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
-<use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 135.
-(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [4
-
- <./figChap3/2RRTexpansion2000-eps-converted-to.pdf> <./figChap3/RRTstar_expansion2000-eps-converted-to.pdf>]
-<figChap3/RRT_maze7748i119w.pdf, id=104, 270.62305pt x 270.62305pt>
-File: figChap3/RRT_maze7748i119w.pdf Graphic file (type pdf)
-<use figChap3/RRT_maze7748i119w.pdf>
-Package pdftex.def Info: figChap3/RRT_maze7748i119w.pdf  used on input line 155.
-(pdftex.def)             Requested size: 154.03183pt x 154.03787pt.
-<figChap3/RRTstar_maze_7060i_35w.pdf, id=105, 270.62305pt x 270.62305pt>
-File: figChap3/RRTstar_maze_7060i_35w.pdf Graphic file (type pdf)
-<use figChap3/RRTstar_maze_7060i_35w.pdf>
-Package pdftex.def Info: figChap3/RRTstar_maze_7060i_35w.pdf  used on input line 155.
-(pdftex.def)             Requested size: 154.03183pt x 154.03787pt.
-File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
-<use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 155.
-(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [5
-
- <./figChap3/RRT_maze7748i119w.pdf> <./figChap3/RRTstar_maze_7060i_35w.pdf>]
-<figChap5/3D_exampleRRT314it_big.pdf, id=3096, 558.085pt x 558.085pt>
-File: figChap5/3D_exampleRRT314it_big.pdf Graphic file (type pdf)
-<use figChap5/3D_exampleRRT314it_big.pdf>
-Package pdftex.def Info: figChap5/3D_exampleRRT314it_big.pdf  used on input line 173.
-(pdftex.def)             Requested size: 154.03183pt x 154.03163pt.
-<figChap5/3D_exampleNew471it_cropped.pdf, id=3097, 269.005pt x 269.005pt>
-File: figChap5/3D_exampleNew471it_cropped.pdf Graphic file (type pdf)
-<use figChap5/3D_exampleNew471it_cropped.pdf>
-Package pdftex.def Info: figChap5/3D_exampleNew471it_cropped.pdf  used on input line 173.
-(pdftex.def)             Requested size: 154.03183pt x 154.03223pt.
-File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
-<use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 173.
-(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [6
-
- <./figChap5/3D_exampleRRT314it_big.pdf> <./figChap5/3D_exampleNew471it_cropped.pdf
-
-pdfTeX warning: pdflatex (file ./figChap5/3D_exampleNew471it_cropped.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
+ <./figChap3/RRT_maze7748i119w.pdf> <./figChap2/ConfigSpace-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figChap4/SimpleMaze.eps>
 (epstopdf)                    date: 2024-05-11 13:17:01
 (epstopdf)                    size: 826683 bytes
@@ -1078,261 +999,211 @@ Package epstopdf Info: Source file: <figChap4/SimpleMaze.eps>
 (epstopdf)                    date: 2024-05-11 13:17:13
 (epstopdf)                    size: 5470 bytes
 (epstopdf)             Command: <repstopdf --outfile=figChap4/SimpleMaze-eps-converted-to.pdf figChap4/SimpleMaze.eps>
-(epstopdf)             \includegraphics on input line 185.
+(epstopdf)             \includegraphics on input line 203.
 Package epstopdf Info: Output file is already uptodate.
-<figChap4/SimpleMaze-eps-converted-to.pdf, id=28996, 271.0125pt x 271.0125pt>
+<figChap4/SimpleMaze-eps-converted-to.pdf, id=1694, 271.0125pt x 271.0125pt>
 File: figChap4/SimpleMaze-eps-converted-to.pdf Graphic file (type pdf)
 <use figChap4/SimpleMaze-eps-converted-to.pdf>
-Package pdftex.def Info: figChap4/SimpleMaze-eps-converted-to.pdf  used on input line 185.
-(pdftex.def)             Requested size: 171.14764pt x 171.1523pt.
+Package pdftex.def Info: figChap4/SimpleMaze-eps-converted-to.pdf  used on input line 203.
+(pdftex.def)             Requested size: 167.72658pt x 167.73239pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 203.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 203.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 203.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 203.
+LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <10> not available
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 203.
+LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <7> not available
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 203.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 203.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 203.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 203.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 203.
+LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 203.
+LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 203.
 File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
 <use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 185.
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 203.
+(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
+ [3
+
+ <./figChap4/SimpleMaze-eps-converted-to.pdf>]
+File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
+<use files/symbol_cvut_plna_samostatna_verze.pdf>
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 219.
+(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
+ [4
+
+]
+<figChap4/GKDE_obsU.pdf, id=1721, 1387.58403pt x 723.42267pt>
+File: figChap4/GKDE_obsU.pdf Graphic file (type pdf)
+<use figChap4/GKDE_obsU.pdf>
+Package pdftex.def Info: figChap4/GKDE_obsU.pdf  used on input line 233.
+(pdftex.def)             Requested size: 342.2953pt x 178.44882pt.
+File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
+<use files/symbol_cvut_plna_samostatna_verze.pdf>
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 233.
+(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
+ [5
+
+ <./figChap4/GKDE_obsU.pdf>]
+<figChap4/GKDE_freeU.pdf, id=1753, 1387.58403pt x 723.42267pt>
+File: figChap4/GKDE_freeU.pdf Graphic file (type pdf)
+<use figChap4/GKDE_freeU.pdf>
+Package pdftex.def Info: figChap4/GKDE_freeU.pdf  used on input line 246.
+(pdftex.def)             Requested size: 342.2953pt x 178.44882pt.
+File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
+<use files/symbol_cvut_plna_samostatna_verze.pdf>
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 246.
+(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
+ [6
+
+ <./figChap4/GKDE_freeU.pdf>]
+File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
+<use files/symbol_cvut_plna_samostatna_verze.pdf>
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 282.
 (pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
  [7
 
- <./figChap4/SimpleMaze-eps-converted-to.pdf>]
-<figChap4/GKDE_obsU.pdf, id=29008, 1387.58403pt x 723.42267pt>
-File: figChap4/GKDE_obsU.pdf Graphic file (type pdf)
-<use figChap4/GKDE_obsU.pdf>
-Package pdftex.def Info: figChap4/GKDE_obsU.pdf  used on input line 198.
-(pdftex.def)             Requested size: 342.2953pt x 178.44882pt.
+]
+<figChap4/RRTstar_maze216.0.pdf, id=1796, 270.62305pt x 270.62305pt>
+File: figChap4/RRTstar_maze216.0.pdf Graphic file (type pdf)
+<use figChap4/RRTstar_maze216.0.pdf>
+Package pdftex.def Info: figChap4/RRTstar_maze216.0.pdf  used on input line 303.
+(pdftex.def)             Requested size: 154.03183pt x 154.03787pt.
+<figChap4/RRTstarML_maze206.0.pdf, id=1797, 270.62305pt x 270.62305pt>
+File: figChap4/RRTstarML_maze206.0.pdf Graphic file (type pdf)
+<use figChap4/RRTstarML_maze206.0.pdf>
+Package pdftex.def Info: figChap4/RRTstarML_maze206.0.pdf  used on input line 303.
+(pdftex.def)             Requested size: 154.03183pt x 154.03787pt.
 File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
 <use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 198.
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 303.
 (pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
  [8
 
- <./figChap4/GKDE_obsU.pdf>]
-<figChap4/GKDE_freeU.pdf, id=29040, 1387.58403pt x 723.42267pt>
-File: figChap4/GKDE_freeU.pdf Graphic file (type pdf)
-<use figChap4/GKDE_freeU.pdf>
-Package pdftex.def Info: figChap4/GKDE_freeU.pdf  used on input line 211.
-(pdftex.def)             Requested size: 342.2953pt x 178.44882pt.
+ <./figChap4/RRTstar_maze216.0.pdf> <./figChap4/RRTstarML_maze206.0.pdf>]
+<figChap4/RRTstarML_learning206.0.pdf, id=3149, 270.62305pt x 270.62305pt>
+File: figChap4/RRTstarML_learning206.0.pdf Graphic file (type pdf)
+<use figChap4/RRTstarML_learning206.0.pdf>
+Package pdftex.def Info: figChap4/RRTstarML_learning206.0.pdf  used on input line 322.
+(pdftex.def)             Requested size: 154.03183pt x 154.03787pt.
+File: figChap4/RRTstarML_maze206.0.pdf Graphic file (type pdf)
+<use figChap4/RRTstarML_maze206.0.pdf>
+Package pdftex.def Info: figChap4/RRTstarML_maze206.0.pdf  used on input line 322.
+(pdftex.def)             Requested size: 154.03183pt x 154.03787pt.
 File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
 <use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 211.
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 322.
 (pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
  [9
 
- <./figChap4/GKDE_freeU.pdf>]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 247.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 247.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 247.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 247.
-LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 247.
-LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 247.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 247.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 247.
-LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 247.
+ <./figChap4/RRTstarML_learning206.0.pdf>]
+<figChap5/graph_U_20pt_ticks.pdf, id=4006, 515.66057pt x 500.00519pt>
+File: figChap5/graph_U_20pt_ticks.pdf Graphic file (type pdf)
+<use figChap5/graph_U_20pt_ticks.pdf>
+Package pdftex.def Info: figChap5/graph_U_20pt_ticks.pdf  used on input line 401.
+(pdftex.def)             Requested size: 164.30028pt x 159.31064pt.
+<figChap5/Maze_U_ticks.pdf, id=4007, 291.49316pt x 283.84431pt>
+File: figChap5/Maze_U_ticks.pdf Graphic file (type pdf)
+<use figChap5/Maze_U_ticks.pdf>
+Package pdftex.def Info: figChap5/Maze_U_ticks.pdf  used on input line 401.
+(pdftex.def)             Requested size: 167.72658pt x 163.32614pt.
 File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
 <use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 247.
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 401.
 (pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
  [10
 
-]
-<figChap4/RRTstar_maze216.0.pdf, id=29086, 270.62305pt x 270.62305pt>
-File: figChap4/RRTstar_maze216.0.pdf Graphic file (type pdf)
-<use figChap4/RRTstar_maze216.0.pdf>
-Package pdftex.def Info: figChap4/RRTstar_maze216.0.pdf  used on input line 268.
-(pdftex.def)             Requested size: 154.03183pt x 154.03787pt.
-<figChap4/RRTstarML_maze206.0.pdf, id=29087, 270.62305pt x 270.62305pt>
-File: figChap4/RRTstarML_maze206.0.pdf Graphic file (type pdf)
-<use figChap4/RRTstarML_maze206.0.pdf>
-Package pdftex.def Info: figChap4/RRTstarML_maze206.0.pdf  used on input line 268.
-(pdftex.def)             Requested size: 154.03183pt x 154.03787pt.
+ <./figChap5/graph_U_20pt_ticks.pdf> <./figChap5/Maze_U_ticks.pdf>]
+<figChap5/graph_clutter_20pt_ticks.pdf, id=4066, 515.66057pt x 500.00519pt>
+File: figChap5/graph_clutter_20pt_ticks.pdf Graphic file (type pdf)
+<use figChap5/graph_clutter_20pt_ticks.pdf>
+Package pdftex.def Info: figChap5/graph_clutter_20pt_ticks.pdf  used on input line 419.
+(pdftex.def)             Requested size: 164.30028pt x 159.31064pt.
+<figChap5/Maze_clutter_ticks.pdf, id=4067, 291.49316pt x 283.84431pt>
+File: figChap5/Maze_clutter_ticks.pdf Graphic file (type pdf)
+<use figChap5/Maze_clutter_ticks.pdf>
+Package pdftex.def Info: figChap5/Maze_clutter_ticks.pdf  used on input line 419.
+(pdftex.def)             Requested size: 167.72658pt x 163.32614pt.
 File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
 <use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 268.
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 419.
 (pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
  [11
 
- <./figChap4/RRTstar_maze216.0.pdf> <./figChap4/RRTstarML_maze206.0.pdf>]
-<figChap4/RRTstarML_learning206.0.pdf, id=30439, 270.62305pt x 270.62305pt>
-File: figChap4/RRTstarML_learning206.0.pdf Graphic file (type pdf)
-<use figChap4/RRTstarML_learning206.0.pdf>
-Package pdftex.def Info: figChap4/RRTstarML_learning206.0.pdf  used on input line 287.
-(pdftex.def)             Requested size: 154.03183pt x 154.03787pt.
-File: figChap4/RRTstarML_maze206.0.pdf Graphic file (type pdf)
-<use figChap4/RRTstarML_maze206.0.pdf>
-Package pdftex.def Info: figChap4/RRTstarML_maze206.0.pdf  used on input line 287.
-(pdftex.def)             Requested size: 154.03183pt x 154.03787pt.
+ <./figChap5/graph_clutter_20pt_ticks.pdf> <./figChap5/Maze_clutter_ticks.pdf>]
+<figChap5/Maze_clutter_RRTstarML_learning500.pdf, id=4124, 270.62305pt x 270.62305pt>
+File: figChap5/Maze_clutter_RRTstarML_learning500.pdf Graphic file (type pdf)
+<use figChap5/Maze_clutter_RRTstarML_learning500.pdf>
+Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning500.pdf  used on input line 445.
+(pdftex.def)             Requested size: 109.537pt x 109.53566pt.
+<figChap5/Maze_clutter_RRTstarML_learning1000.pdf, id=4125, 270.62305pt x 270.62305pt>
+File: figChap5/Maze_clutter_RRTstarML_learning1000.pdf Graphic file (type pdf)
+<use figChap5/Maze_clutter_RRTstarML_learning1000.pdf>
+Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning1000.pdf  used on input line 445.
+(pdftex.def)             Requested size: 109.537pt x 109.53566pt.
+<figChap5/Maze_clutter_RRTstarML_learning5000.pdf, id=4126, 270.62305pt x 270.62305pt>
+File: figChap5/Maze_clutter_RRTstarML_learning5000.pdf Graphic file (type pdf)
+<use figChap5/Maze_clutter_RRTstarML_learning5000.pdf>
+Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning5000.pdf  used on input line 445.
+(pdftex.def)             Requested size: 109.537pt x 109.53566pt.
 File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
 <use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 287.
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 445.
 (pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
  [12
 
- <./figChap4/RRTstarML_learning206.0.pdf>]
-<figChap4/RRTstar2DML_learning237.2.pdf, id=31295, 270.62305pt x 270.62305pt>
-File: figChap4/RRTstar2DML_learning237.2.pdf Graphic file (type pdf)
-<use figChap4/RRTstar2DML_learning237.2.pdf>
-Package pdftex.def Info: figChap4/RRTstar2DML_learning237.2.pdf  used on input line 307.
-(pdftex.def)             Requested size: 154.03183pt x 154.03787pt.
-<figChap4/RRTstar2DML_maze237.2.pdf, id=31296, 270.62305pt x 270.62305pt>
-File: figChap4/RRTstar2DML_maze237.2.pdf Graphic file (type pdf)
-<use figChap4/RRTstar2DML_maze237.2.pdf>
-Package pdftex.def Info: figChap4/RRTstar2DML_maze237.2.pdf  used on input line 307.
-(pdftex.def)             Requested size: 154.03183pt x 154.03787pt.
-File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
-<use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 307.
-(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [13
-
- <./figChap4/RRTstar2DML_learning237.2.pdf> <./figChap4/RRTstar2DML_maze237.2.pdf>]
-<figChap4/6D_RRTstar173it_loc_m135to35.pdf, id=32682, 269.005pt x 269.005pt>
-File: figChap4/6D_RRTstar173it_loc_m135to35.pdf Graphic file (type pdf)
-<use figChap4/6D_RRTstar173it_loc_m135to35.pdf>
-Package pdftex.def Info: figChap4/6D_RRTstar173it_loc_m135to35.pdf  used on input line 326.
-(pdftex.def)             Requested size: 154.03183pt x 154.03223pt.
-<figChap4/6D_RRTstarML193it_loc_m135to35.pdf, id=32683, 269.005pt x 269.005pt>
-File: figChap4/6D_RRTstarML193it_loc_m135to35.pdf Graphic file (type pdf)
-<use figChap4/6D_RRTstarML193it_loc_m135to35.pdf>
-Package pdftex.def Info: figChap4/6D_RRTstarML193it_loc_m135to35.pdf  used on input line 326.
-(pdftex.def)             Requested size: 154.03183pt x 154.03223pt.
-File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
-<use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 326.
-(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [14
-
- <./figChap4/6D_RRTstar173it_loc_m135to35.pdf> <./figChap4/6D_RRTstarML193it_loc_m135to35.pdf
-
-pdfTeX warning: pdflatex (file ./figChap4/6D_RRTstarML193it_loc_m135to35.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<figChap4/6D_RRTstar1773it_loc_135to10.pdf, id=37844, 269.005pt x 269.005pt>
-File: figChap4/6D_RRTstar1773it_loc_135to10.pdf Graphic file (type pdf)
-<use figChap4/6D_RRTstar1773it_loc_135to10.pdf>
-Package pdftex.def Info: figChap4/6D_RRTstar1773it_loc_135to10.pdf  used on input line 345.
-(pdftex.def)             Requested size: 154.03183pt x 154.03223pt.
-<figChap4/6D_RRTstarML193it_loc_135to10.pdf, id=37845, 269.005pt x 269.005pt>
-File: figChap4/6D_RRTstarML193it_loc_135to10.pdf Graphic file (type pdf)
-<use figChap4/6D_RRTstarML193it_loc_135to10.pdf>
-Package pdftex.def Info: figChap4/6D_RRTstarML193it_loc_135to10.pdf  used on input line 345.
-(pdftex.def)             Requested size: 154.03183pt x 154.03223pt.
-File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
-<use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 345.
-(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [15
-
- <./figChap4/6D_RRTstar1773it_loc_135to10.pdf> <./figChap4/6D_RRTstarML193it_loc_135to10.pdf
-
-pdfTeX warning: pdflatex (file ./figChap4/6D_RRTstarML193it_loc_135to10.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<figChap5/graph_U_20pt_ticks.pdf, id=43005, 515.66057pt x 500.00519pt>
-File: figChap5/graph_U_20pt_ticks.pdf Graphic file (type pdf)
-<use figChap5/graph_U_20pt_ticks.pdf>
-Package pdftex.def Info: figChap5/graph_U_20pt_ticks.pdf  used on input line 366.
-(pdftex.def)             Requested size: 164.30028pt x 159.31064pt.
-<figChap5/Maze_U_ticks.pdf, id=43006, 291.49316pt x 283.84431pt>
-File: figChap5/Maze_U_ticks.pdf Graphic file (type pdf)
-<use figChap5/Maze_U_ticks.pdf>
-Package pdftex.def Info: figChap5/Maze_U_ticks.pdf  used on input line 366.
-(pdftex.def)             Requested size: 167.72658pt x 163.32614pt.
-File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
-<use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 366.
-(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [16
-
- <./figChap5/graph_U_20pt_ticks.pdf> <./figChap5/Maze_U_ticks.pdf>]
-<figChap5/graph_clutter_20pt_ticks.pdf, id=43065, 515.66057pt x 500.00519pt>
-File: figChap5/graph_clutter_20pt_ticks.pdf Graphic file (type pdf)
-<use figChap5/graph_clutter_20pt_ticks.pdf>
-Package pdftex.def Info: figChap5/graph_clutter_20pt_ticks.pdf  used on input line 384.
-(pdftex.def)             Requested size: 164.30028pt x 159.31064pt.
-<figChap5/Maze_clutter_ticks.pdf, id=43066, 291.49316pt x 283.84431pt>
-File: figChap5/Maze_clutter_ticks.pdf Graphic file (type pdf)
-<use figChap5/Maze_clutter_ticks.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_ticks.pdf  used on input line 384.
-(pdftex.def)             Requested size: 167.72658pt x 163.32614pt.
-File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
-<use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 384.
-(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [17
-
- <./figChap5/graph_clutter_20pt_ticks.pdf> <./figChap5/Maze_clutter_ticks.pdf>]
-<figChap5/Maze_clutter_RRTstarML_learning500.pdf, id=43123, 270.62305pt x 270.62305pt>
-File: figChap5/Maze_clutter_RRTstarML_learning500.pdf Graphic file (type pdf)
-<use figChap5/Maze_clutter_RRTstarML_learning500.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning500.pdf  used on input line 410.
-(pdftex.def)             Requested size: 109.537pt x 109.53566pt.
-<figChap5/Maze_clutter_RRTstarML_learning1000.pdf, id=43124, 270.62305pt x 270.62305pt>
-File: figChap5/Maze_clutter_RRTstarML_learning1000.pdf Graphic file (type pdf)
-<use figChap5/Maze_clutter_RRTstarML_learning1000.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning1000.pdf  used on input line 410.
-(pdftex.def)             Requested size: 109.537pt x 109.53566pt.
-<figChap5/Maze_clutter_RRTstarML_learning5000.pdf, id=43125, 270.62305pt x 270.62305pt>
-File: figChap5/Maze_clutter_RRTstarML_learning5000.pdf Graphic file (type pdf)
-<use figChap5/Maze_clutter_RRTstarML_learning5000.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_RRTstarML_learning5000.pdf  used on input line 410.
-(pdftex.def)             Requested size: 109.537pt x 109.53566pt.
-File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
-<use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 410.
-(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [18
-
  <./figChap5/Maze_clutter_RRTstarML_learning500.pdf> <./figChap5/Maze_clutter_RRTstarML_learning1000.pdf> <./figChap5/Maze_clutter_RRTstarML_learning5000.pdf>]
-<figChap5/Maze_clutter_final_solution_RRTstarML.pdf, id=49943, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_final_solution_RRTstarML.pdf, id=10944, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_final_solution_RRTstarML.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_RRTstarML.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTstarML.pdf  used on input line 429.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTstarML.pdf  used on input line 464.
 (pdftex.def)             Requested size: 148.89761pt x 143.81604pt.
-<figChap5/Maze_clutter_final_solution_RRTstar2.pdf, id=49944, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_final_solution_RRTstar2.pdf, id=10945, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_final_solution_RRTstar2.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_RRTstar2.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTstar2.pdf  used on input line 429.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTstar2.pdf  used on input line 464.
 (pdftex.def)             Requested size: 148.89761pt x 143.81604pt.
 File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
 <use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 429.
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 464.
 (pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [19
+ [13
 
  <./figChap5/Maze_clutter_final_solution_RRTstarML.pdf> <./figChap5/Maze_clutter_final_solution_RRTstar2.pdf
 
 pdfTeX warning: pdflatex (file ./figChap5/Maze_clutter_final_solution_RRTstar2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf, id=50250, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf, id=11251, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf  used on input line 454.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf  used on input line 489.
 (pdftex.def)             Requested size: 109.537pt x 105.79884pt.
-<figChap5/Maze_clutter_final_solution_RRTsharp.pdf, id=50251, 293.28584pt x 283.84431pt>
+<figChap5/Maze_clutter_final_solution_RRTsharp.pdf, id=11252, 293.28584pt x 283.84431pt>
 File: figChap5/Maze_clutter_final_solution_RRTsharp.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_RRTsharp.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTsharp.pdf  used on input line 454.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTsharp.pdf  used on input line 489.
 (pdftex.def)             Requested size: 109.537pt x 106.00824pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 454.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <9> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 454.
-LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <9> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 454.
-<figChap5/Maze_clutter_final_solution_RRTXstatic.pdf, id=50252, 294.09875pt x 284.06125pt>
+<figChap5/Maze_clutter_final_solution_RRTXstatic.pdf, id=11253, 294.09875pt x 284.06125pt>
 File: figChap5/Maze_clutter_final_solution_RRTXstatic.pdf Graphic file (type pdf)
 <use figChap5/Maze_clutter_final_solution_RRTXstatic.pdf>
-Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTXstatic.pdf  used on input line 454.
+Package pdftex.def Info: figChap5/Maze_clutter_final_solution_RRTXstatic.pdf  used on input line 489.
 (pdftex.def)             Requested size: 109.537pt x 105.79884pt.
 File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
 <use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 454.
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 489.
 (pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [20
+ [14
 
  <./figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf> <./figChap5/Maze_clutter_final_solution_RRTsharp.pdf> <./figChap5/Maze_clutter_final_solution_RRTXstatic.pdf
 
@@ -1340,86 +1211,58 @@ pdfTeX warning: pdflatex (file ./figChap5/Maze_clutter_final_solution_RRTXstatic
 >]
 File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
 <use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 478.
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 513.
 (pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [21
+ [15
 
 ]
-<figChap5/Maze_E_2D.pdf, id=50490, 293.28584pt x 283.84431pt>
-File: figChap5/Maze_E_2D.pdf Graphic file (type pdf)
-<use figChap5/Maze_E_2D.pdf>
-Package pdftex.def Info: figChap5/Maze_E_2D.pdf  used on input line 496.
-(pdftex.def)             Requested size: 167.72658pt x 162.32565pt.
-<figChap5/RRTstar_ML_Maze_E_2D_solution.pdf, id=50491, 293.28584pt x 283.84431pt>
-File: figChap5/RRTstar_ML_Maze_E_2D_solution.pdf Graphic file (type pdf)
-<use figChap5/RRTstar_ML_Maze_E_2D_solution.pdf>
-Package pdftex.def Info: figChap5/RRTstar_ML_Maze_E_2D_solution.pdf  used on input line 496.
-(pdftex.def)             Requested size: 167.72658pt x 162.32565pt.
+<figChap5/graph_clutter_learning_time.pdf, id=11490, 522.21712pt x 500.00519pt>
+File: figChap5/graph_clutter_learning_time.pdf Graphic file (type pdf)
+<use figChap5/graph_clutter_learning_time.pdf>
+Package pdftex.def Info: figChap5/graph_clutter_learning_time.pdf  used on input line 552.
+(pdftex.def)             Requested size: 167.72658pt x 160.59239pt.
 File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
 <use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 496.
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 552.
 (pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [22
+ [16
 
- <./figChap5/Maze_E_2D.pdf> <./figChap5/RRTstar_ML_Maze_E_2D_solution.pdf>]
-<figChap5/graph_E_2D_learning_time.pdf, id=50542, 515.65273pt x 500.00519pt>
+ <./figChap5/graph_clutter_learning_time.pdf>]
+<figChap5/graph_E_2D_learning_time.pdf, id=11524, 515.65273pt x 500.00519pt>
 File: figChap5/graph_E_2D_learning_time.pdf Graphic file (type pdf)
 <use figChap5/graph_E_2D_learning_time.pdf>
-Package pdftex.def Info: figChap5/graph_E_2D_learning_time.pdf  used on input line 524.
+Package pdftex.def Info: figChap5/graph_E_2D_learning_time.pdf  used on input line 571.
 (pdftex.def)             Requested size: 167.72658pt x 162.63708pt.
-File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
-<use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 524.
-(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [23
-
- <./figChap5/graph_E_2D_learning_time.pdf>]
-<figChap5/6D_RRTstarFront_ML.pdf, id=50578, 294.09875pt x 226.8475pt>
-File: figChap5/6D_RRTstarFront_ML.pdf Graphic file (type pdf)
-<use figChap5/6D_RRTstarFront_ML.pdf>
-Package pdftex.def Info: figChap5/6D_RRTstarFront_ML.pdf  used on input line 545.
-(pdftex.def)             Requested size: 167.72658pt x 129.37364pt.
-<figChap5/6D_RRTstraRight_ML.pdf, id=50579, 294.09875pt x 226.8475pt>
-File: figChap5/6D_RRTstraRight_ML.pdf Graphic file (type pdf)
-<use figChap5/6D_RRTstraRight_ML.pdf>
-Package pdftex.def Info: figChap5/6D_RRTstraRight_ML.pdf  used on input line 545.
-(pdftex.def)             Requested size: 167.72658pt x 129.37364pt.
-File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
-<use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 545.
-(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [24
-
- <./figChap5/6D_RRTstarFront_ML.pdf> <./figChap5/6D_RRTstraRight_ML.pdf
-
-pdfTeX warning: pdflatex (file ./figChap5/6D_RRTstraRight_ML.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<figChap5/graph_6D_learning.pdf, id=56480, 518.77567pt x 500.00519pt>
+<figChap5/graph_6D_learning.pdf, id=11525, 518.77567pt x 500.00519pt>
 File: figChap5/graph_6D_learning.pdf Graphic file (type pdf)
 <use figChap5/graph_6D_learning.pdf>
-Package pdftex.def Info: figChap5/graph_6D_learning.pdf  used on input line 561.
+Package pdftex.def Info: figChap5/graph_6D_learning.pdf  used on input line 571.
 (pdftex.def)             Requested size: 167.72658pt x 161.6605pt.
-File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
-<use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 561.
-(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [25
-
- <./figChap5/graph_6D_learning.pdf>]
 File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
 <use files/symbol_cvut_plna_samostatna_verze.pdf>
 Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 571.
 (pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [26
+ [17
 
-] (./presentation.bbl)
+ <./figChap5/graph_E_2D_learning_time.pdf> <./figChap5/graph_6D_learning.pdf>]
 File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
 <use files/symbol_cvut_plna_samostatna_verze.pdf>
-Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 578.
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 630.
 (pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
- [27
+ [18
 
- </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
+]
+File: files/symbol_cvut_plna_samostatna_verze.pdf Graphic file (type pdf)
+<use files/symbol_cvut_plna_samostatna_verze.pdf>
+Package pdftex.def Info: files/symbol_cvut_plna_samostatna_verze.pdf  used on input line 640.
+(pdftex.def)             Requested size: 37.2196pt x 28.45274pt.
+ [19
+
+] (./presentation.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+)
 \tf@nav=\write6
 \openout6 = `presentation.nav'.
 
@@ -1434,18 +1277,18 @@ Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26621 strings out of 478287
- 525404 string characters out of 5849289
- 782588 words of memory out of 5000000
- 44101 multiletter control sequences out of 15000+600000
+ 26480 strings out of 478287
+ 520227 string characters out of 5849289
+ 782051 words of memory out of 5000000
+ 44004 multiletter control sequences out of 15000+600000
  582147 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,19n,122p,464b,769s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on presentation.pdf (27 pages, 12253601 bytes).
+ 128i,19n,122p,464b,773s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb>
+Output written on presentation.pdf (19 pages, 5713528 bytes).
 PDF statistics:
- 56615 PDF objects out of 66169 (max. 8388607)
- 28584 compressed objects within 286 object streams
- 80 named destinations out of 1000 (max. 500000)
- 274 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11682 PDF objects out of 12825 (max. 8388607)
+ 630 compressed objects within 7 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
