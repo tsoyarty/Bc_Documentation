@@ -1,3 +1,10 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{arslan2015machine}
+Oktay Arslan and Panagiotis Tsiotras.
+\newblock Machine learning guided exploration for sampling-based motion
+  planning algorithms.
+\newblock In {\em 2015 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)}, pages 2646--2652, 2015.
 
 \end{thebibliography}

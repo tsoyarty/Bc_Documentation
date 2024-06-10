@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex presentation"] 1718013830 "presentation.aux" "presentation.bbl" "presentation" 1718014071
+["bibtex presentation"] 1718034393 "presentation.aux" "presentation.bbl" "presentation" 1718034439
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "main.bib" 1716065434 10117 6a2b55fc4635a0ec26352c0f8dce7992 ""
-  "presentation.aux" 1718014071 5794 c63e1c35dcb45881fde7160219f47c08 "pdflatex"
+  "presentation.aux" 1718034438 5895 429460df57cad09a6b3353651fd273a7 "pdflatex"
   (generated)
   "presentation.bbl"
   "presentation.blg"
-["pdflatex"] 1718014070 "/home/tsoyarty/Desktop/Bc_work/Documentation/presentation.tex" "presentation.pdf" "presentation" 1718014071
+["pdflatex"] 1718034437 "/home/tsoyarty/Desktop/Bc_work/Documentation/presentation.tex" "presentation.pdf" "presentation" 1718034439
   "/etc/texmf/web2c/texmf.cnf" 1713119362 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/tsoyarty/Desktop/Bc_work/Documentation/presentation.tex" 1718014069 23696 ec1e9fb62be5895835710057ee7faba1 ""
+  "/home/tsoyarty/Desktop/Bc_work/Documentation/presentation.tex" 1718034437 23762 9cd871eddb36e9de173db9a7f228abcc ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -301,11 +301,11 @@
   "figChap5/graph_clutter_20pt_ticks.pdf" 1715952253 16612 83d60714a8cfb3678a8cf4e1bd6ad758 ""
   "figChap5/graph_clutter_learning_time.pdf" 1716143710 18377 f834c15db8a3ddc89018009766447a80 ""
   "files/symbol_cvut_plna_samostatna_verze.pdf" 1717658096 9002 c3abad72924279a4c909d21c76b87090 ""
-  "presentation.aux" 1718014071 5794 c63e1c35dcb45881fde7160219f47c08 "pdflatex"
-  "presentation.bbl" 1718013830 49 0eba253fc001332e731e8aba3f23127b "bibtex presentation"
-  "presentation.nav" 1718014071 1946 cc1d57bc897673374b837eab8153475a "pdflatex"
-  "presentation.out" 1718014070 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "presentation.tex" 1718014069 23696 ec1e9fb62be5895835710057ee7faba1 ""
+  "presentation.aux" 1718034438 5895 429460df57cad09a6b3353651fd273a7 "pdflatex"
+  "presentation.bbl" 1718034393 338 cfdd859a4b5d0ca4ec87659daa64f9a8 "bibtex presentation"
+  "presentation.nav" 1718034438 1946 770452eb80477a1bbf53d5252470a3ac "pdflatex"
+  "presentation.out" 1718034438 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "presentation.tex" 1718034437 23762 9cd871eddb36e9de173db9a7f228abcc ""
   (generated)
   "presentation.aux"
   "presentation.log"

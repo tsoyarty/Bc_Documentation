@@ -113,7 +113,7 @@ Department of Cybernetics\\
 			\includegraphics[width=\linewidth]{figChap2/ConfigSpace.eps}
 			\caption{2D workspace with a 2D $\mathcal{C}$-space.}
 		\end{subfigure} 
-		\caption{RRT and RRT* comparison.} 
+		\caption{RRT and a worspace example.} 
 	  \end{figure}
 \end{frame}	
 % ==========================================================================
@@ -185,7 +185,7 @@ Department of Cybernetics\\
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.49\textwidth}
-	  \vspace{1cm}
+	  \vspace{0.5cm}
 	  \vfill
     \begin{center} % Center horizontally
       \begin{itemize}
@@ -196,6 +196,8 @@ Department of Cybernetics\\
 		\item Real-time learning;
         \vspace{0.2cm}
 		\item Finding better solutions with the same number of iterations.
+		\vspace{0.2cm}
+		\item Inspired by the work of~\cite{arslan2015machine}.
       \end{itemize}
     \end{center}
     \vfill
@@ -206,16 +208,16 @@ Department of Cybernetics\\
 % ==========================================================================
 \begin{frame}
 	\frametitle{Proposed solution}	 
-	\[ \hat{f}_\mathcal{X}(x) = \frac{1}{m} \sum_{i=1}^{m} K \left( x - x_{i} \right);\enspace
-K(x) = (2\pi)^{-\frac{d}{2}} \cdot \det(\textbf{H})^{-\frac{1}{2}} \cdot e^{-\frac{1}{2} x^T H^{-1} x},
+	\[ \hat{f}_\mathcal{X}(x) = \frac{1}{m} \sum_{i=1}^{m} K \left( x - x_{i} \right)\]
+	\[K(x) = (2\pi)^{-\frac{d}{2}} \cdot \det(\textbf{H})^{-\frac{1}{2}} \cdot e^{-\frac{1}{2} x^T H^{-1} x}
 \] 
 \[
-  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)},
+  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)}
 \] 
-\[ P(x|y=1) = \hat{f}_{\mathcal{X}_{\text{obs}}}(x) = \frac{1}{|\mathcal{X}_{\text{obs}}|} \sum_{x' \in \mathcal{X}_{\text{obs}}} K \left( x - x' \right); \]
-\[ P(x|y=0) = \hat{f}_{\mathcal{X}_{\text{free}}}(x) = \frac{1}{|\mathcal{X}_{\text{free}}|} \sum_{x' \in \mathcal{X}_{\text{free}}} K \left( x - x' \right); \]
+\[ P(x|y=1) = \hat{f}_{\mathcal{X}_{\text{obs}}}(x) = \frac{1}{|\mathcal{X}_{\text{obs}}|} \sum_{x' \in \mathcal{X}_{\text{obs}}} K \left( x - x' \right) \]
+\[ P(x|y=0) = \hat{f}_{\mathcal{X}_{\text{free}}}(x) = \frac{1}{|\mathcal{X}_{\text{free}}|} \sum_{x' \in \mathcal{X}_{\text{free}}} K \left( x - x' \right) \]
 \[ P(y=1) = \frac{|\mathcal{X}_{\text{obs}}|}{|\mathcal{X}_{\text{obs}}|+|\mathcal{X}_{\text{free}}|};\enspace
-P(y=0) = \frac{|\mathcal{X}_{\text{free}}|}{|\mathcal{X}_{\text{obs}}|+|\mathcal{X}_{\text{free}}|};\]
+P(y=0) = \frac{|\mathcal{X}_{\text{free}}|}{|\mathcal{X}_{\text{obs}}|+|\mathcal{X}_{\text{free}}|}\]
 \end{frame}	
 % ==========================================================================
 
@@ -525,6 +527,7 @@ P(y=0) = \frac{|\mathcal{X}_{\text{free}}|}{|\mathcal{X}_{\text{obs}}|+|\mathcal
 % 	  \end{figure}
 % \end{frame}	
 % % ==========================================================================
+ 
 % ==========================================================================
 \begin{frame}
 	\frametitle{Results}	
@@ -535,15 +538,15 @@ P(y=0) = \frac{|\mathcal{X}_{\text{free}}|}{|\mathcal{X}_{\text{obs}}|+|\mathcal
 	  \captionof{figure}{Time taken to learn predicting points in the 2D workspace with the 2D $\mathcal{C}$-space to be in the \(C_{\text{free}}\).}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[t]{0.49\textwidth}
-	  \vspace{1.5cm}
+	\begin{minipage}[t]{0.48\textwidth}
+	  \vspace{1cm}
 	  \vfill
     \begin{center} % Center horizontally
       \begin{itemize}
         \item Implementation in Python;
         \vspace{0.2cm}
-        \item Time required to predict points;
-        \vspace{0.2cm}
+        \item Time required to predict points; 
+		\vspace{0.2cm}
 		\item Increasing dataset sizes necessitating the computation of more kernels.
       \end{itemize}
     \end{center}

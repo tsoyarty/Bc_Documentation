@@ -1856,6 +1856,10 @@ INPUT ./presentation.bbl
 INPUT presentation.bbl
 INPUT ./presentation.bbl
 INPUT presentation.bbl
+INPUT ./files/symbol_cvut_plna_samostatna_verze.pdf
+INPUT ./files/symbol_cvut_plna_samostatna_verze.pdf
+INPUT files/symbol_cvut_plna_samostatna_verze.pdf
+INPUT ./files/symbol_cvut_plna_samostatna_verze.pdf
 OUTPUT presentation.nav
 OUTPUT presentation.toc
 OUTPUT presentation.snm
