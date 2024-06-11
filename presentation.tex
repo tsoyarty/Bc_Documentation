@@ -104,6 +104,36 @@ Department of Cybernetics\\
 \begin{frame}
 	\frametitle{Introduction}	
 	\begin{figure}[!ht]
+		\centering
+		\begin{subfigure}[b]{0.3\textwidth}
+			\includegraphics[width=\textwidth]{figChap3/2RRTexpansion100.eps}
+			\caption{100 iterations}
+			% \label{fig:gull}
+		\end{subfigure}
+		~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+		  %(or a blank line to force the subfigure onto a new line)
+		\begin{subfigure}[b]{0.3\textwidth}
+			\includegraphics[width=\textwidth]{figChap3/2RRTexpansion1000.eps}
+			\caption{1000 iterations}
+			% \label{fig:tiger}
+		\end{subfigure}
+		~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+		%(or a blank line to force the subfigure onto a new line)
+		\begin{subfigure}[b]{0.3\textwidth}
+			\includegraphics[width=\textwidth]{figChap3/2RRTexpansion2000.eps}
+			\caption{2000 iterations}
+			% \label{fig:mouse}
+		\end{subfigure}
+		\caption{Example of RRT expansion in 2D $\mathcal{C}$-space.}
+		\label{fig:RRTgrowing}
+	  \end{figure} 
+\end{frame}	
+% ==========================================================================
+
+% ==========================================================================
+\begin{frame}
+	\frametitle{Introduction}	
+	\begin{figure}[!ht]
 		\centering  
 		\begin{subfigure}[b]{0.45\textwidth}
 			\includegraphics[width=\textwidth]{figChap3/RRT_maze7748i119w.pdf}
@@ -286,6 +316,38 @@ P(y=0) = \frac{|\mathcal{X}_{\text{free}}|}{|\mathcal{X}_{\text{obs}}|+|\mathcal
 
 % ==========================================================================
 \begin{frame}
+    \frametitle{Proposed Solution}
+     
+    \begin{figure}[!ht]
+		\centering
+		\begin{subfigure}[b]{0.3\textwidth}
+			\includegraphics[width=\textwidth]{figChap3/RRTstar_expansion100.eps}
+			\caption{100 iterations}
+			% \label{fig:gull}
+		\end{subfigure}
+		~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+		  %(or a blank line to force the subfigure onto a new line)
+		\begin{subfigure}[b]{0.3\textwidth}
+			\includegraphics[width=\textwidth]{figChap3/RRTstar_expansion1000.eps}
+			\caption{1000 iterations}
+			% \label{fig:tiger}
+		\end{subfigure}
+		~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+		%(or a blank line to force the subfigure onto a new line)
+		\begin{subfigure}[b]{0.302\textwidth}
+			\includegraphics[width=\textwidth]{figChap3/RRTstar_expansion2000.eps}
+			\caption{2000 iterations}
+			% \label{fig:mouse}
+		\end{subfigure}
+		\caption{Example of RRT* expansion in 2D $\mathcal{C}$-space.}
+		\label{fig:RRTstargrowing}
+	  \end{figure}
+    
+\end{frame}
+% ==========================================================================
+
+% ==========================================================================
+\begin{frame}
 	\frametitle{Proposed solution}	
 	\begin{figure}[!ht]
 		\centering 
@@ -421,75 +483,75 @@ P(y=0) = \frac{|\mathcal{X}_{\text{free}}|}{|\mathcal{X}_{\text{obs}}|+|\mathcal
 \end{frame}	
 % ==========================================================================
 
-% ==========================================================================
-\begin{frame}
-	\frametitle{Results}	
-	\begin{figure}
-		\centering
-		\begin{subfigure}[b]{0.32\textwidth}
-		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_RRTstarML_learning500.pdf}  
-		  \caption{500 iterations.}
-		  % \label{fig:maze_E_graphs}
-		\end{subfigure}  
-		\begin{subfigure}[b]{0.32\textwidth}
-		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_RRTstarML_learning1000.pdf}  
-		  \caption{1000 iterations.}
-		  % \label{fig:maze_E_graphs}
-		\end{subfigure}  
-		\begin{subfigure}[b]{0.32\textwidth}
-		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_RRTstarML_learning5000.pdf}  
-		  \caption{5000 iterations.}
-		  % \label{fig:maze_E_graphs} 
-		\end{subfigure}  
-		\caption{Learning $\mathcal{C}$-space in the cluttered map.}
-		\label{fig:learning_clutter}
-	  \end{figure}
-\end{frame}	
-% ==========================================================================
+% % ==========================================================================
+% \begin{frame}
+% 	\frametitle{Results}	
+% 	\begin{figure}
+% 		\centering
+% 		\begin{subfigure}[b]{0.32\textwidth}
+% 		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_RRTstarML_learning500.pdf}  
+% 		  \caption{500 iterations.}
+% 		  % \label{fig:maze_E_graphs}
+% 		\end{subfigure}  
+% 		\begin{subfigure}[b]{0.32\textwidth}
+% 		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_RRTstarML_learning1000.pdf}  
+% 		  \caption{1000 iterations.}
+% 		  % \label{fig:maze_E_graphs}
+% 		\end{subfigure}  
+% 		\begin{subfigure}[b]{0.32\textwidth}
+% 		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_RRTstarML_learning5000.pdf}  
+% 		  \caption{5000 iterations.}
+% 		  % \label{fig:maze_E_graphs} 
+% 		\end{subfigure}  
+% 		\caption{Learning $\mathcal{C}$-space in the cluttered map.}
+% 		\label{fig:learning_clutter}
+% 	  \end{figure}
+% \end{frame}	
+% % ==========================================================================
 
-% ==========================================================================
-\begin{frame}
-	\frametitle{Results}	
-	\begin{figure}[!ht]
-		\centering
-		\begin{subfigure}[b]{0.435\textwidth}
-		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTstarML.pdf}  
-		  \caption{RRT*\_ML.}
-		  % \label{fig:maze_E_graphs}
-		\end{subfigure}  
-		\begin{subfigure}[b]{0.435\textwidth}
-		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTstar2.pdf}  
-		  \caption{RRT*.} 
-		\end{subfigure}   
-		\caption{Found solutions.} 
-	  \end{figure}
-\end{frame}	
-% ==========================================================================
+% % ==========================================================================
+% \begin{frame}
+% 	\frametitle{Results}	
+% 	\begin{figure}[!ht]
+% 		\centering
+% 		\begin{subfigure}[b]{0.435\textwidth}
+% 		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTstarML.pdf}  
+% 		  \caption{RRT*\_ML.}
+% 		  % \label{fig:maze_E_graphs}
+% 		\end{subfigure}  
+% 		\begin{subfigure}[b]{0.435\textwidth}
+% 		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTstar2.pdf}  
+% 		  \caption{RRT*.} 
+% 		\end{subfigure}   
+% 		\caption{Found solutions.} 
+% 	  \end{figure}
+% \end{frame}	
+% % ==========================================================================
 
-% ==========================================================================
-\begin{frame}
-	\frametitle{Results}	
-	\begin{figure}[!ht]
-		\centering 
-		\begin{subfigure}[t]{0.32\textwidth}
-		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf}  
-		  \caption{Informed RRT*.}
-		  % \label{fig:maze_E_graphs}
-		\end{subfigure}  
-		\begin{subfigure}[t]{0.32\textwidth}
-		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTsharp.pdf}  
-		  \caption{RRT$^\#$.}
-		  % \label{fig:maze_E_graphs}
-		\end{subfigure}  
-		\begin{subfigure}[t]{0.32\textwidth}
-		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTXstatic.pdf}  
-		  \caption{RRT$^X$ static.}
-		  % \label{fig:maze_E_graphs}
-		\end{subfigure}   
-		\caption{Found solutions.} 
-	  \end{figure}
-\end{frame}	
-% ==========================================================================
+% % ==========================================================================
+% \begin{frame}
+% 	\frametitle{Results}	
+% 	\begin{figure}[!ht]
+% 		\centering 
+% 		\begin{subfigure}[t]{0.32\textwidth}
+% 		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_InformedRRTstar.pdf}  
+% 		  \caption{Informed RRT*.}
+% 		  % \label{fig:maze_E_graphs}
+% 		\end{subfigure}  
+% 		\begin{subfigure}[t]{0.32\textwidth}
+% 		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTsharp.pdf}  
+% 		  \caption{RRT$^\#$.}
+% 		  % \label{fig:maze_E_graphs}
+% 		\end{subfigure}  
+% 		\begin{subfigure}[t]{0.32\textwidth}
+% 		  \includegraphics[width=\textwidth]{figChap5/Maze_clutter_final_solution_RRTXstatic.pdf}  
+% 		  \caption{RRT$^X$ static.}
+% 		  % \label{fig:maze_E_graphs}
+% 		\end{subfigure}   
+% 		\caption{Found solutions.} 
+% 	  \end{figure}
+% \end{frame}	
+% % ==========================================================================
 
 % ==========================================================================
 \begin{frame}
